@@ -1,3 +1,195 @@
+/* Mobile phones breakpoint */
+
+@media (max-width: 776px) { }
+
+html {
+    font-size:16pt;
+}
 body {
-    background-color:blueviolet;
+    width:100%;
+}
+
+main {
+    width:70%;
+}
+
+/* HEADER */
+header {
+    height:60vh;
+    background-color:palegoldenrod;   
+}
+
+/* TOP MENU */
+ul {
+    background-color:whitesmoke;
+    text-decoration: none;
+    list-style: none;
+    box-shadow: 4px 4px 22px grey;
+}
+
+
+/* SORT MENU */
+.sort .navbar {
+    box-shadow:none;
+    background-color:white;
+}
+
+.sort li {
+    font-size:0.7rem;
+    width:30%;
+}
+
+.sort h3 {
+    font-size:0.7rem;
+    text-transform: uppercase;
+    padding-bottom:4px;
+    border-bottom:1px solid black;
+    
+}
+
+.sort input {
+    margin-right:8px;
+    margin-left:5px;
+}
+
+/* CARD DECK */
+div.card {
+    width:80vw;
+    border:none !important;
+}
+
+.card-img-top {
+    margin-top:20px;
+    height:20vh;
+    object-fit: scale-down;
+}
+
+h5 {
+    font-size:1rem !important;
+}
+.card-text{
+    font-size:0.7rem;
+    border-top:2px solid palegoldenrod;
+    padding-top:5px;
+} 
+
+.card-body {
+    padding-bottom:none;
+}
+
+/* Card buttons */
+.btn {
+    font-size:0.7rem !important;
+    color:grey !important; 
+    background-color: palegoldenrod !important;
+    border-radius:28px !important;
+}
+
+.custom-select {
+    font-size:0.7rem !important;
+    border-radius:20px !important;
+    margin-left: 8px !important;    
+}
+
+
+/*Desktop */ 
+@media (min-width: 992px) {
+    
+    /* HEADER */
+    header {
+        height:400px;  
+    }
+
+    h1 {
+        font-size:64px !important;
+        padding-top:100px;
+        color:white;
+        text-shadow: 2px 2px 20px orchid;
+    }
+    
+    /* TOP MENU */
+    ul {
+        background-color:whitesmoke;
+        text-decoration: none;
+        list-style: none;
+        box-shadow: 4px 4px 22px grey;
+    }
+    
+    
+    /* SORT MENU */
+    .sort .navbar {
+        position:sticky;
+        box-shadow:none;
+        background-color:white;
+    }
+
+    .sort li {
+        font-size:0.7rem;
+        width:30%;
+    }
+    .sort h3 {
+        font-size:0.7rem;
+        text-transform: uppercase;
+        padding-bottom:10px;
+        border-bottom:1px solid black;
+        cursor:pointer;
+        
+    }
+    
+    .sort input {
+        margin-right:8px;
+        margin-left:10px;
+    }
+
+    .categories {
+        display:none;
+        border-bottom:1px solid black;
+        padding-bottom:5px;
+    }
+    
+    /* CARD DECK */
+    div.card {
+        width:25vw;
+        border:none !important;
+    }
+    
+    .card-img-top {
+        margin-top:20px;
+        height:20vh;
+        object-fit: scale-down;
+    }
+    
+    h5 {
+        font-size:1rem !important;
+    }
+    .card-text{
+        font-size:0.7rem;
+        border-top:2px solid palegoldenrod;
+        padding-top:5px;
+    } 
+    
+    .card-body {
+        padding-bottom:none;
+    }
+
+    .product_description {
+        display:none;
+    }
+    
+    /* Card buttons */
+    .btn {
+        font-size:0.7rem !important;
+        color:grey !important; 
+        background-color: palegoldenrod !important;
+        border-radius:28px !important;
+    }
+    
+    .custom-select {
+        font-size:0.7rem !important;
+        border-radius:20px !important;
+        margin-left: 8px !important;    
+    }
+
+
+
 }
