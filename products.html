@@ -7,15 +7,196 @@
     
     <title>Produkter</title>
     <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="/styles/main.css"> 
+    <link rel="stylesheet" href="styles/main.css"> 
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- JQUERY -->
-    <script></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/0f212518bd.js"></script>
+    <script type="text/javascript" src="products.js"></script>
 </head>
 <body>
+    <header>
+        <div class="text-center">
+            <ul class="navbar nav">
+                <li>First</li>
+                <li>First</li>
+                <li>First</li>
+            </ul>
+            <h1 id="headline">Oppigårds Öl</h1>
+        </div>
+    </header>
+        <main class="container-fluid m-4">  
+            <div class="sort container">
+                <ul class="navbar text-center col-lg-12 row">
 
+                        <li class="sortcategories col-4">
+                            <h3 class="sorthead">Ölsort <i class="fa fa-caret-down"></i> </h3>
+                            <div class="categories">
+                                <input type="checkbox">IPA</input>
+                                <input type="checkbox">Lager</input>
+                                <input type="checkbox">Ale</input>
+                            </div>
+                        </li>
+                        <li class="sortcategories col-4">
+                            <h3 class="sorthead">Pris<i class="fa fa-caret-down"></i></h3>
+                            <div class="categories">
+                                <input type="checkbox">Högt till lågt</input>
+                                <input type="checkbox">Lågt till högt</input>
+                            </div>
+                        </li>
+                        <li class="sortcategories col-4">
+                            <h3 class="sorthead">Styrka<i class="fa fa-caret-down"></i></h3>
+                            <div class="categories">
+                                <input type="checkbox">3,5%</input>
+                                <input type="checkbox"> 5,5%</input>
+                                <input type="checkbox">Alkoholfritt</input>   
+                            </div>
+                        </li>
+                </ul>
+            </div>    
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-4">
+                        <div class="card container mb-4">
+                                <img src="product_images/winterale.jpg" class="card-img-top" alt="">
+                                <div class="card-body row justify-content-center">
+                                  <h5 class="card-title">Winter Ale</h5>
+                                  <p class="card-text"></p>
+                                  <div class="input-group">
+                                        <button type="button" class="btn">Läs mer</button>
+                                        <select class="custom-select" id="inputGroupSelect01">
+                                            <option selected>Välj antal</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            <div class="product_description">
+                                <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                
+                </div>
+                <div class="col-12 col-lg-4">
+                        <div class="card container mb-4">
+                                <img src="product_images/thurbodouble.jpg" class="card-img-top" alt="...">
+                                <div class="card-body row justify-content-center">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text"></p>
+                                  <div class="input-group">
+                                        <button type="button" class="btn">Läs mer</button>
+                                        <select class="custom-select" id="inputGroupSelect01">
+                                            <option selected>Välj antal</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="product_description">
+                                        <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    </div>
+                        </div>
+                </div>
+     
 
     
+                    <div class="col-12 col-lg-4">
+                            <div class="card container mb-4">
+                                    <img src="product_images/singlehop.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body row justify-content-center">
+                                      <h5 class="card-title">Card title</h5>
+                                      <p class="card-text"></p>
+                                      <div class="input-group">
+                                            <button type="button" class="btn">Läs mer</button>
+                                            <select class="custom-select" id="inputGroupSelect01">
+                                                <option selected>Välj antal</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="product_description">
+                                            <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        </div>
+                            </div>
+                    
+                    </div>
+                    <div class="col-12 col-lg-4">
+                            <div class="card container mb-4">
+                                    <img src="product_images/hedemoraporter.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body row justify-content-center">
+                                      <h5 class="card-title">Card title</h5>
+                                      <p class="card-text"></p>
+                                      <div class="input-group">
+                                            <button type="button" class="btn">Läs mer</button>
+                                            <select class="custom-select" id="inputGroupSelect01">
+                                                <option selected>Välj antal</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </div>
+                            </div>
+                            <div class="product_description">
+                                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                    </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                            <div class="card container mb-4">
+                                    <img src="product_images/everydayipa.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body row justify-content-center">
+                                      <h5 class="card-title">Card title</h5>
+                                      <p class="card-text"></p>
+                                      <div class="input-group">
+                                            <button type="button" class="btn">Läs mer</button>
+                                            <select class="custom-select" id="inputGroupSelect01">
+                                                <option selected>Välj antal</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="product_description">
+                                            <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        </div>
+                            </div>
+                    
+                    </div>
+                 
+                <div class="col-12 col-lg-4">
+                        <div class="card container mb-4">
+                                <img src="product_images/everydayipa.jpg" class="card-img-top" alt="...">
+                                <div class="card-body row justify-content-center">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text"></p>
+                                
+                                <div class="input-group">
+                                    <button type="button" class="btn">Läs mer</button>
+                                    <select class="custom-select" id="inputGroupSelect01">
+                                        <option selected>Välj antal</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </div>
+                                  
+                        </div>
+                        <div class="product_description">
+                                <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                
+                </div>
+            </div>
+
+
+        </main>
+    <footer>
+
+    </footer>    
 </body>
 </html>
