@@ -14,43 +14,63 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/0f212518bd.js"></script>
     <script type="text/javascript" src="products.js"></script>
+    <!-- BOOTSTRAP JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <div class="text-center">
-            <ul class="navbar nav">
-                <li>First</li>
-                <li>First</li>
-                <li>First</li>
-            </ul>
-            <h1 id="headline">Oppigårds Öl</h1>
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a href="#" class="navbar-brand">OPPIGÅRDS ÖL</a>
+                <ul class="collapse navbar-collapse text-center" id="navbarNavAltMarkup">
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Startsida</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Webbshop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Kontakt</a>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa fa-shopping-cart"></i>
+                    </li>
+                </ul>
+                
+            </nav>
         </div>
+            
     </header>
         <main class="container-fluid m-4">  
             <div class="sort container">
                 <ul class="navbar text-center col-lg-12 row">
 
-                        <li class="sortcategories col-4">
-                            <h3 class="sorthead">Ölsort <i class="fa fa-caret-down"></i> </h3>
-                            <div class="categories">
-                                <input type="checkbox">IPA</input>
-                                <input type="checkbox">Lager</input>
-                                <input type="checkbox">Ale</input>
+                        <li class="sortcategories col">
+                            <h3 class="sorthead">Ölsort<i class="fa fa-caret-down"></i> </h3>
+                            <div class="categories text-left">
+                                <div class="w-100"><input type="checkbox">IPA</input></div>
+                                <div class="w-100"> <input type="checkbox">Lager</input></div>
+                                <div class="w-100"><input type="checkbox">Ale</input></div>
                             </div>
                         </li>
-                        <li class="sortcategories col-4">
+                        <li class="sortcategories col">
                             <h3 class="sorthead">Pris<i class="fa fa-caret-down"></i></h3>
-                            <div class="categories">
-                                <input type="checkbox">Högt till lågt</input>
-                                <input type="checkbox">Lågt till högt</input>
+                            <div class="categories text-left">
+                                <div class="w-100"><input type="checkbox">Högt till lågt</input></div>
+                                <div class=""><input type="checkbox">Lågt till högt</input></div>
                             </div>
                         </li>
-                        <li class="sortcategories col-4">
+                        <li class="sortcategories col">
                             <h3 class="sorthead">Styrka<i class="fa fa-caret-down"></i></h3>
-                            <div class="categories">
-                                <input type="checkbox">3,5%</input>
-                                <input type="checkbox"> 5,5%</input>
-                                <input type="checkbox">Alkoholfritt</input>   
+                            <div class="categories text-left">
+                                <div class="w-100"><input type="checkbox">3,5%</input></div>
+                                <div class="w-100"><input type="checkbox"> 5,5%</input></div>
+                                <div class=""><input type="checkbox">Alkoholfritt</input></div>   
                             </div>
                         </li>
                 </ul>
@@ -99,8 +119,6 @@
                                     </div>
                         </div>
                 </div>
-     
-
     
                     <div class="col-12 col-lg-4">
                             <div class="card container mb-4">
