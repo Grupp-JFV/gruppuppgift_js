@@ -47,12 +47,12 @@ function display(products) {
     console.log(products);
 
     $.each(products, function (i, product) {  // i???
-        let responsiveColumn = $("<div>").addClass("col-12" + "col-lg-4");
-        let productContainer = $("<div>").addClass("card" + "container" + "mb-4").appendTo(responsiveColumn);
-        $("<img>").addClass("card-img-top").attr("src", product.image).attr("alt", "").appendTo(productContainer);
-        let cardBody = $("<div>").addClass("card-body" + "row" + "justify-content-center").appendTo(productContainer);
+        let responsiveColumn = $("<div>").addClass("col-12"+" "+"col-lg-4");
+        let productContainer = $("<div>").addClass("card"+" "+"container"+" "+"mb-4").appendTo(responsiveColumn);
+        $("<img>").addClass("card-img-top").attr("src", product.image).attr("alt", "Ölflaska").appendTo(productContainer);
+        let cardBody = $("<div>").addClass("card-body"+" "+"row"+" "+ "justify-content-center").appendTo(productContainer);
         $("<h5>").addClass("card-title").text(product.name).appendTo(cardBody);
-        $("<p>").addClass("card-text").text(product.price + "Kr").appendTo(cardBody);
+        $("<p>").addClass("card-text").text(product.price +" "+"Kr").appendTo(cardBody);
 
         //  (!!! input + knapp här !!!)
 
