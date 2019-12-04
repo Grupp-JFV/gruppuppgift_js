@@ -3,11 +3,9 @@ $(document).ready(function() {
     $(".sorthead").on("click", function() {
         $(".categories").toggle();
     }); 
-     
-//togglar beskrivningen 
-    $(".btn").on("click", function() {
-        $(".product_description").toggle();
-    }); 
 
-          
+    $(".btn").click(function() {
+        $(this).siblings().toggle();
+    });
+
 }); //stänger jquery 
