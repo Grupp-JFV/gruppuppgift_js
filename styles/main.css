@@ -107,6 +107,15 @@ h5 {
     margin-left: 8px !important;    
 }
 
+/* FOOTER */
+
+footer {
+    background-color: palegoldenrod;
+    font-size: 0.7rem;
+    box-shadow: 4px 4px 22px grey;
+}
+
+
 /*Desktop */ 
 @media (min-width: 992px) {
     
