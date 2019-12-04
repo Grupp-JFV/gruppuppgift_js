@@ -17,11 +17,16 @@ $(document).ready(function() {
 
 function productList() {
     
-    let product1 = new Product("Öl1", "./product_images/winterale.jpg", "Ljus lager", "Bla bla...", "10", "0");
-    let product2 = new Product("Öl2", "./product_images/winterale.jpg", "Mörk lager", "Blä blä...", "15", "0");
-    let product3 = new Product("Öl3", "./product_images/winterale.jpg", "Ipa", "Prat...", "20", "0");
+    let product1 = new Product("Oppigårds Golden Ale", "./product_images/golden.jpg", "Ljus lager", 
+    "Fruktig, något humlearomatisk smak med tydlig beska, inslag av aprikos, örter, apelsinskal och" + 
+    "rågbröd. Serveras vid 8-10°C till husmanskost.", "19:90", "0");
+    let product2 = new Product("Oppigårds Winter Ale", "./product_images/winterale.jpg", "Mörk lager", "Blä blä...", "15", "0");
+    let product3 = new Product("Oppigårds Every Day Ipa", "./product_images/everydayipa.jpg", "Ipa", "Prat...", "20", "0");
+    let product4 = new Product("Oppigårds Hedemora Porter", "./product_images/hedemoraporter.jpg", "Porter", "Prat...", "20", "0");
+    let product5 = new Product("Oppigårds Single Hop", "./product_images/singlehop.jpg", "?", "Prat...", "20", "0");
+    let product6 = new Product("Oppigårds Thurbo Double", "./product_images/thurbodouble.jpg", "?", "Prat...", "20", "0");
 
-    let products = [product1, product2, product3];
+    let products = [product1, product2, product3, product4, product5, product6];
 
     display(products);
    // toLocalStorage(products);  //(!!! funkar men fyller ingen funktion just nu !!!)
