@@ -47,7 +47,7 @@ function display(products) {
         $("<img>").addClass("card-img-top").attr("src", product.image).attr("alt", "Ölflaska").appendTo(productContainer);
         let cardBody = $("<div>").addClass("card-body"+" "+"row"+" "+ "justify-content-center").appendTo(productContainer);
         $("<h5>").addClass("card-title").text(product.name).appendTo(cardBody);
-        $("<p>").addClass("card-text").text(product.price +" "+"Kr").appendTo(cardBody);
+        $("<p>").addClass("card-text").text(product.price+" "+"Kr").appendTo(cardBody);
 
         //  (!!! input + knapp här !!!)
 
