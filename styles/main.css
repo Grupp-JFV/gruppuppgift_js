@@ -4,10 +4,8 @@ html {
     font-size:16pt;
 }
 body {
-    width:100%;
 }
 main {
-    width:70%;
 }
 
 
@@ -17,37 +15,27 @@ header {
     background-color:palegoldenrod;   
 }
 
-/* TOP MENU */
-nav {
-    background-color:whitesmoke;
-    box-shadow: 4px 4px 22px grey;
+/*NYA NAVBAREN*/
+
+#nav {
+    background-color: palegoldenrod;
     
+    box-shadow: 0px 0px 8px grey;
 }
 
-ul {
-    text-decoration: none;
-    list-style: none;
-    color:black !important;
-}
-
-li.nav-item {
-    text-decoration:none !important;
-    color: black !important;
-    font-size:0.8rem;
-}
-
-.navbar-toggler {
-    border:none !important;
-}
-.navbar-toggler-icon {
+#logo {
     font-size:1rem;
 }
 
 
-/* SORT MENU */
+
+
+
+/*SORT MENU */
 .sort .navbar {
     box-shadow:none;
     background-color:whitesmoke;
+    width: 100%;
 }
 .sort li {
     font-size:0.6rem;
@@ -124,28 +112,6 @@ footer {
         height:400px;  
     }
 
-    h1 {
-        font-size:64px !important;
-        padding-top:100px;
-        color:white;
-        text-shadow: 2px 2px 20px orchid;
-    }
-    
-    /* TOP MENU */
-    ul {
-        background-color:whitesmoke;
-        text-decoration: none;
-        list-style: none;
-        box-shadow: 4px 4px 22px grey;
-    }
-
-    .collapse {
-        box-shadow: none !important;
-        margin:0 !important;
-        padding:0 10px 0 10px; 
-    }
-    
-    
     /* SORT MENU */
 
     .sort li {
