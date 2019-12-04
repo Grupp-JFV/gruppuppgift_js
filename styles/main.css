@@ -1,13 +1,7 @@
 /* Mobile phones breakpoint */
-
 html {
     font-size:16pt;
 }
-body {
-}
-main {
-}
-
 
 /* HEADER */
 header {
@@ -16,17 +10,14 @@ header {
 }
 
 /*NAVBAR*/
-
 #nav {
     background-color: palegoldenrod;
-    
     box-shadow: 0px 0px 8px grey;
 }
 
 #logo {
     font-size:1rem;
 }
-
 
 /*SORT MENU */
 .sort .navbar {
@@ -36,12 +27,12 @@ header {
 }
 .sort li {
     font-size:0.6rem;
+    list-style:none;
 }
 .sort h3 {
     font-size:0.7rem;
     text-transform: uppercase;
-    padding-bottom:4px;   
-    border-bottom:1px solid grey;
+    padding-top:10px;   
     cursor:pointer;
 }
 
@@ -58,42 +49,58 @@ div.card {
     width:80vw;
     border:none;
 }
-
 .card-img-top {
     margin-top:20px;
     height:20vh;
     object-fit: scale-down;
 }
-
-h5 {
-    font-size:1rem;
+.card-title{
+    width:100%;
+    font-size:0.8rem;
+    border-top:2px solid lightgrey; 
+    padding-top:20px;  
 }
 .card-text{
-    font-size:0.7rem;
-    border-top:2px solid palegoldenrod;
-    padding-top:5px;
+    font-size:1.5rem;
+    font-weight:bold;
+    align-self: baseline;
+    margin-right:5px;
 } 
-
-.card-body {
-    padding-bottom:none;
+.readmore_button {
+    font-size:0.7rem;
+    font-weight:500;
+    color:grey;
+    align-self: baseline;
+    text-transform: uppercase;
+    border:none;
 }
 
 /* Card buttons */
 .btn {
     font-size:0.7rem;
-    color:grey; 
+    color: grey; 
     background-color: palegoldenrod;
     border-radius:28px;
+    width:100px; 
 }
-
-.custom-select {
+.input-group input{
     font-size:0.7rem;
-    border-radius:20px;
-    margin-left: 8px;    
+    border-radius:8px;
+    text-align: center;
+    border:1px solid palegoldenrod; 
 }
 
+/* PRODUCT DESCRIPTION */
+.product_description {
+    display:none;
+    font-size:0.7rem;
+    text-align:left;
+    padding:20px;
+    border-top:2px solid lightgrey;
+    border-bottom:2px solid lightgrey;
+    margin-bottom:20px;
+}
 /* FOOTER */
-
 footer {
     background-color: palegoldenrod;
     font-size: 0.7rem;
@@ -108,12 +115,11 @@ footer {
     header {
         height:400px;  
     }
-
     /* SORT MENU */
-
     .sort li {
         font-size:0.7rem;
         width:30%;
+        list-style:none;
     }
     .sort h3 {
         font-size:0.7rem;
@@ -124,7 +130,6 @@ footer {
         margin-right:8px;
         margin-left:10px;
     }
-
     .categories {
         display:none;
         padding-bottom:5px;
@@ -135,42 +140,23 @@ footer {
         width:25vw;
         border:none;
     }
-    
     .card-img-top {
         margin-top:20px;
         height:20vh;
         object-fit: scale-down;
     }
-    
-    h5 {
-        font-size:1rem;
-    }
-    .card-text{
+    .readmore_button {
         font-size:0.7rem;
-        border-top:2px solid palegoldenrod;
-        padding-top:5px;
-    } 
-    
-    .card-body {
-        padding-bottom:none;
+        font-weight:500;
+        color:grey;
+        align-self: baseline;
+        text-transform: uppercase;
+        border:none;
     }
-
-    .product_description {
-       display:none;
-    }
-    
-    /* Card buttons */
-    .btn {
+    .input-group input{
         font-size:0.7rem;
-        color:grey; 
-        background-color: palegoldenrod;
-        border-radius:28px;
+        border-radius:8px;
+        text-align: center;
+        border:1px solid palegoldenrod; 
     }
     
-    .custom-select {
-        font-size:0.7rem;
-        border-radius:20px;
-        margin-left: 8px;    
-    }
-
-}

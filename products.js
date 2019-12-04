@@ -7,7 +7,7 @@ $(document).ready(function() {
     productList();
     
     //togglar läs mer-knappen
-    $(".btn").on("click",function() {
+    $(".readmore_button").on("click",function() {
         $(this).siblings(".product_description").toggle(); 
 
     }); 
@@ -57,22 +57,25 @@ function display(products) {
     $.each(products, function (i, product) {  // i???*
         console.log(i); 
         let responsiveColumn = $("<div>").addClass("col-12"+" "+"col-lg-4");
-        let productContainer = $("<div>").addClass("card"+" "+"container"+" "+"mb-4").appendTo(responsiveColumn);
+        let productContainer = $("<div>").addClass("card"+" "+"container"+" "+"mb-4"+" "+"text-center").appendTo(responsiveColumn);
         $("<img>").addClass("card-img-top").attr("src", product.image).attr("alt", "Ölflaska").appendTo(productContainer);
         let cardBody = $("<div>").addClass("card-body"+" "+"row"+" "+ "justify-content-center").appendTo(productContainer);
         $("<h5>").addClass("card-title").text(product.name).appendTo(cardBody);
         $("<p>").addClass("card-text").text(product.price+" "+"Kr").appendTo(cardBody);
 
+        //skapa en läs-mer-knapp         
+        $("<button>").addClass("readmore_button").attr("type", "button").append("Läs mer").appendTo(cardBody);
+        
+        //skapa en div för beskrivningen
+        let descriptionDiv = $("<div>").addClass("product_description").appendTo(cardBody);        
+        $(descriptionDiv).text(product.description).appendTo(descriptionDiv);
+
         //skapa en input-group + lägger in input-group i card-body  
         let input = $("<div>").addClass("input-group").appendTo(cardBody);
         $("<input>").attr("type", "number").appendTo(input).attr("placeholder", "Välj antal"); 
 
-        //skapa en läs-mer knapp         
-        $("<button>").addClass("btn").attr("type", "button").append("Läs mer").appendTo(productContainer);
-
-        //skapa en div för beskrivningen
-        let descriptionDiv = $("<div>").addClass("product_description").appendTo(productContainer);        
-        $("<p>").text(product.description).appendTo(descriptionDiv);
+        //skapa en köp-knapp         
+        $("<button>").addClass("btn").attr("type", "button").append("Köp").appendTo(input);
 
         $("#page").append(responsiveColumn);
     });
