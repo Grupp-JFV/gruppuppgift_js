@@ -22,35 +22,17 @@
     -->
 </head>
 <body>
-    <header>
-        <div>
-            <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                        <i class="fa fa-shopping-cart ml-2"></i>
-                </button>
-                <a href="#" class="navbar-brand">OPPIGÅRDS ÖL</a>
-                <ul class="collapse navbar-collapse text-center" id="navbarNavAltMarkup">
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link">Startsida</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link">Webbshop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link">Kontakt</a>
-                    </li>
-                    <li class="nav-item">
-                        <i class="fa fa-shopping-cart fa-lg"></i>
-                    </li>
-                </ul>
-            </nav>
+    <!--NAVBAR-->
+    <header class="container-fluid">
+        <div class="row justify-content-center sticky-top pt-2 pb-2 p-0" id="nav">
+            <span class="text-center col-5 col-md-4" id ="logo"><a href="index.html" class="text-dark">OPPIGÅRDS ÖL</a></span>
+            <span class="text-center col-3 col-md-4"><a href="products.html" class="text-dark">Webbshop</a></span>
+            <span class="text-center col-4 col-md-4"><a href="pages/shoppingbag.html" class="text-dark"><i class="fa fa-shopping-cart fa-lg"></i></a></span>
         </div>
-            
     </header>
-        <main class="container-fluid m-4">  
-            <div class="sort container">
-                <ul class="navbar text-center col-lg-12 row">
+
+        <main class="sort container-fluid p-0">  
+                <ul class="navbar text-center col-lg-12 row m-0">
 
                         <li class="sortcategories col">
                             <h3 class="sorthead">Ölsort<i class="fa fa-caret-down"></i> </h3>
@@ -76,168 +58,26 @@
                             </div>
                         </li>
                 </ul>
-            </div>
-            
             
             <div class="row justify-content-center" id="page">
-                <!--<div class="col-12 col-lg-4">
-                        
-                    <div class="card container mb-4">
-                        <img src="product_images/winterale.jpg" class="card-img-top" alt="">
-                        <div class="card-body row justify-content-center">
-                            <h5 class="card-title">Winter Ale</h5>
-                            <p class="card-text"></p>
-                            <div class="input-group">
-                                <button type="button" class="btn">Läs mer</button>
-                                <select class="custom-select" id="inputGroupSelect01">
-                                    <option selected>Välj antal</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="product_description">
-                            <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-4">
-                        <div class="card container mb-4">
-                                <img src="product_images/thurbodouble.jpg" class="card-img-top" alt="...">
-                                <div class="card-body row justify-content-center">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text"></p>
-                                  <div class="input-group">
-                                        
-                                        <select class="custom-select" id="inputGroupSelect01">
-                                            <option selected>Välj antal</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            <div class="test_section">
-                            <button type="button" class="btn">Läs mer</button>
-                            <div class="product_description">
-                                <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            </div>
-                        </div>
-                </div>
-    
-                    <div class="col-12 col-lg-4">
-                            <div class="card container mb-4">
-                                    <img src="product_images/singlehop.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body row justify-content-center">
-                                      <h5 class="card-title">Card title</h5>
-                                      <p class="card-text"></p>
-                                      <div class="input-group">
-                                            <select class="custom-select" id="inputGroupSelect01">
-                                                <option selected>Välj antal</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="test_section">
-                                            <button type="button" class="btn">Läs mer</button>
-                                            <div class="product_description">
-                                                <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                            </div>
-                                    </div>
-                            </div>
-                    
-                    </div>
-                    <div class="col-12 col-lg-4">
-                            <div class="card container mb-4">
-                                    <img src="product_images/hedemoraporter.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body row justify-content-center">
-                                      <h5 class="card-title">Card title</h5>
-                                      <p class="card-text"></p>
-                                      <div class="input-group">
-                                            <select class="custom-select" id="inputGroupSelect01">
-                                                <option selected>Välj antal</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                            </select>
-                                        </div>
-                            </div>
-                            <div class="test_section">
-                                    <button type="button" class="btn">Läs mer</button>
-                                    <div class="product_description">
-                                        <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    </div>
-                                    </div>
-                    </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                            <div class="card container mb-4">
-                                    <img src="product_images/everydayipa.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body row justify-content-center">
-                                      <h5 class="card-title">Card title</h5>
-                                      <p class="card-text"></p>
-                                      <div class="input-group">
-                                            <select class="custom-select" id="inputGroupSelect01">
-                                                <option selected>Välj antal</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="test_section">
-                                            <button type="button" class="btn">Läs mer</button>
-                                            <div class="product_description">
-                                                <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                            </div>
-                                            </div>
-                            </div>
-                    
-                    </div>
-                 
-                <div class="col-12 col-lg-4">
-                        <div class="card container mb-4">
-                                <img src="product_images/everydayipa.jpg" class="card-img-top" alt="...">
-                                <div class="card-body row justify-content-center">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text"></p>
-                                
-                                <div class="input-group">
-                                    <select class="custom-select" id="inputGroupSelect01">
-                                        <option selected>Välj antal</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                    </select>
-                                </div>   
-                        </div>
-                            <div class="product_description">
-                                <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                
-                        </div>
-                </div>
-            </div>-->
         </main>
 
         <footer>
-            <div class="row justify-content-center pt-2 pb-2">
-                <div class="col-12 col-lg-6 text-center">
-                    <div class="font-weight-bolder">Oppigårds Öl</div>
-                    <div><a href="phoneto:0771-101010" class="text-info">Ring</a> 
-                        eller <a href="mailto:oppigardsol@oppigard.se" class="text-info">maila</a> oss!</div>
-                    <div>Oppigårdsvägen 1</div>
-                    <div>12345 Oppigård</div>
-                </div>
-                <div class="col-12 col-lg-6 text-center">
-                    <div class="pt-3">
-                        <a href="http://www.facebook.com" class="text-dark"><i class="fab fa-facebook fa-2x"></i></a>
-                        <a href="http://www.instagram.com" class="text-dark"><i class="fab fa-instagram fa-2x"></i></a>
-                        <a href="http://www.twitter.com" class="text-dark"><i class="fab fa-twitter fa-2x"></i></a>
+            <div class="container-fluid">
+                <div class="row justify-content-center pt-2 pb-2">
+                    <div class="col-12 col-lg-6 text-center">
+                        <div class="font-weight-bolder">Oppigårds Öl</div>
+                        <div><a href="phoneto:0771-101010" class="text-info">Ring</a> 
+                            eller <a href="mailto:oppigardsol@oppigard.se" class="text-info">maila</a> oss!</div>
+                        <div>Oppigårdsvägen 1</div>
+                        <div>12345 Oppigård</div>
+                    </div>
+                    <div class="col-12 col-lg-6 text-center">
+                        <div class="pt-3">
+                            <a href="http://www.facebook.com" class="text-dark"><i class="fab fa-facebook fa-2x"></i></a>
+                            <a href="http://www.instagram.com" class="text-dark"><i class="fab fa-instagram fa-2x"></i></a>
+                            <a href="http://www.twitter.com" class="text-dark"><i class="fab fa-twitter fa-2x"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
