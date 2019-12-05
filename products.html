@@ -24,63 +24,85 @@
 <body>
     <!--NAVBAR-->
     <header class="container-fluid">
-        <div class="row justify-content-center sticky-top pt-2 pb-2 p-0" id="nav">
-            <span class="text-center col-5 col-md-4" id ="logo"><a href="index.html" class="text-dark">OPPIGÅRDS ÖL</a></span>
-            <span class="text-center col-3 col-md-4"><a href="products.html" class="text-dark">Webbshop</a></span>
-            <span class="text-center col-4 col-md-4"><a href="pages/shoppingbag.html" class="text-dark"><i class="fa fa-shopping-cart fa-lg"></i></a></span>
+        <div class="row sticky-top pt-2 pb-2 p-0" id="nav">
+            <div class="col-12 d-flex justify-content-between">
+                <span class="text-center" id ="logo"><a href="index.html" class="text-dark">OPPIGÅRDS</a></span>
+                <span class="text-center"><a href="products.html" class="text-dark">Webbshop</a></span>
+                <span class="text-center"><a href="pages/shoppingbag.html" class="text-dark"><i class="fa fa-shopping-cart fa-lg"></i></a></span>
+            </div>  
         </div>
     </header>
 
-        <main class="sort container-fluid p-0">  
-                <ul class="navbar text-center col-lg-12 row m-0">
+    <main class="sort container-fluid p-0">  
+        <ul class="navbar text-center row m-0">
+            <li class="sortcategories col-4">
+                <h3 class="sorthead">Ölsort<i class="fa fa-caret-down"></i> </h3>
+                <div class="categories text-left">
+                    <div class="w-100"><input type="checkbox">IPA</input></div>
+                    <div class="w-100"> <input type="checkbox">Lager</input></div>
+                    <div class="w-100"><input type="checkbox">Ale</input></div>
+                </div>
+            </li>
+            <li class="sortcategories col-4">
+                <h3 class="sorthead">Pris<i class="fa fa-caret-down"></i></h3>
+                <div class="categories text-left">
+                    <div class="w-100"><input type="checkbox">Högt till lågt</input></div>
+                    <div class=""><input type="checkbox">Lågt till högt</input></div>
+                </div>
+            </li>
+            <li class="sortcategories col-4">
+                <h3 class="sorthead">Styrka<i class="fa fa-caret-down"></i></h3>
+                <div class="categories text-left">
+                    <div class="w-100"><input type="checkbox">3,5%</input></div>
+                    <div class="w-100"><input type="checkbox"> 5,5%</input></div>
+                    <div class=""><input type="checkbox">Alkoholfritt</input></div>   
+                </div>
+            </li>
+        </ul>  
+        <div class="row m-0 justify-content-center" id="page">
+        </div>
+    </main>
 
-                        <li class="sortcategories col">
-                            <h3 class="sorthead">Ölsort<i class="fa fa-caret-down"></i> </h3>
-                            <div class="categories text-left">
-                                <div class="w-100"><input type="checkbox">IPA</input></div>
-                                <div class="w-100"> <input type="checkbox">Lager</input></div>
-                                <div class="w-100"><input type="checkbox">Ale</input></div>
-                            </div>
-                        </li>
-                        <li class="sortcategories col">
-                            <h3 class="sorthead">Pris<i class="fa fa-caret-down"></i></h3>
-                            <div class="categories text-left">
-                                <div class="w-100"><input type="checkbox">Högt till lågt</input></div>
-                                <div class=""><input type="checkbox">Lågt till högt</input></div>
-                            </div>
-                        </li>
-                        <li class="sortcategories col">
-                            <h3 class="sorthead">Styrka<i class="fa fa-caret-down"></i></h3>
-                            <div class="categories text-left">
-                                <div class="w-100"><input type="checkbox">3,5%</input></div>
-                                <div class="w-100"><input type="checkbox"> 5,5%</input></div>
-                                <div class=""><input type="checkbox">Alkoholfritt</input></div>   
-                            </div>
-                        </li>
-                </ul>
-            
-            <div class="row justify-content-center" id="page">
-        </main>
-
-        <footer>
-            <div class="container-fluid">
-                <div class="row justify-content-center pt-2 pb-2">
-                    <div class="col-12 col-lg-6 text-center">
-                        <div class="font-weight-bolder">Oppigårds Öl</div>
-                        <div><a href="phoneto:0771-101010" class="text-info">Ring</a> 
-                            eller <a href="mailto:oppigardsol@oppigard.se" class="text-info">maila</a> oss!</div>
-                        <div>Oppigårdsvägen 1</div>
-                        <div>12345 Oppigård</div>
+    <footer>
+        <div class="container-fluid">
+            <div class="row justify-content-center pt-2 pb-2">
+                <div class="col-12 col-lg-6 text-center">
+                    <div class="font-weight-bolder">
+                        Oppigårds Öl
                     </div>
-                    <div class="col-12 col-lg-6 text-center">
-                        <div class="pt-3">
-                            <a href="http://www.facebook.com" class="text-dark"><i class="fab fa-facebook fa-2x"></i></a>
-                            <a href="http://www.instagram.com" class="text-dark"><i class="fab fa-instagram fa-2x"></i></a>
-                            <a href="http://www.twitter.com" class="text-dark"><i class="fab fa-twitter fa-2x"></i></a>
-                        </div>
+                    <div>
+                        <a href="phoneto:0771-101010" class="text-info">
+                            Ring
+                        </a> 
+                        eller 
+                        <a href="mailto:oppigardsol@oppigard.se" class="text-info">
+                            maila
+                        </a>
+                        oss!
+                    </div>
+                    <div>
+                        Oppigårdsvägen 1
+                    </div>
+                    <div>
+                        12345 Oppigård
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 text-center">
+                    <div class="pt-3">
+                        <a href="http://www.facebook.com" class="text-dark">
+                            <i class="fab fa-facebook fa-2x"></i>
+                        </a>
+                        <a href="http://www.instagram.com" class="text-dark">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                        <a href="http://www.twitter.com" class="text-dark">
+                            <i class="fab fa-twitter fa-2x"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-        </footer>     
+        </div>
+    </footer>
+
 </body>
 </html>
