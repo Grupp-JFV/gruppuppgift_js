@@ -148,17 +148,18 @@ hr {
     border-radius:8px;
     text-align: center;
     border:1px solid palegoldenrod; 
-    width: 20%;
+    width: 25%;
 }
 .purchase-button {
     font-size:0.7rem;
     color: grey; 
     background-color: palegoldenrod;
     border-radius:28px;
-    width:100px; 
+    width:100px;
+    border: none; 
 }
 .purchase-button:hover {
-    background-color: rgba(238, 234, 190, 0.979);
+    background-color: rgba(238, 231, 200, 0.979);
 }
 
     
@@ -197,6 +198,9 @@ hr {
     .shoppingbag-main {
         text-align: center;
         font-size: 3vw;
+    }
+    .numberofpurchaseditems {
+        width: 20%;
     }
 }
 
@@ -246,6 +250,10 @@ hr {
     .shoppingbag-main {
         text-align: center;
         font-size: 1.5vw;
+    }
+
+    .numberofpurchaseditems {
+        width: 8%;
     }
 
 }
