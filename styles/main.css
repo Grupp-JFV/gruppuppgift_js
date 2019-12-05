@@ -1,34 +1,24 @@
 /* Mobile phones breakpoint */
-
 html {
     font-size:16pt;
 }
 
-body {
-}
-
-main {
-}
-
-
 /* HEADER */
 header {
-    height:60vh;
-    background-color:palegoldenrod;   
+    height:20vh;
+    background-color:grey;   
 }
 
 /*NAVBAR*/
-
 #nav {
-    background-color: palegoldenrod;
-    
+    background-color:white;
     box-shadow: 0px 0px 8px grey;
 }
 
 #logo {
     font-size:1rem;
+    font-weight:800;
 }
-
 
 /*SORT MENU */
 .sort .navbar {
@@ -38,17 +28,20 @@ header {
 }
 .sort li {
     font-size:0.6rem;
+    list-style:none;
 }
 .sort h3 {
     font-size:0.7rem;
     text-transform: uppercase;
-    padding-bottom:4px;   
-    border-bottom:1px solid grey;
+    padding-top:10px;   
     cursor:pointer;
 }
-
 .sort .categories {
     flex-wrap:nowrap ;
+}
+.categories {
+    display:none;
+    padding-bottom:5px;
 }
 
 .sort input {
@@ -60,47 +53,69 @@ div.card {
     width:80vw;
     border:none;
 }
-
 .card-img-top {
     margin-top:20px;
     height:20vh;
     object-fit: scale-down;
 }
-
-h5 {
-    font-size:1rem;
+.card-title{
+    width:100%;
+    font-size:0.8rem;
+    border-top:2px solid lightgrey; 
+    padding-top:20px;  
 }
 
 .card-text{
-    font-size:0.7rem;
-    border-top:2px solid palegoldenrod;
-    padding-top:5px;
+    font-size:1.5rem;
+    font-weight:bold;
+    align-self: baseline;
+    margin-right:5px;
 } 
-
-.card-body {
-    padding-bottom:none;
+.readmore_button {
+    font-size:0.7rem;
+    font-weight:500;
+    background-color:white;
+    color:grey;
+    align-self: baseline;
+    text-transform: uppercase;
+    border:none;
 }
 
 /* Card buttons */
 .btn {
     font-size:0.7rem;
-    color:grey; 
+    color: grey; 
     background-color: palegoldenrod;
     border-radius:28px;
+    width:100px; 
 }
-
-.custom-select {
+.input-group {
+    justify-content: center;
+}
+.input-group input{
     font-size:0.7rem;
-    border-radius:20px;
-    margin-left: 8px;    
+    border-radius:8px;
+    text-align: center;
+    border:1px solid palegoldenrod; 
 }
 
+/* PRODUCT DESCRIPTION */
+.product_description {
+    display:none;
+    font-size:0.7rem;
+    text-align:left;
+    padding:20px;
+    border-top:2px solid lightgrey;
+    border-bottom:2px solid lightgrey;
+    margin-bottom:20px;
+}
 /* FOOTER */
-
 footer {
-    background-color: palegoldenrod;
+    background-color:white;
     font-size: 0.7rem;
-    box-shadow: 4px 4px 22px grey;
+    border-top:1px solid grey;
+    /* box-shadow: 4px 4px 22px grey; */
+
 }
 
 
@@ -138,73 +153,68 @@ hr {
 /*Desktop */ 
 @media (min-width: 992px) {
     
+/* Padlet 768px */
+@media (min-width: 768px) {
     /* HEADER */
     header {
-        height:400px;  
-    }
-
-    /* SORT MENU */
-
-    .sort li {
-        font-size:0.7rem;
-        width:30%;
-    }
-    .sort h3 {
-        font-size:0.7rem;
-        text-transform: uppercase;
-    }
-    
-    .sort input {
-        margin-right:8px;
-        margin-left:10px;
-    }
-
-    .categories {
-        display:none;
-        padding-bottom:5px;
-    }
-    
+        height:30vh;  
+    }    
     /* CARD DECK */
     div.card {
-        width:25vw;
+        width:40vw;
         border:none;
     }
-    
     .card-img-top {
         margin-top:20px;
         height:20vh;
         object-fit: scale-down;
     }
-    
-    h5 {
-        font-size:1rem;
-    }
-    .card-text{
+    .input-group input{
         font-size:0.7rem;
-        border-top:2px solid palegoldenrod;
-        padding-top:5px;
-    } 
-    
-    .card-body {
-        padding-bottom:none;
+        border-radius:8px;
+        text-align: center;
+        border:1px solid palegoldenrod; 
+        width:50%;
     }
+    .input-group .btn{
+        width:30%;
+    }
+}
 
-    .product_description {
-       display:none;
-    }
-    
-    /* Card buttons */
-    .btn {
+/*Desktop */ 
+@media (min-width: 992px) {
+    /* SORT MENU */
+    .sort li {
         font-size:0.7rem;
-        color:grey; 
-        background-color: palegoldenrod;
-        border-radius:28px;
+        width:30%;
     }
-    
-    .custom-select {
+    .sort input {
+        margin-right:8px;
+        margin-left:10px;
+    }  
+    /* CARD DECK */
+    div.card {
+        width:25vw;
+        border:none;
+    }
+    .card-img-top {
+        margin-top:20px;
+        height:20vh;
+        object-fit: scale-down;
+    }
+    .readmore_button {
         font-size:0.7rem;
-        border-radius:20px;
-        margin-left: 8px;    
+        font-weight:500;
+        color:grey;
+        align-self: baseline;
+        text-transform: uppercase;
+        border:none;
+    }
+    .input-group input{
+        font-size:0.7rem;
+        border-radius:8px;
+        text-align: center;
+        border:1px solid palegoldenrod; 
     }
     
     /*Shopping bag*/
