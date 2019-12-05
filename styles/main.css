@@ -88,6 +88,9 @@ div.card {
     border-radius:28px;
     width:100px; 
 }
+.input-group {
+    justify-content: center;
+}
 .input-group input{
     font-size:0.7rem;
     border-radius:8px;
