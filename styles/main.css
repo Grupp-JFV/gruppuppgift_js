@@ -3,8 +3,10 @@
 html {
     font-size:16pt;
 }
+
 body {
 }
+
 main {
 }
 
@@ -68,6 +70,7 @@ div.card {
 h5 {
     font-size:1rem;
 }
+
 .card-text{
     font-size:0.7rem;
     border-top:2px solid palegoldenrod;
@@ -99,6 +102,37 @@ footer {
     font-size: 0.7rem;
     box-shadow: 4px 4px 22px grey;
 }
+
+
+/*SHOPPING BAG*/
+
+.shoppingbag-header{
+    font-size: 4vw;
+}
+
+.shoppingbag-main {
+    text-align: center;
+    font-size: 3vw;
+}
+.purchaseditem-image {
+    width: 25%;
+}
+hr {
+    width: 75%;
+}
+
+.purchase-button {
+    width: 30%;
+    font-size: 0.8rem;
+    color: grey; 
+    background-color: palegoldenrod;
+    border-radius:28px;
+}
+
+.purchase-button:hover {
+    background-color: rgba(238, 234, 190, 0.979);
+}
+
 
 
 /*Desktop */ 
@@ -171,6 +205,17 @@ footer {
         font-size:0.7rem;
         border-radius:20px;
         margin-left: 8px;    
+    }
+    
+    /*Shopping bag*/
+
+    .shoppingbag-header{
+        font-size: 2.5vw;
+    }
+
+    .shoppingbag-main {
+        text-align: center;
+        font-size: 1.5vw;
     }
 
 }
