@@ -5,18 +5,19 @@ html {
 
 /* HEADER */
 header {
-    height:60vh;
-    background-color:palegoldenrod;   
+    height:20vh;
+    background-color:grey;   
 }
 
 /*NAVBAR*/
 #nav {
-    background-color: palegoldenrod;
+    background-color:white;
     box-shadow: 0px 0px 8px grey;
 }
 
 #logo {
     font-size:1rem;
+    font-weight:800;
 }
 
 /*SORT MENU */
@@ -35,9 +36,12 @@ header {
     padding-top:10px;   
     cursor:pointer;
 }
-
 .sort .categories {
     flex-wrap:nowrap ;
+}
+.categories {
+    display:none;
+    padding-bottom:5px;
 }
 
 .sort input {
@@ -69,6 +73,7 @@ div.card {
 .readmore_button {
     font-size:0.7rem;
     font-weight:500;
+    background-color:white;
     color:grey;
     align-self: baseline;
     text-transform: uppercase;
@@ -102,39 +107,53 @@ div.card {
 }
 /* FOOTER */
 footer {
-    background-color: palegoldenrod;
+    background-color:white;
     font-size: 0.7rem;
-    box-shadow: 4px 4px 22px grey;
+    border-top:1px solid grey;
+    /* box-shadow: 4px 4px 22px grey; */
+
 }
 
 
-/*Desktop */ 
-@media (min-width: 992px) {
-    
+/* Padlet 768px */
+@media (min-width: 768px) {
     /* HEADER */
     header {
-        height:400px;  
+        height:30vh;  
+    }    
+    /* CARD DECK */
+    div.card {
+        width:40vw;
+        border:none;
     }
+    .card-img-top {
+        margin-top:20px;
+        height:20vh;
+        object-fit: scale-down;
+    }
+    .input-group input{
+        font-size:0.7rem;
+        border-radius:8px;
+        text-align: center;
+        border:1px solid palegoldenrod; 
+        width:50%;
+    }
+    .input-group .btn{
+        width:30%;
+    }
+}
+
+/*Desktop */ 
+@media (min-width: 992px) {
     /* SORT MENU */
     .sort li {
         font-size:0.7rem;
         width:30%;
-        list-style:none;
     }
-    .sort h3 {
-        font-size:0.7rem;
-        text-transform: uppercase;
-    }
-    
     .sort input {
         margin-right:8px;
         margin-left:10px;
-    }
-    .categories {
-        display:none;
-        padding-bottom:5px;
-    }
-    
+    }  
     /* CARD DECK */
     div.card {
         width:25vw;
@@ -159,4 +178,4 @@ footer {
         text-align: center;
         border:1px solid palegoldenrod; 
     }
-    
+}
