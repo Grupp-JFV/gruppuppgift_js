@@ -12,9 +12,9 @@ $(document).ready(function() {
 
     }); 
 
-});
+}); //stänger window 
     
-
+//skapar en lista med existerande produkter 
 function productList() {
     
     let product1 = new Product("Oppigårds Golden Ale", "./product_images/golden.jpg", "Ljus lager", 4.8,
@@ -42,6 +42,7 @@ function productList() {
     // toLocalStorage(products);  //(!!! funkar men fyller ingen funktion just nu !!!)
 }
 
+//skapar en objektsklass för produkterna 
 function Product(name, image, type, strength, description, price, selected) {                         //Product Constructor
 
     this.name = name;
@@ -53,6 +54,7 @@ function Product(name, image, type, strength, description, price, selected) {   
     this.selected = selected;
 }
 
+//funktion som loopar igenom produkterna och skriver ut dem i products.html 
 function display(products) {
 
     $.each(products, function (i, product) {  // i???*
@@ -82,11 +84,14 @@ function display(products) {
     });
 }
 
+//sparar produkterna som finns i listan 
 function toLocalStorage(products) {
 
     localStorage.setItem("CurrentProductList", JSON.stringify(products));
 
 }
-              
+    
+
+//lyssnar efter tryck på "köp"-knappen, testar att göra detta i separat fil 
 
 
