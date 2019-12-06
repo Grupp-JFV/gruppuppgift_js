@@ -5,14 +5,20 @@ html {
 
 /* HEADER */
 header {
-    height:20vh;
+    /*height:20vh;*/
     background-color:grey;   
+}
+
+.header_img {
+    object-fit: cover;
+    height:10vh;
 }
 
 /*NAVBAR*/
 #nav {
     background-color:white;
-    box-shadow: 0px 0px 8px grey;
+    border-bottom: 1px solid black;
+    box-shadow: 0px 0px 4px black;
 }
 
 #logo {
@@ -22,10 +28,17 @@ header {
 
 /*SORT MENU */
 .sort .navbar {
-    box-shadow:none;
+    box-shadow: 0px 0px 4px black;
+    border-top: 1px solid black;
     background-color:whitesmoke;
     width: 100%;
 }
+
+/*.sort ul {
+    position: sticky;
+    top: 0;
+}*/
+
 .sort li {
     font-size:0.6rem;
     list-style:none;
@@ -87,7 +100,7 @@ div.card {
     color: grey; 
     background-color: palegoldenrod;
     border-radius:28px;
-    width:100px; 
+    width:100px;
 }
 .input-group {
     justify-content: center;
@@ -96,7 +109,7 @@ div.card {
     font-size:0.7rem;
     border-radius:8px;
     text-align: center;
-    border:1px solid palegoldenrod; 
+    border:1px solid palegoldenrod;
 }
 
 /* PRODUCT DESCRIPTION */
@@ -149,15 +162,11 @@ hr {
 }
 
 
-
-/*Desktop */ 
-@media (min-width: 992px) {
-    
 /* Padlet 768px */
 @media (min-width: 768px) {
     /* HEADER */
     header {
-        height:30vh;  
+        /*height:30vh;*/
     }    
     /* CARD DECK */
     div.card {
@@ -184,6 +193,9 @@ hr {
 /*Desktop */ 
 @media (min-width: 992px) {
     /* SORT MENU */
+    .header_img {
+        height:24vh;
+    }
     .sort li {
         font-size:0.7rem;
         width:30%;

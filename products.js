@@ -8,7 +8,7 @@ $(document).ready(function() {
     
     //togglar läs mer-knappen
     $(".readmore_button").on("click",function() {
-        $(this).siblings(".product_description").toggle(); 
+        $(this).siblings(".product_description").toggle();
 
     }); 
 

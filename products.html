@@ -24,16 +24,27 @@
 <body>
     <!--NAVBAR-->
     <header class="container-fluid">
-        <div class="row sticky-top justify-content-center pt-2 pb-2 p-0" id="nav">     
-            <span class="text-center col-5 col-lg-4" id ="logo"><a href="index.html" class="text-dark">OPPIGÅRDS</a></span>
-            <span class="text-right text-lg-center col-4"><a href="products.html" class="text-dark">Webbshop</a></span>
-            <span class="text-right text-lg-center col-3 col-lg-4"><a href="pages/shoppingbag.html" class="text-dark"><i class="fa fa-shopping-cart fa-lg"></i></a></span>
+        <div class="row sticky-top justify-content-center" id="nav">     
+            <span class="text-left col-5 col-lg-4 pt-2 pb-2" id ="logo">
+                <a href="index.html" class="text-dark ml-2">OPPIGÅRDS</a>
+            </span>
+            <span class="text-center col-5 col-lg-4 pt-2 pb-2">
+                <a href="products.html" class="text-dark">Produkter</a>
+            </span>
+            <span class="text-right col-2 col-lg-4 pt-2 pb-2">
+                <a href="pages/shoppingbag.html" class="text-dark mr-2"><i class="fa fa-shopping-cart"></i></a>
+            </span>
+        </div>
+        <div class="row">
+            <div class="col-12 p-0">
+                <img class="w-100 header_img" src="product_images/dalalven.jpg" alt="Dalalven">
+            </div>
         </div>
     </header>
 
     <main class="sort container-fluid p-0">  
         <ul class="navbar text-center row m-0">
-            <li class="sortcategories col-4">
+            <li class="sortcategories col">
                 <h3 class="sorthead">Ölsort<i class="fa fa-caret-down"></i> </h3>
                 <div class="categories text-left">
                     <div class="w-100"><input type="checkbox">IPA</input></div>
@@ -41,14 +52,14 @@
                     <div class="w-100"><input type="checkbox">Ale</input></div>
                 </div>
             </li>
-            <li class="sortcategories col-4">
+            <li class="sortcategories col">
                 <h3 class="sorthead">Pris<i class="fa fa-caret-down"></i></h3>
                 <div class="categories text-left">
                     <div class="w-100"><input type="checkbox">Högt till lågt</input></div>
                     <div class=""><input type="checkbox">Lågt till högt</input></div>
                 </div>
             </li>
-            <li class="sortcategories col-4">
+            <li class="sortcategories col  ">
                 <h3 class="sorthead">Styrka<i class="fa fa-caret-down"></i></h3>
                 <div class="categories text-left">
                     <div class="w-100"><input type="checkbox">3,5%</input></div>
@@ -57,7 +68,7 @@
                 </div>
             </li>
         </ul>  
-        <div class="row m-0 justify-content-center" id="page">
+        <div class="row mr-0 ml-0" id="page">
         </div>
     </main>
 
