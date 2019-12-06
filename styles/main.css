@@ -114,7 +114,6 @@ footer {
     font-size: 0.7rem;
     border-top:1px solid grey;
 }
-
 .footer-logo {
     font-size: 0.8rem;
     font-weight: 800;
@@ -132,11 +131,14 @@ footer {
 /*SHOPPING BAG*/
 
 .shoppingbag-header{
-    font-size: 5vw;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: palegoldenrod;
 }
 .shoppingbag-main {
     text-align: center;
-    font-size: 4vw;
+    font-size: 1rem;
+    padding-top: 20px;
 }
 .purchaseditem-image {
     width: 25%;
@@ -193,11 +195,11 @@ hr {
     /* SHOPPIBG-BAG */
 
     .shoppingbag-header{
-        font-size: 3vw;
+        font-size: 1.2rem;
     }
     .shoppingbag-main {
         text-align: center;
-        font-size: 3vw;
+        font-size: 1.2;
     }
     .numberofpurchaseditems {
         width: 20%;
@@ -244,12 +246,8 @@ hr {
     
     /*Shopping bag*/
 
-    .shoppingbag-header{
-        font-size: 2.5vw;
-    }
     .shoppingbag-main {
         text-align: center;
-        font-size: 1.5vw;
     }
 
     .numberofpurchaseditems {
