@@ -140,13 +140,13 @@ footer {
     font-size: 1rem;
     padding-top: 20px;
 }
-.purchaseditem-image {
-    width: 25%;
+.purchaseditem-image{
+    width: 50%;
 }
 hr {
     width: 75%;
 }
-.numberofpurchaseditems {
+.numberofpurchaseditems{
     border-radius:8px;
     text-align: center;
     border:1px solid palegoldenrod; 
@@ -201,6 +201,9 @@ hr {
         text-align: center;
         font-size: 1.2;
     }
+    .purchaseditem-image{
+        width: 30%;
+    }
     .numberofpurchaseditems {
         width: 20%;
     }
@@ -249,9 +252,11 @@ hr {
     .shoppingbag-main {
         text-align: center;
     }
-
     .numberofpurchaseditems {
         width: 8%;
+    }
+    .purchaseditem-image{
+        width: 25%;
     }
 
 }
