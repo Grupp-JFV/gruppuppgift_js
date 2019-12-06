@@ -43,7 +43,6 @@ header {
     display:none;
     padding-bottom:5px;
 }
-
 .sort input {
     margin-right:5px;
 }
@@ -114,20 +113,30 @@ footer {
     background-color:white;
     font-size: 0.7rem;
     border-top:1px solid grey;
-    /* box-shadow: 4px 4px 22px grey; */
+}
 
+.footer-logo {
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+.footer-phone, .footer-email {
+    color: grey;
+    text-decoration: underline;
+}
+.footer-phone:hover, .footer-email:hover {
+    text-decoration: none;
+    color: black;
 }
 
 
 /*SHOPPING BAG*/
 
 .shoppingbag-header{
-    font-size: 4vw;
+    font-size: 5vw;
 }
-
 .shoppingbag-main {
     text-align: center;
-    font-size: 3vw;
+    font-size: 4vw;
 }
 .purchaseditem-image {
     width: 25%;
@@ -135,20 +144,25 @@ footer {
 hr {
     width: 75%;
 }
-
+.numberofpurchaseditems {
+    border-radius:8px;
+    text-align: center;
+    border:1px solid palegoldenrod; 
+    width: 25%;
+}
 .purchase-button {
-    width: 30%;
-    font-size: 0.8rem;
+    font-size:0.7rem;
     color: grey; 
     background-color: palegoldenrod;
     border-radius:28px;
+    width:100px;
+    border: none; 
 }
-
 .purchase-button:hover {
-    background-color: rgba(238, 234, 190, 0.979);
+    background-color: rgba(238, 231, 200, 0.979);
 }
 
-
+    
 /* Padlet 768px */
 @media (min-width: 768px) {
     /* HEADER */
@@ -175,10 +189,25 @@ hr {
     .input-group .btn{
         width:30%;
     }
+
+    /* SHOPPIBG-BAG */
+
+    .shoppingbag-header{
+        font-size: 3vw;
+    }
+    .shoppingbag-main {
+        text-align: center;
+        font-size: 3vw;
+    }
+    .numberofpurchaseditems {
+        width: 20%;
+    }
 }
+
 
 /*Desktop */ 
 @media (min-width: 992px) {
+
     /* SORT MENU */
     .sort li {
         font-size:0.7rem;
@@ -218,10 +247,13 @@ hr {
     .shoppingbag-header{
         font-size: 2.5vw;
     }
-
     .shoppingbag-main {
         text-align: center;
         font-size: 1.5vw;
+    }
+
+    .numberofpurchaseditems {
+        width: 8%;
     }
 
 }
