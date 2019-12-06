@@ -149,10 +149,6 @@ hr {
 }
 
 
-
-/*Desktop */ 
-@media (min-width: 992px) {
-    
 /* Padlet 768px */
 @media (min-width: 768px) {
     /* HEADER */
