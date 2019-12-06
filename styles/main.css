@@ -21,9 +21,14 @@ header {
     box-shadow: 0px 0px 4px black;
 }
 
-#logo {
+#logo a {
     font-size:1rem;
     font-weight:800;
+    color:darkred; 
+}
+
+#shoppingcartlogo {
+    color:darkred;
 }
 
 /*SORT MENU */
@@ -91,8 +96,8 @@ div.card {
 /* Card buttons */
 .btn {
     font-size:0.7rem;
-    color: grey; 
-    background-color: palegoldenrod;
+    color:whitesmoke; 
+    background-color: darkred;
     border-radius:28px;
     width:100px;
 }
@@ -103,7 +108,7 @@ div.card {
     font-size:0.7rem;
     border-radius:8px;
     text-align: center;
-    border:1px solid palegoldenrod;
+    border:1px solid darkred !important;
 }
 
 /* PRODUCT DESCRIPTION */
@@ -141,7 +146,7 @@ footer {
 .shoppingbag-header{
     font-size: 1.5rem;
     font-weight: 800;
-    color: palegoldenrod;
+    color: darkred; 
 }
 .shoppingbag-main {
     text-align: center;
@@ -157,13 +162,13 @@ hr {
 .numberofpurchaseditems{
     border-radius:8px;
     text-align: center;
-    border:1px solid palegoldenrod; 
+    border:1px solid darkred;  
     width: 25%;
 }
 .purchase-button {
     font-size:0.7rem;
-    color: grey; 
-    background-color: palegoldenrod;
+    color:whitesmoke; 
+    background-color: darkred;
     border-radius:28px;
     width:100px;
     border: none; 
@@ -192,7 +197,6 @@ hr {
         font-size:0.7rem;
         border-radius:8px;
         text-align: center;
-        border:1px solid palegoldenrod; 
         width:50%;
     }
     .input-group .btn{
@@ -254,7 +258,6 @@ hr {
         font-size:0.7rem;
         border-radius:8px;
         text-align: center;
-        border:1px solid palegoldenrod; 
     }
     
     /*Shopping bag*/
