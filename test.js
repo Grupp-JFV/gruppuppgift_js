@@ -1,14 +1,14 @@
 $(document).ready(function() {
     //togglar filterfunktionen mellan hide/show 
-        $(".sorthead").on("click", function() {
-            $(".categories").toggle();
+        $("#sortheadline").on("click", function() {
+            $(".sortcategories").slideToggle(300);
         }); 
     
         productList();
         
         //togglar läs mer-knappen
         $(".readmore_button").on("click",function() {
-            $(this).siblings(".product_description").toggle(); 
+            $(this).siblings(".product_description").slideToggle(300); 
     
         });
         
@@ -17,10 +17,12 @@ $(document).ready(function() {
             buy(); 
         }); 
 
+        /*
         //lyssnar efter varukorgen och hämtar info från local storage 
         $(".fa fa-shopping-cart").on("click", function() {
             fromLocalStorage(); 
         }); 
+        */
     
     }); //stänger window 
         
@@ -49,7 +51,6 @@ $(document).ready(function() {
         let products = [product1, product2, product3, product4, product5, product6];
     
         display(products);
-        // toLocalStorage(products);  //(!!! funkar men fyller ingen funktion just nu !!!)
     }
     
     //skapar en objektsklass för produkterna 
@@ -89,41 +90,60 @@ $(document).ready(function() {
     
             //skapa en köp-knapp         
             $("<button>").addClass("btn").attr("type", "button").append("Köp").appendTo(input);
-    
+
             $("#page").append(responsiveColumn);
         });
+
+        let hello = $(product.image).data(); 
+        console.log(hello); 
     }
     
     //funktionen som är kopplad till köpknappen 
     function buy() {
+        //hämtar värder från input-fältet till en variabel, detta ska vara värdet på selected 
         let input = $(".input-group input").val();
-        
-        //hämtar varukorgen och skapar en tom lista 
-        let shoppingcart = $(".fa fa-shopping-cart"); 
-        shoppingcart = [];
+        console.log(input); 
 
-        //kontrollerar om man skrivit in något värde 
-        //antingen så som det står nu eller också kör vi input === 0 
 
-        if ($(input).val() < 1) {
-            console.log("empty"); 
-        } else {
-            //hittar värdet på positionen och lägger in objektet i listan 
-            $.each(products, function (i, product) {
-            //pushar in värdet i shoppingcart 
-            shoppingcart.push(products[i] + input); 
-            //tom lista skrivs ut 
-            console.log(shoppingcart); 
-            //tömmer input-fältet 
-            
-            //sparar produkterna som ska köpas till till local storage 
-            localStorage.setItem("CurrentProductList", JSON.stringify(shoppingcart));
+
+        $("button").click(function() {
+            ("p").each(function( index, element) {
+                $(element).css("backgroundColor", "yellow"); 
+
+                //To access a jQuery object instead of the regular DOM element, use $( this ).
+                if ($ ( this ).is(".btn") ) {
+                    //to be executed 
+                } 
+
+            });
         }); 
-        }
-    }
 
-    //när man klickar på varukorgen så hämntas listan från local-storage 
-    function fromLocalStorage() {
-        JSON.parse(localStorage.getItem("CurrentProductList"));
-       
-    }
+
+        //inputval ska vara värdet som ges till selected. hur gör vi detta? hur binder vi ihop dem? 
+
+        //.data(obj) = ett objekt m key/value pairs of data to update
+
+
+
+
+
+
+
+        //hämtar varukorgen och skapar en tom lista 
+        let shoppingcart = $(".fa fa-shopping-cart");     
+        shoppingcart = [];  
+ 
+        //pushar in värdet till shoppingcart
+        shoppingcart.push(input);
+
+            console.log(shoppingcart); 
+            //tömmer input-fältet
+            input = "";  
+    
+        }
+    //Objekten heter Product, så det borde gå att hänta dessa på något sätt. Så slipper man hämta hela. 
+
+
+    /*om man använder each() functionen kan man gå igenom listan med objekt, och leta efter de 
+    som matchar att selected har fått ett nytt värde. dessa läggs sedan till i listan som sparas i local storage. 
+    */ 
