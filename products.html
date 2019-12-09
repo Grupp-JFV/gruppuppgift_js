@@ -15,7 +15,7 @@
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <!-- <script type="text/javascript" src="products.js"></script> -->
-    <script type="text/javascript" src="test.js"></script>
+    <script type="text/javascript" src="products.js"></script>
 </head>
 <body>
     <!--NAVBAR-->
@@ -38,26 +38,29 @@
         </div>
     </header>
 
+    <!-- MAIN CONTENT -->
     <main class="sort container-fluid p-0">  
         <ul class="navbar sticky-top text-center row m-0">
-            <li class="sortcategories col">
-                <h3 class="sorthead">Ölsort<i class="fa fa-caret-down"></i> </h3>
-                <div class="categories text-left">
+            <h3 class="col-12 text-center" id="sortheadline">Filtrera produkter<i class="fa fa-caret-down"></i></h2>
+            
+                <li class="sortcategories col-4">
+                <h3 class="sorthead">Ölsort </h3>
+                <div class="categories">
                     <div class="w-100"><input type="checkbox">IPA</input></div>
                     <div class="w-100"> <input type="checkbox">Lager</input></div>
                     <div class="w-100"><input type="checkbox">Ale</input></div>
                 </div>
             </li>
-            <li class="sortcategories col">
-                <h3 class="sorthead">Pris<i class="fa fa-caret-down"></i></h3>
-                <div class="categories text-left">
+            <li class="sortcategories col-4">
+                <h3 class="sorthead">Pris</h3>
+                <div class="categories">
                     <div class="w-100"><input type="checkbox">Högt till lågt</input></div>
                     <div class=""><input type="checkbox">Lågt till högt</input></div>
                 </div>
             </li>
-            <li class="sortcategories col  ">
-                <h3 class="sorthead">Styrka<i class="fa fa-caret-down"></i></h3>
-                <div class="categories text-left">
+            <li class="sortcategories col-4">
+                <h3 class="sorthead">Styrka</h3>
+                <div class="categories">
                     <div class="w-100"><input type="checkbox">3,5%</input></div>
                     <div class="w-100"><input type="checkbox"> 5,5%</input></div>
                     <div class=""><input type="checkbox">Alkoholfritt</input></div>   

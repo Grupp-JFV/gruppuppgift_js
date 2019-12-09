@@ -103,10 +103,11 @@ $(document).ready(function() {
         shoppingcart = [];
 
         //kontrollerar om man skrivit in något värde 
-        if (input == 0) {
+        //antingen så som det står nu eller också kör vi input === 0 
+
+        if ($(input).val() < 1) {
             console.log("empty"); 
         } else {
-
             //hittar värdet på positionen och lägger in objektet i listan 
             $.each(products, function (i, product) {
             //pushar in värdet i shoppingcart 

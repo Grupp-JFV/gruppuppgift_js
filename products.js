@@ -1,14 +1,15 @@
 $(document).ready(function() {
 //togglar filterfunktionen mellan hide/show 
-    $(".sorthead").on("click", function() {
-        $(".categories").toggle();
+    $("#sortheadline").on("click", function() {
+        $(".sortcategories").slideToggle(300);
     }); 
 
     productList();
     
     //togglar läs mer-knappen
     $(".readmore_button").on("click",function() {
-        $(this).siblings(".product_description").toggle();
+        $(this).siblings(".product_description").slideToggle(300);
+        console.log(display); 
 
     }); 
 
