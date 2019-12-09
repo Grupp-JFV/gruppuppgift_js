@@ -1,0 +1,247 @@
+/* Mobile phones breakpoint */
+html {
+    font-size:16pt;
+}
+
+/* HEADER */
+header {
+    /*height:20vh;*/
+    background-color:grey;   
+}
+
+.header_img {
+    object-fit: cover;
+    height:90vh;
+}
+
+/*NAVBAR*/
+#nav {
+    background-color:white;
+    border-bottom: 1px solid black;
+    box-shadow: 0px 0px 4px black;
+}
+#logo a {
+    font-size:1rem;
+    font-weight:800;
+    color:darkred; 
+}
+#shoppingcartlogo {
+    color:darkred;
+}
+
+/* CARD DECK */
+div.card {
+    width:80vw;
+    border:none;
+}
+.card-img-top {
+    margin-top:20px;
+    height:20vh;
+    object-fit: scale-down;
+}
+.card-title{
+    width:100%;
+    font-size:0.8rem;
+    border-top:2px solid lightgrey; 
+    padding-top:20px;  
+}
+
+.card-text{
+    font-size:1.5rem;
+    font-weight:bold;
+    align-self: baseline;
+    margin-right:5px;
+} 
+.readmore_button {
+    font-size:0.7rem;
+    font-weight:500;
+    background-color:white;
+    color:grey;
+    align-self: baseline;
+    text-transform: uppercase;
+    border:none;
+}
+
+/* Card buttons */
+.btn {
+    font-size:0.7rem;
+    color:whitesmoke; 
+    background-color: darkred;
+    border-radius:28px;
+    width:100px;
+}
+.input-group {
+    justify-content: center;
+}
+.input-group input{
+    font-size:0.7rem;
+    border-radius:8px;
+    text-align: center;
+    border:1px solid darkred !important;
+}
+
+/* PRODUCT DESCRIPTION */
+.product_description {
+    display:none;
+    font-size:0.7rem;
+    text-align:left;
+    padding:20px;
+    border-top:2px solid lightgrey;
+    border-bottom:2px solid lightgrey;
+    margin-bottom:20px;
+}
+/* FOOTER */
+footer {
+    background-color:white;
+    font-size: 0.7rem;
+    border-top:1px solid grey;
+}
+.footer-logo {
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+.footer-phone, .footer-email {
+    color: grey;
+    text-decoration: underline;
+}
+.footer-phone:hover, .footer-email:hover {
+    text-decoration: none;
+    color: black;
+}
+
+
+/*SHOPPING BAG*/
+
+.shoppingbag-header{
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: darkred; 
+}
+.shoppingbag-main {
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 20px;
+}
+.purchaseditem-image{
+    width: 50%;
+}
+hr {
+    width: 75%;
+}
+.numberofpurchaseditems{
+    border-radius:8px;
+    text-align: center;
+    border:1px solid darkred;  
+    width: 25%;
+}
+.purchase-button {
+    font-size:0.7rem;
+    color:whitesmoke; 
+    background-color: darkred;
+    border-radius:28px;
+    width:100px;
+    border: none; 
+}
+.purchase-button:hover {
+    background-color: rgba(238, 231, 200, 0.979);
+}
+
+/* Padlet 768px */
+@media (min-width: 768px) {
+    /* HEADER */
+    header {
+        /*height:30vh;*/
+    }    
+    /* CARD DECK */
+    div.card {
+        width:40vw;
+        border:none;
+    }
+    .card-img-top {
+        margin-top:20px;
+        height:20vh;
+        object-fit: scale-down;
+    }
+    .input-group input{
+        font-size:0.7rem;
+        border-radius:8px;
+        text-align: center;
+        width:50%;
+    }
+    .input-group .btn{
+        width:30%;
+    }
+
+    /* SHOPPIBG-BAG */
+
+    .shoppingbag-header{
+        font-size: 1.2rem;
+    }
+    .shoppingbag-main {
+        text-align: center;
+        font-size: 1.2;
+    }
+    .purchaseditem-image{
+        width: 30%;
+    }
+    .numberofpurchaseditems {
+        width: 20%;
+    }
+}
+
+
+/*Desktop */ 
+@media (min-width: 992px) {
+
+    /* SORT MENU */
+    .header_img {
+        height:90vh;
+    } 
+
+    /* Intro styling */
+   .introheadline {
+       font-size:;
+       font-weight:800;
+       color:darkred;
+       text-transform: uppercase;
+       border-bottom:1px solid grey;
+   }
+    .introtext {
+    font-size:0.8rem;
+   }
+
+   .introtext img {
+       object-fit: scale;
+   }
+
+    .findproduct {
+        font-size:0.7rem;
+        font-weight:500;
+        color:grey;
+        align-self: baseline;
+        text-transform: uppercase;
+        border:none;
+    }
+
+    .infoheadline {
+        font-size:1rem;
+        font-weight:800;
+        color:darkred;
+        text-transform: uppercase;
+        border-bottom:1px solid grey;
+    }
+
+    
+    /*Shopping bag*/
+
+    .shoppingbag-main {
+        text-align: center;
+    }
+    .numberofpurchaseditems {
+        width: 8%;
+    }
+    .purchaseditem-image{
+        width: 25%;
+    }
+
+}

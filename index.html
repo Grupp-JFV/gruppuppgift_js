@@ -1,12 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <title>OPPIGÅRDS ÖL</title>
+        <!-- BOOTSTRAP CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- CSS  -->
+        <link rel="stylesheet" href="styles/startpage.css"> 
+         <!-- FONT-AWESOME -->
+         <script src="https://kit.fontawesome.com/55cb2a86bc.js" crossorigin="anonymous"></script>
+        <!-- JQUERY -->
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
 </head>
 <body>
-    <span>Hello</span>
-</body>
+    <!--NAVBAR-->
+    <header class="container-fluid">
+            <div class="row sticky-top justify-content-center" id="nav">     
+                <span class="text-left col-5 col-md-4 pt-2 pb-2" id ="logo">
+                    <a href="index.html" class="ml-2">OPPIGÅRDS</a>
+                </span>
+                <span class="text-center col-5 col-md-4 pt-2 pb-2">
+                    <a href="products.html" class="text-dark">Produkter</a>
+                </span>
+                <span class="text-right col-2 col-md-4 pt-2 pb-2">
+                    <a href="pages/shoppingbag.html" class="mr-2"><i class="fa fa-shopping-cart" id="shoppingcartlogo"></i></a>
+                </span>
+            </div>
+            <div class="row">
+                <div class="col-12 p-0">
+                    <img class="w-100 header_img" src="product_images/dalalven.jpg" alt="Dalalven">
+                </div>
+            </div>
+        </header>
+    
+        <!-- MAIN CONTENT -->
+        <main class="sort container-fluid p-0">  
+            <div class="row mr-0 ml-0 justify-content-center" id="page">
+                
+                <!-- content goes here -->
+                <div class="col-lg-8 text-center m-4 p-4">
+                    <h2 class="introheadline m-4">Välkommen!</h2>
+                    <div class="introtext">
+                    <span>Gården Oppigårds har varit i vår släkts ägo sedan 1700-talet. 
+                            Bryggeriet har vi byggt i en hage på gården. 
+                            Idéerna om att brygga öl började spira under 1980-talet. 
+                            Nu har vi varit igång i 15 år! Första året bryggdes 8.000 liter öl som såldes här i närområdet. 
+                            Nu är vi uppe i över 2 miljoner liter som fylls på flaska, burk och fat och säljs över hela Sverige.
+                        </br>
+                        <br> 
+                            På 1980-talet bryggdes det bara ljus lageröl med mycket lite humle i industriformat i vårt land. 
+                            Antalet ölbryggerier var mindre än tio. Idag är det nästan 400 bryggerier i gång. Svensk ölkultur blomstrar. 
+                        </br>
+                        <br>
+                            Välkommen till oss och ta del av vårt bidrag till den svenska ölkartan!
+                    </span>
+                    </div>
+
+                </div>
+                <div class="col-lg-6 col-md-12 mt-4">
+                    <h3 class="infoheadline">Vår öl</h3>
+                    <div class="introtext">
+                        <img src="humle.jpg">
+                        <span>Vi på Oppigårds har alltid gillat att utforska smak, doft och karaktär. 
+                            Öl är för oss ett uttryckssätt, som säger mycket om hur vi tänker och vad vi gillar. 
+                            Vår första öl i kontinuerlig produktion, Golden Ale, inspirerades av de brittiska öarna och humlesorten East Kent Golding. 
+                            Men vi kände oss inte begränsade av ölkulturella gärsgårdar, utan testade att höja ölen med en amerikansk fruktig humlesort. 
+                            På liknande vis har vi blivit inspirerade av klassiska ölstilar från olika delar av världen och lagt till en twist som vi tycker passar.
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 mt-4">
+                    <h3 class="infoheadline">Nyheter</h3>
+                    <div class="introtext">
+                        <div class="">
+                            <img src="hedemora_pilsner.jpg" alt="Öletikett"/>
+                            <span class="introtext">
+                                <a href="products.html" class="findproduct">
+                                    Hitta mig 
+                                </a>
+                            </span>
+                        </div>
+                        <div class="">
+                                <img src="hedemora_pilsner.jpg" alt="Öletikett" />
+                                <span class="introtext">
+                                    <a href="products.html" class="findproduct">
+                                        Hitta mig 
+                                    </a>
+                                </span>
+                            </div>
+                            <div class="">
+                                <img src="hedemora_pilsner.jpg"  alt="Öletikett"/>
+                                <span class="introtext">
+                                    <a href="products.html" class="findproduct">
+                                        Hitta mig 
+                                    </a>
+                                </span>
+                            </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+    
+        <footer>
+            <div class="container-fluid">
+                <div class="row justify-content-center pt-2 pb-2">
+                    <div class="col-12 col-lg-6 text-center">
+                        <div class="footer-logo">
+                            OPPIGÅRDS ÖL
+                        </div>
+                        <div>
+                            <a href="phoneto:0771-101010" class="footer-phone">Ring</a> 
+                            eller 
+                            <a href="mailto:oppigardsol@oppigard.se" class="footer-email">maila</a>
+                            oss!
+                        </div>
+                        <div>
+                            Oppigårdsvägen 1
+                        </div>
+                        <div>
+                            12345 Oppigård
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 text-center">
+                        <div class="pt-3">
+                            <a href="http://www.facebook.com" class="text-dark">
+                                <i class="fab fa-facebook fa-2x"></i>
+                            </a>
+                            <a href="http://www.instagram.com" class="text-dark">
+                                <i class="fab fa-instagram fa-2x"></i>
+                            </a>
+                            <a href="http://www.twitter.com" class="text-dark">
+                                <i class="fab fa-twitter fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+    </body>
+
 </html>
