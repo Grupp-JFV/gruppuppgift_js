@@ -1,30 +1,32 @@
 $(document).ready(function() {
+    //skapar alla html-element 
+    productList();
+
     //togglar filterfunktionen mellan hide/show 
         $("#sortheadline").on("click", function() {
             $(".sortcategories").slideToggle(300);
         }); 
-    
-        productList();
+
         
         //togglar läs mer-knappen
         $(".readmore_button").on("click",function() {
             $(this).siblings(".product_description").slideToggle(300); 
-    
         });
         
         //lyssnar efter köpknappen 
         $(".btn").on("click",function() {
-            buy(); 
+            buy($(this)); 
+
         }); 
 
-        /*
+        
         //lyssnar efter varukorgen och hämtar info från local storage 
         $(".fa fa-shopping-cart").on("click", function() {
             fromLocalStorage(); 
         }); 
-        */
+        
     
-    }); //stänger window 
+}); //stänger window ready 
         
     //skapar en lista med existerande produkter 
     function productList() {
@@ -51,10 +53,12 @@ $(document).ready(function() {
         let products = [product1, product2, product3, product4, product5, product6];
     
         display(products);
+        toLocalStorage(products);  //(!!! funkar men fyller ingen funktion just nu !!!)
+
     }
     
-    //skapar en objektsklass för produkterna 
-    function Product(name, image, type, strength, description, price, selected) {                         //Product Constructor
+    //skapar en objektklass för produkterna 
+    function Product(name, image, type, strength, description, price, selected, id) {                         //Product Constructor
     
         this.name = name;
         this.image = image;
@@ -63,13 +67,17 @@ $(document).ready(function() {
         this.description = description;
         this.price = price;
         this.selected = selected;
+        this.id = id; 
     }
     
     //funktion som loopar igenom produkterna och skriver ut dem i products.html 
     function display(products) {
-    
+        
         $.each(products, function (i, product) {  // i???*
-            console.log(i); 
+         
+            product.id = i; 
+            console.log(product.id);
+             
             let responsiveColumn = $("<div>").addClass("col-12"+" "+"col-md-6"+" "+"col-lg-4");
             let productContainer = $("<div>").addClass("card"+" "+"container"+" "+"mb-4"+" "+"text-center").appendTo(responsiveColumn);
             $("<img>").addClass("card-img-top").attr("src", product.image).attr("alt", "Ölflaska").appendTo(productContainer);
@@ -89,39 +97,69 @@ $(document).ready(function() {
             $("<input>").attr("type", "number").appendTo(input).attr("placeholder", "Välj antal"); 
     
             //skapa en köp-knapp         
-            $("<button>").addClass("btn").attr("type", "button").append("Köp").appendTo(input);
+            $("<button>").addClass("btn").attr("type", "button").attr("id", i).append("Köp").appendTo(input);
 
             $("#page").append(responsiveColumn);
         });
 
-        let hello = $(product.image).data(); 
-        console.log(hello); 
+         
+
+    } 
+
+    //sparar produkterna som finns i listan i localstorage 
+    function toLocalStorage(products) {
+        localStorage.setItem("CurrentProductList", JSON.stringify(products));
     }
-    
+
+
     //funktionen som är kopplad till köpknappen 
-    function buy() {
+    function buy(buttonClicked) {
+
+        //skapa en tom lista 
+        shoppingcart = [];  
+
+        //hämtar produktlistan från localstorage och sparar i variabeln products 
+        let localstorageList = localStorage.getItem("CurrentProductList"); 
+        let products = JSON.parse(localstorageList); 
+
+    
+        
+            $.each(products, function(i, product) {
+
+                let buttonId = buttonClicked[0].id;
+                //här inne vill vi hämta värdena från objekten som vi behöver 
+                console.log(buttonId); 
+        
+                //skapa ett villkor för knappen som är tryckt och om id är detsamma som indexpositionen 
+                if (product.id = buttonId) {
+
+                    let newObject =  {
+                        name: product.name, 
+                        price: product.price,  
+                        selected: product.selected 
+                    }
+
+                //pushar in listobjekt till den nya listan 
+                shoppingcart.push(newObject); 
+                console.log(shoppingcart);
+
+
+            } 
+
+       }); 
+
+
+    } 
+
+
+
+       /*
         //hämtar värder från input-fältet till en variabel, detta ska vara värdet på selected 
-        let input = $(".input-group input").val();
+        let input = buttonClicked.prev().val();
         console.log(input); 
 
 
 
-        $("button").click(function() {
-            ("p").each(function( index, element) {
-                $(element).css("backgroundColor", "yellow"); 
-
-                //To access a jQuery object instead of the regular DOM element, use $( this ).
-                if ($ ( this ).is(".btn") ) {
-                    //to be executed 
-                } 
-
-            });
-        }); 
-
-
-        //inputval ska vara värdet som ges till selected. hur gör vi detta? hur binder vi ihop dem? 
-
-        //.data(obj) = ett objekt m key/value pairs of data to update
 
 
 
@@ -129,21 +167,77 @@ $(document).ready(function() {
 
 
 
-        //hämtar varukorgen och skapar en tom lista 
-        let shoppingcart = $(".fa fa-shopping-cart");     
+
+
+        //skapa en tom lista 
         shoppingcart = [];  
+
+        //pushar in listobjekt till den nya listan 
+        shoppingcart.push( den valda produkten  ); 
+        console.log(shoppingcart); 
  
-        //pushar in värdet till shoppingcart
-        shoppingcart.push(input);
+    }  
 
-            console.log(shoppingcart); 
-            //tömmer input-fältet
-            input = "";  
-    
+     
+
+
+
+
+
+
+
+
+
+/*
+    //skapar en objektklass för produkterna 
+    function ShopProduct(name, price, selected) {     //Product Constructor
+        this.name = name;
+        this.price = price;
+        this.selected = selected;
+    }
+
+    function show(shoppingcart) {
+        //appendar saker till vår shoppingcart? 
+        $.each(shoppingcart, function (i, product) {  
+
+            product.name 
+            product.price
+            product.selected 
+
         }
-    //Objekten heter Product, så det borde gå att hänta dessa på något sätt. Så slipper man hämta hela. 
+
+    }
+
+*/ 
+
+    //hämta valt objekt från den tidigare listan? kanske använda $this? 
+    //använda map() eller filter() i jquery? 
 
 
-    /*om man använder each() functionen kan man gå igenom listan med objekt, och leta efter de 
-    som matchar att selected har fått ett nytt värde. dessa läggs sedan till i listan som sparas i local storage. 
+    /*
+    
+    
+
+    1. Hämta det valda objektet (det som man har klickat "köp" på)
+        - Hämta titel och pris från objektets egenskaper 
+    2. Hämta antalet man vill ha (input-fältets value) 
+
+    3. 
+
+    4. 
+
+    5. 
+
+    6. 
+
+    7. 
+
+    8. Pushar in i tomma listan 
+    
+    ----
+    här skriver vi sedan ut sakerna i html 
+    
+    
+
+    
     */ 
