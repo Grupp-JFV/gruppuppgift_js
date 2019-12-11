@@ -6,13 +6,15 @@ html {
 /* HEADER */
 header {
     /*height:20vh;*/
-    background-color:grey;   
+    background-color:rgb(255, 255, 255);   
 }
 
-.header_img {
-    object-fit: cover;
-    height:90vh;
-}
+.introtext {
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    font-size: 1rem;
+ }
 
 /*NAVBAR*/
 #nav {
@@ -82,7 +84,6 @@ div.card {
 
 /* PRODUCT DESCRIPTION */
 .product_description {
-    display:none;
     font-size:0.7rem;
     text-align:left;
     padding:20px;
@@ -90,6 +91,7 @@ div.card {
     border-bottom:2px solid lightgrey;
     margin-bottom:20px;
 }
+
 /* FOOTER */
 footer {
     background-color:white;
@@ -111,7 +113,6 @@ footer {
 
 
 /*SHOPPING BAG*/
-
 .shoppingbag-header{
     font-size: 1.5rem;
     font-weight: 800;
@@ -148,10 +149,8 @@ hr {
 
 /* Padlet 768px */
 @media (min-width: 768px) {
-    /* HEADER */
-    header {
-        /*height:30vh;*/
-    }    
+    /* HEADER */  
+
     /* CARD DECK */
     div.card {
         width:40vw;
@@ -172,7 +171,7 @@ hr {
         width:30%;
     }
 
-    /* SHOPPIBG-BAG */
+    /* SHOPPING-BAG */
 
     .shoppingbag-header{
         font-size: 1.2rem;
@@ -194,9 +193,7 @@ hr {
 @media (min-width: 992px) {
 
     /* SORT MENU */
-    .header_img {
-        height:90vh;
-    } 
+
 
     /* Intro styling */
    .introheadline {
@@ -210,10 +207,23 @@ hr {
     font-size:0.8rem;
    }
 
-   .introtext img {
-       object-fit: scale;
-   }
+    .jumbotron {
+        background-image:url("../headerimg.jpg")!important;
+        height: 90vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-bottom:1px solid #ff6a00
+      }
 
+    .headercontent{
+        background-color: rgba(255, 255, 255, 0.562);
+        width: 100%;
+    }
+
+   .introheadline p {
+       background-color:none;
+   }
+   
     .findproduct {
         font-size:0.7rem;
         font-weight:500;

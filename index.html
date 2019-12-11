@@ -14,104 +14,103 @@
          <script src="https://kit.fontawesome.com/55cb2a86bc.js" crossorigin="anonymous"></script>
         <!-- JQUERY -->
         <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <!-- JS-FIL -->
+        <script type="text/javascript" src="startpage.js"></script>
 
 </head>
 <body>
+
     <!--NAVBAR-->
-    <header class="container-fluid">
-            <div class="row sticky-top justify-content-center" id="nav">     
-                <span class="text-left col-5 col-md-4 pt-2 pb-2" id ="logo">
-                    <a href="index.html" class="ml-2">OPPIGÅRDS</a>
-                </span>
-                <span class="text-center col-5 col-md-4 pt-2 pb-2">
-                    <a href="products.html" class="text-dark">Produkter</a>
-                </span>
-                <span class="text-right col-2 col-md-4 pt-2 pb-2">
-                    <a href="pages/shoppingbag.html" class="mr-2"><i class="fa fa-shopping-cart" id="shoppingcartlogo"></i></a>
-                </span>
+    <div class="navcontainer sticky-top col-12" id="nav"> 
+        <div class="row">    
+            <span class="text-left col-6 pt-2 pb-2" id ="logo">
+                <a href="index.html" class="ml-2">OPPIGÅRDS</a>
+            </span>
+            <span class="text-right col-6 pt-2 pb-2">
+                <a href="pages/shoppingbag.html" class="mr-2"><i class="fa fa-shopping-cart" id="shoppingcartlogo"></i></a>
+            </span>
+        </div>
+    </div>
+
+
+
+
+    <header class="jumbotron jumbotron-fluid p-0 m-0">
+        <div class="container firstheadercontent m-0 p-0">
+            <div class="p-0 headercontent">
+                <h1 class="introheadline mb-4">Välkommen!</h1>
+                    <p>
+                        Gården Oppigårds har varit i vår släkts ägo sedan 1700-talet. 
+                        Bryggeriet har vi byggt i en hage på gården. 
+                        Idéerna om att brygga öl började spira under 1980-talet. 
+                        Nu har vi varit igång i 15 år! Första året bryggdes 8.000 liter öl som såldes här i närområdet. 
+                        Nu är vi uppe i över 2 miljoner liter som fylls på flaska, burk och fat och säljs över hela Sverige.
+                    </p>
+                    <p> 
+                        På 1980-talet bryggdes det bara ljus lageröl med mycket lite humle i industriformat i vårt land. 
+                        Antalet ölbryggerier var mindre än tio. Idag är det nästan 400 bryggerier i gång. Svensk ölkultur blomstrar. 
+                    </p>
+                    <span class="linktoproducts pt-3">
+                        <a href="products.html">
+                            Välkommen till oss och ta del av vårt bidrag till den svenska ölkartan! 
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </span>
             </div>
-            <div class="row">
-                <div class="col-12 p-0">
-                    <img class="w-100 header_img" src="product_images/dalalven.jpg" alt="Dalalven">
-                </div>
-            </div>
-        </header>
+        </div>
+    </header>
     
         <!-- MAIN CONTENT -->
-        <main class="sort container-fluid p-0">  
-            <div class="row mr-0 ml-0 justify-content-center" id="page">
-                
-                <!-- content goes here -->
-                <div class="col-lg-8 text-center m-4 p-4">
-                    <h2 class="introheadline m-4">Välkommen!</h2>
-                    <div class="introtext">
-                    <span>Gården Oppigårds har varit i vår släkts ägo sedan 1700-talet. 
-                            Bryggeriet har vi byggt i en hage på gården. 
-                            Idéerna om att brygga öl började spira under 1980-talet. 
-                            Nu har vi varit igång i 15 år! Första året bryggdes 8.000 liter öl som såldes här i närområdet. 
-                            Nu är vi uppe i över 2 miljoner liter som fylls på flaska, burk och fat och säljs över hela Sverige.
-                        </br>
-                        <br> 
-                            På 1980-talet bryggdes det bara ljus lageröl med mycket lite humle i industriformat i vårt land. 
-                            Antalet ölbryggerier var mindre än tio. Idag är det nästan 400 bryggerier i gång. Svensk ölkultur blomstrar. 
-                        </br>
-                        <br>
-                            Välkommen till oss och ta del av vårt bidrag till den svenska ölkartan!
-                    </span>
-                    </div>
+        <main class="row sort p-0 justify-content-center mr-0 ml-0 text-center" id="page">
 
-                </div>
-                <div class="col-lg-6 col-md-12 mt-4">
-                    <h3 class="infoheadline">Vår öl</h3>
-                    <div class="introtext">
-                        <img src="humle.jpg">
-                        <span>Vi på Oppigårds har alltid gillat att utforska smak, doft och karaktär. 
-                            Öl är för oss ett uttryckssätt, som säger mycket om hur vi tänker och vad vi gillar. 
-                            Vår första öl i kontinuerlig produktion, Golden Ale, inspirerades av de brittiska öarna och humlesorten East Kent Golding. 
-                            Men vi kände oss inte begränsade av ölkulturella gärsgårdar, utan testade att höja ölen med en amerikansk fruktig humlesort. 
-                            På liknande vis har vi blivit inspirerade av klassiska ölstilar från olika delar av världen och lagt till en twist som vi tycker passar.
-                        </span>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 mt-4">
-                    <h3 class="infoheadline">Nyheter</h3>
-                    <div class="introtext">
-                        <div class="">
-                            <img src="hedemora_pilsner.jpg" alt="Öletikett"/>
-                            <span class="introtext">
-                                <a href="products.html" class="findproduct">
-                                    Hitta mig 
-                                </a>
+                    
+                    <!-- content goes here -->
+                    <div class="col-lg-5 col-md-12 mt-4">
+                        <h3 class="infoheadline">Vår öl</h3>
+                        <div class="introtext">
+                            <span>Vi på Oppigårds har alltid gillat att utforska smak, doft och karaktär. 
+                                Öl är för oss ett uttryckssätt, som säger mycket om hur vi tänker och vad vi gillar. 
+                                Vår första öl i kontinuerlig produktion, Golden Ale, inspirerades av de brittiska öarna och humlesorten East Kent Golding. 
+                                Men vi kände oss inte begränsade av ölkulturella gärsgårdar, utan testade att höja ölen med en amerikansk fruktig humlesort. 
+                                På liknande vis har vi blivit inspirerade av klassiska ölstilar från olika delar av världen och lagt till en twist som vi tycker passar.
                             </span>
+                            <div class="pt-4 pb-4">
+                                <img src="thelogo.png" width="35%">
+                            </div>
                         </div>
-                        <div class="">
-                                <img src="hedemora_pilsner.jpg" alt="Öletikett" />
-                                <span class="introtext">
-                                    <a href="products.html" class="findproduct">
-                                        Hitta mig 
-                                    </a>
-                                </span>
-                            </div>
-                            <div class="">
-                                <img src="hedemora_pilsner.jpg"  alt="Öletikett"/>
-                                <span class="introtext">
-                                    <a href="products.html" class="findproduct">
-                                        Hitta mig 
-                                    </a>
-                                </span>
-                            </div>
-
                     </div>
-
-                </div>
-
-            </div>
-
+                    <div class="col-lg-4 col-md-12 mt-4 mb-5">
+                        <h3 class="infoheadline">Nyheter</h3>
+                        <div class="introtext text-left ml-5">
+                            <div class="mt-1 mb-4">
+                                <img src="product_images/everydayipa.jpg" alt="Öletikett" width="20%">
+                                <span class="introtext">
+                                    <a href="products.html" class="findproduct">
+                                        Everyday Ipa - 4,8%
+                                    </a>
+                                </span>
+                            </div>
+                            <div class="mt-1 mb-4">
+                                <img src="product_images/hedemoraporter.jpg" alt="Öletikett" width="20%">
+                                <span class="introtext">
+                                    <a href="products.html" class="findproduct">
+                                        Hedemora Porter - 5,4%
+                                    </a>
+                                </span>
+                            </div>
+                                <div class="mt-1 mb-4">
+                                    <img src="product_images/winterale.jpg"  alt="Öletikett" width="20%">
+                                    <span class="introtext">
+                                        <a href="products.html" class="findproduct">
+                                            Winter Ale - 5,0% 
+                                        </a>
+                                    </span>
+                                </div>
+                        </div>
+                    </div>
         </main>
     
-        <footer>
-            <div class="container-fluid">
-                <div class="row justify-content-center pt-2 pb-2">
+        <footer class="row justify-content-center pt-2 pb-2 w-100">
                     <div class="col-12 col-lg-6 text-center">
                         <div class="footer-logo">
                             OPPIGÅRDS ÖL
@@ -142,10 +141,8 @@
                             </a>
                         </div>
                     </div>
-                </div>
-            </div>
         </footer>
-    
+    </div>
     </body>
 
 </html>
