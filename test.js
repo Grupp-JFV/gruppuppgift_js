@@ -73,9 +73,7 @@ $(document).ready(function() {
     function display(products) {
         
         $.each(products, function (i, product) {  // i???*
-          
-           
-             
+    
             let responsiveColumn = $("<div>").addClass("col-12"+" "+"col-md-6"+" "+"col-lg-4");
             let productContainer = $("<div>").addClass("card"+" "+"container"+" "+"mb-4"+" "+"text-center").appendTo(responsiveColumn);
             $("<img>").addClass("card-img-top").attr("src", product.image).attr("alt", "Ölflaska").appendTo(productContainer);
@@ -113,17 +111,22 @@ $(document).ready(function() {
     //funktionen som är kopplad till köpknappen 
     function buy(buttonClicked) {
 
+        //hämta input-fältets värde och använd som villkor
+        let input = buttonClicked.prev().val();
+
+        //sätt ett villkor så att när input är tomt så görs inget
+        if ( input > 0 ) {
+
         //hämtar produktlistan från localstorage och sparar i variabeln products 
         let localstorageList = localStorage.getItem("CurrentProductList"); 
         let products = JSON.parse(localstorageList); 
         
             $.each(products, function(i, product) {
-
                 let buttonId = buttonClicked[0].id;
                 //skapa ett villkor för knappen som är tryckt och om id är detsamma som indexpositionen 
                 if (product.id == buttonId) {
                 
-                    //hämtar värder från input-fältet till en variabel, detta ska vara värdet på selected 
+                    //hämtar värder från input-fältet till en variabel
                     let input = buttonClicked.prev().val();
 
                     let newObject =  {
@@ -136,10 +139,22 @@ $(document).ready(function() {
                 //pushar in listobjekt till den nya listan 
                 shoppingcart.push(newObject); 
                 console.log(shoppingcart); 
+                
+                //tömmer inputfältet 
+                $('.input-group input').val('');
+                }    
 
-            } 
+            }); 
 
-       }); 
 
+        } else {
+            //skapa en div med en p-tagg som säger: välj ett antal!
+            //detta ska dock bara göras en gång? hur??  
+            $("<p>").addClass("col-12 mt-4").text("Välj antal!").appendTo(".input-group");  
+        }
+
+
+    /* när man klickar på köpknappen så är det sista som händer INNUTI den funktionen att den sparas i local Storage */ 
+    //sparar produkterna som finns i listan i localstorage 
 
     } 
