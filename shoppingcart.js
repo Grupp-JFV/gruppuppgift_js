@@ -19,8 +19,8 @@ $(document).ready(function() {
 
         }); 
 
-        
-        //lyssnar efter varukorgen och hämtar info från local storage 
+        //lyssnar efter varukorgen och hämtar info från local storage
+        //denna funktion ska fixa en drop-down som togglar när man klickar 
         $(".fa fa-shopping-cart").on("click", function() {
             fromLocalStorage(); 
         }); 
@@ -53,7 +53,7 @@ $(document).ready(function() {
         let products = [product1, product2, product3, product4, product5, product6];
     
         display(products);
-        toLocalStorage(products);  //(!!! funkar men fyller ingen funktion just nu !!!)
+        toLocalStorage(products); 
 
     }
     
@@ -73,8 +73,6 @@ $(document).ready(function() {
     function display(products) {
         
         $.each(products, function (i, product) {  // i???*
-          
-           
              
             let responsiveColumn = $("<div>").addClass("col-12"+" "+"col-md-6"+" "+"col-lg-4");
             let productContainer = $("<div>").addClass("card"+" "+"container"+" "+"mb-4"+" "+"text-center").appendTo(responsiveColumn);
@@ -107,8 +105,8 @@ $(document).ready(function() {
     }
 
     //skapa en tom lista 
-     shoppingcart = [];  
-    
+     shoppingcart = []; 
+
     
     //funktionen som är kopplad till köpknappen 
     function buy(buttonClicked) {
@@ -136,10 +134,12 @@ $(document).ready(function() {
                 //pushar in listobjekt till den nya listan 
                 shoppingcart.push(newObject); 
                 console.log(shoppingcart); 
+                localStorage.setItem("ShoppingcartList", JSON.stringify(shoppingcart));
 
-            } 
+            } //stänger if-sats 
 
-       }); 
+       }); //stänger each-loop 
 
+            
 
     } 
