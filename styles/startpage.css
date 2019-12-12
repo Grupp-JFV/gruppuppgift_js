@@ -5,8 +5,41 @@ html {
 
 /* HEADER */
 header {
-    /*height:20vh;*/
     background-color:rgb(255, 255, 255);   
+}
+
+.jumbotron {
+    background-image:url("../product_images/dalalven.jpg")!important;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.headercontent {
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 15%;
+    font-size: 0.7rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+}
+
+.introheadline {
+    font-size: 1rem;
+    font-weight: 800;
+    color:darkred;
+    text-transform: uppercase;
+    border-bottom:1px solid grey;
+}
+
+.introlinks a{
+    color: darkred;
+}
+
+.introlinks a:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
 }
 
 .introtext {
@@ -14,7 +47,15 @@ header {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 15px;
     font-size: 1rem;
- }
+}
+
+.infoheadline {
+    font-size: 1rem;
+    font-weight: 800;
+    color:darkred;
+    text-transform: uppercase;
+    border-bottom: 1px solid grey;
+}
 
 /*NAVBAR*/
 #nav {
@@ -41,14 +82,14 @@ div.card {
     height:20vh;
     object-fit: scale-down;
 }
-.card-title{
+.card-title {
     width:100%;
     font-size:0.8rem;
     border-top:2px solid lightgrey; 
     padding-top:20px;  
 }
 
-.card-text{
+.card-text {
     font-size:1.5rem;
     font-weight:bold;
     align-self: baseline;
@@ -75,7 +116,7 @@ div.card {
 .input-group {
     justify-content: center;
 }
-.input-group input{
+.input-group input {
     font-size:0.7rem;
     border-radius:8px;
     text-align: center;
@@ -113,7 +154,7 @@ footer {
 
 
 /*SHOPPING BAG*/
-.shoppingbag-header{
+.shoppingbag-header {
     font-size: 1.5rem;
     font-weight: 800;
     color: darkred; 
@@ -123,13 +164,13 @@ footer {
     font-size: 1rem;
     padding-top: 20px;
 }
-.purchaseditem-image{
+.purchaseditem-image {
     width: 50%;
 }
 hr {
     width: 75%;
 }
-.numberofpurchaseditems{
+.numberofpurchaseditems {
     border-radius:8px;
     text-align: center;
     border:1px solid darkred;  
@@ -151,6 +192,16 @@ hr {
 @media (min-width: 768px) {
     /* HEADER */  
 
+
+    .introheadline {
+        font-size: 1.4rem;
+    }
+    .headercontent {
+        font-size: 0.8rem;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
     /* CARD DECK */
     div.card {
         width:40vw;
@@ -161,26 +212,26 @@ hr {
         height:20vh;
         object-fit: scale-down;
     }
-    .input-group input{
+    .input-group input {
         font-size:0.7rem;
         border-radius:8px;
         text-align: center;
         width:50%;
     }
-    .input-group .btn{
+    .input-group .btn {
         width:30%;
     }
 
     /* SHOPPING-BAG */
 
-    .shoppingbag-header{
+    .shoppingbag-header {
         font-size: 1.2rem;
     }
     .shoppingbag-main {
         text-align: center;
         font-size: 1.2;
     }
-    .purchaseditem-image{
+    .purchaseditem-image {
         width: 30%;
     }
     .numberofpurchaseditems {
@@ -196,33 +247,21 @@ hr {
 
 
     /* Intro styling */
+
+    .headercontent {
+        padding-left: 90px;
+        padding-right: 90px;
+    }
    .introheadline {
-       font-size:;
-       font-weight:800;
-       color:darkred;
-       text-transform: uppercase;
-       border-bottom:1px solid grey;
-   }
+       font-size: 1.8rem;
+    }
     .introtext {
-    font-size:0.8rem;
-   }
-
-    .jumbotron {
-        background-image:url("../headerimg.jpg")!important;
-        height: 90vh;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-bottom:1px solid #ff6a00
-      }
-
-    .headercontent{
-        background-color: rgba(255, 255, 255, 0.562);
-        width: 100%;
+    font-size:1rem;
     }
 
-   .introheadline p {
-       background-color:none;
-   }
+    .introheadline p {
+        background-color:none;
+    }
    
     .findproduct {
         font-size:0.7rem;
@@ -231,14 +270,6 @@ hr {
         align-self: baseline;
         text-transform: uppercase;
         border:none;
-    }
-
-    .infoheadline {
-        font-size:1rem;
-        font-weight:800;
-        color:darkred;
-        text-transform: uppercase;
-        border-bottom:1px solid grey;
     }
 
     
