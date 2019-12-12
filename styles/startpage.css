@@ -18,10 +18,11 @@ header {
 .headercontent {
     background-color: rgba(255, 255, 255, 0.8);
     position: absolute;
-    font-size: 0.7rem;
     top: 15%;
+    font-size: 0.7rem;
     padding-left: 20px;
     padding-right: 20px;
+    border-radius: 5px;
 }
 
 .introheadline {
@@ -191,9 +192,16 @@ hr {
 @media (min-width: 768px) {
     /* HEADER */  
 
-    .headercontent {
-        font-size: 1rem;
+
+    .introheadline {
+        font-size: 1.4rem;
     }
+    .headercontent {
+        font-size: 0.8rem;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
     /* CARD DECK */
     div.card {
         width:40vw;
@@ -239,16 +247,21 @@ hr {
 
 
     /* Intro styling */
+
+    .headercontent {
+        padding-left: 90px;
+        padding-right: 90px;
+    }
    .introheadline {
        font-size: 1.8rem;
-   }
+    }
     .introtext {
     font-size:1rem;
-   }
+    }
 
-   .introheadline p {
-       background-color:none;
-   }
+    .introheadline p {
+        background-color:none;
+    }
    
     .findproduct {
         font-size:0.7rem;
