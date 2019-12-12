@@ -139,25 +139,24 @@ $(document).ready(function() {
                         id: product.id
                     }
 
-                //pushar in listobjekt till den nya listan 
-                shoppingcart.push(newObject); 
-                console.log(shoppingcart); 
+                    //pushar in listobjekt till den nya listan 
+                    shoppingcart.push(newObject); 
+                    console.log(shoppingcart); 
+                    
+                    //tömmer inputfältet 
+                    $('.input-group input').val('');    
                 
-                //tömmer inputfältet 
-                $('.input-group input').val('');
-                }    
-
-            }); 
-
-
-        } else {
-            //skapa en div med en p-tagg som säger: välj ett antal!
-            //detta ska dock bara göras en gång? hur??  
-            $("<p>").addClass("col-12 mt-4").text("Välj antal!").appendTo(".input-group");  
-        }
-
+                }  //stänger if-satsen   
+        
+            }); //stänger each-loop 
+        
+        }  else {
+            alert("Välj ett antal innan du köper!");
+    
+        } //stänger else 
 
     /* när man klickar på köpknappen så är det sista som händer INNUTI den funktionen att den sparas i local Storage */ 
     //sparar produkterna som finns i listan i localstorage 
+    localStorage.setItem("CurrentShoppingcartList", JSON.stringify(shoppingcart));
 
-    } 
+ } //stänger buy()
