@@ -15,14 +15,13 @@
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="products.js"></script>
-    <!-- BOOTSTRAP JS -->
-    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- BOOTSTRAP JS --> <!-- MÅSTE DET AVAKTIVERAS PGA JS NI SKRIVIT SJÄLVA?? -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    -->
+
 </head>
 <body>
-    <!--NAVBAR-->
     <!--NAVBAR-->
     <div class="navcontainer sticky-top col-12" id="nav"> 
         <div class="row">    
@@ -170,14 +169,29 @@
             </div>
         </div>
 
-
-        <div>
-            <button type="submit" class="sendorderbtn mt-5 mb-5 p-2">Skicka beställning</button>
-        </div>
-
-
-
-
+        <button type="submit" class="btn sendorderbtn mt-5 mb-5 p-2d" data-toggle="modal" data-target="#exampleModalCenter">
+            Skicka beställning!
+          </button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Tack för ditt köp!</h5>
+                  <button type="button" class="close closemodal" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Sammanfattning av beställning!
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="purchaseconfirmed-modal-btn">OK</button>
+                </div>
+              </div>
+            </div>
+          </div>
 
 
 

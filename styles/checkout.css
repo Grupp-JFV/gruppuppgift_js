@@ -131,7 +131,22 @@ hr {
 .form-control {
     font-size: 0.6rem;
 }
+ /*THANKS FOR YOUR PURCHASE MODAL */
 
+.purchaseconfirmed-modal-btn {
+    font-size:0.9rem;
+    font-weight: 500;
+    color:whitesmoke; 
+    text-transform: uppercase;
+    background-color: darkred;
+    border-radius:28px;
+    width:100px;
+    border: none;
+}
+
+.modal-title {
+    color: darkred;
+}
 
 /* FOOTER */
 footer {
