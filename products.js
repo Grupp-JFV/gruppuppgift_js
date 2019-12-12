@@ -61,7 +61,7 @@ function display(products) {
     $.each(products, function (i, product) {  // i???*
         console.log(i); 
         let responsiveColumn = $("<div>").addClass("col-12"+" "+"col-md-6"+" "+"col-lg-4");
-        let productContainer = $("<div>").addClass("card"+" "+"container"+" "+"mb-4"+" "+"text-center").appendTo(responsiveColumn);
+        let productContainer = $("<div>").addClass("card"+" "+"container"+" "+" "+"text-center").appendTo(responsiveColumn);
         $("<img>").addClass("card-img-top").attr("src", product.image).attr("alt", "Ölflaska").appendTo(productContainer);
         let cardBody = $("<div>").addClass("card-body"+" "+"row"+" "+"justify-content-center").appendTo(productContainer);
         $("<h5>").addClass("card-title").text(product.name + " " + "(" + product.strength + "%" + ")").appendTo(cardBody);

@@ -18,20 +18,20 @@
     <script type="text/javascript" src="test.js"></script>
 </head>
 <body>
-
-  
-    <!--NAVBAR-->
-    <header class="container-fluid">
+    <div class="container-fluid">
+        <!--NAVBAR-->
         <div class="row sticky-top justify-content-center" id="nav">     
-            <span class="text-left col-6 pt-2 pb-2" id ="logo">
+            <span class="text-left col-6 pt-2 pb-2" id ="companyname">
                 <a href="index.html" class="ml-2">OPPIGÅRDS</a>
             </span>
-            
+            <!-- SHOPPING CART -->
             <span class="text-right col-6 pt-2 pb-2">
-                <button type="button" class="mr-2" id="basketButton"><i class="fa fa-shopping-cart" id="shoppingcartlogo"></i></button>
+                <button type="button" class="mr-2 btn" id="basketButton"><i class="fa fa-shopping-cart" id="shoppingcartlogo"></i></button>
             </span>
+            
+            <!-- HIDDEN BASKET -->
             <div class="col-12 hidden-basket" id="basket">
-                <div class="container-fluid pl-4 pr-4">
+                <div class="pl-4 pr-4">
                     <div class="row border-top pt-2 basket-heading">
                         <div class="col-2">
                             <h3 class="text-left ml-2">Produkt</h3>
@@ -39,7 +39,7 @@
                         <div class="col-2">
                             <h3 class="text-center">%</h3>
                         </div>
-                        <div class="col-2">
+                        <div class="col-2"> 
                             <h3 class="text-center">Typ</h3>
                         </div>
                         <div class="col-2">
@@ -54,6 +54,7 @@
                     </div>
                     <div class="row border-bottom border-top pt-2 basket-text">
                         <div class="col-2">
+                            <i class="fal fa-times"></i>
                             <h3 class="text-left ml-2">Oppegårds Hedemora Porter</h3>
                         </div>
                         <div class="col-2">
@@ -90,50 +91,48 @@
         </div>
         <div class="row border-line">
         </div>
-    </div>
-    <header class="container-fluid">
-        <div class="row">
+        <!-- HEADER -->
+        <header class="row">
             <div class="col-12 p-0">
                 <img class="w-100 header_img" src="product_images/dalalven.jpg" alt="Dalalven">
             </div>
-        </div>
-    </header>
-
-    <!-- MAIN CONTENT -->
-    <main class="sort container-fluid p-0">  
-        <ul class="navbar sticky-top text-center row m-0">
-            <h3 class="col-12 text-center" id="sortheadline">Filtrera produkter<i class="fa fa-caret-down"></i></h3>
-            
-                <li class="sortcategories col-4">
-                <h3 class="sorthead">Ölsort </h3>
-                <div class="categories">
-                    <div class="w-100"><input type="checkbox">IPA</input></div>
-                    <div class="w-100"> <input type="checkbox">Lager</input></div>
-                    <div class="w-100"><input type="checkbox">Ale</input></div>
-                </div>
-            </li>
-            <li class="sortcategories col-4">
-                <h3 class="sorthead">Pris</h3>
-                <div class="categories">
-                    <div class="w-100"><input type="checkbox">Högt till lågt</input></div>
-                    <div class=""><input type="checkbox">Lågt till högt</input></div>
-                </div>
-            </li>
-            <li class="sortcategories col-4">
-                <h3 class="sorthead">Styrka</h3>
-                <div class="categories">
-                    <div class="w-100"><input type="checkbox">3,5%</input></div>
-                    <div class="w-100"><input type="checkbox"> 5,5%</input></div>
-                    <div class=""><input type="checkbox">Alkoholfritt</input></div>   
-                </div>
-            </li>
-        </ul>  
-        <div class="row mr-0 ml-0" id="page">
-        </div>
-    </main>
-
-    <footer>
-        <div class="container-fluid">
+        </header>
+        <!-- MAIN CONTENT -->
+        <main class="sort">  
+            <!-- SORTING MENU -->
+            <ul class="row navbar sticky-top align-items-baseline">
+                <h3 class="text-center col-12" id="sortheadline">Filtrera produkter<i class="fa fa-caret-down"></i></h3>
+                <li class="sortcategories col pl-4 pr-0">
+                    <h3 class="sorthead text-center w-100">Öltyp </h3>
+                    <div class="categories">
+                        <div class="w-100"><input type="checkbox">IPA</input></div>
+                        <div class="w-100"> <input type="checkbox">Lager</input></div>
+                        <div class="w-100"><input type="checkbox">Ale</input></div>
+                    </div>
+                </li>
+                <li class="sortcategories col">
+                    <h3 class="sorthead text-center w-100">Pris</h3>
+                    <div class="categories">
+                        <div class="w-100"><input type="checkbox">Högt till lågt</input></div>
+                        <div class="w-100"><input type="checkbox">Lågt till högt</input></div>
+                    </div>
+                </li>
+                <li class="sortcategories col pr-4 pl-0">
+                    <h3 class="sorthead text-center w-100">Styrka</h3>
+                    <div class="categories">
+                        <div class="w-100"><input type="checkbox">3,5%</input></div>
+                        <div class="w-100"><input type="checkbox">5,5%</input></div>
+                        <div class="w-100"><input type="checkbox">0,0%</input></div>   
+                    </div>
+                </li>
+            </ul>  
+            <!-- CARD DECK WITH PRODUCTS -->
+            <div class="row pl-4 pr-4" id="page">
+                <!-- CONTENT FROM PRODUCTS.JS -->
+            </div>
+        </main>
+        <!-- FOOTER -->
+        <footer>
             <div class="row justify-content-center pt-2 pb-2">
                 <div class="col-12 col-lg-6 text-center">
                     <div class="footer-logo">
@@ -166,8 +165,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
-
+        </footer>   
+</div>
+    <!--  stänger container som innesluter allt -->
 </body>
 </html>
