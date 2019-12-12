@@ -9,11 +9,6 @@ header {
     background-color:grey;   
 }
 
-.header_img {
-    object-fit: cover;
-    height:10vh;
-}
-
 /*NAVBAR*/
 #nav {
     background-color:white;
@@ -27,9 +22,53 @@ header {
     color:darkred; 
 }
 
+#basketbutton {
+    border: none;
+    background: none;
+}
+
 #shoppingcartlogo {
     color:darkred;
 }
+
+/*SHOPPING CART*/
+.hidden-basket {
+    display: none;
+    background: white;
+}
+
+.hidden-basket h3, span {
+    font-size:0.7rem;
+}
+
+.basket-heading h3 {
+    font-weight: bold;
+}
+
+.basket-text {
+    font-weight: normal;
+}
+
+.basket-sum {
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+.pay-btn {
+    font-size:0.7rem;
+    color:whitesmoke; 
+    background-color: darkred;
+    border-radius:28px;
+    border: none;
+    padding: 6px 18px;
+}
+
+.header_img {
+    object-fit: cover;
+    height:10vh;
+}
+
+
 
 /*SORT MENU */
 .sort .navbar {

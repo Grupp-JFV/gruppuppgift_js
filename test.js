@@ -21,8 +21,11 @@ $(document).ready(function() {
 
         
         //lyssnar efter varukorgen och hämtar info från local storage 
-        $(".fa fa-shopping-cart").on("click", function() {
-            fromLocalStorage(); 
+        $("#basketButton").on("click", function() {
+
+            $("#basket").slideToggle(300);
+
+            fromLocalStorage();
         }); 
         
     
@@ -72,7 +75,7 @@ $(document).ready(function() {
     //funktion som loopar igenom produkterna och skriver ut dem i products.html 
     function display(products) {
         
-        $.each(products, function (i, product) {  // i???*
+        $.each(products, function (i, product) {
     
             let responsiveColumn = $("<div>").addClass("col-12"+" "+"col-md-6"+" "+"col-lg-4");
             let productContainer = $("<div>").addClass("card"+" "+"container"+" "+"mb-4"+" "+"text-center").appendTo(responsiveColumn);
