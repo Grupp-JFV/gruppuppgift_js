@@ -2,33 +2,37 @@ $(document).ready(function() {
     //skapar alla html-element 
     productList();
 
+    //lyssnar efter varukorgen och hämtar info från local storage 
+    $("#basketButton").on("click", function() {
+
+        /*let localstorageList = localStorage.getItem("CurrentShoppingcartList"); 
+        let products = JSON.parse(localstorageList);
+
+        $.each(products, function (i, product) {
+            $("<span>").addClass("basket-text").text(product.name).appendTo("#basket_name");
+        });*/
+
+        $("#basket").slideToggle(300);
+
+    }); 
+
     //togglar filterfunktionen mellan hide/show 
-        $("#sortheadline").on("click", function() {
-            $(".sortcategories").slideToggle(300);
-        }); 
+    $("#sortheadline").on("click", function() {
+        $(".sortcategories").slideToggle(300);
+    }); 
 
-        
-        //togglar läs mer-knappen
-        $(".readmore_button").on("click",function() {
-            $(this).siblings(".product_description").slideToggle(300); 
-        });
-        
-        //lyssnar efter köpknappen 
-        $(".btn").on("click",function() {
-            buy($(this)); 
-
-        }); 
-
-        
-        //lyssnar efter varukorgen och hämtar info från local storage 
-        $("#basketButton").on("click", function() {
-
-            $("#basket").slideToggle(300);
-
-            fromLocalStorage();
-        }); 
-        
     
+    //togglar läs mer-knappen
+    $(".readmore_button").on("click",function() {
+        $(this).siblings(".product_description").slideToggle(300); 
+    });
+    
+    //lyssnar efter köpknappen 
+    $(".btn").on("click",function() {
+        addToCart($(this)); 
+
+    }); 
+        
 }); //stänger window ready 
         
     //skapar en lista med existerande produkter 
@@ -108,11 +112,11 @@ $(document).ready(function() {
     }
 
     //skapa en tom lista 
-     shoppingcart = [];  
+    shoppingcart = [];  
     
     
     //funktionen som är kopplad till köpknappen 
-    function buy(buttonClicked) {
+    function addToCart(buttonClicked) {
 
         //hämta input-fältets värde och använd som villkor
         let input = buttonClicked.prev().val();
@@ -133,18 +137,36 @@ $(document).ready(function() {
                     let input = buttonClicked.prev().val();
 
                     let newObject =  {
-                        name: product.name, 
+                        name: product.name,
+                        strength: product.strength,
+                        type: product.type,
                         price: product.price,  
-                        selected: input, 
+                        amount: input,
                         id: product.id
                     }
+
+                    let basketItem = $("<div>").addClass("row border-bottom border-top pt-2 basket-text").appendTo("#basket_content");
+
+                    let basketName = $("<div>").addClass("col-2 text-left").appendTo(basketItem);
+                    $("<span>").addClass("ml-2 basket-text").text(product.name).appendTo(basketName);
+                    let basketStrength = $("<div>").addClass("col-0 col-md-2 text-center").appendTo(basketItem);
+                    $("<span>").addClass("basket-text").text(product.strength).appendTo(basketStrength);
+                    let basketType = $("<div>").addClass("col-0 col-md-2 text-center").appendTo(basketItem);
+                    $("<span>").addClass("basket-text").text(product.type).appendTo(basketType);
+                    let basketPrice = $("<div>").addClass("col-2 text-center").appendTo(basketItem);
+                    $("<span>").addClass("basket-text").text(product.price).appendTo(basketPrice);
+                    let basketAmount = $("<div>").addClass("col-2 text-center").appendTo(basketItem);
+                    $("<span>").addClass("basket-text").text(input).appendTo(basketAmount);
+                    let basketTotal = $("<div>").addClass("col-2 text-right text-right").appendTo(basketItem);
+                    $("<span>").addClass("mr-2 basket-text").text(product.price * input).appendTo(basketTotal);
+
 
                     //pushar in listobjekt till den nya listan 
                     shoppingcart.push(newObject); 
                     console.log(shoppingcart); 
                     
                     //tömmer inputfältet 
-                    $('.input-group input').val('');    
+                    $('.input-group input').val('');
                 
                 }  //stänger if-satsen   
         
