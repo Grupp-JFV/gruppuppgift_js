@@ -18,22 +18,22 @@ $(document).ready(function() {
 //skapar en lista med existerande produkter 
 function productList() {
     
-    let product1 = new Product("Oppigårds Golden Ale", "./product_images/golden.jpg", "Ljus lager", 4.8,
+    let product1 = new Product("Oppigårds Golden Ale", "../product_images/golden.jpg", "Ljus lager", 4.8,
     "Fruktig, något humlearomatisk smak med tydlig beska, inslag av aprikos, örter, apelsinskal och rågbröd. Serveras vid 8-10°C till husmanskost.", 
     19, 0);
-    let product2 = new Product("Oppigårds Winter Ale", "./product_images/winterale.jpg", "Mörk lager", 5.0, 
+    let product2 = new Product("Oppigårds Winter Ale", "../product_images/winterale.jpg", "Mörk lager", 5.0, 
     "Nyanserad, något humlearomatisk smak med tydlig beska, inslag av rågbröd, kryddor, tallkåda och apelsinskal. Serveras vid 8-10°C som sällskapsdryck, eller till rätter av lamm- och nötkött.", 
     27, 0);
-    let product3 = new Product("Oppigårds Every Day Ipa", "./product_images/everydayipa.jpg", "Ipa", 4.8, 
+    let product3 = new Product("Oppigårds Every Day Ipa", "../product_images/everydayipa.jpg", "Ipa", 4.8, 
     "Humlearomatisk smak med tydlig beska, inslag av tallbarr, tropisk frukt, grapefrukt och honung. Serveras vid 11-14°C som sällskapsdryck eller till smakrik husmanskost.", 
     19, 0);
-    let product4 = new Product("Oppigårds Hedemora Porter", "./product_images/hedemoraporter.jpg", "Porter", 5.4, 
+    let product4 = new Product("Oppigårds Hedemora Porter", "../product_images/hedemoraporter.jpg", "Porter", 5.4, 
     "Maltig, rostad, nyanserad smak med inslag av kavring, choklad, hasselnötter, kaffe, smörkola och torkade dadlar. Serveras vid 10-12°C till rätter av mörkt kött.", 
     19, 0);
-    let product5 = new Product("Oppigårds Single Hop", "./product_images/singlehop.jpg", "?", 5.0, 
+    let product5 = new Product("Oppigårds Single Hop", "../product_images/singlehop.jpg", "?", 5.0, 
     "Tydligt humlearomatisk smak med inslag av apelsinblom, aprikos, honung, citrusskal och knäckebröd. Serveras vid 11-13°C som sällskapsdryck, eller till rätter av fisk eller ljust kött.", 
     18, 0);
-    let product6 = new Product("Oppigårds Thurbo Double", "./product_images/thurbodouble.jpg", "?", 5.4,
+    let product6 = new Product("Oppigårds Thurbo Double", "../product_images/thurbodouble.jpg", "?", 5.4,
     "Maltig, aningen rostad smak med inslag av kavring, kaffe, mörk choklad, torkade fikon, apelsin, sirap och lakrits. Serveras vid 10-12°C till rätter av lamm- eller nötkött, eller till smakrika rätter med svamp.", 
     29, 0);
 
