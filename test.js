@@ -159,7 +159,6 @@ $(document).ready(function() {
         }
     } //stänger buy
  
-        
 
     function printShoppingcart() {
 
