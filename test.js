@@ -147,18 +147,21 @@ $(document).ready(function() {
 
                     let basketItem = $("<div>").addClass("row border-top pt-0 basket-text").appendTo("#basket_content");
 
-                    let basketName = $("<div>").addClass("col-6 col-md-2 text-left").appendTo(basketItem);
+                    let basketName = $("<div>").addClass("col-7 col-md-2 text-left").appendTo(basketItem);
+                    $("<button>").addClass("delete-button").text("x").appendTo(basketName);
                     $("<span>").addClass("text-left").text(product.name).appendTo(basketName);
                     let basketStrength = $("<div>").addClass("col-0 col-md-2 d-none d-md-inline text-center").appendTo(basketItem);
-                    $("<span>").addClass("basket-text").text(product.strength).appendTo(basketStrength);
+                    $("<span>").addClass("basket-text").text(product.strength + " %").appendTo(basketStrength);
                     let basketType = $("<div>").addClass("col-0 col-md-2 d-none d-md-inline text-center").appendTo(basketItem);
                     $("<span>").addClass("basket-text").text(product.type).appendTo(basketType);
                     let basketPrice = $("<div>").addClass("col-0 col-md-2 d-none d-md-inline text-center").appendTo(basketItem);
-                    $("<span>").addClass("basket-text").text(product.price).appendTo(basketPrice);
-                    let basketAmount = $("<div>").addClass("col-3 col-md-2 text-center").appendTo(basketItem);
+                    $("<span>").addClass("basket-text").text(product.price + " kr").appendTo(basketPrice);
+                    let basketAmount = $("<div>").addClass("col-2 col-md-2 p-0 text-center").appendTo(basketItem);
+                    $("<button>").addClass("amount-button").text("-").appendTo(basketAmount);
                     $("<span>").addClass("basket-text").text(input).appendTo(basketAmount);
+                    $("<button>").addClass("amount-button").text("+").appendTo(basketAmount);
                     let basketTotal = $("<div>").addClass("col-3 col-md-2 text-right").appendTo(basketItem);
-                    $("<span>").addClass("basket-text").text(product.price * input).appendTo(basketTotal);
+                    $("<span>").addClass("basket-text").text(product.price * input + " kr").appendTo(basketTotal);
 
 
                     //pushar in listobjekt till den nya listan 
@@ -176,4 +179,8 @@ $(document).ready(function() {
     //sparar produkterna som finns i listan i localstorage 
     localStorage.setItem("CurrentShoppingcartList", JSON.stringify(shoppingcart));
 
- } //stänger buy()
+    } //stänger buy()
+
+function showDeleteOption() {
+    alert("funkar");
+}
