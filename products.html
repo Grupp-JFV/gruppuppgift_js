@@ -19,71 +19,73 @@
 </head>
 <body>
     <div class="container-fluid">
+        <!-- HEADER -->
         <!--NAVBAR-->
-        <div class="row sticky-top justify-content-center" id="nav">     
-            <span class="text-left col-6 pt-2 pb-2" id ="companyname">
-                <a href="index.html" class="ml-2">OPPIGÅRDS</a>
-            </span>
+        <header class="row sticky-top" id="nav"> 
+            <div class="text-left col-6" id ="companyname">
+                <a href="index.html">
+                    <h1>OPPIGÅRDS</h1>
+                </a>
+            </div>
             <!-- SHOPPING CART -->
-            <span class="text-right col-6 pt-2 pb-2">
-                <button type="button" class="mr-2 btn" id="basketButton"><i class="fa fa-shopping-cart" id="shoppingcartlogo"></i></button>
-            </span>
-            
+            <div class="text-right col-6">
+                <button type="button" class="btn p-0 shopping-cart-button" id="basketButton">
+                    <i class="fa fa-shopping-cart" id="shoppingcartlogo"></i>
+                </button>
+            </div>
             <!-- HIDDEN BASKET -->
             <div class="col-12 hidden-basket" id="basket">
-                <div class="inner container-fluid" id="basket_content">
-                    <div class="row border-top pt-2 basket-heading">
-                        <div class="col-2">
-                            <h3 class="text-left ml-2">Produkt</h3>
+                <div class="inner container-fluid p-0 p-0 pl-md-4 pr-md-4" id="basket_content">
+                    <div class="row border-top pt-1 basket-heading">
+                        <div class="col-6 col-md-2">
+                            <h3 class="text-left">Produkt</h3>
                         </div>
-                        <div class="col-0 col-md-2">
+                        <div class="col-0 col-md-2 d-none d-md-inline">
                             <h3 class="text-center">%</h3>
                         </div>
-                        <div class="col-0 col-md-2">
+                        <div class="col-0 col-md-2 d-none d-md-inline">
                             <h3 class="text-center">Typ</h3>
                         </div>
-                        <div class="col-2">
+                        <div class="col-0 col-md-2 d-none d-md-inline">
                             <h3 class="text-center">Pris</h3>
                         </div>
-                        <div class="col-2">
+                        <div class="col-3 col-md-2">
                             <h3 class="text-center">Antal</h3>
                         </div>
-                        <div class="col-2">
-                            <h3 class="text-right mr-2">Totalt</h3>
+                        <div class="col-3 col-md-2">
+                            <h3 class="text-right mr-0">Totalt</h3>
                         </div>
                     </div>
                 </div>
-                <div class="inner container-fluid" id="basket_sum">
-                    <div class="row">
-                        <div class="col-12 text-right basket-sum">
+                <div class="inner container-fluid p-0 pl-md-4 pr-md-4" id="basket_sum">
+                    <div class="row border-top">
+                        <div class="col-12 pr-md-0 text-center text-md-right basket-sum">
                             <h3 class="d-inline">Summa</h3>
-                            <span class="mr-3">499kr</span>
-                            <span class="mr-3">+</span>
-                            <h3 class="d-inline">Frakt</h3>
-                            <span class="mr-3">200kr</span>
-                            <span class="mr-3">=</span>
-                            <h3 class="d-inline">Att betala</h3>
-                            <span class="mr-5">699kr</span>
-                            <button type="button" class="mr-2 pay-btn" id="to_pay">Till Kassan</button>
+                            <span>499kr</span>
+                            <h3 class="d-inline">(+Frakt</h3>
+                            <span class="mr-md-3">200kr)</span>                       
+                            <h3 class="d-inline ml-0">Att betala</h3>
+                            <span class="mr-md-4">699kr</span>
+                            <button type="button" class="pay-btn" id="to_pay">Till Kassan</button>
                         </div>
                     </div>
                 </div>
             </div>          
-        </div>
+        </header>
         <div class="row border-line">
         </div>
-        <!-- HEADER -->
-        <header class="row">
+        
+        <div class="row">
             <div class="col-12 p-0">
                 <img class="w-100 header_img" src="product_images/dalalven.jpg" alt="Dalalven">
             </div>
-        </header>
+        </div>
         <!-- MAIN CONTENT -->
         <main class="sort">  
             <!-- SORTING MENU -->
-            <ul class="row navbar sticky-top align-items-baseline">
-                <h3 class="text-center col-12" id="sortheadline">Filtrera produkter<i class="fa fa-caret-down"></i></h3>
-                <li class="sortcategories col pl-4 pr-0">
+            <ul class="row navbar align-items-baseline">
+                <h3 class="text-center col-12 p-0 m-0" id="sortheadline">Filtrera produkter<i class="fa fa-caret-down"></i></h3>
+                <li class="sortcategories col pl-4 pr-0 border-top mt-1">
                     <h3 class="sorthead text-center w-100">Öltyp </h3>
                     <div class="categories">
                         <div class="w-100"><input type="checkbox">IPA</input></div>
@@ -91,14 +93,14 @@
                         <div class="w-100"><input type="checkbox">Ale</input></div>
                     </div>
                 </li>
-                <li class="sortcategories col">
+                <li class="sortcategories col border-top mt-1">
                     <h3 class="sorthead text-center w-100">Pris</h3>
                     <div class="categories">
                         <div class="w-100"><input type="checkbox">Högt till lågt</input></div>
                         <div class="w-100"><input type="checkbox">Lågt till högt</input></div>
                     </div>
                 </li>
-                <li class="sortcategories col pr-4 pl-0">
+                <li class="sortcategories col pr-4 pl-0 border-top mt-1">
                     <h3 class="sorthead text-center w-100">Styrka</h3>
                     <div class="categories">
                         <div class="w-100"><input type="checkbox">3,5%</input></div>
@@ -108,7 +110,7 @@
                 </li>
             </ul>  
             <!-- CARD DECK WITH PRODUCTS -->
-            <div class="row pl-4 pr-4" id="page">
+            <div class="row justify-content-center" id="page">
                 <!-- CONTENT FROM PRODUCTS.JS -->
             </div>
         </main>
