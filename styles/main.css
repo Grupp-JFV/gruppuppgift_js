@@ -193,16 +193,26 @@ div.card {
     border:1px solid darkred;  
     width: 25%;
 }
+.backtoshop-button {
+    font-size:0.7rem;
+    font-weight: 500;
+    color: whitesmoke; 
+    background-color: darkgrey;
+    border-radius:28px;
+    width:200px;
+    border: none;
+}
 .purchase-button {
     font-size:0.7rem;
+    font-weight: 500;
     color:whitesmoke; 
     background-color: darkred;
     border-radius:28px;
-    width:100px;
+    width:200px;
     border: none; 
 }
-.purchase-button:hover {
-    background-color: rgba(238, 231, 200, 0.979);
+.backtoshop-button:hover, .purchase-button:hover {
+    color: black;
 }
 
 
@@ -264,6 +274,8 @@ footer {
     .numberofpurchaseditems {
         width: 20%;
     }
+
+
 }
 
 

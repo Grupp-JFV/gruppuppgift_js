@@ -9,25 +9,36 @@
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- CSS  -->
-    <link rel="stylesheet" href="../styles/main.css"> 
+    <link rel="stylesheet" href="../styles/checkout.css"> 
      <!-- FONT-AWESOME -->
      <script src="https://kit.fontawesome.com/55cb2a86bc.js" crossorigin="anonymous"></script>
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="products.js"></script>
-    <!-- BOOTSTRAP JS -->
-    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script type="text/javascript" src=""></script>
+    <!-- BOOTSTRAP JS --> <!-- MÅSTE DET AVAKTIVERAS PGA JS NI SKRIVIT SJÄLVA?? -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    -->
+
 </head>
 <body>
     <!--NAVBAR-->
+    <div class="navcontainer sticky-top col-12" id="nav"> 
+        <div class="row">    
+            <span class="text-left col-6 pt-2 pb-2" id ="logo">
+                <a href="../index.html" class="ml-2">OPPIGÅRDS</a>
+            </span>
+            <span class="text-right col-6 pt-2 pb-2">
+                <a href="pages/shoppingbag.html" class="mr-2"><i class="fa fa-shopping-cart" id="shoppingcartlogo"></i></a>
+            </span>
+        </div>
+    </div>
+
     <header class="container-fluid">
-        <div class="row justify-content-center sticky-top pt-2 pb-2 p-0" id="nav">
-            <span class="text-center col-5 col-md-4" id ="logo"><a href="../index.html" class="text-dark">OPPIGÅRDS ÖL</a></span>
-            <span class="text-center col-3 col-md-4"><a href="../products.html" class="text-dark">Webbshop</a></span>
-            <span class="text-center col-4 col-md-4"><a href="shoppingbag.html" class="text-dark"><i class="fa fa-shopping-cart fa-lg"></i></a></span>
+        <div class="row">
+            <div class="col-12 p-0">
+                <img class="w-100 header_img" src="../product_images/dalalven.jpg" alt="Dalalven">
+            </div>
         </div>
     </header>
 
@@ -35,7 +46,7 @@
     <main class="container-fluid shoppingbag-main m-0">
         <div class="col-12">
             <div class="shoppingbag-header">
-                DIN VARUKORG
+                MIN VARUKORG
             </div>
 
             <div class="row d-flex align-items-center pt-4 pb-4">
@@ -54,12 +65,170 @@
                     </div>
                 </div>
             </div>
-
         </div>
+
         <div>Totalt pris: 80 kr</div>
-        <button class="purchase-button mt-2 mb-3 justify-content-center">Beställ</button>
+        <a href="../products.html"><button class="backtoshop-button mt-2 mb-3">Tillbaka till webbshopen</button></a>
+        <button class="purchase-button mt-2 mb-3">Gå vidare till kassan</button> <!-- FRAMTIDA TOGGLE-KNAPP -->
         
+        <hr>
+
+        <!-- CHECKOUT FORM -->
+        <div class="checkoutcontent"> <!-- SÄTT TOGGLE PÅ DEN HÄR-->
+            <div class="checkoutform col 12 pb-4">
+                <h5 class="checkoutheaders">MINA UPPGIFTER</h5>
+                <form>
+                    <div class="form-row text-left">
+                        <div class="form-group col-md-6 col-sm-12">
+                        <label for="firstname">Förnamn</label>
+                        <input type="text" class="form-control" placeholder="Förnamn" required>
+                    </div>
+                    <div class="form-group col-md-6 col-sm-12">
+                        <label for="lastname">Efternamn</label>
+                        <input type="text" class="form-control" placeholder="Efternamn" required>
+                    </div>
+                </div>
+                <div class="form-row text-left">
+                    <div class="form-group col-md-8 col-sm-12">
+                        <label for="streetadress">Gata</label>
+                        <input type="text" class="form-control" placeholder="Gata" required>
+                    </div>
+                    <div class="form-group col-md-4 col-sm-12">
+                        <label for="streetnumber">Nummer</label>
+                        <input type="text" class="form-control" placeholder="Nummer" required>
+                    </div>
+                </div>
+                <div class="form-row text-left">
+                    <div class="form-group col-md-8 col-sm-12">
+                    <label for="city">Stad</label>
+                    <input type="text" class="form-control" placeholder="Stad" required>
+                    </div>
+                    <div class="form-group col-md-4 col-sm-12">
+                    <label for="zipcode">Postnummer</label>
+                    <input type="text" class="form-control" placeholder="Postnummer" required>
+                    </div>
+                </div>
+                <div class="form-row text-left">
+                    <div class="form-group col-md-8 col-sm-12">
+                        <label for="email">E-post</label>
+                        <input type="email" class="form-control" placeholder="E-post" required>
+                    </div>
+                    <div class="form-group col-md-4 col-sm-12">
+                        <label for="phonenumber">Telefonnummer</label>
+                        <input type="tel" class="form-control" placeholder="Telefonnummer" required>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="paymentform pt-2 pb-2">
+                <h5 class="checkoutheaders">BETALNING</h5>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="paymentform" id="exampleRadios1" value="option1" required>
+                    <label class="form-check-label" for="exampleRadios1">
+                        Klarna (faktura)
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="paymentform" id="exampleRadios2" value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                        Kreditkort
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="paymentform" id="exampleRadios3" value="option3">
+                    <label class="form-check-label" for="exampleRadios3">
+                        Swish
+                    </label>
+                </div>
+            </div>
+
+            <hr>
+
+            
+            <div class="deliveryform pt-2 pb-4">
+                <h5 class="checkoutheaders">LEVERANS 
+                    <span class="small">(0kr)</span>
+                </h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="deliveryform" id="exampleRadios1" value="option1" required>
+                    <label class="form-check-label" for="exampleRadios1">
+                        Leverans till utlämningsställe - 2-5 arbetsdagar
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="deliveryform" id="exampleRadios2" value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                        Hemleverans - 2-5 arbetsdagar
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="deliveryform" id="exampleRadios3" value="option3">
+                    <label class="form-check-label" for="exampleRadios3">
+                        Expressleverans - 1-2 arbetsdagar
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn sendorderbtn mt-5 mb-5 p-2d">
+                    Skicka beställning!
+            </button>
+       
+
+            <!-- DOLD TILLS VALIDERINGEN ÄR FÄRDIG OCH SEDAN 
+                
+                <button type="submit" class="btn sendorderbtn mt-5 mb-5 p-2d" data-toggle="modal" data-target="#exampleModalCenter">
+                Skicka beställning!
+            </button> -->
+
+
+            
+            <!-- THANK YOU MODAL -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Tack för ditt köp!</h5>
+                    <button type="button" class="close closemodal" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                    Sammanfattning av beställning!
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="purchaseconfirmed-modal-btn">OK</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
     </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <footer m-0>
         <div class="container-fluid">

@@ -1,0 +1,224 @@
+/* Mobile phones breakpoint */
+html {
+    font-size:16pt;
+}
+
+/* HEADER */
+header {
+    background-color:grey;   
+}
+
+/*NAVBAR*/
+#nav {
+    background-color:white;
+    border-bottom: 1px solid black;
+    box-shadow: 0px 0px 4px black;
+}
+
+#logo a {
+    font-size:1rem;
+    font-weight:800;
+    color:darkred; 
+}
+
+#basketbutton {
+    border: none;
+    background: none;
+}
+
+#shoppingcartlogo {
+    color:darkred;
+}
+
+/*SHOPPING CART*/
+.hidden-basket {
+    display: none;
+    background: white;
+}
+
+.hidden-basket h3, span {
+    font-size:0.7rem;
+}
+
+.basket-heading h3 {
+    font-weight: bold;
+}
+
+.basket-text {
+    font-weight: normal;
+}
+
+.basket-sum {
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+.pay-btn {
+    font-size:0.7rem;
+    color:whitesmoke; 
+    background-color: darkred;
+    border-radius:28px;
+    border: none;
+    padding: 6px 18px;
+}
+
+.header_img {
+    object-fit: cover;
+    height:24vh;
+}
+
+
+/*CHECKOUT PAGE*/
+
+/*INSIDE SHOPPING CART*/
+.shoppingbag-header{
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: darkred; 
+}
+.shoppingbag-main {
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 20px;
+}
+.purchaseditem-image{
+    width: 50%;
+}
+hr {
+    width: 75%;
+}
+.numberofpurchaseditems{
+    border-radius:8px;
+    text-align: center;
+    border:1px solid darkred;  
+    width: 25%;
+}
+.backtoshop-button {
+    font-size:0.7rem;
+    font-weight: 500;
+    color: whitesmoke; 
+    background-color: darkgrey;
+    border-radius:28px;
+    width:200px;
+    border: none;
+}
+.purchase-button {
+    font-size:0.7rem;
+    font-weight: 500;
+    color:whitesmoke; 
+    background-color: darkred;
+    border-radius:28px;
+    width:200px;
+    border: none; 
+}
+.backtoshop-button:hover, .purchase-button:hover {
+    color: black;
+}
+
+/*CHECK OUT FORM*/
+
+.checkoutcontent {
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.checkoutheaders {
+    font-weight: 500;
+    color: darkred;
+    text-transform: uppercase;
+}
+
+.sendorderbtn {
+    font-size:0.9rem;
+    font-weight: 500;
+    color:whitesmoke; 
+    text-transform: uppercase;
+    background-color: darkred;
+    border-radius:28px;
+    width:300px;
+    border: none; 
+}
+
+.form-control {
+    font-size: 0.6rem;
+}
+
+
+
+
+ /*THANKS FOR YOUR PURCHASE MODAL */
+
+.purchaseconfirmed-modal-btn {
+    font-size:0.9rem;
+    font-weight: 500;
+    color:whitesmoke; 
+    text-transform: uppercase;
+    background-color: darkred;
+    border-radius:28px;
+    width:100px;
+    border: none;
+}
+
+.modal-title {
+    color: darkred;
+}
+
+/* FOOTER */
+footer {
+    background-color:white;
+    font-size: 0.7rem;
+    border-top:1px solid grey;
+}
+.footer-logo {
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+.footer-phone, .footer-email {
+    color: grey;
+    text-decoration: underline;
+}
+.footer-phone:hover, .footer-email:hover {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Padlet 768px */
+@media (min-width: 768px) {
+    /* HEADER */
+
+    /* SHOPPIBG-BAG */
+
+    .shoppingbag-header{
+        font-size: 1.2rem;
+    }
+    .shoppingbag-main {
+        text-align: center;
+        font-size: 1.2;
+    }
+    .purchaseditem-image{
+        width: 30%;
+    }
+    .numberofpurchaseditems {
+        width: 20%;
+    }
+
+
+}
+
+
+/*Desktop */ 
+@media (min-width: 992px) {
+  
+    /*Shopping bag*/
+
+    .shoppingbag-main {
+        text-align: center;
+    }
+    .numberofpurchaseditems {
+        width: 8%;
+    }
+    .purchaseditem-image{
+        width: 25%;
+    }
+}
