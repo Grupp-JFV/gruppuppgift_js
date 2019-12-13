@@ -172,33 +172,37 @@ $(document).ready(function() {
         $.each (shoppingcartList, function(i, cartitem) {
 
             //skriver ut listan i html 
-            let basketItem = $("<div>").addClass("row border-bottom border-top pt-2 basket-text").appendTo("#basket_content");
+            let basketItem = $("<div>").addClass("row border-top pt-2 basket-text").appendTo("#basket_content");
 
-            let basketName = $("<div>").addClass("col-2 text-left").appendTo(basketItem);
-            $("<span>").addClass("ml-2 basket-text").text(cartitem.name).appendTo(basketName);
+            let basketName = $("<div>").addClass("col-7 col-md-2 text-left").appendTo(basketItem);
+            $("<button>").addClass("delete-button").text("x").appendTo(basketName);
+            $("<span>").addClass("text-left").text(cartitem.name).appendTo(basketName);
     
-            let basketStrength = $("<div>").addClass("col-0 col-md-2 text-center").appendTo(basketItem);
-            $("<span>").addClass("basket-text").text(cartitem.strength).appendTo(basketStrength);
+            let basketStrength = $("<div>").addClass("col-0 col-md-2 d-none d-md-inline text-center").appendTo(basketItem);
+            $("<span>").addClass("basket-text").text(cartitem.strength + " %").appendTo(basketStrength);
     
-            let basketType = $("<div>").addClass("col-0 col-md-2 text-center").appendTo(basketItem);
+            let basketType = $("<div>").addClass("col-0 col-md-2 d-none d-md-inline text-center").appendTo(basketItem);
             $("<span>").addClass("basket-text").text(cartitem.type).appendTo(basketType);
     
-            let basketPrice = $("<div>").addClass("col-2 text-center").appendTo(basketItem);
-            $("<span>").addClass("basket-text").text(cartitem.price).appendTo(basketPrice);
+            let basketPrice = $("<div>").addClass("col-0 col-md-2 d-none d-md-inline text-center").appendTo(basketItem);
+            $("<span>").addClass("basket-text").text(cartitem.price + " kr").appendTo(basketPrice);
     
-            let basketAmount = $("<div>").addClass("col-2 text-center").appendTo(basketItem);
+            let basketAmount = $("<div>").addClass("col-2 col-md-2 p-0 text-center").appendTo(basketItem);
+            $("<button>").addClass("amount-button").text("-").appendTo(basketAmount);
             $("<span>").addClass("basket-text").text(cartitem.amount).appendTo(basketAmount);
+            $("<button>").addClass("amount-button").text("+").appendTo(basketAmount);
     
-            let basketTotal = $("<div>").addClass("col-2 text-right text-right").appendTo(basketItem);
-            $("<span>").addClass("mr-2 basket-text").text(cartitem.price * cartitem.amount).appendTo(basketTotal);
+            let basketTotal = $("<div>").addClass("col-3 col-md-2 text-right").appendTo(basketItem);
+            $("<span>").addClass("basket-text").text(cartitem.price * cartitem.amount + " kr").appendTo(basketTotal);
+
 
         }); 
-
-        //VARFÖR HITTAR DEN EJ VÄRDENA 
-        // ----> vi måste använda oss av "printlist" som vi testade i förra uppgiften, dvs. all html behöver nollställas/skrivas ut igen? 
-     
-
-    }
-
+    } 
  
-    
+    //sparar produkterna som finns i listan i localstorage 
+    localStorage.setItem("CurrentShoppingcartList", JSON.stringify(shoppingcart));
+
+    //delete-funktion ej klar 
+    function showDeleteOption() {
+        alert("funkar");
+    }

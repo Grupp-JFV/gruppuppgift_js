@@ -19,55 +19,55 @@
 
 </head>
 <body>
+    <div class="container-fluid">    
 
     <!--NAVBAR-->
-    <div class="navcontainer sticky-top col-12" id="nav"> 
-        <div class="row">    
-            <span class="text-left col-6 pt-2 pb-2" id ="logo">
-                <a href="index.html" class="ml-2">OPPIGÅRDS</a>
-            </span>
-            <span class="text-right col-6 pt-2 pb-2">
-                <a href="pages/shoppingbag.html" class="mr-2"><i class="fa fa-shopping-cart" id="shoppingcartlogo"></i></a>
-            </span>
-        </div>
+    <div class="row sticky-top justify-content-center" id="nav">   
+        <span class="text-left col-6 pt-2 pb-2" id ="companyname">
+            <a href="index.html" class="ml-2">OPPIGÅRDS</a>
+        </span>
+        <span class="text-right col-6 pt-2 pb-2">
+            <button type="button" class="mr-2 btn" id="basketButton"><i class="fa fa-shopping-cart" id="shoppingcartlogo"></i>
+        </span>
     </div>
 
 
-
-
-    <header class="jumbotron jumbotron-fluid p-0 m-0">
-        <div class="container m-0 p-0">
+    <header class="jumbotron jumbotron-fluid row">
+    
             <div class="mw-100 pb-2 pt-2 mr-4 ml-4 text-center headercontent">
                 <h1 class="introheadline mb-2">Välkommen!</h1>
-                    <p>
-                        Gården Oppigårds har varit i vår släkts ägo sedan 1700-talet. 
-                        Bryggeriet har vi byggt i en hage på gården. 
-                        Idéerna om att brygga öl började spira under 1980-talet. 
-                        Nu har vi varit igång i 15 år! Första året bryggdes 8.000 liter öl som såldes här i närområdet. 
-                        Nu är vi uppe i över 2 miljoner liter som fylls på flaska, burk och fat och säljs över hela Sverige.
-                    </p>
-                    <p> 
-                        På 1980-talet bryggdes det bara ljus lageröl med mycket lite humle i industriformat i vårt land. 
-                        Antalet ölbryggerier var mindre än tio. Idag är det nästan 400 bryggerier i gång. Svensk ölkultur blomstrar. 
-                    </p>
-                    <p>
-                        Välkommen till oss och ta del av vårt bidrag till den svenska ölkartan!
-                    </p>
-                    <span class="introlinks">
-                        <a href="#page">Läs mer</a> eller besök våran
-                        <a href="products.html">webshop</a>!
-                    </span>
+                <p>
+                    Gården Oppigårds har varit i vår släkts ägo sedan 1700-talet. 
+                    Bryggeriet har vi byggt i en hage på gården. 
+                    Idéerna om att brygga öl började spira under 1980-talet. 
+                    Nu har vi varit igång i 15 år! Första året bryggdes 8.000 liter öl som såldes här i närområdet. 
+                    Nu är vi uppe i över 2 miljoner liter som fylls på flaska, burk och fat och säljs över hela Sverige.
+                </p>
+                <p> 
+                    På 1980-talet bryggdes det bara ljus lageröl med mycket lite humle i industriformat i vårt land. 
+                    Antalet ölbryggerier var mindre än tio. Idag är det nästan 400 bryggerier i gång. Svensk ölkultur blomstrar. 
+                </p>
+                <p>
+                    Välkommen till oss och ta del av vårt bidrag till den svenska ölkartan!
+                </p>
+                <span>
+                    <button type="button" class="btn" id="readmoreindex_button">LÄS MER</button>
+                </span>
+                <span>
+                    <a href="products.html">
+                        <button type="button" class="btn" id="webshop_button">WEBBSHOP</button>
+                    </a>
+                </span>
             </div>
-        </div>
+
     </header>
     
         <!-- MAIN CONTENT -->
-        <main class="row sort p-0 justify-content-center mr-0 ml-0 text-center" id="page">
-
-                    
+        <div class="row sort text-center readmoreindex">
+        <main> 
                     <!-- content goes here -->
-                    <div class="col-lg-5 col-md-12 mt-4">
-                        <h3 class="infoheadline" id="readmoreindex">Vår öl</h3>
+                    <div class="col-lg-6 col-sm-12">
+                        <h3 class="infoheadline">Vår öl</h3>
                         <div class="introtext">
                             <span>Vi på Oppigårds har alltid gillat att utforska smak, doft och karaktär. 
                                 Öl är för oss ett uttryckssätt, som säger mycket om hur vi tänker och vad vi gillar. 
@@ -76,33 +76,33 @@
                                 På liknande vis har vi blivit inspirerade av klassiska ölstilar från olika delar av världen och lagt till en twist som vi tycker passar.
                             </span>
                             <div class="pt-4 pb-4">
-                                <img src="thelogo.png" width="35%">
+                                <img src="thelogo.png" id="companylogo">
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-12 mt-4 mb-5">
+                    <div class="col-lg-6 col-sm-12">
                         <h3 class="infoheadline">Nyheter</h3>
-                        <div class="introtext text-left ml-5">
-                            <div class="mt-1 mb-4">
-                                <img src="product_images/everydayipa.jpg" alt="Öletikett" width="20%">
+                        <div class="introtext text-left">
+                            <div class="">
+                                <img src="product_images/everydayipa.jpg" alt="Öletikett" class="index-productnewsimg">
                                 <span class="introtext">
-                                    <a href="products.html" class="findproduct">
+                                    <a href="products.html" class="index-productnews">
                                         Everyday Ipa - 4,8%
                                     </a>
                                 </span>
                             </div>
-                            <div class="mt-1 mb-4">
-                                <img src="product_images/hedemoraporter.jpg" alt="Öletikett" width="20%">
+                            <div class="">
+                                <img src="product_images/hedemoraporter.jpg" alt="Öletikett" class="index-productnewsimg">
                                 <span class="introtext">
-                                    <a href="products.html" class="findproduct">
+                                    <a href="products.html" class="index-productnews">
                                         Hedemora Porter - 5,4%
                                     </a>
                                 </span>
                             </div>
-                                <div class="mt-1 mb-4">
-                                    <img src="product_images/winterale.jpg"  alt="Öletikett" width="20%">
+                                <div class="">
+                                    <img src="product_images/winterale.jpg"  alt="Öletikett" class="index-productnewsimg">
                                     <span class="introtext">
-                                        <a href="products.html" class="findproduct">
+                                        <a href="products.html" class="index-productnews">
                                             Winter Ale - 5,0% 
                                         </a>
                                     </span>
@@ -110,7 +110,16 @@
                         </div>
                     </div>
         </main>
-    
+</div>    
+
+
+
+
+
+
+
+
+
         <footer class="row justify-content-center pt-2 pb-2 w-100">
                     <div class="col-12 col-lg-6 text-center">
                         <div class="footer-logo">
