@@ -2,19 +2,30 @@
 html {
     font-size:16pt;
 }
-
 /* HEADER */
+/*NAVBAR*/
+#nav {
+    background-color:white;
+    border-bottom: 1px solid black;
+    box-shadow: 0px 0px 4px black;
+}
+#companyname a {
+    font-size:1rem;
+    font-weight:800;
+    color:darkred; 
+}
+#shoppingcartlogo {
+    color:darkred;
+}
 header {
     background-color:rgb(255, 255, 255);   
 }
-
 .jumbotron {
     background-image:url("../product_images/dalalven.jpg")!important;
     height: 90vh;
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 .headercontent {
     background-color: rgba(255, 255, 255, 0.8);
     position: absolute;
@@ -24,7 +35,6 @@ header {
     padding-right: 20px;
     border-radius: 5px;
 }
-
 .introheadline {
     font-size: 1rem;
     font-weight: 800;
@@ -32,22 +42,6 @@ header {
     text-transform: uppercase;
     border-bottom:1px solid grey;
 }
-
-.webshop_button {
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: whitesmoke; 
-    background-color: darkred;
-    border-radius:25px;
-    border: none;
-    width:300px;
-}
-
-.webshop_button:hover {
-    color: black;
-}
-
-
 .introtext {
     color: rgb(0, 0, 0);
     background-color: rgba(255, 255, 255, 0.7);
@@ -55,6 +49,21 @@ header {
     font-size: 1rem;
 }
 
+#webshop_button, #readmoreindex_button {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: whitesmoke; 
+    background-color: darkred;
+    border-radius:25px;
+    border: none;
+    width:250px;
+}
+#webshop_button:hover, #readmoreindex_button:hover {
+    background-color: rgb(90, 2, 2);
+}
+.readmoreindex {
+    display: none;
+}
 .infoheadline {
     font-size: 1rem;
     font-weight: 800;
@@ -62,82 +71,11 @@ header {
     text-transform: uppercase;
     border-bottom: 1px solid grey;
 }
-
-/*NAVBAR*/
-#nav {
-    background-color:white;
-    border-bottom: 1px solid black;
-    box-shadow: 0px 0px 4px black;
+#companylogo {
+    width: 30%;
 }
-#logo a {
-    font-size:1rem;
-    font-weight:800;
-    color:darkred; 
-}
-#shoppingcartlogo {
-    color:darkred;
-}
-
-
-/* CARD DECK */
-div.card {
-    width:80vw;
-    border:none;
-}
-.card-img-top {
-    margin-top:20px;
-    height:20vh;
-    object-fit: scale-down;
-}
-.card-title {
-    width:100%;
-    font-size:0.8rem;
-    border-top:2px solid lightgrey; 
-    padding-top:20px;  
-}
-
-.card-text {
-    font-size:1.5rem;
-    font-weight:bold;
-    align-self: baseline;
-    margin-right:5px;
-} 
-.readmore_button {
-    font-size:0.7rem;
-    font-weight:500;
-    background-color:white;
-    color:grey;
-    align-self: baseline;
-    text-transform: uppercase;
-    border:none;
-}
-
-/* Card buttons */
-.btn {
-    font-size:0.7rem;
-    color:whitesmoke; 
-    background-color: darkred;
-    border-radius:28px;
-    width:100px;
-}
-.input-group {
-    justify-content: center;
-}
-.input-group input {
-    font-size:0.7rem;
-    border-radius:8px;
-    text-align: center;
-    border:1px solid darkred !important;
-}
-
-/* PRODUCT DESCRIPTION */
-.product_description {
-    font-size:0.7rem;
-    text-align:left;
-    padding:20px;
-    border-top:2px solid lightgrey;
-    border-bottom:2px solid lightgrey;
-    margin-bottom:20px;
+.index-productnewsimg {
+    width: 15%;
 }
 
 /* FOOTER */
@@ -159,46 +97,9 @@ footer {
     color: black;
 }
 
-
-/*SHOPPING BAG*/
-.shoppingbag-header {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: darkred; 
-}
-.shoppingbag-main {
-    text-align: center;
-    font-size: 1rem;
-    padding-top: 20px;
-}
-.purchaseditem-image {
-    width: 50%;
-}
-hr {
-    width: 75%;
-}
-.numberofpurchaseditems {
-    border-radius:8px;
-    text-align: center;
-    border:1px solid darkred;  
-    width: 25%;
-}
-.purchase-button {
-    font-size:0.7rem;
-    color:whitesmoke; 
-    background-color: darkred;
-    border-radius:28px;
-    width:100px;
-    border: none; 
-}
-.purchase-button:hover {
-    background-color: rgba(238, 231, 200, 0.979);
-}
-
 /* Padlet 768px */
 @media (min-width: 768px) {
     /* HEADER */  
-
 
     .introheadline {
         font-size: 1.4rem;
@@ -207,42 +108,9 @@ hr {
         font-size: 0.8rem;
         padding-left: 30px;
         padding-right: 30px;
-    }
-
-    /* CARD DECK */
-    div.card {
-        width:40vw;
-        border:none;
-    }
-    .card-img-top {
-        margin-top:20px;
-        height:20vh;
-        object-fit: scale-down;
-    }
-    .input-group input {
-        font-size:0.7rem;
-        border-radius:8px;
-        text-align: center;
-        width:50%;
-    }
-    .input-group .btn {
-        width:30%;
-    }
-
-    /* SHOPPING-BAG */
-
-    .shoppingbag-header {
-        font-size: 1.2rem;
-    }
-    .shoppingbag-main {
-        text-align: center;
-        font-size: 1.2;
-    }
-    .purchaseditem-image {
-        width: 30%;
-    }
-    .numberofpurchaseditems {
-        width: 20%;
+    }    
+    #companylogo {
+        width: 25%;
     }
 }
 
@@ -250,8 +118,9 @@ hr {
 /*Desktop */ 
 @media (min-width: 992px) {
 
-    /* SORT MENU */
-
+    main {
+        display:flex; 
+    }
 
     /* Intro styling */
 
@@ -265,12 +134,10 @@ hr {
     .introtext {
     font-size:1rem;
     }
-
     .introheadline p {
         background-color:none;
     }
-   
-    .findproduct {
+    .index-productnews {
         font-size:0.7rem;
         font-weight:500;
         color:grey;
@@ -278,18 +145,4 @@ hr {
         text-transform: uppercase;
         border:none;
     }
-
-    
-    /*Shopping bag*/
-
-    .shoppingbag-main {
-        text-align: center;
-    }
-    .numberofpurchaseditems {
-        width: 8%;
-    }
-    .purchaseditem-image{
-        width: 25%;
-    }
-
 }
