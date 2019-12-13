@@ -1,18 +1,15 @@
 $(document).ready(function() {
+    
     //skapar alla html-element 
     productList();
+    //skapa en tom lista för varukorgen (alltid tillgänglig onload)
+    shoppingcart = []; 
 
     //lyssnar efter varukorgen och hämtar info från local storage 
     $("#basketButton").on("click", function() {
-
-        /*let localstorageList = localStorage.getItem("CurrentShoppingcartList"); 
-        let products = JSON.parse(localstorageList);
-
-        $.each(products, function (i, product) {
-            $("<span>").addClass("basket-text").text(product.name).appendTo("#basket_name");
-        });*/
-
         $("#basket").slideToggle(300);
+                        //skriv ut listan printlist 
+                        printShoppingcart();
 
     }); 
 
@@ -30,7 +27,6 @@ $(document).ready(function() {
     //lyssnar efter köpknappen 
     $(".btn").on("click",function() {
         addToCart($(this)); 
-
     }); 
         
 }); //stänger window ready 
@@ -60,12 +56,12 @@ $(document).ready(function() {
         let products = [product1, product2, product3, product4, product5, product6];
     
         display(products);
-        toLocalStorage(products);  //(!!! funkar men fyller ingen funktion just nu !!!)
+        toLocalStorage(products);  
 
     }
     
     //skapar en objektklass för produkterna 
-    function Product(name, image, type, strength, description, price, id) {                         //Product Constructor
+    function Product(name, image, type, strength, description, price, id) {                     
     
         this.name = name;
         this.image = image;
@@ -104,17 +100,16 @@ $(document).ready(function() {
 
             $("#page").append(responsiveColumn);
         });
+
     } 
 
     //sparar produkterna som finns i listan i localstorage 
     function toLocalStorage(products) {
         localStorage.setItem("CurrentProductList", JSON.stringify(products));
+
     }
 
-    //skapa en tom lista 
-    shoppingcart = [];  
-    
-    
+ 
     //funktionen som är kopplad till köpknappen 
     function addToCart(buttonClicked) {
 
@@ -124,15 +119,14 @@ $(document).ready(function() {
         //sätt ett villkor så att när input är tomt så görs inget
         if ( input > 0 ) {
 
-        //hämtar produktlistan från localstorage och sparar i variabeln products 
+        //hämtar produktlistan från localstorage och sparar listan i variabeln products 
         let localstorageList = localStorage.getItem("CurrentProductList"); 
         let products = JSON.parse(localstorageList); 
         
             $.each(products, function(i, product) {
-                let buttonId = buttonClicked[0].id;
-                //skapa ett villkor för knappen som är tryckt och om id är detsamma som indexpositionen 
-                if (product.id == buttonId) {
                 
+                let buttonId = buttonClicked[0].id;
+                if (product.id == buttonId) {
                     //hämtar värder från input-fältet till en variabel
                     let input = buttonClicked.prev().val();
 
@@ -145,42 +139,70 @@ $(document).ready(function() {
                         id: product.id
                     }
 
-                    let basketItem = $("<div>").addClass("row border-top pt-0 basket-text").appendTo("#basket_content");
-
-                    let basketName = $("<div>").addClass("col-7 col-md-2 text-left").appendTo(basketItem);
-                    $("<button>").addClass("delete-button").text("x").appendTo(basketName);
-                    $("<span>").addClass("text-left").text(product.name).appendTo(basketName);
-                    let basketStrength = $("<div>").addClass("col-0 col-md-2 d-none d-md-inline text-center").appendTo(basketItem);
-                    $("<span>").addClass("basket-text").text(product.strength + " %").appendTo(basketStrength);
-                    let basketType = $("<div>").addClass("col-0 col-md-2 d-none d-md-inline text-center").appendTo(basketItem);
-                    $("<span>").addClass("basket-text").text(product.type).appendTo(basketType);
-                    let basketPrice = $("<div>").addClass("col-0 col-md-2 d-none d-md-inline text-center").appendTo(basketItem);
-                    $("<span>").addClass("basket-text").text(product.price + " kr").appendTo(basketPrice);
-                    let basketAmount = $("<div>").addClass("col-2 col-md-2 p-0 text-center").appendTo(basketItem);
-                    $("<button>").addClass("amount-button").text("-").appendTo(basketAmount);
-                    $("<span>").addClass("basket-text").text(input).appendTo(basketAmount);
-                    $("<button>").addClass("amount-button").text("+").appendTo(basketAmount);
-                    let basketTotal = $("<div>").addClass("col-3 col-md-2 text-right").appendTo(basketItem);
-                    $("<span>").addClass("basket-text").text(product.price * input + " kr").appendTo(basketTotal);
-
-
                     //pushar in listobjekt till den nya listan 
-                    shoppingcart.push(newObject); 
-                    console.log(shoppingcart); 
-                    
+                    shoppingcart.push(newObject);
+    
                     //tömmer inputfältet 
-                    $('.input-group input').val('');
-                
-                }  //stänger if-satsen   
-        
+                    $(".input-group input").val("");
+
+                    //sparar produkterna som finns i listan i localstorage 
+                    localStorage.setItem("CurrentShoppingcartList", JSON.stringify(shoppingcart));
+                }  
+
             }); //stänger each-loop 
-        }  
-    /* när man klickar på köpknappen så är det sista som händer INNUTI den funktionen att den sparas i local Storage */ 
+       
+        } else {
+
+            //FUNKAR INTE EFTERSOM INGET LÄGGS TILL I SHOPPINGCART
+          //  alert("Välj ett antal innan du köper!");
+
+        }
+    } //stänger buy
+ 
+        
+
+    function printShoppingcart() {
+
+        let localstorageList = localStorage.getItem("CurrentShoppingcartList"); 
+        let shoppingcartList = JSON.parse(localstorageList);
+
+        //tömmer varukorgens html 
+        $("#basket_content").html("");
+
+        $.each (shoppingcartList, function(i, cartitem) {
+
+            //skriver ut listan i html 
+            let basketItem = $("<div>").addClass("row border-top pt-2 basket-text").appendTo("#basket_content");
+
+            let basketName = $("<div>").addClass("col-7 col-md-2 text-left").appendTo(basketItem);
+            $("<button>").addClass("delete-button").text("x").appendTo(basketName);
+            $("<span>").addClass("text-left").text(cartitem.name).appendTo(basketName);
+    
+            let basketStrength = $("<div>").addClass("col-0 col-md-2 d-none d-md-inline text-center").appendTo(basketItem);
+            $("<span>").addClass("basket-text").text(cartitem.strength + " %").appendTo(basketStrength);
+    
+            let basketType = $("<div>").addClass("col-0 col-md-2 d-none d-md-inline text-center").appendTo(basketItem);
+            $("<span>").addClass("basket-text").text(cartitem.type).appendTo(basketType);
+    
+            let basketPrice = $("<div>").addClass("col-0 col-md-2 d-none d-md-inline text-center").appendTo(basketItem);
+            $("<span>").addClass("basket-text").text(cartitem.price + " kr").appendTo(basketPrice);
+    
+            let basketAmount = $("<div>").addClass("col-2 col-md-2 p-0 text-center").appendTo(basketItem);
+            $("<button>").addClass("amount-button").text("-").appendTo(basketAmount);
+            $("<span>").addClass("basket-text").text(cartitem.amount).appendTo(basketAmount);
+            $("<button>").addClass("amount-button").text("+").appendTo(basketAmount);
+    
+            let basketTotal = $("<div>").addClass("col-3 col-md-2 text-right").appendTo(basketItem);
+            $("<span>").addClass("basket-text").text(cartitem.price * cartitem.amount + " kr").appendTo(basketTotal);
+
+
+        }); 
+    } 
+ 
     //sparar produkterna som finns i listan i localstorage 
     localStorage.setItem("CurrentShoppingcartList", JSON.stringify(shoppingcart));
 
-    } //stänger buy()
-
-function showDeleteOption() {
-    alert("funkar");
-}
+    //delete-funktion ej klar 
+    function showDeleteOption() {
+        alert("funkar");
+    }
