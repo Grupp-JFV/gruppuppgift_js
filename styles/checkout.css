@@ -111,8 +111,11 @@ hr {
     width:200px;
     border: none; 
 }
-.backtoshop-button:hover, .purchase-button:hover {
-    color: black;
+.backtoshop-button:hover {
+    background-color: rgb(95, 94, 94);
+}
+.purchase-button:hover {
+    background-color:rgb(82, 6, 6);
 }
 
 /*CHECK OUT FORM*/
@@ -121,13 +124,11 @@ hr {
     padding-left: 70px;
     padding-right: 70px;
 }
-
 .checkoutheaders {
     font-weight: 500;
     color: darkred;
     text-transform: uppercase;
 }
-
 .sendorderbtn {
     font-size:0.9rem;
     font-weight: 500;
@@ -138,27 +139,36 @@ hr {
     width:300px;
     border: none; 
 }
-
+.sendorderbtn:hover {
+    background-color: rgb(61, 6, 6);
+    color: whitesmoke;
+}
 .form-control {
     font-size: 0.6rem;
 }
-
-
-
-
- /*THANKS FOR YOUR PURCHASE MODAL */
-
-.purchaseconfirmed-modal-btn {
-    font-size:0.9rem;
+.modalgobackbtn {
+    font-size:0.7rem;
     font-weight: 500;
     color:whitesmoke; 
     text-transform: uppercase;
     background-color: darkred;
     border-radius:28px;
-    width:100px;
-    border: none;
+    width: 250px;
+    border: none; 
 }
 
+ /*THANKS FOR YOUR PURCHASE MODAL */
+
+.purchaseconfirmed-modal-btn {
+    font-size:0.7rem;
+    font-weight: 500;
+    color:whitesmoke; 
+    text-transform: uppercase;
+    background-color: darkred;
+    border-radius:28px;
+    width:200px;
+    border: none;
+}
 .modal-title {
     color: darkred;
 }
@@ -202,8 +212,6 @@ footer {
     .numberofpurchaseditems {
         width: 20%;
     }
-
-
 }
 
 
