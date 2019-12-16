@@ -21,15 +21,62 @@
 <body>
     <div class="container-fluid">    
 
-    <!--NAVBAR-->
-    <div class="row sticky-top justify-content-center" id="nav">   
-        <span class="text-left col-6 pt-2 pb-2" id ="companyname">
-            <a href="index.html" class="ml-2">OPPIGÅRDS</a>
-        </span>
-        <span class="text-right col-6 pt-2 pb-2">
-            <button type="button" class="mr-2 btn" id="basketButton"><i class="fa fa-shopping-cart" id="shoppingcartlogo"></i>
-        </span>
+<!--NAVBAR-->
+<header class="row sticky-top" id="nav"> 
+    <div class="text-left col-6 align-self-center" id ="companyname">
+        <a href="../index.html">
+            <span id="companylogo">OPPI<h1 id="test">GÅRDS</h1></span>
+        </a>
     </div>
+    <!-- SHOPPING CART -->
+    <div class="text-right col-6">
+        <button type="button" class="btn p-0 shopping-cart-button" id="basketButton">
+            <i class="fa fa-shopping-cart" id="shoppingcartlogo"></i>
+        </button>
+    </div>
+    <!-- HIDDEN BASKET -->
+    <div class="col-12 hidden-basket" id="basket">
+        <div class="inner container-fluid p-0 p-0 pl-md-4 pr-md-4" id="basket_content">
+            <div class="row border-top pt-1 basket-heading">
+                <div class="col-7 col-md-2">
+                    <h3 class="text-left">Produkt</h3>
+                </div>
+                <div class="col-0 col-md-2 d-none d-md-inline">
+                    <h3 class="text-center">Alkoholhalt</h3>
+                </div>
+                <div class="col-0 col-md-2 d-none d-md-inline">
+                    <h3 class="text-center">Sort</h3>
+                </div>
+                <div class="col-0 col-md-2 d-none d-md-inline">
+                    <h3 class="text-center">Pris</h3>
+                </div>
+                <div class="col-2 col-md-2 p-0">
+                    <h3 class="text-center">Antal</h3>
+                </div>
+                <div class="col-3 col-md-2">
+                    <h3 class="text-right mr-0">Totalt</h3>
+                </div>
+            </div>
+        </div>
+        <div class="inner container-fluid p-0 pl-md-4 pr-md-4" id="basket_sum">
+            <div class="row border-top">
+                <div class="col-12 pr-md-0 text-center text-md-right basket-sum">
+                    <h3 class="d-inline">Summa</h3>
+                    <span>499kr</span>
+                    <h3 class="d-inline">(+Frakt</h3>
+                    <span class="mr-md-3">200kr)</span>                       
+                    <h3 class="d-inline ml-0">Att betala</h3>
+                    <span class="mr-md-4">699kr</span>
+                    <a href="checkout.html">
+                        <button" class="pay-btn" id="to_pay">Till Kassan</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>          
+</header>
+<div class="row border-line">
+</div>
 
 
     <header class="jumbotron jumbotron-fluid row">
@@ -63,11 +110,11 @@
     </header>
     
         <!-- MAIN CONTENT -->
-        <div class="row sort text-center readmoreindex">
+        <div class="row sort readmoreindex text-center">
         <main> 
                     <!-- content goes here -->
-                    <div class="col-lg-6 col-sm-12">
-                        <h3 class="infoheadline">Vår öl</h3>
+                    <div class="col-lg-6 col-sm-8">
+                        <h3 class="infoheadline text-left">Vår öl</h3>
                         <div class="introtext">
                             <span>Vi på Oppigårds har alltid gillat att utforska smak, doft och karaktär. 
                                 Öl är för oss ett uttryckssätt, som säger mycket om hur vi tänker och vad vi gillar. 
@@ -80,10 +127,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-sm-12">
-                        <h3 class="infoheadline">Nyheter</h3>
+                    
+                    <div class="col-lg-6 col-sm-8">
+                        <h3 class="infoheadline text-left">Nyheter</h3>
                         <div class="introtext text-left">
-                            <div class="">
+                            <div class="mb-4">
                                 <img src="product_images/everydayipa.jpg" alt="Öletikett" class="index-productnewsimg">
                                 <span class="introtext">
                                     <a href="pages/products.html" class="index-productnews">
@@ -91,7 +139,7 @@
                                     </a>
                                 </span>
                             </div>
-                            <div class="">
+                            <div class="mb-4">
                                 <img src="product_images/hedemoraporter.jpg" alt="Öletikett" class="index-productnewsimg">
                                 <span class="introtext">
                                     <a href="pages/products.html" class="index-productnews">
@@ -99,7 +147,7 @@
                                     </a>
                                 </span>
                             </div>
-                                <div class="">
+                                <div class="mb-4">
                                     <img src="product_images/winterale.jpg"  alt="Öletikett" class="index-productnewsimg">
                                     <span class="introtext">
                                         <a href="pages/products.html" class="index-productnews">
