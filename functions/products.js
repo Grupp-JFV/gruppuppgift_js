@@ -177,11 +177,11 @@ function printShoppingcart() {
     //tömmer innehållet i basket_content innan den skapar nytt 
     $("#basket_content").html("");
 
-    let totalPay = 0;
+    let totalCost = 0;
 
     $.each (shoppingcartList, function(i, cartitem) {
 
-        let basketItem = $("<div>").addClass("row border-top pt-2 basket-text").appendTo("#basket_content");
+        let basketItem = $("<div>").addClass("row border-top basket-text").appendTo("#basket_content");
 
         let basketName = $("<div>").addClass("col-7 col-md-2 text-left").appendTo(basketItem);
         $("<button>").addClass("delete-button").text("x").appendTo(basketName);
@@ -204,15 +204,20 @@ function printShoppingcart() {
         $("<span>").addClass("basket-text").text(cartitem.amount).appendTo(basketAmount);
         $("<button>").addClass("amount-button").text("+").appendTo(basketAmount);
 
-
         let basketTotal = $("<div>").addClass("col-3 col-md-2 text-right").appendTo(basketItem);
-        $("<span>").addClass("basket-text").text(cartitem.price * cartitem.amount + " kr").appendTo(basketTotal);
+        let cost = cartitem.price * cartitem.amount;
+        $("<span>").addClass("basket-text").text(cost + " kr").appendTo(basketTotal);
 
-        totalPay += cartitem.price * cartitem.amount;
-
+        totalCost += cost;
+        
     });
 
-    $("#total_payment").html(String(totalPay));
+    $("#total_cost").html(String(totalCost) + "kr");
+    let shippingCost = 99;
+    $("#shipping_cost").html(String(shippingCost) + "kr)");
+    let totalPayment = totalCost + shippingCost;
+    $("#total_payment").html(String(totalPayment) + "kr");
+
 } 
 
 
