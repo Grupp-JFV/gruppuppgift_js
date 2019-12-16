@@ -12,9 +12,14 @@
     <link rel="stylesheet" href="../styles/checkout.css"> 
      <!-- FONT-AWESOME -->
      <script src="https://kit.fontawesome.com/55cb2a86bc.js" crossorigin="anonymous"></script>
-    <!-- JQUERY -->
+
+     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <!--  js -->
+    <script type="text/javascript" src="../functions/shoppingcart.js"></script>
     <script type="text/javascript" src="../functions/checkout.js"></script>
+    
     <!-- BOOTSTRAP JS --> <!-- MÅSTE DET AVAKTIVERAS PGA JS NI SKRIVIT SJÄLVA?? -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -22,25 +27,67 @@
 
 </head>
 <body>
-    <!--NAVBAR-->
-    <div class="navcontainer sticky-top col-12" id="nav"> 
-        <div class="row">    
-            <span class="text-left col-6 pt-2 pb-2" id ="logo">
-                <a href="../index.html" class="ml-2">OPPIGÅRDS</a>
-            </span>
-            <span class="text-right col-6 pt-2 pb-2">
-                <a href="checkout.html" class="mr-2"><i class="fa fa-shopping-cart" id="shoppingcartlogo"></i></a>
-            </span>
-        </div>
-    </div>
-
-    <header class="container-fluid">
+    <div class="container-fluid">
+        <!--TOP NAVBAR-->
+        <header class="row sticky-top" id="nav"> 
+            <div class="text-left col-6 align-self-center" id ="companyname">
+                <a href="../index.html">
+                    <span id="companylogo">OPPI<h1 id="test">GÅRDS</h1></span>
+                </a>
+            </div>
+            <!-- SHOPPING CART ICON-->
+            <div class="text-right col-6">
+                <button type="button" class="btn p-0 shopping-cart-button" id="basketButton">
+                    <i class="fa fa-shopping-cart" id="shoppingcartlogo"></i>
+                </button>
+            </div>
+            <!-- HIDDEN BASKET -->
+            <div class="col-12 hidden-basket" id="basket">
+                <div class="inner container-fluid p-0 p-0 pl-md-4 pr-md-4" id="basket_content">
+                    <div class="row border-top pt-1 basket-heading">
+                        <div class="col-7 col-md-2">
+                            <h3 class="text-left">Produkt</h3>
+                        </div>
+                        <div class="col-0 col-md-2 d-none d-md-inline">
+                            <h3 class="text-center">Alkoholhalt</h3>
+                        </div>
+                        <div class="col-0 col-md-2 d-none d-md-inline">
+                            <h3 class="text-center">Sort</h3>
+                        </div>
+                        <div class="col-0 col-md-2 d-none d-md-inline">
+                            <h3 class="text-center">Pris</h3>
+                        </div>
+                        <div class="col-2 col-md-2 p-0">
+                            <h3 class="text-center">Antal</h3>
+                        </div>
+                        <div class="col-3 col-md-2">
+                            <h3 class="text-right mr-0">Totalt</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner container-fluid p-0 pl-md-4 pr-md-4" id="basket_sum">
+                    <div class="row border-top">
+                        <div class="col-12 pr-md-0 text-center text-md-right basket-sum">
+                            <h3 class="d-inline">Summa</h3>
+                            <span>499kr</span>                       
+                            <h3 class="d-inline ml-0">Att betala</h3>
+                            <span class="mr-md-4">699kr</span>
+                            <a href="../gruppuppgift_js/pages/checkout.html">
+                                <button" class="pay-btn" id="to_pay">Till Kassan</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>          
+        </header>
+        <!-- BORDER -->
+        <div class="row border-line"></div>
+        <!-- HEADER IMG -->
         <div class="row">
             <div class="col-12 p-0">
-                <img class="w-100 header_img" src="../styles/headerimage/header-image.jpg" alt="Beerbottles">
+                <img class="w-100 header_img" src="../styles/headerimage/header-image.jpg" alt="Beer bottles">
             </div>
         </div>
-    </header>
 
     <!-- SHOPPING CART -->
     <main class="container-fluid shoppingbag-main m-0">
@@ -191,43 +238,44 @@
             </div>
 
         </div>
-    </main>
-    <!-- FOOTER -->
-    <footer m-0>
-        <div class="container-fluid">
-            <div class="row justify-content-center pt-2 pb-2">
-                <div class="col-12 col-lg-6 text-center">
-                    <div class="footer-logo">
-                        OPPIGÅRDS ÖL
+        </main>
+        <!-- FOOTER -->
+        <footer m-0>
+            <div class="container-fluid">
+                <div class="row justify-content-center pt-2 pb-2">
+                    <div class="col-12 col-lg-6 text-center">
+                        <div class="footer-logo">
+                            OPPIGÅRDS ÖL
+                        </div>
+                        <div>
+                            <a href="phoneto:0771-101010" class="footer-phone">Ring</a> 
+                            eller 
+                            <a href="mailto:oppigardsol@oppigard.se" class="footer-email">maila</a> 
+                            oss!
+                        </div>
+                        <div>
+                            Oppigårdsvägen 1
+                        </div>
+                        <div>
+                            12345 Oppigård
+                        </div>
                     </div>
-                    <div>
-                        <a href="phoneto:0771-101010" class="footer-phone">Ring</a> 
-                        eller 
-                        <a href="mailto:oppigardsol@oppigard.se" class="footer-email">maila</a> 
-                        oss!
-                    </div>
-                    <div>
-                        Oppigårdsvägen 1
-                    </div>
-                    <div>
-                        12345 Oppigård
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 text-center">
-                    <div class="pt-3">
-                        <a href="http://www.facebook.com" class="text-dark">
-                            <i class="fab fa-facebook fa-2x"></i>
-                        </a>
-                        <a href="http://www.instagram.com" class="text-dark">
-                            <i class="fab fa-instagram fa-2x"></i>
-                        </a>
-                        <a href="http://www.twitter.com" class="text-dark">
-                            <i class="fab fa-twitter fa-2x"></i>
-                        </a>
+                    <div class="col-12 col-lg-6 text-center">
+                        <div class="pt-3">
+                            <a href="http://www.facebook.com" class="text-dark">
+                                <i class="fab fa-facebook fa-2x"></i>
+                            </a>
+                            <a href="http://www.instagram.com" class="text-dark">
+                                <i class="fab fa-instagram fa-2x"></i>
+                            </a>
+                            <a href="http://www.twitter.com" class="text-dark">
+                                <i class="fab fa-twitter fa-2x"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>     
+        </footer>
+    </div>     
 </body>
 </html>

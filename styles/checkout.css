@@ -13,24 +13,42 @@ header {
     background-color:white;
     border-bottom: 1px solid black;
     box-shadow: 0px 0px 4px black;
+    min-height: 48px;
 }
 
-#logo a {
+#companylogo {
     font-size:1rem;
     font-weight:800;
     color:darkred; 
+    padding-top: 10px;
 }
 
-#basketbutton {
-    border: none;
-    background: none;
+#test {
+    font-size:1rem;
+    font-weight:800;
+    padding-top: 10px;
+    display:inline;
+    color:darkred;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: darkred;
+    text-align:left;
 }
 
+.shopping-cart-button {
+    margin-top: 6px;
+}
 #shoppingcartlogo {
+    font-size:1rem;
     color:darkred;
 }
+#shoppingcart_content {
+    display:inline;
+    font-size:0.7rem;
+    font-weight:800;
+} 
 
-/*SHOPPING CART*/
+/*DROP-DOWN SHOPPING CART*/
 .hidden-basket {
     display: none;
     background: white;
@@ -42,14 +60,48 @@ header {
 
 .basket-heading h3 {
     font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 8px;
 }
 
 .basket-text {
+    padding-top: 0;
+    padding-bottom: 4px;
+}
+
+.basket-text span {
+    font-size:0.7rem;
     font-weight: normal;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+
+.basket-text-interactive span {
+    color: rgb(0, 100, 38);
+}
+
+.basket-text .delete-button {
+    display: hidden;
+    font-size:0.7rem;
+    color: darkred;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0 4px 0 0;
+}
+
+.basket-text .amount-button {
+    display: hidden;
+    font-size:0.7rem;
+    color: rgb(0, 87, 39);
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0 6px 0 4px;
 }
 
 .basket-sum {
-    padding: 10px 0;
     font-weight: bold;
 }
 
@@ -59,12 +111,15 @@ header {
     background-color: darkred;
     border-radius:28px;
     border: none;
-    padding: 6px 18px;
+    padding: 4px 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
+/* HEADER IMAGE */
 .header_img {
     object-fit: cover;
-    height:24vh;
+    height:25vh;
 }
 
 
@@ -196,6 +251,9 @@ footer {
 /* Padlet 768px */
 @media (min-width: 768px) {
     /* HEADER */
+    .header_img {
+        height:30vh;
+    }  
 
     /* SHOPPIBG-BAG */
 
@@ -204,7 +262,7 @@ footer {
     }
     .shoppingbag-main {
         text-align: center;
-        font-size: 1.2;
+        font-size: 1.2rem;
     }
     .purchaseditem-image{
         width: 30%;

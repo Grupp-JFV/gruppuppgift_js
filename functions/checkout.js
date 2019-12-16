@@ -7,8 +7,6 @@ $(document).ready(function(){
             $("#thankyoucustomer").text(value);
         }); 
     
-
-
         $(".show-modal").click(function(){
             let value = $("#firstname").val();
             $("#thankyoucustomer").text(value);
@@ -19,4 +17,4 @@ $(document).ready(function(){
             });
         });
     
-    });
+});
