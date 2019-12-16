@@ -14,7 +14,7 @@
      <script src="https://kit.fontawesome.com/55cb2a86bc.js" crossorigin="anonymous"></script>
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src=""></script>
+    <script type="text/javascript" src="../functions/checkout.js"></script>
     <!-- BOOTSTRAP JS --> <!-- MÅSTE DET AVAKTIVERAS PGA JS NI SKRIVIT SJÄLVA?? -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -79,41 +79,31 @@
                 <h5 class="checkoutheaders">MINA UPPGIFTER</h5>
                 <form>
                     <div class="form-row text-left">
-                        <div class="form-group col-md-6 col-sm-12">
+                    <div class="form-group col-md-6 col-sm-12">
                         <label for="firstname">Förnamn</label>
-                        <input type="text" class="form-control" placeholder="Förnamn" required>
+                        <input type="text" class="form-control" placeholder="Förnamn" id="firstname" required>
                     </div>
                     <div class="form-group col-md-6 col-sm-12">
                         <label for="lastname">Efternamn</label>
                         <input type="text" class="form-control" placeholder="Efternamn" required>
                     </div>
-                </div>
-                <div class="form-row text-left">
-                    <div class="form-group col-md-8 col-sm-12">
-                        <label for="streetadress">Gata</label>
+                    </div>
+                    <div class="form-row text-left">
+                    <div class="form-group col-12">
+                        <label for="streetadress">Gata och nummer</label>
                         <input type="text" class="form-control" placeholder="Gata" required>
                     </div>
-                    <div class="form-group col-md-4 col-sm-12">
-                        <label for="streetnumber">Nummer</label>
-                        <input type="text" class="form-control" placeholder="Nummer" required>
+                    <div class="form-group col-12">
+                        <label for="city and zip">Stad och postnummer</label>
+                        <input type="text" class="form-control" placeholder="Stad" required>
                     </div>
-                </div>
-                <div class="form-row text-left">
-                    <div class="form-group col-md-8 col-sm-12">
-                    <label for="city">Stad</label>
-                    <input type="text" class="form-control" placeholder="Stad" required>
                     </div>
-                    <div class="form-group col-md-4 col-sm-12">
-                    <label for="zipcode">Postnummer</label>
-                    <input type="text" class="form-control" placeholder="Postnummer" required>
-                    </div>
-                </div>
-                <div class="form-row text-left">
-                    <div class="form-group col-md-8 col-sm-12">
+                    <div class="form-row text-left">
+                    <div class="form-group col-md-6 col-sm-12">
                         <label for="email">E-post</label>
                         <input type="email" class="form-control" placeholder="E-post" required>
                     </div>
-                    <div class="form-group col-md-4 col-sm-12">
+                    <div class="form-group col-md-6 col-sm-12">
                         <label for="phonenumber">Telefonnummer</label>
                         <input type="tel" class="form-control" placeholder="Telefonnummer" required>
                     </div>
@@ -146,7 +136,6 @@
 
             <hr>
 
-            
             <div class="deliveryform pt-2 pb-4">
                 <h5 class="checkoutheaders">LEVERANS 
                     <span class="small">(0kr)</span>
@@ -170,66 +159,40 @@
                     </label>
                 </div>
             </div>
-
-            <button type="submit" class="btn sendorderbtn mt-5 mb-5 p-2d">
-                    Skicka beställning!
-            </button>
-       
-
-            <!-- DOLD TILLS VALIDERINGEN ÄR FÄRDIG OCH SEDAN --> 
-                
-                <button type="submit" class="btn sendorderbtn mt-5 mb-5 p-2d" data-toggle="modal" data-target="#exampleModalCenter">
-                Skicka beställning!
-            </button> 
-
-
             
-            <!-- THANK YOU MODAL -->
-            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn sendorderbtn mt-5 mb-5 p-2d show-modal" >
+                SKICKA BESTÄLLNING
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Tack för ditt köp!</h5>
-                    <button type="button" class="close closemodal" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        Tack för ditt köp
+                        <span id="thankyoucustomer"></span>
+                        !
+                    </h5>
                     </div>
                     <div class="modal-body">
-                    Sammanfattning av beställning!
+                    KVITTO PÅ BESTÄLLNING
                     </div>
                     <div class="modal-footer">
-                    <button type="button" class="purchaseconfirmed-modal-btn">OK</button>
+                        <a href="products.html">
+                            <button type="button" class="btn modalgobackbtn">
+                                Tillbaka till webbshopen
+                            </button>
+                        </a>
                     </div>
                 </div>
                 </div>
             </div>
+
         </div>
-
-
-
-
-
-
-
-
     </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- FOOTER -->
     <footer m-0>
         <div class="container-fluid">
             <div class="row justify-content-center pt-2 pb-2">
