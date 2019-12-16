@@ -5,13 +5,6 @@ $(document).ready(function() {
     //skapa en tom lista för varukorgen
     shoppingcart = []; 
 
-    //lyssnar efter varukorgen och hämtar info från local storage 
-    $("#basketButton").on("click", function() {
-        $("#basket").slideToggle(300);
-        //skriv ut listan printlist 
-        printShoppingcart();
-    });
-
     //lyssnar efter köpknappen 
     $(".btn").on("click",function() {
         addToCart($(this)); 
@@ -147,46 +140,6 @@ function addToCart(buttonClicked) {
         //FUNKAR INTE EFTERSOM INGET LÄGGS TILL I SHOPPINGCART
         //alert("Välj ett antal innan du köper!");
     }
-} 
-
-function printShoppingcart() {
-
-    let localstorageList = localStorage.getItem("CurrentShoppingcartList"); 
-    let shoppingcartList = JSON.parse(localstorageList);
-
-    //tömmer innehållet i basket_content innan den skapar nytt 
-    $("#basket_content").html("");
-
-    $.each (shoppingcartList, function(i, cartitem) {
-
-        let basketItem = $("<div>").addClass("row border-top pt-2 basket-text").appendTo("#basket_content");
-
-        let basketName = $("<div>").addClass("col-7 col-md-2 text-left").appendTo(basketItem);
-        $("<button>").addClass("delete-button").text("x").appendTo(basketName);
-        $("<span>").addClass("text-left").text(cartitem.name).appendTo(basketName);
-
-        let basketStrength = $("<div>").addClass("col-0 col-md-2 d-none d-md-inline text-center").appendTo(basketItem);
-        $("<span>").addClass("basket-text").text(cartitem.strength + " %").appendTo(basketStrength);
-
-        let basketType = $("<div>").addClass("col-0 col-md-2 d-none d-md-inline text-center").appendTo(basketItem);
-        $("<span>").addClass("basket-text").text(cartitem.type).appendTo(basketType);
-
-        let basketPrice = $("<div>").addClass("col-0 col-md-2 d-none d-md-inline text-center").appendTo(basketItem);
-        $("<span>").addClass("basket-text").text(cartitem.price + " kr").appendTo(basketPrice);
-
-        //lägg in så att basket-amount uppdateras med villkor om id för produkten matchar ett som redan finns i varukorgen
-        //dvs. om samma produkt läggs till, lägg inte till en ny rad utan uppdatera bara cartitem.amount!
-
-        let basketAmount = $("<div>").addClass("col-2 col-md-2 p-0 text-center").appendTo(basketItem);
-        $("<button>").addClass("amount-button").text("-").appendTo(basketAmount);
-        $("<span>").addClass("basket-text").text(cartitem.amount).appendTo(basketAmount);
-        $("<button>").addClass("amount-button").text("+").appendTo(basketAmount);
-
-
-        let basketTotal = $("<div>").addClass("col-3 col-md-2 text-right").appendTo(basketItem);
-        $("<span>").addClass("basket-text").text(cartitem.price * cartitem.amount + " kr").appendTo(basketTotal);
-
-    }); 
 } 
 
 

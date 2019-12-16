@@ -12,18 +12,20 @@
     <link rel="stylesheet" href="../styles/checkout.css"> 
      <!-- FONT-AWESOME -->
      <script src="https://kit.fontawesome.com/55cb2a86bc.js" crossorigin="anonymous"></script>
-
-     <!-- JQUERY -->
+    <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-
     <!--  js -->
+
+    
+    <!-- Fungerar att toggla menyn så länge som boostraps funktionalitet ej är aktiverad? -->
+    <!-- BOOTSTRAP JS --> <!-- MÅSTE DET AVAKTIVERAS PGA JS NI SKRIVIT SJÄLVA?? -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+
+   
     <script type="text/javascript" src="../functions/shoppingcart.js"></script>
     <script type="text/javascript" src="../functions/checkout.js"></script>
-    
-    <!-- BOOTSTRAP JS --> <!-- MÅSTE DET AVAKTIVERAS PGA JS NI SKRIVIT SJÄLVA?? -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -43,7 +45,7 @@
             </div>
             <!-- HIDDEN BASKET -->
             <div class="col-12 hidden-basket" id="basket">
-                <div class="inner container-fluid p-0 p-0 pl-md-4 pr-md-4" id="basket_content">
+                <div class="inner container-fluid p-0 pl-md-4 pr-md-4" id="basket_content">
                     <div class="row border-top pt-1 basket-heading">
                         <div class="col-7 col-md-2">
                             <h3 class="text-left">Produkt</h3>
@@ -66,7 +68,7 @@
                     </div>
                 </div>
                 <div class="inner container-fluid p-0 pl-md-4 pr-md-4" id="basket_sum">
-                    <div class="row border-top">
+                    <div class="row border-top p-2">
                         <div class="col-12 pr-md-0 text-center text-md-right basket-sum">
                             <h3 class="d-inline">Summa</h3>
                             <span>499kr</span>                       

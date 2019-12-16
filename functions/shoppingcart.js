@@ -5,8 +5,15 @@ $(document).ready(function() {
         $("#basket").slideToggle(300);
         //skriv ut listan printlist 
         printShoppingcart();
-    });
+    
+        //funktion för delete-knappen för varje rad i listan
+        $(".delete-button").on("click", function() {
+           removeFromCart($(this));
         
+        }); 
+
+    });
+
     
 }); //stänger window ready 
         
@@ -49,3 +56,28 @@ function printShoppingcart() {
 
     }); 
 } 
+
+function removeFromCart(deleteItem) {
+
+    console.log(deleteItem); 
+     
+    //hämta listan från local storage 
+    let localstorageList = localStorage.getItem("CurrentShoppingcartList"); 
+    let shoppingcartList = JSON.parse(localstorageList);
+
+    //loopa igenom listan för att hitta objektet 
+
+    $.each(shoppingcartList, function(i, deleteMe) {
+        console.log(shoppingcartList); 
+        console.log(deleteMe); 
+        
+        shoppingcartList.splice(i, 1);
+          
+        localStorage.setItem("CurrentShoppingcartList", JSON.stringify(shoppingcartList));
+        console.log(shoppingcartList); 
+
+    }); 
+
+}   
+
+//denna funktion fungerar NÄSTAN, jag fattar bara inte hur man ska göra för att det ska hända på en gång, och inte bara när fönstret eller knappen laddas om? 

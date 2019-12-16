@@ -1,7 +1,6 @@
 $(document).ready(function(){
 
 
-
         $(".sendorderbtn").click(function() {
             let value = $("#firstname").val();
             $("#thankyoucustomer").text(value);
