@@ -143,10 +143,10 @@ function addToCart(buttonClicked) {
                 let duplicate = false;
                 let cartIndex = 0;
                 $.each(shoppingcart, function(j, cartObject) {
-                    if (product.id = cartObject.id) {
+                    if (product.id === cartObject.id) {
                         duplicate = true;
                         cartIndex = j;
-                        return false; //jquery break om den hittat det den söker
+                        return false; //jquery break om den hittat det den
                     }
                 });
                 if (duplicate) {
@@ -177,6 +177,8 @@ function printShoppingcart() {
     //tömmer innehållet i basket_content innan den skapar nytt 
     $("#basket_content").html("");
 
+    let totalPay = 0;
+
     $.each (shoppingcartList, function(i, cartitem) {
 
         let basketItem = $("<div>").addClass("row border-top pt-2 basket-text").appendTo("#basket_content");
@@ -206,7 +208,11 @@ function printShoppingcart() {
         let basketTotal = $("<div>").addClass("col-3 col-md-2 text-right").appendTo(basketItem);
         $("<span>").addClass("basket-text").text(cartitem.price * cartitem.amount + " kr").appendTo(basketTotal);
 
-    }); 
+        totalPay += cartitem.price * cartitem.amount;
+
+    });
+
+    $("#total_payment").html(String(totalPay));
 } 
 
 
