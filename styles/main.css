@@ -34,11 +34,16 @@ html {
 .shopping-cart-button {
     margin-top: 6px;
 }
-
 #shoppingcartlogo {
     font-size:1rem;
     color:darkred;
 }
+#shoppingcart_content {
+    display:inline;
+    font-size:0.7rem;
+    font-weight:800;
+} 
+
 
 
 /*DROP-DOWN SHOPPING CART*/
