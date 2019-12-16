@@ -30,7 +30,6 @@
             </div>
             <!-- SHOPPING CART -->
             <div class="text-right col-6">
-                <p class="" id="shoppingcart_content"></p>
                 <button type="button" class="btn p-0 shopping-cart-button" id="basketButton">
                     <i class="fa fa-shopping-cart" id="shoppingcartlogo"></i>
                 </button>
@@ -65,11 +64,11 @@
                     <div class="row border-top p-2">
                         <div class="col-12 pr-md-0 text-center text-md-right basket-sum">
                             <h3 class="d-inline">Summa</h3>
-                            <span>499kr</span>
+                            <span id="total_cost">499kr</span>
                             <h3 class="d-inline">(+Frakt</h3>
-                            <span class="mr-md-3">200kr)</span>                       
+                            <span class="mr-md-3" id="shipping_cost">200kr)</span>                       
                             <h3 class="d-inline ml-0">Att betala</h3>
-                            <span class="mr-md-4">699kr</span>
+                            <span class="mr-md-4" id="total_payment"></span>
                             <a href="checkout.html">
                                 <button" class="pay-btn" id="to_pay">Till Kassan</button>
                             </a>

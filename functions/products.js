@@ -3,11 +3,12 @@ $(document).ready(function() {
     //skapar alla html-element 
     productList();
     //skapa en tom lista för varukorgen
-    shoppingcart = []; 
+    //shoppingcart = [];
 
     //lyssnar efter köpknappen 
-    $(".btn").on("click",function() {
-        addToCart($(this)); 
+    $(".purchase-button").on("click",function() {
+        addToCart($(this));
+        printShoppingcart();
     }); 
 
     //togglar filterfunktionen mellan hide/show 
@@ -81,12 +82,12 @@ function display(products) {
         let descriptionDiv = $("<div>").addClass("product_description").appendTo(cardBody);        
         $(descriptionDiv).text(product.description).appendTo(descriptionDiv);
 
-        //skapa en input-group + lägger in input-group i card-body  
+        //skapa en input-group + lägger in input-group i card-body
         let input = $("<div>").addClass("input-group").appendTo(cardBody);
         $("<input>").attr("type", "number").appendTo(input).attr("placeholder", "Välj antal"); 
 
         //skapa en köp-knapp         
-        $("<button>").addClass("btn").attr("type", "button").attr("id", i).append("Köp").appendTo(input);
+        $("<button>").addClass("btn purchase-button").attr("type", "button").attr("id", "button_" + i).append("Köp").appendTo(input);
 
         $("#page").append(responsiveColumn);
     });
@@ -107,12 +108,17 @@ function addToCart(buttonClicked) {
     //sätt ett villkor så att när input är tomt så görs inget
     if ( input > 0 ) {
 
-    //hämtar produktlistan från localstorage och sparar listan i variabeln products 
-    let localstorageList = localStorage.getItem("CurrentProductList"); 
-    let products = JSON.parse(localstorageList); 
+        let shoppingcart = JSON.parse(localStorage.getItem("CurrentShoppingcartList"));
+        if (shoppingcart === null) {
+            shoppingcart = [];
+        }
+
+        //hämtar produktlistan från localstorage och sparar listan i variabeln products 
+        let localstorageList = localStorage.getItem("CurrentProductList"); 
+        let products = JSON.parse(localstorageList); 
     
         $.each(products, function(i, product) {
-            let buttonId = buttonClicked[0].id;
+            let buttonId = buttonClicked[0].id.substring(7);
 
             if (product.id == buttonId) {
                 //hämtar värder från input-fältet till en variabel
@@ -123,22 +129,36 @@ function addToCart(buttonClicked) {
                     strength: product.strength,
                     type: product.type,
                     price: product.price,  
-                    amount: input,
+                    amount: Number(input),
                     id: product.id
                 }
-
-                //pushar in listobjekt till den nya listan 
-                shoppingcart.push(newObject);
+                //kollar om den redan finns i "shopping cart"
+                let duplicate = false;
+                let cartIndex = 0;
+                $.each(shoppingcart, function(j, cartObject) {
+                    if (product.id === cartObject.id) {
+                        duplicate = true;
+                        cartIndex = j;
+                        return false; //jquery break om den hittat det den
+                    }
+                });
+                if (duplicate) {
+                    // lägger till amount till en produkt som redan finns i "shoppingcart"
+                    shoppingcart[cartIndex].amount += newObject.amount;
+                }
+                else {
+                    //pushar in listobjekt till den nya listan 
+                    shoppingcart.push(newObject);
+                }
                 //tömmer inputfältet 
                 $(".input-group input").val("");
-                //sparar produkterna som finns i listan i localstorage 
-                localStorage.setItem("CurrentShoppingcartList", JSON.stringify(shoppingcart));
             }  
         }); 
-    
-    } else {
-        //FUNKAR INTE EFTERSOM INGET LÄGGS TILL I SHOPPINGCART
-        //alert("Välj ett antal innan du köper!");
+        //sparar produkterna som finns i listan i localstorage 
+        localStorage.setItem("CurrentShoppingcartList", JSON.stringify(shoppingcart));
+    } 
+    else {
+        alert("Välj ett antal innan du köper!");
     }
 } 
 

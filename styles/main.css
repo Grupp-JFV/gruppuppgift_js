@@ -49,10 +49,11 @@ html {
 .hidden-basket {
     display: none;
     background: white;
+    padding-bottom: 12px;
 }
 
 .hidden-basket h3, span {
-    font-size:0.7rem;
+    font-size:0.6rem;
 }
 
 .basket-heading h3 {
@@ -67,7 +68,7 @@ html {
 }
 
 .basket-text span {
-    font-size:0.7rem;
+    font-size:0.6rem;
     font-weight: normal;
     margin-top: 5px;
     margin-bottom: 8px;
@@ -79,7 +80,7 @@ html {
 
 .basket-text .delete-button {
     display: hidden;
-    font-size:0.7rem;
+    font-size:0.6rem;
     color: darkred;
     background: none;
     border: none;
@@ -89,7 +90,7 @@ html {
 
 .basket-text .amount-button {
     display: hidden;
-    font-size:0.7rem;
+    font-size:0.6rem;
     color: rgb(0, 87, 39);
     background: none;
     border: none;
@@ -102,7 +103,7 @@ html {
 }
 
 .pay-btn {
-    font-size:0.7rem;
+    font-size:0.6rem;
     color:whitesmoke; 
     background-color: darkred;
     border-radius:28px;
