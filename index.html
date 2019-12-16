@@ -17,70 +17,68 @@
         <!-- JS-FIL -->
         <script type="text/javascript" src="functions/startpage.js"></script>
 
+            <!-- Funktionen som hämtar info för varukorgen -->
+            <script type="text/javascript" src="functions/products.js"></script>
 </head>
 <body>
     <div class="container-fluid">    
-
-<!--NAVBAR-->
-<header class="row sticky-top" id="nav"> 
-    <div class="text-left col-6 align-self-center" id ="companyname">
-        <a href="../index.html">
-            <span id="companylogo">OPPI<h1 id="test">GÅRDS</h1></span>
-        </a>
-    </div>
-    <!-- SHOPPING CART -->
-    <div class="text-right col-6">
-        <button type="button" class="btn p-0 shopping-cart-button" id="basketButton">
-            <i class="fa fa-shopping-cart" id="shoppingcartlogo"></i>
-        </button>
-    </div>
-    <!-- HIDDEN BASKET -->
-    <div class="col-12 hidden-basket" id="basket">
-        <div class="inner container-fluid p-0 p-0 pl-md-4 pr-md-4" id="basket_content">
-            <div class="row border-top pt-1 basket-heading">
-                <div class="col-7 col-md-2">
-                    <h3 class="text-left">Produkt</h3>
-                </div>
-                <div class="col-0 col-md-2 d-none d-md-inline">
-                    <h3 class="text-center">Alkoholhalt</h3>
-                </div>
-                <div class="col-0 col-md-2 d-none d-md-inline">
-                    <h3 class="text-center">Sort</h3>
-                </div>
-                <div class="col-0 col-md-2 d-none d-md-inline">
-                    <h3 class="text-center">Pris</h3>
-                </div>
-                <div class="col-2 col-md-2 p-0">
-                    <h3 class="text-center">Antal</h3>
-                </div>
-                <div class="col-3 col-md-2">
-                    <h3 class="text-right mr-0">Totalt</h3>
-                </div>
+        <!--TOP NAVBAR-->
+        <header class="row sticky-top" id="nav"> 
+            <div class="text-left col-6 align-self-center" id ="companyname">
+                <a href="../gruppuppgift_js/index.html">
+                    <span id="companylogo">OPPI<h1 id="test">GÅRDS</h1></span>
+                </a>
             </div>
-        </div>
-        <div class="inner container-fluid p-0 pl-md-4 pr-md-4" id="basket_sum">
-            <div class="row border-top">
-                <div class="col-12 pr-md-0 text-center text-md-right basket-sum">
-                    <h3 class="d-inline">Summa</h3>
-                    <span>499kr</span>
-                    <h3 class="d-inline">(+Frakt</h3>
-                    <span class="mr-md-3">200kr)</span>                       
-                    <h3 class="d-inline ml-0">Att betala</h3>
-                    <span class="mr-md-4">699kr</span>
-                    <a href="checkout.html">
-                        <button" class="pay-btn" id="to_pay">Till Kassan</button>
-                    </a>
-                </div>
+            <!-- SHOPPING CART ICON-->
+            <div class="text-right col-6">
+                <button type="button" class="btn p-0 shopping-cart-button" id="basketButton">
+                    <i class="fa fa-shopping-cart" id="shoppingcartlogo"></i>
+                </button>
             </div>
-        </div>
-    </div>          
-</header>
-<div class="row border-line">
-</div>
+            <!-- HIDDEN BASKET -->
+            <div class="col-12 hidden-basket" id="basket">
+                <div class="inner container-fluid p-0 p-0 pl-md-4 pr-md-4" id="basket_content">
+                    <div class="row border-top pt-1 basket-heading">
+                        <div class="col-7 col-md-2">
+                            <h3 class="text-left">Produkt</h3>
+                        </div>
+                        <div class="col-0 col-md-2 d-none d-md-inline">
+                            <h3 class="text-center">Alkoholhalt</h3>
+                        </div>
+                        <div class="col-0 col-md-2 d-none d-md-inline">
+                            <h3 class="text-center">Sort</h3>
+                        </div>
+                        <div class="col-0 col-md-2 d-none d-md-inline">
+                            <h3 class="text-center">Pris</h3>
+                        </div>
+                        <div class="col-2 col-md-2 p-0">
+                            <h3 class="text-center">Antal</h3>
+                        </div>
+                        <div class="col-3 col-md-2">
+                            <h3 class="text-right mr-0">Totalt</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner container-fluid p-0 pl-md-4 pr-md-4" id="basket_sum">
+                    <div class="row border-top">
+                        <div class="col-12 pr-md-0 text-center text-md-right basket-sum">
+                            <h3 class="d-inline">Summa</h3>
+                            <span>499kr</span>                       
+                            <h3 class="d-inline ml-0">Att betala</h3>
+                            <span class="mr-md-4">699kr</span>
+                            <a href="../gruppuppgift_js/pages/checkout.html">
+                                <button" class="pay-btn" id="to_pay">Till Kassan</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>          
+        </header>
+        <!-- BORDER -->
+        <div class="row border-line"></div>
 
-
-    <header class="jumbotron jumbotron-fluid row">
-    
+        <!-- SECOND HEADER?? DET KAN MAN VÄL INTE HA -->
+        <header class="jumbotron jumbotron-fluid row">
             <div class="mw-100 pb-2 pt-2 mr-4 ml-4 text-center headercontent">
                 <h1 class="introheadline mb-2">Välkommen!</h1>
                 <p>
@@ -106,68 +104,57 @@
                     </a>
                 </span>
             </div>
-
-    </header>
-    
+        </header>
         <!-- MAIN CONTENT -->
         <div class="row sort readmoreindex text-center">
         <main> 
-                    <!-- content goes here -->
-                    <div class="col-lg-6 col-sm-8">
-                        <h3 class="infoheadline text-left">Vår öl</h3>
-                        <div class="introtext">
-                            <span>Vi på Oppigårds har alltid gillat att utforska smak, doft och karaktär. 
-                                Öl är för oss ett uttryckssätt, som säger mycket om hur vi tänker och vad vi gillar. 
-                                Vår första öl i kontinuerlig produktion, Golden Ale, inspirerades av de brittiska öarna och humlesorten East Kent Golding. 
-                                Men vi kände oss inte begränsade av ölkulturella gärsgårdar, utan testade att höja ölen med en amerikansk fruktig humlesort. 
-                                På liknande vis har vi blivit inspirerade av klassiska ölstilar från olika delar av världen och lagt till en twist som vi tycker passar.
-                            </span>
-                            <div class="pt-4 pb-4">
-                                <img src="thelogo.png" id="companylogo">
-                            </div>
-                        </div>
+            <!-- content goes here -->
+            <div class="col-lg-6 col-sm-8">
+                <h3 class="infoheadline text-left">Vår öl</h3>
+                <div class="introtext">
+                    <span>Vi på Oppigårds har alltid gillat att utforska smak, doft och karaktär. 
+                        Öl är för oss ett uttryckssätt, som säger mycket om hur vi tänker och vad vi gillar. 
+                        Vår första öl i kontinuerlig produktion, Golden Ale, inspirerades av de brittiska öarna och humlesorten East Kent Golding. 
+                        Men vi kände oss inte begränsade av ölkulturella gärsgårdar, utan testade att höja ölen med en amerikansk fruktig humlesort. 
+                        På liknande vis har vi blivit inspirerade av klassiska ölstilar från olika delar av världen och lagt till en twist som vi tycker passar.
+                    </span>
+                    <div class="pt-4 pb-4">
+                        <img src="thelogo.png" id="companylogo">
                     </div>
-                    
-                    <div class="col-lg-6 col-sm-8">
-                        <h3 class="infoheadline text-left">Nyheter</h3>
-                        <div class="introtext text-left">
-                            <div class="mb-4">
-                                <img src="product_images/everydayipa.jpg" alt="Öletikett" class="index-productnewsimg">
-                                <span class="introtext">
-                                    <a href="pages/products.html" class="index-productnews">
-                                        Everyday Ipa - 4,8%
-                                    </a>
-                                </span>
-                            </div>
-                            <div class="mb-4">
-                                <img src="product_images/hedemoraporter.jpg" alt="Öletikett" class="index-productnewsimg">
-                                <span class="introtext">
-                                    <a href="pages/products.html" class="index-productnews">
-                                        Hedemora Porter - 5,4%
-                                    </a>
-                                </span>
-                            </div>
-                                <div class="mb-4">
-                                    <img src="product_images/winterale.jpg"  alt="Öletikett" class="index-productnewsimg">
-                                    <span class="introtext">
-                                        <a href="pages/products.html" class="index-productnews">
-                                            Winter Ale - 5,0% 
-                                        </a>
-                                    </span>
-                                </div>
-                        </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 col-sm-8">
+                <h3 class="infoheadline text-left">Nyheter</h3>
+                <div class="introtext text-left">
+                    <div class="mb-4">
+                        <img src="product_images/everydayipa.jpg" alt="Öletikett" class="index-productnewsimg">
+                        <span class="introtext">
+                            <a href="pages/products.html" class="index-productnews">
+                                Everyday Ipa - 4,8%
+                            </a>
+                        </span>
                     </div>
+                    <div class="mb-4">
+                        <img src="product_images/hedemoraporter.jpg" alt="Öletikett" class="index-productnewsimg">
+                        <span class="introtext">
+                            <a href="pages/products.html" class="index-productnews">
+                                Hedemora Porter - 5,4%
+                            </a>
+                        </span>
+                    </div>
+                    <div class="mb-4">
+                        <img src="product_images/winterale.jpg"  alt="Öletikett" class="index-productnewsimg">
+                        <span class="introtext">
+                            <a href="pages/products.html" class="index-productnews">
+                                Winter Ale - 5,0% 
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
         </main>
-</div>    
-
-
-
-
-
-
-
-
-
+        </div>    
         <footer class="row justify-content-center pt-2 pb-2 w-100">
                     <div class="col-12 col-lg-6 text-center">
                         <div class="footer-logo">

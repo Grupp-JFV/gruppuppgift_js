@@ -111,7 +111,7 @@ html {
 /* HEADER */
 .header_img {
     object-fit: cover;
-    height:10vh;
+    height:25vh;
 }
 
 /*SORTING MENU */
@@ -281,8 +281,8 @@ footer {
 @media (min-width: 768px) {
    
     /* HEADER */
-    header {
-        /*height:30vh;*/
+    .header_img {
+        height:30vh;
     }    
     /* CARD DECK */
     div.card {
@@ -323,7 +323,7 @@ footer {
 
     /* SORT MENU */
     .header_img {
-        height:24vh;
+        height:30vh;
     }
     .sort li {
         font-size:0.7rem;
