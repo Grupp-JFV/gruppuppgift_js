@@ -14,11 +14,12 @@ html {
 #companylogo {
     font-size:1rem;
     font-weight:800;
-    color:darkred; 
+    color:darkred;
     padding-top: 10px;
+    
 }
 
-#test {
+#companylogo_end {
     font-size:1rem;
     font-weight:800;
     padding-top: 10px;
@@ -27,7 +28,7 @@ html {
     -webkit-text-fill-color: white; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: darkred;
-    text-align:left;
+    text-align:left;   
 }
 
 .shopping-cart-button {
