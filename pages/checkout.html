@@ -33,45 +33,7 @@
                 <button type="button" class="btn p-0 shopping-cart-button" id="basketButton" disabled>
                     <i class="fa fa-shopping-cart" id="shoppingcartlogo"></i>
                 </button>
-            </div>
-            <!-- HIDDEN BASKET -->
-            <div class="col-12 hidden-basket" id="basket">
-                <div class="inner container-fluid p-0 pl-md-4 pr-md-4" id="basket_content">
-                    <div class="row border-top pt-1 basket-heading">
-                        <div class="col-7 col-md-2">
-                            <h3 class="text-left">Produkt</h3>
-                        </div>
-                        <div class="col-0 col-md-2 d-none d-md-inline">
-                            <h3 class="text-center">Alkoholhalt</h3>
-                        </div>
-                        <div class="col-0 col-md-2 d-none d-md-inline">
-                            <h3 class="text-center">Sort</h3>
-                        </div>
-                        <div class="col-0 col-md-2 d-none d-md-inline">
-                            <h3 class="text-center">Pris</h3>
-                        </div>
-                        <div class="col-2 col-md-2 p-0">
-                            <h3 class="text-center">Antal</h3>
-                        </div>
-                        <div class="col-3 col-md-2">
-                            <h3 class="text-right mr-0">Totalt</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="inner container-fluid p-0 pl-md-4 pr-md-4" id="basket_sum">
-                    <div class="row border-top p-2">
-                        <div class="col-12 pr-md-0 text-center text-md-right basket-sum">
-                            <h3 class="d-inline">Summa</h3>
-                            <span>499kr</span>                       
-                            <h3 class="d-inline ml-0">Att betala</h3>
-                            <span class="mr-md-4">699kr</span>
-                            <a href="../gruppuppgift_js/pages/checkout.html">
-                                <button" class="pay-btn" id="to_pay">Till Kassan</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>          
+            </div>         
         </header>
         <!-- BORDER -->
         <div class="row border-line"></div>
@@ -82,12 +44,11 @@
             </div>
         </div>
         <!-- SHOPPING CART -->
-        <div class="row shoppingcart-main justify-content-center">
-            <main>
+            <main class="row shoppingcart-main justify-content-center">
                 <div class="shoppingcart-header col-12 pt-4 text-center">
                     <h2>VARUKORG</h2>
                 </div>
-                <div class="col-12 col-md-10">
+                <div class="col-12 col-md-10 text-center">
                     <div class="purchase-info">
                         <!-- Product image from shoppingcart -->
                         <!-- Product titel  -->
@@ -103,10 +64,8 @@
                         </div>
                     </div>
                 </div>
-            
-
             <!-- CHECKOUT FORM -->
-            <div class="checkoutcontent row">
+            <div class="checkoutcontent row justify-content-center">
                 <!-- CUSTOMER INFORMATION -->
                 <div class="checkoutform col-12 pb-4">
                     <h5 class="checkoutheaders mt-4">MINA UPPGIFTER</h5>
@@ -143,8 +102,8 @@
                     </div>
                 </div>
 
-                <div class="paymentform row pt-2 pb-2">
-                    <h5 class="checkoutheaders col-12">BETALNING</h5>
+                <div class="paymentform col-12 col-md-6 pt-2 pb-2">
+                    <h5 class="checkoutheaders">BETALNING</h5>
 
                     <div class="form-check form-check-inline">
                         <input class="form-check-input klarna" type="radio" name="paymentform" id="klarnaradiobutton" value="option1" required>
@@ -171,7 +130,7 @@
                 </div>
 
                 <!-- DELIVERY INFORMATION -->
-                <div class="deliveryform  row pt-2 pb-4">
+                <div class="deliveryform col-12 col-md-6 pt-2 pb-4">
                     <h5 class="checkoutheaders col-12">LEVERANS 
                         <span class="small">(0kr)</span>
                     </h5>
@@ -195,13 +154,12 @@
                     </div>
                 </div>
                 
-
-
-
                 <!-- Button trigger modal -->
-                <button type="button" class="btn sendorderbtn mt-5 mb-5 p-2d show-modal" >
+            
+                <button type="button" class="btn sendorderbtn mt-5 mb-5 p-2d show-modal">
                     SKICKA BESTÄLLNING
                 </button>
+               
                 
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -227,7 +185,6 @@
                     </div>
                     </div>
                 </div>
-
             </div>
         </main>
         <!-- FOOTER -->

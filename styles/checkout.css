@@ -3,11 +3,6 @@ html {
     font-size:16pt;
 }
 
-/* HEADER */
-header {
-    background-color:grey;   
-}
-
 /*NAVBAR*/
 #nav {
     background-color:white;
@@ -48,83 +43,13 @@ header {
     font-weight:800;
 } 
 
-/*DROP-DOWN SHOPPING CART*/
-.hidden-basket {
-    display: none;
-    background: white;
-}
-
-.hidden-basket h3, span {
-    font-size:0.7rem;
-}
-
-.basket-heading h3 {
-    font-weight: bold;
-    margin-top: 5px;
-    margin-bottom: 8px;
-}
-
-.basket-text {
-    padding-top: 0;
-    padding-bottom: 4px;
-}
-
-.basket-text span {
-    font-size:0.7rem;
-    font-weight: normal;
-    margin-top: 5px;
-    margin-bottom: 8px;
-}
-
-
-.basket-text-interactive span {
-    color: rgb(0, 100, 38);
-}
-
-.basket-text .delete-button {
-    display: hidden;
-    font-size:0.7rem;
-    color: darkred;
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0 4px 0 0;
-}
-
-.basket-text .amount-button {
-    display: hidden;
-    font-size:0.7rem;
-    color: rgb(0, 87, 39);
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0 6px 0 4px;
-}
-
-.basket-sum {
-    font-weight: bold;
-}
-
-.pay-btn {
-    font-size:0.7rem;
-    color:whitesmoke; 
-    background-color: darkred;
-    border-radius:28px;
-    border: none;
-    padding: 4px 12px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
 /* HEADER IMAGE */
 .header_img {
     object-fit: cover;
     height:25vh;
 }
 
-
 /*CHECKOUT PAGE*/
-
 /*PRODUCTS IN SHOPPINGCART*/
 .shoppingcart-div {
     margin-bottom:10px;
@@ -159,9 +84,6 @@ header {
    padding:none !important;
 }
 
-hr {
-    width: 75%;
-}
 .numberofpurchaseditems{
     border-radius:8px;
     text-align: center;
