@@ -125,20 +125,40 @@ header {
 
 /*CHECKOUT PAGE*/
 
-/*INSIDE SHOPPING CART*/
-.shoppingbag-header{
+/*PRODUCTS IN SHOPPINGCART*/
+.shoppingcart-div {
+    margin-bottom:10px;
+    box-shadow: 0px 2px 2px lightgray;
+}
+
+.shoppingcart-header h2{
     font-size: 1.5rem;
     font-weight: 800;
-    color: darkred; 
+    color: darkred;
+    padding:20px; 
 }
-.shoppingbag-main {
-    text-align: center;
-    font-size: 1rem;
-    padding-top: 20px;
+
+.purchase-info {
+    font-size:0.6rem;
+    color:black;
+
 }
+
 .purchaseditem-image{
-    width: 50%;
+    object-fit: scale-down;
+    height:10vh;
 }
+
+.shoppingcart-item-titel {
+    font-size:0.6rem;
+    font-weight:bold;
+    border-right:1px solid lightgrey;
+}
+
+.purchase-item-amount, .purchase-item-price{
+   padding:none !important;
+}
+
 hr {
     width: 75%;
 }
@@ -257,16 +277,14 @@ footer {
 
     /* SHOPPIBG-BAG */
 
-    .shoppingbag-header{
-        font-size: 1.2rem;
+    .purchase-info {
+        font-size:1rem;
+        color:black;
     }
-    .shoppingbag-main {
-        text-align: center;
-        font-size: 1.2rem;
+    .shoppingcart-item-titel {
+        font-size:1rem;
     }
-    .purchaseditem-image{
-        width: 30%;
-    }
+
     .numberofpurchaseditems {
         width: 20%;
     }
@@ -278,13 +296,15 @@ footer {
   
     /*Shopping bag*/
 
-    .shoppingbag-main {
-        text-align: center;
-    }
     .numberofpurchaseditems {
         width: 8%;
     }
-    .purchaseditem-image{
-        width: 25%;
+
+
+    .shoppingcart-item-titel {
+        font-size:1rem;
     }
+
+
+    
 }

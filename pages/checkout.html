@@ -15,16 +15,10 @@
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <!--  js -->
-
-    
-    <!-- Fungerar att toggla menyn så länge som boostraps funktionalitet ej är aktiverad? -->
-    <!-- BOOTSTRAP JS --> <!-- MÅSTE DET AVAKTIVERAS PGA JS NI SKRIVIT SJÄLVA?? -->
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-   
-    <script type="text/javascript" src="../functions/shoppingcart.js"></script>
     <script type="text/javascript" src="../functions/checkout.js"></script>
 
 </head>
@@ -92,34 +86,34 @@
         </div>
 
     <!-- SHOPPING CART -->
-    <main class="container-fluid shoppingbag-main m-0">
-        <div class="col-12">
-            <div class="shoppingbag-header">
-                MIN VARUKORG
+    <main class="container-fluid shoppingcart-main">
+        
+        <div class="row justify-content-center">
+            
+            <div class="shoppingcart-header col-12 pt-4 text-center">
+                <h2>VARUKORG</h2>
             </div>
 
-            <div class="row d-flex align-items-center pt-4 pb-4">
-                <div class="col-4">
-                    <img src="../product_images/golden.jpg" class="purchaseditem-image">
+            <div class="col-12 col-md-10">
+                <div class="purchase-info">
+
+                    <!-- Product image from choppingcart -->
+                    <!-- Product titel  -->
+                    <!-- Product amount -->
+                    <!-- Product price -->
+
                 </div>
-                <div class="col-8 purchase-info text-left">
-                    <div class="purchase-item-titel">
-                         Oppigårds Golden Ale
-                    </div>
-                    <div class="purchase-item-price p-0">
-                        Pris per flaska: 20 kr
-                    </div>
-                    <div class="p-0">
-                        Antal: <input type="number" class="numberofpurchaseditems">
-                    </div>
-                </div>
+                <div class="purchase-item-sum col-12 pt-4"></div>
             </div>
         </div>
 
-        <div>Totalt pris: 80 kr</div>
-        <a href="products.html"><button class="backtoshop-button mt-2 mb-3">Tillbaka till webbshopen</button></a>
-        <button class="purchase-button mt-2 mb-3">Gå vidare till kassan</button> <!-- FRAMTIDA TOGGLE-KNAPP -->
+
         
+        
+        <div class="row backtoshop justify-content-center">
+            <a href="products.html"><button class="backtoshop-button mt-2 mb-3">Tillbaka till webbshopen</button></a>   
+        </div>
+
         <hr>
 
         <!-- CHECKOUT FORM -->
