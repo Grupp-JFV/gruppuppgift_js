@@ -1,47 +1,16 @@
 $(document).ready(function(){
     
 
-    $("input#klarnaradiobutton.form-check-input").on("click", function(){
-        $("#klarna-input").slideToggle(300);
-
+    //när man väljer betalsätt, kör denna funktion: 
+    $(".form-check-input").change(function(){
+        $(".paymentinput").slideToggle(300);
     }); 
 
-    $("input#creditradiobutton.form-check-input").on("click", function(){
-        $("#credit-input").slideToggle(300);
 
-    }); 
-
-    $("input#swishradiobutton.form-check-input").on("click", function(){
-        $("#swish-input").slideToggle(300);
-
-    }); 
-    
-    /* //om inputfältet förändras, enablea skicka beställning-knappen.
-    if ( input > 0 ) {
-        let shoppingcart = JSON.parse(localStorage.getItem("CurrentShoppingcartList"));
-        if (shoppingcart === null) {
-            shoppingcart = [];
-        }
-        else {
-            alert("Välj ett antal innan du köper!");
-        }*/
-
-    // Skickar värdet från first name-inputfältet till modalens Tack för ditt köp-rubrik.
-    $(".show-modal").click(function(){
-        let value = $("#firstname").val();
-        $("#thankyoucustomer").text(value);
-
-
-        // Avaktiverar möjligheten att klicka utanför modalen för att stänga den.
-        $("#exampleModal").modal({
-            backdrop: 'static',
-            keyboard: false
-        });
-    });
-    
     printCart(); 
 
 });
+
 
 
 function printCart() {
@@ -50,6 +19,10 @@ function printCart() {
     let localstorageList = localStorage.getItem("CurrentShoppingcartList"); 
     let shoppingcartList = JSON.parse(localstorageList);
 
+    subtotal = 0; 
+    $("#sumtotal").text("Totalt: " + subtotal + " kr"); 
+
+    
 
         //kör en loop som skriver ut rätt innehåll på rätt plats i shoppingcarten 
         $.each (shoppingcartList, function(i, cartitem) {
@@ -69,9 +42,31 @@ function printCart() {
             //skapa en p-tagg, placera ut antalet 
             $("<p>").addClass("text-center purchase-item-price col-2 text-nowrap").text(cartitem.price + " kr/st").appendTo(newRow);
 
-        }); 
+        
+        
+                //skriver in det senaste totalavärdet ???? va 
 
-            //se till så att den tömmer priset innan den räknar ut det nya 
-           // $("<h3>").text(cartitem.price * cartitem.amount + " kr").appendTo(".purchase-item-sum");
+                    //längden på listan x antalet av varje produkt varukorgen 
+                    let itemTotal = cartitem.amount = shoppingcartList.length; 
+                    console.log(itemTotal);
+
+                    let amountTotal = cartitem.price * shoppingcartList.length
+
+
+                let subtotal = amountTotal * itemTotal; 
+                $("#sumtotal").text("Totalt: " + subtotal + " kr");
+    
+
+
+
+
+
+        });
+
+            
+
+       
+
+        
 
 }

@@ -174,23 +174,17 @@ hr {
     color: whitesmoke; 
     background-color: darkgrey;
     border-radius:28px;
-    width:200px;
     border: none;
 }
-.purchase-button {
-    font-size:0.7rem;
-    font-weight: 500;
-    color:whitesmoke; 
-    background-color: darkred;
-    border-radius:28px;
-    width:200px;
-    border: none; 
-}
+
 .backtoshop-button:hover {
     background-color: rgb(95, 94, 94);
 }
-.purchase-button:hover {
-    background-color:rgb(82, 6, 6);
+
+.purchase-item-sum {
+    font-size: 1.5rem;
+    font-weight:bold;
+
 }
 
 /*CHECK OUT FORM*/
@@ -208,6 +202,8 @@ hr {
 #klarna-input, #credit-input, #swish-input {
     display: none;
 }
+
+
 
 .sendorderbtn {
     font-size:0.9rem;
