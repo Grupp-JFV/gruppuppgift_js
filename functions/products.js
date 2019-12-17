@@ -1,15 +1,12 @@
 $(document).ready(function() {
-
     //skapar alla html-element 
     productList();
-    //skapa en tom lista för varukorgen
-    //shoppingcart = [];
-
-    //lyssnar efter köpknappen 
+    
+    //lyssnar efter läggtill i varukorg 
     $(".purchase-button").on("click",function() {
         addToCart($(this));
         printShoppingcart();
-    }); 
+    });
 
     //togglar filterfunktionen mellan hide/show 
     $("#sortheadline").on("click", function() {
@@ -20,7 +17,6 @@ $(document).ready(function() {
     $(".readmore_button").on("click",function() {
         $(this).siblings(".product_description").slideToggle(300);
     }); 
-
 }); 
     
 //skapar en lista med existerande produkter 
@@ -38,20 +34,21 @@ function productList() {
     let product4 = new Product("Oppigårds Hedemora Porter", "../product_images/hedemoraporter.jpg", "Porter", 5.4, 
     "Maltig, rostad, nyanserad smak med inslag av kavring, choklad, hasselnötter, kaffe, smörkola och torkade dadlar. Serveras vid 10-12°C till rätter av mörkt kött.", 
     19, "3");
-    let product5 = new Product("Oppigårds Single Hop", "../product_images/singlehop.jpg", "?", 5.0, 
+    let product5 = new Product("Oppigårds Single Hop", "../product_images/singlehop.jpg", "Ljus lager", 5.0, 
     "Tydligt humlearomatisk smak med inslag av apelsinblom, aprikos, honung, citrusskal och knäckebröd. Serveras vid 11-13°C som sällskapsdryck, eller till rätter av fisk eller ljust kött.", 
     18, "4");
-    let product6 = new Product("Oppigårds Thurbo Double", "../product_images/thurbodouble.jpg", "?", 5.4,
+    let product6 = new Product("Oppigårds Thurbo Double", "../product_images/thurbodouble.jpg", "Ipa", 5.4,
     "Maltig, aningen rostad smak med inslag av kavring, kaffe, mörk choklad, torkade fikon, apelsin, sirap och lakrits. Serveras vid 10-12°C till rätter av lamm- eller nötkött, eller till smakrika rätter med svamp.", 
     29, "5");
 
     let products = [product1, product2, product3, product4, product5, product6];
 
     display(products);
-    toLocalStorage(products); 
+    toLocalStorage(products);
+
 }
 
-//skapar en objektsklass för produkterna 
+//skapar en objektsklass för produkterna
 function Product(name, image, type, strength, description, price, id) {                         //Product Constructor
 
     this.name = name;
@@ -63,10 +60,10 @@ function Product(name, image, type, strength, description, price, id) {         
     this.id = id;
 }
 
-//funktion som loopar igenom produkterna och skriver ut dem i products.html 
+//funktion som loopar igenom produkterna och skriver ut dem i products.html
 function display(products) {
 
-    $.each(products, function (i, product) { 
+    $.each(products, function (i, product) {
          
         let responsiveColumn = $("<div>").addClass("col-12"+" "+"col-md-6"+" "+"col-lg-4");
         let productContainer = $("<div>").addClass("card"+" "+"container"+" "+" "+"text-center").appendTo(responsiveColumn);
@@ -142,7 +139,7 @@ function addToCart(buttonClicked) {
                     if (product.id === cartObject.id) {
                         duplicate = true;
                         cartIndex = j;
-                        return false; //jquery break om den hittat det den
+                        return false; //jquery break om den hittat det den söker
                     }
                 });
                 if (duplicate) {
@@ -163,7 +160,4 @@ function addToCart(buttonClicked) {
     else {
         alert("Välj ett antal innan du köper!");
     }
-} 
-
-
- 
+}
