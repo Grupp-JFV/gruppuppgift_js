@@ -126,15 +126,18 @@ function addToCart(buttonClicked) {
 
                 let newObject =  {
                     name: product.name,
+                    image: product.image, 
                     strength: product.strength,
                     type: product.type,
                     price: product.price,  
                     amount: Number(input),
                     id: product.id
                 }
+                
                 //kollar om den redan finns i "shopping cart"
                 let duplicate = false;
                 let cartIndex = 0;
+
                 $.each(shoppingcart, function(j, cartObject) {
                     if (product.id === cartObject.id) {
                         duplicate = true;
