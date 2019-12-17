@@ -184,6 +184,11 @@ hr {
     color: darkred;
     text-transform: uppercase;
 }
+
+#klarna-input, #credit-input, #swish-input {
+    display: none;
+}
+
 .sendorderbtn {
     font-size:0.9rem;
     font-weight: 500;
