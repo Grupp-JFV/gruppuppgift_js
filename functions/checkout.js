@@ -23,7 +23,6 @@ function printCart() {
     $("#sumtotal").text("Totalt: " + subtotal + " kr"); 
 
     
-
         //kör en loop som skriver ut rätt innehåll på rätt plats i shoppingcarten 
         $.each (shoppingcartList, function(i, cartitem) {
 

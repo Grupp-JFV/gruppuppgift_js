@@ -3,19 +3,30 @@ $(document).ready(function() {
      //lyssnar efter varukorgen och hämtar info från local storage 
     $("#basketButton").on("click", function() {
         $("#basket").slideToggle(300);
-        //skriv ut listan printlist 
-        printShoppingcart();
-    
+        //skriv ut listan printlist
+        printShoppingcart(); 
+
+
+        //OKEJ DENNA FUNKAR TYP MEN FATTAR INTE VARFÖR? 
+        //FRÅGA OM HJÄLP, DEN REAGERAR INTE PÅ FÖRSTA KLICKET 
+
         //funktion för delete-knappen för varje rad i listan
         $(".delete-button").on("click", function() {
-           removeFromCart($(this));
+      
+        removeFromCart($(this));
+        printShoppingcart();
         
         }); 
-
+    
     });
+
+
 
     
 }); //stänger window ready 
+
+
+
         
 function printShoppingcart() {
 
@@ -79,5 +90,3 @@ function removeFromCart(deleteItem) {
     }); 
 
 }   
-
-//denna funktion fungerar NÄSTAN, jag fattar bara inte hur man ska göra för att det ska hända på en gång, och inte bara när fönstret eller knappen laddas om? 
