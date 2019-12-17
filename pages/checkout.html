@@ -15,9 +15,15 @@
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <!--  js -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    
+
+    <!-- BOOTSTRAP JS --> <!-- MÅSTE DET AVAKTIVERAS PGA JS NI SKRIVIT SJÄLVA?? -->
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    -->
+   
 
     <script type="text/javascript" src="../functions/checkout.js"></script>
 
@@ -33,7 +39,7 @@
             </div>
             <!-- SHOPPING CART ICON-->
             <div class="text-right col-6">
-                <button type="button" class="btn p-0 shopping-cart-button" id="basketButton">
+                <button type="button" class="btn p-0 shopping-cart-button" id="basketButton" disabled>
                     <i class="fa fa-shopping-cart" id="shoppingcartlogo"></i>
                 </button>
             </div>
@@ -132,12 +138,12 @@
                     </div>
                     <div class="form-row text-left">
                     <div class="form-group col-12">
-                        <label for="streetadress">Gata och nummer</label>
-                        <input type="text" class="form-control" placeholder="Gata" required>
+                        <label for="streetadress">Adress</label>
+                        <input type="text" class="form-control" placeholder="Adress" required>
                     </div>
                     <div class="form-group col-12">
                         <label for="city and zip">Stad och postnummer</label>
-                        <input type="text" class="form-control" placeholder="Stad" required>
+                        <input type="text" class="form-control" placeholder="Stad och postnummer" required>
                     </div>
                     </div>
                     <div class="form-row text-left">
@@ -153,30 +159,41 @@
             </div>
 
             <hr>
-            <!-- PAYMENT INFORMATION -->
+
             <div class="paymentform row pt-2 pb-2">
                 <h5 class="checkoutheaders col-12">BETALNING</h5>
-                
-                <div class="form-check form-check-inline col-3">
-                    <input class="form-check-input" type="radio" name="paymentform" id="exampleRadios1" value="option1" required>
-                    <label class="form-check-label" for="exampleRadios1">
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="paymentform" id="klarnaradiobutton" value="option1" required>
+                    <label class="form-check-label" for="klarnaradiobutton">
                         Klarna (faktura)
                     </label>
                 </div>
-                <div class="form-check form-check-inline col-3">
-                    <input class="form-check-input" type="radio" name="paymentform" id="exampleRadios2" value="option2">
-                    <label class="form-check-label" for="exampleRadios2">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="paymentform" id="creditradiobutton" value="option2">
+                    <label class="form-check-label" for="creditradiobutton">
                         Kreditkort
                     </label>
                 </div>
-                <div class="form-check form-check-inline col-3">
-                    <input class="form-check-input" type="radio" name="paymentform" id="exampleRadios3" value="option3">
-                    <label class="form-check-label" for="exampleRadios3">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="paymentform" id="swishradiobutton" value="option3">
+                    <label class="form-check-label" for="swishradiobutton">
                         Swish
                     </label>
                 </div>
-                
-                <!-- PAYMENT INFO GOES HERE -->
+
+                <!--DE TRE INPUTFÄLTEN SOM SKA TOGGLAS NÄR MAN KLICKAR PÅ TILLHÖRANDE RADIOBUTTON-->
+                <div>
+                    <input id="klarna-input" type="text" class="paymentinput" placeholder="Fyll i personnummer" required>
+                </div>
+                <div>
+                    <input id="credit-input" type="text" class="paymentinput" placeholder="Fyll i kreditkortsnummer" required>
+                </div>
+                <div>
+                    <input id="swish-input" type="text" class="paymentinput" placeholder="Fyll i telefonnummer" required>
+                </div>
+
+
 
             </div>
 
