@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
     //skapar alla html-element 
     productList();
     //skapa en tom lista för varukorgen
@@ -12,11 +11,11 @@ $(document).ready(function() {
         printShoppingcart();
     });
 
-    //lyssnar efter köpknappen 
+    //lyssnar efter läggtill i varukorg 
     $(".purchase-button").on("click",function() {
         addToCart($(this));
         printShoppingcart();
-    }); 
+    });
 
     //togglar filterfunktionen mellan hide/show 
     $("#sortheadline").on("click", function() {
@@ -27,7 +26,6 @@ $(document).ready(function() {
     $(".readmore_button").on("click",function() {
         $(this).siblings(".product_description").slideToggle(300);
     }); 
-
 }); 
     
 //skapar en lista med existerande produkter 
@@ -45,20 +43,21 @@ function productList() {
     let product4 = new Product("Oppigårds Hedemora Porter", "../product_images/hedemoraporter.jpg", "Porter", 5.4, 
     "Maltig, rostad, nyanserad smak med inslag av kavring, choklad, hasselnötter, kaffe, smörkola och torkade dadlar. Serveras vid 10-12°C till rätter av mörkt kött.", 
     19, "3");
-    let product5 = new Product("Oppigårds Single Hop", "../product_images/singlehop.jpg", "?", 5.0, 
+    let product5 = new Product("Oppigårds Single Hop", "../product_images/singlehop.jpg", "Ljus lager", 5.0, 
     "Tydligt humlearomatisk smak med inslag av apelsinblom, aprikos, honung, citrusskal och knäckebröd. Serveras vid 11-13°C som sällskapsdryck, eller till rätter av fisk eller ljust kött.", 
     18, "4");
-    let product6 = new Product("Oppigårds Thurbo Double", "../product_images/thurbodouble.jpg", "?", 5.4,
+    let product6 = new Product("Oppigårds Thurbo Double", "../product_images/thurbodouble.jpg", "Ipa", 5.4,
     "Maltig, aningen rostad smak med inslag av kavring, kaffe, mörk choklad, torkade fikon, apelsin, sirap och lakrits. Serveras vid 10-12°C till rätter av lamm- eller nötkött, eller till smakrika rätter med svamp.", 
     29, "5");
 
     let products = [product1, product2, product3, product4, product5, product6];
 
     display(products);
-    toLocalStorage(products); 
+    toLocalStorage(products);
+
 }
 
-//skapar en objektsklass för produkterna 
+//skapar en objektsklass för produkterna
 function Product(name, image, type, strength, description, price, id) {                         //Product Constructor
 
     this.name = name;
@@ -70,10 +69,10 @@ function Product(name, image, type, strength, description, price, id) {         
     this.id = id;
 }
 
-//funktion som loopar igenom produkterna och skriver ut dem i products.html 
+//funktion som loopar igenom produkterna och skriver ut dem i products.html
 function display(products) {
 
-    $.each(products, function (i, product) { 
+    $.each(products, function (i, product) {
          
         let responsiveColumn = $("<div>").addClass("col-12"+" "+"col-md-6"+" "+"col-lg-4");
         let productContainer = $("<div>").addClass("card"+" "+"container"+" "+" "+"text-center").appendTo(responsiveColumn);
@@ -146,7 +145,7 @@ function addToCart(buttonClicked) {
                     if (product.id === cartObject.id) {
                         duplicate = true;
                         cartIndex = j;
-                        return false; //jquery break om den hittat det den
+                        return false; //jquery break om den hittat det den söker
                     }
                 });
                 if (duplicate) {
@@ -167,7 +166,40 @@ function addToCart(buttonClicked) {
     else {
         alert("Välj ett antal innan du köper!");
     }
-} 
+}
+
+function deleteBasketItem(buttonClicked) {
+
+    let shoppingcart = JSON.parse(localStorage.getItem("CurrentShoppingcartList"));
+    let buttonId = buttonClicked[0].id.substring(11);
+
+    shoppingcart.splice(buttonId, 1);
+    localStorage.setItem("CurrentShoppingcartList", JSON.stringify(shoppingcart));
+}
+
+function increaseBasketItem(buttonClicked) {
+
+    let shoppingcart = JSON.parse(localStorage.getItem("CurrentShoppingcartList"));
+    let buttonId = buttonClicked[0].id.substring(13);
+
+    shoppingcart[buttonId].amount += 1;
+
+    localStorage.setItem("CurrentShoppingcartList", JSON.stringify(shoppingcart));
+}
+
+function decreaseBasketItem(buttonClicked) {
+
+    let shoppingcart = JSON.parse(localStorage.getItem("CurrentShoppingcartList"));
+    let buttonId = buttonClicked[0].id.substring(13);
+
+    shoppingcart[buttonId].amount -= 1;
+
+    if (shoppingcart[buttonId].amount === 0) {
+        shoppingcart.splice(buttonId, 1);
+    }
+
+    localStorage.setItem("CurrentShoppingcartList", JSON.stringify(shoppingcart));
+}
 
 function printShoppingcart() {
 
@@ -184,7 +216,12 @@ function printShoppingcart() {
         let basketItem = $("<div>").addClass("row border-top basket-text").appendTo("#basket_content");
 
         let basketName = $("<div>").addClass("col-7 col-md-2 text-left").appendTo(basketItem);
-        $("<button>").addClass("delete-button").text("x").appendTo(basketName);
+        
+        $("<button>").attr("id", "delete_btn_" + i).addClass("delete-button").text("x").on("click",function() {
+            deleteBasketItem($(this));
+            printShoppingcart();
+        }).appendTo(basketName);
+
         $("<span>").addClass("text-left").text(cartitem.name).appendTo(basketName);
 
         let basketStrength = $("<div>").addClass("col-0 col-md-2 d-none d-md-inline text-center").appendTo(basketItem);
@@ -196,13 +233,18 @@ function printShoppingcart() {
         let basketPrice = $("<div>").addClass("col-0 col-md-2 d-none d-md-inline text-center").appendTo(basketItem);
         $("<span>").addClass("basket-text").text(cartitem.price + " kr").appendTo(basketPrice);
 
-        //lägg in så att basket-amount uppdateras med villkor om id för produkten matchar ett som redan finns i varukorgen
-        //dvs. om samma produkt läggs till, lägg inte till en ny rad utan uppdatera bara cartitem.amount!
-
         let basketAmount = $("<div>").addClass("col-2 col-md-2 p-0 text-center").appendTo(basketItem);
-        $("<button>").addClass("amount-button").text("-").appendTo(basketAmount);
+        $("<button>").attr("id", "decrease_btn_" + i).addClass("amount-button").text("-").on("click",function() {
+            decreaseBasketItem($(this));
+            printShoppingcart();
+        }).appendTo(basketAmount);
+
         $("<span>").addClass("basket-text").text(cartitem.amount).appendTo(basketAmount);
-        $("<button>").addClass("amount-button").text("+").appendTo(basketAmount);
+
+        $("<button>").attr("id", "increase_btn_" + i).addClass("amount-button").text("+").on("click",function() {
+            increaseBasketItem($(this));
+            printShoppingcart();
+        }).appendTo(basketAmount);
 
         let basketTotal = $("<div>").addClass("col-3 col-md-2 text-right").appendTo(basketItem);
         let cost = cartitem.price * cartitem.amount;
@@ -218,7 +260,6 @@ function printShoppingcart() {
     let totalPayment = totalCost + shippingCost;
     $("#total_payment").html(String(totalPayment) + "kr");
 
-} 
+}
 
 
- 
