@@ -126,9 +126,7 @@ html {
     display: none;
 }
 
-
-
-.sendorderbtn {
+#sendorderbtn {
     font-size:0.9rem;
     font-weight: 500;
     color:whitesmoke; 
@@ -146,60 +144,44 @@ html {
     font-size: 0.6rem;
 }
 
-/*TEST-MODAL*/
+/*TACK FÖR DITT KÖP-MODAL*/
 
-p { margin-top: 0; }
-
-.modal-container {
-
+#modal {
+    display: none;
     position: fixed;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.95);
     border: 3px darkred solid;
-    z-index: 100;
+    z-index: 1;
     width: 70%;
-    max-width: 400px;
     top: 50%;
     left: 50%;
-    padding: 20px;
+    padding: 30px;
     border-radius: 5px;
-    -webkit-transform: translate(-50%, -200%);
-    -ms-transform: translate(-50%, -200%);
-    transform: translate(-50%, -200%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     -webkit-transition: -webkit-transform 200ms ease-out;
     transition: transform 200ms ease-out;
 }
 
-
-
-
-
-
-
- /*THANKS FOR YOUR PURCHASE DIV */
-
- #thankyoucustomer {
-    display: none;
-    position: sticky;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100;
-    width: 50%;
-    height: 85%;
-    background-color: rgba(255, 255, 255, 0.9);
-    border: 3px rgba(139, 0, 0, 0.9) solid;
-    text-align: center;
- }
-
- #thankyourcustomerheader {
-     font-size: 1.5rem;
- }
-
- #customersname {
-    font-size: 1.5rem;
+.modalheader {
+     font-size: 1.2rem;
 }
 
-#thankyougoback {
+#customersname {
+    font-size: 1.2rem;
+}
+
+#modalreciept {
+    padding-top: 10px;
+}
+
+.reciept {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.modalokbutton {
     font-size:0.7rem;
     font-weight: 500;
     color:whitesmoke; 
@@ -207,10 +189,11 @@ p { margin-top: 0; }
     background-color: grey;
     border-radius:28px;
     width: 250px;
+    margin-top: 30px;
     border: none; 
 }
 
-#thankyougoback:hover {
+.modalokbutton:hover {
     background-color: rgb(65, 63, 63);
 }
  

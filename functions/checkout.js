@@ -6,14 +6,11 @@ $(document).ready(function(){
     }); 
 
 
-    });
-
     //visar tack för ditt köp-diven
-    $(document).ready(function(){
-        $("#sendorderbtn").click(function(){
-          $("#demo").show();
-        });
+      $("#sendorderbtn").click(function(){
+        $("#modal").show();
       });
+      
 
 
     // Skickar värdet från first name-inputfältet till modalens Tack för ditt köp-rubrik.
@@ -21,10 +18,10 @@ $(document).ready(function(){
         let value = $("#firstname").val();
         $("#customersname").text(value);
         
-    });
-
     
     printCart(); 
+
+  });
 
 });
 

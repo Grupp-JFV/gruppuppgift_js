@@ -156,37 +156,46 @@ s<!DOCTYPE html>
                     </div>
                 </div>
                 
-                <!-- Button trigger modal -->
+                <!-- Send order button trigger div below -->
             
-                <button type="button" class="btn sendorderbtn mt-5 mb-5 p-2d show-modal">
+                <button type="button" class="btn mt-5 mb-5 p-2d show-modal" id="sendorderbtn">
                     SKICKA BESTÄLLNING
                 </button>
                
-                
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">
-                            Tack för ditt köp
-                            <span id="thankyoucustomer"></span>
-                            !
-                        </h5>
+                <!-- Thanks for your purchase div -->
+
+                <div id="modal">
+                    <div class="modalheader">
+                        TACK FÖR DITT KÖP 
+                        <span id="customersname">
+                            <!-- Value from "first name" input here -->
+                        </span>
+                        !
+                    </div>
+                    <div class="row justify-content-center reciept">
+                        <div id="reciept_title" class="col-6">
+                            <!-- Title of purchased beer from Local Storage -->
                         </div>
-                        <div class="modal-body">
-                        KVITTO PÅ BESTÄLLNING
-                        </div>
-                        <div class="modal-footer">
-                            <a href="products.html">
-                                <button type="button" class="btn modalgobackbtn">
-                                    Tillbaka till webbshopen
-                                </button>
-                            </a>
+                        <div class="col-3">x</div>
+                        <div id="recipet_amount" class="col-3">
+                            <!-- Amount of purchased beer from Local Storage -->
                         </div>
                     </div>
-                    </div>
+                    <div>Total summa: <span id=""></span></div>
+                    <a href="../index.html">
+                        <button type="button" class="modalokbutton">
+                            OK
+                        </button>
+                    </a>
                 </div>
+            </div>
+
+
+
+
+                
+                </div>
+
             </div>
         </main>
         
