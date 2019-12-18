@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    
 
     $("input#klarnaradiobutton.form-check-input").on("click", function(){
         $("#klarna-input").slideToggle(300);
@@ -14,30 +13,23 @@ $(document).ready(function(){
     $("input#swishradiobutton.form-check-input").on("click", function(){
         $("#swish-input").slideToggle(300);
 
-    }); 
-    
-    /* //om inputfältet förändras, enablea skicka beställning-knappen.
-    if ( input > 0 ) {
-        let shoppingcart = JSON.parse(localStorage.getItem("CurrentShoppingcartList"));
-        if (shoppingcart === null) {
-            shoppingcart = [];
-        }
-        else {
-            alert("Välj ett antal innan du köper!");
-        }*/
+    });
+
+    //visar tack för ditt köp-diven
+    $(document).ready(function(){
+        $("#sendorderbtn").click(function(){
+          $("#demo").show();
+        });
+      });
+
 
     // Skickar värdet från first name-inputfältet till modalens Tack för ditt köp-rubrik.
-    $(".show-modal").click(function(){
+    $("#sendorderbtn").click(function(){
         let value = $("#firstname").val();
-        $("#thankyoucustomer").text(value);
-
-
-        // Avaktiverar möjligheten att klicka utanför modalen för att stänga den.
-        $("#exampleModal").modal({
-            backdrop: 'static',
-            keyboard: false
-        });
+        $("#customersname").text(value);
+        
     });
+
     
     printCart(); 
 

@@ -155,7 +155,7 @@
                 <h5 class="checkoutheaders col-12">BETALNING</h5>
 
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="paymentform" id="klarnaradiobutton" value="option1" required>
+                    <input class="form-check-input" type="radio" name="paymentform" id="klarnaradiobutton" value="option1" checked>
                     <label class="form-check-label" for="klarnaradiobutton">
                         Klarna (faktura)
                     </label>
@@ -175,13 +175,13 @@
 
                 <!--DE TRE INPUTFÄLTEN SOM SKA TOGGLAS NÄR MAN KLICKAR PÅ TILLHÖRANDE RADIOBUTTON-->
                 <div>
-                    <input id="klarna-input" type="text" class="paymentinput" placeholder="Fyll i personnummer" required>
+                    <input id="klarna-input" type="text" class="paymentinput" placeholder="Fyll i personnummer">
                 </div>
                 <div>
-                    <input id="credit-input" type="text" class="paymentinput" placeholder="Fyll i kreditkortsnummer" required>
+                    <input id="credit-input" type="text" class="paymentinput" placeholder="Fyll i kreditkortsnummer">
                 </div>
                 <div>
-                    <input id="swish-input" type="text" class="paymentinput" placeholder="Fyll i telefonnummer" required>
+                    <input id="swish-input" type="text" class="paymentinput" placeholder="Fyll i telefonnummer">
                 </div>
 
 
@@ -196,7 +196,7 @@
                     <span class="small">(0kr)</span>
                 </h5>
                 <div class="form-check col-12">
-                    <input class="form-check-input" type="radio" name="deliveryform" id="exampleRadios1" value="option1" required>
+                    <input class="form-check-input" type="radio" name="deliveryform" id="exampleRadios1" value="option1" checked>
                     <label class="form-check-label" for="exampleRadios1">
                         Leverans till utlämningsställe - 2-5 arbetsdagar
                     </label>
@@ -218,15 +218,42 @@
 
 
 
-            <!-- Button trigger modal -->
-            <button type="button" class="btn sendorderbtn mt-5 mb-5 p-2d show-modal" >
+            <!-- Knapp som submittar formulär samt öppnar div. Ska göras disables until form is valid.  -->
+            <button type="submit" class="btn mt-5 mb-5 p-2d" id="sendorderbtn" >
                 SKICKA BESTÄLLNING
             </button>
             
 
+            <!--- Div som öppnas vid knapptrycket ovan 
+
+            <div id="thankyoucustomer">
+                <div id="thankyourcustomerheader">TACK FÖR DITT KÖP 
+                    <span id="thankyoucustomersname"></span>
+                </div>
+                <div id="thankyoureciept">KVITTO PÅ BESTÄLLNING TAGET FRÅN LOCAL STORAGE</div>
+
+                <button id="thankyougoback">Tillbaka till webbshoppen</button>
+            </div> -->
+
+
+            <div class="modal" id="demo">
+            
+                  <div class="modal-container">
+            
+                    <p>I love cats</p>
+            
+                    <a href="#modal-close">Close</a>
+            
+                  </div>
+            
+                </div>
+                
+
+
+
 
             
-            <!-- Modal -->
+            <!-- Modal
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -249,13 +276,10 @@
                     </div>
                 </div>
                 </div>
-            </div>
-
-
-
-
+            </div> -->
 
         </div>
+
                <!-- FOOTER -->
                <footer m-0>
                     <div class="container-fluid">

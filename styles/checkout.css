@@ -209,7 +209,7 @@ hr {
     display: none;
 }
 
-.sendorderbtn {
+#sendorderbtn {
     font-size:0.9rem;
     font-weight: 500;
     color:whitesmoke; 
@@ -219,39 +219,82 @@ hr {
     width:300px;
     border: none; 
 }
-.sendorderbtn:hover {
+#sendorderbtn:hover {
     background-color: rgb(61, 6, 6);
     color: whitesmoke;
 }
 .form-control {
     font-size: 0.6rem;
 }
-.modalgobackbtn {
+
+/*TEST-MODAL*/
+
+p { margin-top: 0; }
+
+.modal-container {
+
+    position: fixed;
+    background-color: #fff;
+    border: 3px darkred solid;
+    z-index: 100;
+    width: 70%;
+    max-width: 400px;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    border-radius: 5px;
+    -webkit-transform: translate(-50%, -200%);
+    -ms-transform: translate(-50%, -200%);
+    transform: translate(-50%, -200%);
+    -webkit-transition: -webkit-transform 200ms ease-out;
+    transition: transform 200ms ease-out;
+}
+
+
+
+
+
+
+
+ /*THANKS FOR YOUR PURCHASE DIV */
+
+ #thankyoucustomer {
+    display: none;
+    position: sticky;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 50%;
+    height: 85%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 3px rgba(139, 0, 0, 0.9) solid;
+    text-align: center;
+ }
+
+ #thankyourcustomerheader {
+     font-size: 1.5rem;
+ }
+
+ #customersname {
+    font-size: 1.5rem;
+}
+
+#thankyougoback {
     font-size:0.7rem;
     font-weight: 500;
     color:whitesmoke; 
     text-transform: uppercase;
-    background-color: darkred;
+    background-color: grey;
     border-radius:28px;
     width: 250px;
     border: none; 
 }
 
- /*THANKS FOR YOUR PURCHASE MODAL */
-
-.purchaseconfirmed-modal-btn {
-    font-size:0.7rem;
-    font-weight: 500;
-    color:whitesmoke; 
-    text-transform: uppercase;
-    background-color: darkred;
-    border-radius:28px;
-    width:200px;
-    border: none;
+#thankyougoback:hover {
+    background-color: rgb(65, 63, 63);
 }
-.modal-title {
-    color: darkred;
-}
+ 
 
 /* FOOTER */
 footer {
