@@ -1,17 +1,36 @@
 $(document).ready(function(){
     
+    //klarna syns som default 
+    $("input#klarnaradiobutton").change( function(){
+        $("#klarna-input").show(); 
 
-    //när man väljer betalsätt, kör denna funktion: 
-    $(".form-check-input").change(function(){
-        $(".paymentinput").slideToggle(300);
+        //dölj de andra betalsätten 
+        $("#swish-input").hide();
+        $("#credit-input").hide();
     }); 
+ 
+    //visa kreditkort
+    $("input#creditradiobutton").on("click", function(){
+        $("#credit-input").show(); 
 
+        //göm de andra alternativen 
+        $("#swish-input").hide();
+        $("#klarna-input").hide();
+    }); 
+ 
+    //visa swish
+    $("input#swishradiobutton").on("click", function(){
+        $("#swish-input").show(); 
 
+        //göm de andra alternativen 
+        $("#credit-input").hide();
+        $("#klarna-input").hide();  
+    });
+
+    //skriver ut varukorgen 
     printCart(); 
 
 });
-
-
 
 function printCart() {
 
@@ -42,7 +61,7 @@ function printCart() {
             $("<p>").addClass("text-center purchase-item-price col-2 text-nowrap").text(cartitem.price + " kr/st").appendTo(newRow);
 
         
-        
+    
                 //skriver in det senaste totalavärdet ???? va 
 
                     //längden på listan x antalet av varje produkt varukorgen 
@@ -55,9 +74,6 @@ function printCart() {
                 let subtotal = amountTotal * itemTotal; 
                 $("#sumtotal").text("Totalt: " + subtotal + " kr");
     
-
-
-
 
 
         });

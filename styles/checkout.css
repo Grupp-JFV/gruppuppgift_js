@@ -67,7 +67,6 @@ html {
 .purchase-info {
     font-size:0.6rem;
     color:black;
-
 }
 
 .purchaseditem-image{
@@ -120,14 +119,34 @@ html {
     font-weight: 500;
     color: darkred;
     text-transform: uppercase;
+    border-bottom:1px solid lightgray; 
 }
 
-#klarna-input, #credit-input, #swish-input {
+
+/* PAYMENT OPTIONS */
+.paymentinput {
+    border-radius:.25rem;
+    font-size: 0.6rem;
+    border:1px solid lightgrey;
+    height:calc(1.5em + .75rem + 2px); 
+    padding: .375rem .75rem;
+    line-height:1.5;
+}
+
+#klarna-input {
+    display: visible;
+}
+#credit-input, #swish-input {
     display: none;
 }
 
 
+/* CUSTOMER INFORMATION FORM */
+.form-control {
+    font-size: 0.6rem;
+}
 
+/* SEND ORDER  */
 .sendorderbtn {
     font-size:0.9rem;
     font-weight: 500;
@@ -141,19 +160,6 @@ html {
 .sendorderbtn:hover {
     background-color: rgb(61, 6, 6);
     color: whitesmoke;
-}
-.form-control {
-    font-size: 0.6rem;
-}
-.modalgobackbtn {
-    font-size:0.7rem;
-    font-weight: 500;
-    color:whitesmoke; 
-    text-transform: uppercase;
-    background-color: darkred;
-    border-radius:28px;
-    width: 250px;
-    border: none; 
 }
 
  /*THANKS FOR YOUR PURCHASE MODAL */
@@ -170,6 +176,17 @@ html {
 }
 .modal-title {
     color: darkred;
+}
+
+.modalgobackbtn {
+    font-size:0.7rem;
+    font-weight: 500;
+    color:whitesmoke; 
+    text-transform: uppercase;
+    background-color: darkred;
+    border-radius:28px;
+    width: 250px;
+    border: none; 
 }
 
 /* FOOTER */
@@ -200,7 +217,6 @@ footer {
     }  
 
     /* SHOPPIBG-BAG */
-
     .purchase-info {
         font-size:1rem;
         color:black;
@@ -208,10 +224,10 @@ footer {
     .shoppingcart-item-titel {
         font-size:1rem;
     }
-
     .numberofpurchaseditems {
         width: 20%;
     }
+
 }
 
 
@@ -220,16 +236,12 @@ footer {
 
    
     /*Shopping bag*/
-
     .numberofpurchaseditems {
         width: 8%;
     }
-
-
     .shoppingcart-item-titel {
         font-size:1rem;
     }
-
 
     
 }
