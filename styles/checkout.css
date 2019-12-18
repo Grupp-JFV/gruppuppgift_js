@@ -1,48 +1,4 @@
 /* Mobile phones breakpoint */
-html {
-    font-size:16pt;
-}
-
-/*NAVBAR*/
-#nav {
-    background-color:white;
-    border-bottom: 1px solid black;
-    box-shadow: 0px 0px 4px black;
-    min-height: 48px;
-}
-
-#companylogo {
-    font-size:1rem;
-    font-weight:800;
-    color:darkred;
-    padding-top: 10px;
-    
-}
-
-#companylogo_end {
-    font-size:1rem;
-    font-weight:800;
-    padding-top: 10px;
-    display:inline;
-    color:darkred;
-    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: darkred;
-    text-align:left;   
-}
-
-.shopping-cart-button {
-    margin-top: 6px;
-}
-#shoppingcartlogo {
-    font-size:1rem;
-    color:darkred;
-}
-#shoppingcart_content {
-    display:inline;
-    font-size:0.7rem;
-    font-weight:800;
-} 
 
 /* HEADER IMAGE */
 .header_img {
@@ -51,6 +7,7 @@ html {
 }
 
 /*CHECKOUT PAGE*/
+
 /*PRODUCTS IN SHOPPINGCART*/
 .shoppingcart-div {
     margin-bottom:10px;
@@ -164,7 +121,7 @@ html {
     display: none;
     position: fixed;
     background-color: rgba(255, 255, 255, 0.95);
-    border: 3px darkred solid;
+    box-shadow: 0px 0px 4px 4px rgba(119, 14, 14, 0.8);
     z-index: 1;
     width: 70%;
     top: 50%;
@@ -178,21 +135,28 @@ html {
     transition: transform 200ms ease-out;
 }
 
-.modalheader {
-     font-size: 1.2rem;
-}
+ /*THANKS FOR YOUR PURCHASE DIV */
 
-#customersname {
-    font-size: 1.2rem;
-}
+ #thankyoucustomer {
+    display: none;
+    position: sticky;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 50%;
+    height: 85%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 3px rgba(139, 0, 0, 0.9) solid;
+    text-align: center;
+ }
 
-#modalreciept {
-    padding-top: 10px;
-}
+ #thankyourcustomerheader {
+    font-size: 1.5rem;
+ }
 
-.reciept {
-    margin-top: 30px;
-    margin-bottom: 30px;
+ #customersname {
+    font-size: 1.5rem;
 }
 
 .modalokbutton {
@@ -211,38 +175,6 @@ html {
     background-color: rgb(65, 63, 63);
 }
  
-
-.modalgobackbtn {
-    font-size:0.7rem;
-    font-weight: 500;
-    color:whitesmoke; 
-    text-transform: uppercase;
-    background-color: darkred;
-    border-radius:28px;
-    width: 250px;
-    border: none; 
-}
-
-/* FOOTER */
-footer {
-    background-color:white;
-    font-size: 0.7rem;
-    border-top:1px solid grey;
-}
-.footer-logo {
-    font-size: 0.8rem;
-    font-weight: 800;
-}
-.footer-phone, .footer-email {
-    color: grey;
-    text-decoration: underline;
-}
-.footer-phone:hover, .footer-email:hover {
-    text-decoration: none;
-    color: black;
-}
-
-
 /* Padlet 768px */
 @media (min-width: 768px) {
     /* HEADER */
@@ -267,8 +199,7 @@ footer {
 
 /*Desktop */ 
 @media (min-width: 992px) {
-
-   
+ 
     /*Shopping bag*/
     .numberofpurchaseditems {
         width: 8%;
