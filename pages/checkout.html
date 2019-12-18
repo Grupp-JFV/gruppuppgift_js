@@ -20,7 +20,7 @@
 
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid"> 
         <!--TOP NAVBAR-->
         <header class="row sticky-top" id="nav"> 
             <div class="text-left col-6 align-self-center" id ="companyname">
@@ -38,33 +38,34 @@
         <!-- BORDER -->
         <div class="row border-line"></div>
         <!-- HEADER IMG -->
-        <div class="row">
-            <div class="col-12 p-0">
-                <img class="w-100 header_img" src="../styles/headerimage/header-image.jpg" alt="Beer bottles">
+        <div class="row justify-content-center">
+            <div class="header_image">
+                <img class="header_img w-100" src="../styles/headerimage/header-image.jpg" alt="Beer bottles">
             </div>
         </div>
         <!-- MAIN CONTENT -->
-        <div class="row shoppingcart-main text-center">    
-            <main>
-                <div class="shoppingcart-header col-12 pt-4 text-center">
+        <main>
+            <div class="row shoppingcart-main text-center justify-content-center"> 
+                <div class="shoppingcart-header col-12 pt-4">
                     <h2>VARUKORG</h2>
                 </div>
-                <div class="col-12 col-md-10 text-center">
-                    <div class="purchase-info">
-                        <!-- Product image from shoppingcart -->
-                        <!-- Product titel  -->
-                        <!-- Product amount -->
-                        <!-- Product price -->
-                    </div>
-                    <div class="row justify-content-between align-items-center pl-2">
-                        <div class="backtoshop col-4 text-center">
-                            <a href="products.html"><button class="backtoshop-button">TILLBAKA</button></a>   
-                        </div>
-                        <div class="purchase-item-sum col-4 text-center pr-2">
-                            <h5 id="sumtotal" class="text-nowrap"></h5>
-                        </div>
-                    </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="purchase-info col-12 col-md-10">
+                    <!-- Product image from shoppingcart -->
+                    <!-- Product titel  -->
+                    <!-- Product amount -->
+                    <!-- Product price -->
                 </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="backtoshop col-6 text-left">
+                    <a href="products.html"><button class="backtoshop-button">TILLBAKA</button></a>   
+                </div>
+                <div class="purchase-item-sum col-2 text-right">
+                    <h5 id="sumtotal" class="text-nowrap"></h5>
+                </div>
+            </div>
             <!-- CHECKOUT FORM -->
             <div class="checkoutcontent row justify-content-center align-items-center">
                 <!-- CUSTOMER INFORMATION -->
@@ -157,9 +158,8 @@
                 <button type="button" class="btn mt-5 mb-5 p-2d show-modal" id="sendorderbtn">
                     SKICKA BESTÄLLNING
                 </button>
-               
+            
                 <!-- Thanks for your purchase div -->
-
                 <div id="modal">
                     <div class="modalheader">
                         <span id="customersname">
@@ -177,19 +177,8 @@
                         </button>
                     </a>
                 </div>
-            </div>
-
-
-
-
-                
-                </div>
-
-            </div>
+            </div>                
         </main>
-        
-    </div>
-
         <!-- FOOTER -->
         <footer class="row pt-2 pb-2 w-100 m-0">
             <div class="col-12 col-lg-6 text-center">
@@ -223,7 +212,6 @@
                 </div>
             </div> 
         </footer>
-
     </div>
 </body>
 </html>
