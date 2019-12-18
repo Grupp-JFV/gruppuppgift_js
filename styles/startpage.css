@@ -1,125 +1,9 @@
 /* Mobile phones breakpoint */
-html, body {
-    font-size:16pt;
-}
-
-
-/*NAVBAR*/
-#companyname a {
-    font-size:1rem;
-    font-weight:800;
-    color:darkred; 
-}
-
-/*NAVBAR*/
-#nav {
-    background-color:white;
-    border-bottom: 1px solid black;
-    box-shadow: 0px 0px 4px black;
-    min-height:48px;
-}
-
-#companylogo {
-    font-size:1rem;
-    font-weight:800;
-    color:darkred;
-    padding-top: 10px;
-    
-}
-
-#companylogo_end {
-    font-size:1rem;
-    font-weight:800;
-    padding-top: 10px;
-    display:inline;
-    color:darkred;
-    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: darkred;
-    text-align:left;   
-}
-
-.shopping-cart-button {
-    margin-top: 6px;
-}
-
-#shoppingcartlogo {
-    font-size:1rem;
-    color:darkred;
-}
-
-
-/*DROP-DOWN SHOPPING CART*/
-.hidden-basket {
-    display: none;
-    background: white;
-}
-
-.hidden-basket h3, span {
-    font-size:0.7rem;
-}
-
-.basket-heading h3 {
-    font-weight: bold;
-    margin-top: 5px;
-    margin-bottom: 8px;
-}
-
-.basket-text {
-    padding-top: 0;
-    padding-bottom: 4px;
-}
-
-.basket-text span {
-    font-size:0.7rem;
-    font-weight: normal;
-    margin-top: 5px;
-    margin-bottom: 8px;
-}
-
-.basket-text-interactive span {
-    color: rgb(0, 100, 38);
-}
-
-.basket-text .delete-button {
-    display: hidden;
-    font-size:0.7rem;
-    color: darkred;
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0 4px 0 0;
-}
-
-.basket-text .amount-button {
-    display: hidden;
-    font-size:0.7rem;
-    color: rgb(0, 87, 39);
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0 6px 0 4px;
-}
-
-.basket-sum {
-    font-weight: bold;
-}
-
-.pay-btn {
-    font-size:0.7rem;
-    color:whitesmoke; 
-    background-color: darkred;
-    border-radius:28px;
-    border: none;
-    padding: 4px 12px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
 
 /* JUMBOTRON */
 
 header {
-    background-color:rgb(255, 255, 255);   
+    background-color: rgb(255, 255, 255);   
 
 }
 .jumbotron {
@@ -129,27 +13,27 @@ header {
     background-size: cover;
 }
 .headercontent {
-    background-color:whitesmoke;
+    background-color: whitesmoke;
     top: 15%;
     font-size: 0.7rem;
     padding:10px 20px 10px 20px;
     border-radius: 1px;
-    width:90%;
+    width: 90%;
 }
 .introheadline {
-    border-bottom:1px solid grey;
-    padding-top:10px;
+    border-bottom: 1px solid grey;
+    padding-top: 10px;
     font-size: 2rem;
     font-weight: 800;
     color:darkred;
     text-transform: uppercase;
-    text-shadow:1px 1px black;
+    text-shadow: 1px 1px black;
 }
 
 .image-link {
     object-fit: scale-down;
-    height:25vh;
-    opacity:0.5;
+    height: 25vh;
+    opacity: 0.5;
 }
 
 #webshop_button, #readmoreindex_button {
@@ -157,10 +41,10 @@ header {
     font-weight: 600;
     color: whitesmoke; 
     background-color: darkred;
-    border-radius:25px;
+    border-radius: 25px;
     border: none;
-    width:150px;
-    margin-bottom:10px;
+    width: 150px;
+    margin-bottom: 10px;
 }
 #webshop_button:hover, #readmoreindex_button:hover {
     background-color: rgb(90, 2, 2);
@@ -173,10 +57,10 @@ header {
 .infoheadline {
     font-size: 1.5rem;
     font-weight: 800;
-    color:darkred;
+    color: darkred;
     text-transform: uppercase;
     border-bottom: 1px solid grey;
-    padding-bottom:10px;
+    padding-bottom: 10px;
 }
 #companylogo {
     width: 30%;
@@ -187,35 +71,16 @@ header {
 
 .introtext {
     color: rgb(0, 0, 0);
-    font-size:1rem;
+    font-size: 1rem;
 }
 .introheadline p {
-    background-color:none;
+    background-color: none;
 }
 .index-productnews {
-    font-size:0.8rem;
-    font-weight:500;
-    color:grey;
-    border:none;
-}
-
-/* FOOTER */
-footer {
-    background-color:white;
-    font-size: 0.7rem;
-    border-top:1px solid grey;
-}
-.footer-logo {
     font-size: 0.8rem;
-    font-weight: 800;
-}
-.footer-phone, .footer-email {
-    color: grey;
-    text-decoration: underline;
-}
-.footer-phone:hover, .footer-email:hover {
-    text-decoration: none;
-    color: black;
+    font-weight: 500;
+    color:grey;
+    border: none;
 }
 
 /* Padlet 768px */
@@ -240,7 +105,7 @@ footer {
 @media (min-width: 992px) {
 
     main {
-        display:flex; 
+        display: flex; 
     }
 
     /* Intro styling */
@@ -249,21 +114,25 @@ footer {
         padding-left: 90px;
         padding-right: 90px;
     }
+
    .introheadline {
        font-size: 1.8rem;
     }
+
     .introtext {
-    font-size:1rem;
+    font-size: 1rem;
     }
+
     .introheadline p {
         background-color:none;
     }
+
     .index-productnews {
-        font-size:0.7rem;
-        font-weight:500;
-        color:grey;
+        font-size: 0.7rem;
+        font-weight: 500;
+        color: grey;
         align-self: baseline;
         text-transform: uppercase;
-        border:none;
+        border: none;
     }
 }

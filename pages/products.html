@@ -9,7 +9,8 @@
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- CSS  -->
-    <link rel="stylesheet" href="../styles/main.css"> 
+    <link rel="stylesheet" href="../styles/header_footer.css">
+    <link rel="stylesheet" href="../styles/main.css">
      <!-- FONT-AWESOME -->
      <script src="https://kit.fontawesome.com/55cb2a86bc.js" crossorigin="anonymous"></script>
     <!-- JQUERY -->
@@ -30,7 +31,10 @@
             <!-- SHOPPING CART -->
             <div class="text-right col-6">
                 <button type="button" class="btn p-0 shopping-cart-button" id="basketButton">
-                    <i class="fa fa-shopping-cart" id="shoppingcartlogo"></i>
+                    <span class="d-inline basket-display" id="display_basket">
+                    </span>
+                    <i class="fa fa-shopping-cart" id="shoppingcartlogo">
+                    </i>
                 </button>
             </div>
             <!-- HIDDEN BASKET -->

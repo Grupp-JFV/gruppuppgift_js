@@ -1,116 +1,4 @@
 /* Mobile phones breakpoint */
-html {
-    font-size:16pt;
-}
-
-/*NAVBAR*/
-#nav {
-    background-color:white;
-    border-bottom: 1px solid black;
-    box-shadow: 0px 0px 4px black;
-    min-height:48px;
-}
-
-#companylogo {
-    font-size:1rem;
-    font-weight:800;
-    color:darkred;
-    padding-top: 10px;
-}
-
-#companylogo_end {
-    font-size:1rem;
-    font-weight:800;
-    padding-top: 10px;
-    display:inline;
-    color:darkred;
-    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: darkred;
-    text-align:left;   
-}
-
-.shopping-cart-button {
-    margin-top: 6px;
-}
-#shoppingcartlogo {
-    font-size:1rem;
-    color:darkred;
-}
-#shoppingcart_content {
-    display:inline;
-    font-size:0.7rem;
-    font-weight:800;
-} 
-
-
-/*DROP-DOWN SHOPPING CART*/
-.hidden-basket {
-    display: none;
-    background: white;
-    padding-bottom: 12px;
-}
-
-.hidden-basket h3, span {
-    font-size:0.6rem;
-}
-
-.basket-heading h3 {
-    font-weight: bold;
-    margin-top: 5px;
-    margin-bottom: 8px;
-}
-
-.basket-text {
-    padding-top: 0;
-    padding-bottom: 4px;
-}
-
-.basket-text span {
-    font-size:0.6rem;
-    font-weight: normal;
-    margin-top: 5px;
-    margin-bottom: 8px;
-}
-
-.basket-text-interactive span {
-    color: rgb(0, 100, 38);
-}
-
-.basket-text .delete-button {
-    display: hidden;
-    font-size:0.6rem;
-    color: darkred;
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0 4px 0 0;
-}
-
-.basket-text .amount-button {
-    display: hidden;
-    font-size:0.6rem;
-    color: rgb(0, 87, 39);
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0 6px 0 4px;
-}
-
-.basket-sum {
-    font-weight: bold;
-}
-
-.pay-btn {
-    font-size:0.6rem;
-    color:whitesmoke; 
-    background-color: darkred;
-    border-radius:28px;
-    border: none;
-    padding: 4px 12px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
 
 /* HEADER IMAGE */
 .header_img {
@@ -122,10 +10,10 @@ html {
 .sort .navbar {
     box-shadow: 0px 0px 4px black;
     border-top: 1px solid black;
-    background-color:whitesmoke;
+    background-color: whitesmoke;
     position: sticky;
-    top:47px; 
-    z-index:1;
+    top: 47px; 
+    z-index: 1;
     padding: 6px;
 }
 
@@ -137,142 +25,111 @@ html {
 .sortcategories {
     display:none;
     font-size:0.6rem;
-    list-style:none;
+    list-style: none;
     color:black;
     padding: 12px 0 12px 0;
 }
 
 .categories{
-    width:50%;
+    width: 50%;
 }
 .sort h3 {
-    font-size:0.7rem;
+    font-size: 0.7rem;
     text-transform: uppercase;  
-    cursor:pointer;
+    cursor: pointer;
 }
 .sort input {
-    margin-right:5px;
+    margin-right: 5px;
 }
 
 /* CARD DECK */
 div.card {
-    width:80vw;
-    border:none;
+    width: 80vw;
+    border: none;
 }
+
 .card-img-top {
-    margin-top:20px;
-    height:20vh;
+    margin-top: 20px;
+    height: 20vh;
     object-fit: scale-down;
 }
-.card-title{
-    width:100%;
-    font-size:0.8rem;
-    border-top:2px solid lightgrey; 
-    padding-top:20px;  
+
+.card-title {
+    width: 100%;
+    font-size: 0.8rem;
+    border-top: 2px solid lightgrey; 
+    padding-top: 20px;  
 }
 
 .card-text{
-    font-size:1.5rem;
-    font-weight:bold;
+    font-size: 1.5rem;
+    font-weight: bold;
     align-self: baseline;
-    margin-right:5px;
-} 
+    margin-right: 5px;
+}
+
 .readmore_button {
-    font-size:0.7rem;
-    font-weight:500;
-    background-color:white;
-    color:grey;
+    font-size: 0.7rem;
+    font-weight: 500;
+    background-color: white;
+    color: grey;
     align-self: baseline;
     text-transform: uppercase;
-    border:none;
+    border: none;
 }
 
 /* Card buttons */
 .input-group {
     justify-content: center;
 }
-.input-group input{
-    font-size:0.7rem;
-    border-radius:8px;
+
+.input-group input {
+    font-size: 0.7rem;
+    border-radius: 8px;
     text-align: center;
-    border:1px solid grey !important;
-    margin-bottom:10px;
+    border: 1px solid grey !important;
+    margin-bottom: 10px;
 }
+
 .input-group .btn {
-    font-size:0.7rem;
-    color:whitesmoke; 
+    font-size: 0.7rem;
+    color: whitesmoke; 
     background-color: darkred;
-    border-radius:28px;
-    width:30%;
+    border-radius: 28px;
+    width: 30%;
 }
 
 .product_description {
-    display:none;
-    font-size:0.7rem;
-    text-align:left;
-    padding:20px;
-    border-top:2px solid lightgrey;
-    border-bottom:2px solid lightgrey;
-    margin-bottom:20px;
-}
-
-/* FOOTER */
-footer {
-    background-color:white;
+    display: none;
     font-size: 0.7rem;
-    border-top:1px solid grey;
+    text-align: left;
+    padding: 20px;
+    border-top: 2px solid lightgrey;
+    border-bottom: 2px solid lightgrey;
+    margin-bottom: 20px;
 }
-.footer-logo {
-    font-size: 0.8rem;
-    font-weight: 800;
-}
-.footer-phone, .footer-email {
-    color: grey;
-    text-decoration: underline;
-}
-.footer-phone:hover, .footer-email:hover {
-    text-decoration: none;
-    color: black;
-}
-
 
 /* Padlet 768px */
 @media (min-width: 768px) {
    
     /* HEADER */
     .header_img {
-        height:30vh;
+        height: 30vh;
     }    
     /* CARD DECK */
     div.card {
-        width:40vw;
-        border:none;
+        width: 40vw;
+        border: none;
     }
     .card-img-top {
         margin-top:20px;
-        height:20vh;
+        height: 20vh;
         object-fit: scale-down;
     }
     .input-group input{
-        width:50%;
-        margin-bottom:0px;
+        width: 50%;
+        margin-bottom: 0px;
     }
-
-    /* SHOPPING-BAG */
-    .shoppingbag-header{
-        font-size: 1.2rem;
-    }
-    .shoppingbag-main {
-        text-align: center;
-        font-size: 1.2rem;
-    }
-    .purchaseditem-image{
-        width: 30%;
-    }
-    .numberofpurchaseditems {
-        width: 20%;
-    }
-
 
 }
 
@@ -282,11 +139,11 @@ footer {
 
     /* SORT MENU */
     .header_img {
-        height:30vh;
+        height: 30vh;
     }
     .sort li {
-        font-size:0.7rem;
-        width:30%;
+        font-size: 0.7rem;
+        width: 30%;
     }
     .sort input {
         margin-right:8px;
@@ -294,62 +151,51 @@ footer {
     }  
     /* CARD DECK */
     div.card {
-        width:25vw;
-        border:none;
+        width: 25vw;
+        border: none;
     }
     .card-img-top {
         margin-top:20px;
-        height:20vh;
+        height: 20vh;
         object-fit: scale-down;
     }
     .readmore_button {
-        font-size:0.7rem;
-        font-weight:500;
-        color:grey;
+        font-size: 0.7rem;
+        font-weight: 500;
+        color: grey;
         align-self: baseline;
         text-transform: uppercase;
-        border:none;
+        border: none;
     }
     .input-group input{
-        font-size:0.7rem;
-        border-radius:8px;
+        font-size: 0.7rem;
+        border-radius: 8px;
         text-align: center;
     }
     
-    /*Shopping bag*/
-    .shoppingbag-main {
-        text-align: center;
-    }
-    .numberofpurchaseditems {
-        width: 8%;
-    }
-    .purchaseditem-image{
-        width: 25%;
-    }
-
     /*SORT MENU */
     .sort .navbar {
         box-shadow: 0px 0px 4px black;
         border-top: 1px solid black;
-        background-color:whitesmoke;
+        background-color: whitesmoke;
     }
     #sortheadline {
-        color:grey;
+        color: grey;
         font-weight: 600;
     }
     .sort li {
-        display:none;
-        font-size:0.6rem;
-        list-style:none;
+        display: none;
+        font-size: 0.6rem;
+        list-style: none;
     }
     .sort h3 {
-        font-size:0.7rem;
+        font-size: 0.7rem;
         text-transform: uppercase;
-        padding-top:10px;   
-        cursor:pointer;
+        padding-top: 10px;   
+        cursor: pointer;
     }
     .categories {
-        justify-content:center;
-        flex-wrap:nowrap;
+        justify-content: center;
+        flex-wrap: nowrap;
     }
 }
