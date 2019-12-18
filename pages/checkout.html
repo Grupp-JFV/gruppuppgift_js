@@ -37,7 +37,6 @@ s<!DOCTYPE html>
         </header>
         <!-- BORDER -->
         <div class="row border-line"></div>
-        
         <!-- HEADER IMG -->
         <div class="row">
             <div class="col-12 p-0">
@@ -67,7 +66,7 @@ s<!DOCTYPE html>
                     </div>
                 </div>
             <!-- CHECKOUT FORM -->
-            <div class="checkoutcontent row justify-content-center">
+            <div class="checkoutcontent row justify-content-center align-items-center">
                 <!-- CUSTOMER INFORMATION -->
                 <div class="checkoutform col-12 pb-4">
                     <h5 class="checkoutheaders mt-4">MINA UPPGIFTER</h5>
@@ -104,54 +103,50 @@ s<!DOCTYPE html>
                     </div>
                 </div>
 
-                <div class="paymentform col-12 col-md-6 pt-2 pb-2">
-                    <h5 class="checkoutheaders">BETALNING</h5>
-
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input klarna" type="radio" name="paymentform" id="klarnaradiobutton" value="option1" required>
+                <div class="paymentform col-12 col-md-6">
+                    <h5 class="checkoutheaders m-2 pb-2">BETALNING</h5>
+                    <div class="form-check text-left">
+                        <input class="" type="radio" name="paymentform" id="klarnaradiobutton" value="option1" checked>
                         <label class="form-check-label" for="klarnaradiobutton">
-                            Klarna (faktura)
+                            Klarna
                         </label>
-                        <input id="klarna-input" type="text" class="paymentinput klarna" placeholder="Fyll i personnummer" required>
+                        <input id="klarna-input" type="text" class="paymentinput ml-2" placeholder="Fyll i personnummer">
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="paymentform" id="creditradiobutton" value="option2">
+                    <div class="form-check text-left">
+                        <input class="" type="radio" name="paymentform" id="creditradiobutton" value="option2">
                         <label class="form-check-label" for="creditradiobutton">
                             Kreditkort
                         </label>
-                        <input id="credit-input" type="number" class="paymentinput" placeholder="Fyll i kreditkortsnummer" required>
+                        <input id="credit-input" type="number" class="paymentinput ml-2" placeholder="Fyll i kreditkortsnummer">
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="paymentform" id="swishradiobutton" value="option3">
-                        <label class="form-check-label" for="swishradiobutton">
+                    <div class="form-check text-left">
+                        <input class="" type="radio" name="paymentform" id="swishradiobutton" value="option3">
+                        <label class="form-check-label " for="swishradiobutton">
                             Swish
                         </label>
-                        <input id="swish-input" type="tel" class="paymentinput" placeholder="Fyll i telefonnummer" required>
+                        <input id="swish-input" type="tel" class="paymentinput ml-2" placeholder="Fyll i telefonnummer">
                     </div>
-
                 </div>
 
                 <!-- DELIVERY INFORMATION -->
-                <div class="deliveryform col-12 col-md-6 pt-2 pb-4">
-                    <h5 class="checkoutheaders col-12">LEVERANS 
-                        <span class="small">(0kr)</span>
-                    </h5>
-                    <div class="form-check col-12">
-                        <input class="form-check-input" type="radio" name="deliveryform" id="exampleRadios1" value="option1" required>
+                <div class="deliveryform col-12 col-md-6">
+                    <h5 class="checkoutheaders m-2 pb-2">LEVERANS</h5>
+                    <div class="form-check text-left">
+                        <input class="" type="radio" name="deliveryform" id="exampleRadios1" value="option1" checked>
                         <label class="form-check-label" for="exampleRadios1">
-                            Leverans till utlämningsställe - 2-5 arbetsdagar
+                            Utlämningsställe
                         </label>
                     </div>
-                    <div class="form-check col-12">
-                        <input class="form-check-input" type="radio" name="deliveryform" id="exampleRadios2" value="option2">
+                    <div class="form-check text-left">
+                        <input class="" type="radio" name="deliveryform" id="exampleRadios2" value="option2">
                         <label class="form-check-label" for="exampleRadios2">
-                            Hemleverans - 2-5 arbetsdagar
+                            Hemleverans
                         </label>
                     </div>
-                    <div class="form-check col-12">
-                        <input class="form-check-input" type="radio" name="deliveryform" id="exampleRadios3" value="option3">
+                    <div class="form-check text-left">
+                        <input class="" type="radio" name="deliveryform" id="exampleRadios3" value="option3">
                         <label class="form-check-label" for="exampleRadios3">
-                            Expressleverans - 1-2 arbetsdagar
+                            Expressleverans
                         </label>
                     </div>
                 </div>
