@@ -153,6 +153,7 @@
                 
                 <!-- Send order button trigger div below -->
             
+                <!-- gör knappen till submit när vi är redo, så vi kan fixa validering -->
                 <button type="button" class="btn mt-5 mb-5 p-2d show-modal" id="sendorderbtn">
                     SKICKA BESTÄLLNING
                 </button>
@@ -161,22 +162,15 @@
 
                 <div id="modal">
                     <div class="modalheader">
-                        TACK FÖR DITT KÖP 
                         <span id="customersname">
                             <!-- Value from "first name" input here -->
                         </span>
-                        !
                     </div>
-                    <div class="row justify-content-center reciept">
-                        <div id="reciept_title" class="col-6">
-                            <!-- Title of purchased beer from Local Storage -->
-                        </div>
-                        <div class="col-3">x</div>
-                        <div id="recipet_amount" class="col-3">
-                            <!-- Amount of purchased beer from Local Storage -->
-                        </div>
+                    <div class="reciept">
+                        <!-- Reciept content from js -->
                     </div>
-                    <div>Total summa: <span id=""></span></div>
+
+                    <div><span id="receipt_totalsum"></span></div>
                     <a href="../index.html">
                         <button type="button" class="modalokbutton">
                             OK

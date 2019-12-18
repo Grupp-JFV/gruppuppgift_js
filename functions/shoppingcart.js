@@ -5,27 +5,9 @@ $(document).ready(function() {
         $("#basket").slideToggle(300);
         //skriv ut listan printlist
         printShoppingcart(); 
-
-
-        //OKEJ DENNA FUNKAR TYP MEN FATTAR INTE VARFÖR? 
-        //FRÅGA OM HJÄLP, DEN REAGERAR INTE PÅ FÖRSTA KLICKET 
-
-        //funktion för delete-knappen för varje rad i listan
-        $(".delete-button").on("click", function() {
-      
-        removeFromCart($(this));
-        printShoppingcart();
-        
-        }); 
-    
     });
-
-
-
     
 }); //stänger window ready 
-
-
 
         
 function deleteBasketItem(buttonClicked) {
@@ -77,6 +59,7 @@ function printShoppingcart() {
 
         let basketName = $("<div>").addClass("col-7 col-md-2 text-left").appendTo(basketItem);
         
+        //"ta-bort"-funktionen för varukorgen (tar bort valt item)
         $("<button>").attr("id", "delete_btn_" + i).addClass("delete-button").text("x").on("click",function() {
             deleteBasketItem($(this));
             printShoppingcart();
