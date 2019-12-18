@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+s<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -25,7 +25,7 @@
         <header class="row sticky-top" id="nav"> 
             <div class="text-left col-6 align-self-center" id ="companyname">
                 <a href="../index.html">
-                    <span id="companylogo">OPPI<h1 id="test">GÅRDS</h1></span>
+                    <span id="companylogo">OPPI<h1 id="companylogo_end">GÅRDS</h1></span>
                 </a>
             </div>
             <!-- SHOPPING CART ICON-->
@@ -33,292 +33,199 @@
                 <button type="button" class="btn p-0 shopping-cart-button" id="basketButton" disabled>
                     <i class="fa fa-shopping-cart" id="shoppingcartlogo"></i>
                 </button>
-            </div>
-            <!-- HIDDEN BASKET -->
-            <div class="col-12 hidden-basket" id="basket">
-                <div class="inner container-fluid p-0 pl-md-4 pr-md-4" id="basket_content">
-                    <div class="row border-top pt-1 basket-heading">
-                        <div class="col-7 col-md-2">
-                            <h3 class="text-left">Produkt</h3>
-                        </div>
-                        <div class="col-0 col-md-2 d-none d-md-inline">
-                            <h3 class="text-center">Alkoholhalt</h3>
-                        </div>
-                        <div class="col-0 col-md-2 d-none d-md-inline">
-                            <h3 class="text-center">Sort</h3>
-                        </div>
-                        <div class="col-0 col-md-2 d-none d-md-inline">
-                            <h3 class="text-center">Pris</h3>
-                        </div>
-                        <div class="col-2 col-md-2 p-0">
-                            <h3 class="text-center">Antal</h3>
-                        </div>
-                        <div class="col-3 col-md-2">
-                            <h3 class="text-right mr-0">Totalt</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="inner container-fluid p-0 pl-md-4 pr-md-4" id="basket_sum">
-                    <div class="row border-top p-2">
-                        <div class="col-12 pr-md-0 text-center text-md-right basket-sum">
-                            <h3 class="d-inline">Summa</h3>
-                            <span>499kr</span>                       
-                            <h3 class="d-inline ml-0">Att betala</h3>
-                            <span class="mr-md-4">699kr</span>
-                            <a href="../gruppuppgift_js/pages/checkout.html">
-                                <button" class="pay-btn" id="to_pay">Till Kassan</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>          
+            </div>         
         </header>
         <!-- BORDER -->
         <div class="row border-line"></div>
+        
         <!-- HEADER IMG -->
         <div class="row">
             <div class="col-12 p-0">
                 <img class="w-100 header_img" src="../styles/headerimage/header-image.jpg" alt="Beer bottles">
             </div>
         </div>
-
-    <!-- SHOPPING CART -->
-    <main class="shoppingcart-main row justify-content-center">
-    
-            <div class="shoppingcart-header col-12 pt-4 text-center">
-                <h2>VARUKORG</h2>
-            </div>
-
-            <div class="col-12 col-md-10">
-                <div class="purchase-info">
-
-                    <!-- Product image from choppingcart -->
-                    <!-- Product titel  -->
-                    <!-- Product amount -->
-                    <!-- Product price -->
-
+        <!-- MAIN CONTENT -->
+        <div class="row shoppingcart-main text-center">    
+            <main>
+                <div class="shoppingcart-header col-12 pt-4 text-center">
+                    <h2>VARUKORG</h2>
                 </div>
-                <div class="purchase-item-sum col-12 pt-4"></div>
-            </div>
-        </div>
-
-        
-        <div class="row backtoshop justify-content-center">
-            <a href="products.html"><button class="backtoshop-button mt-2 mb-3">Tillbaka till webbshopen</button></a>   
-        </div>
-
-        <hr>
-
-        <!-- CHECKOUT FORM -->
-        <div class="checkoutcontent row"> <!-- SÄTT TOGGLE PÅ DEN HÄR-->
-            
-            
-            <!-- CUSTOMER INFORMATION -->
-            <div class="checkoutform col-12 pb-4">
-                <h5 class="checkoutheaders">MINA UPPGIFTER</h5>
-                <form>
-                    <div class="form-row text-left">
-                    <div class="form-group col-md-6 col-sm-12">
-                        <label for="firstname">Förnamn</label>
-                        <input type="text" class="form-control" placeholder="Förnamn" id="firstname" required>
+                <div class="col-12 col-md-10 text-center">
+                    <div class="purchase-info">
+                        <!-- Product image from shoppingcart -->
+                        <!-- Product titel  -->
+                        <!-- Product amount -->
+                        <!-- Product price -->
                     </div>
-                    <div class="form-group col-md-6 col-sm-12">
-                        <label for="lastname">Efternamn</label>
-                        <input type="text" class="form-control" placeholder="Efternamn" required>
-                    </div>
-                    </div>
-                    <div class="form-row text-left">
-                    <div class="form-group col-12">
-                        <label for="streetadress">Adress</label>
-                        <input type="text" class="form-control" placeholder="Adress" required>
-                    </div>
-                    <div class="form-group col-12">
-                        <label for="city and zip">Stad och postnummer</label>
-                        <input type="text" class="form-control" placeholder="Stad och postnummer" required>
-                    </div>
-                    </div>
-                    <div class="form-row text-left">
-                    <div class="form-group col-md-6 col-sm-12">
-                        <label for="email">E-post</label>
-                        <input type="email" class="form-control" placeholder="E-post" required>
-                    </div>
-                    <div class="form-group col-md-6 col-sm-12">
-                        <label for="phonenumber">Telefonnummer</label>
-                        <input type="tel" class="form-control" placeholder="Telefonnummer" required>
-                    </div>
-                </div>
-            </div>
-
-            <hr>
-
-            <div class="paymentform row pt-2 pb-2">
-                <h5 class="checkoutheaders col-12">BETALNING</h5>
-
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="paymentform" id="klarnaradiobutton" value="option1" checked>
-                    <label class="form-check-label" for="klarnaradiobutton">
-                        Klarna (faktura)
-                    </label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="paymentform" id="creditradiobutton" value="option2">
-                    <label class="form-check-label" for="creditradiobutton">
-                        Kreditkort
-                    </label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="paymentform" id="swishradiobutton" value="option3">
-                    <label class="form-check-label" for="swishradiobutton">
-                        Swish
-                    </label>
-                </div>
-
-                <!--DE TRE INPUTFÄLTEN SOM SKA TOGGLAS NÄR MAN KLICKAR PÅ TILLHÖRANDE RADIOBUTTON-->
-                <div>
-                    <input id="klarna-input" type="text" class="paymentinput" placeholder="Fyll i personnummer">
-                </div>
-                <div>
-                    <input id="credit-input" type="text" class="paymentinput" placeholder="Fyll i kreditkortsnummer">
-                </div>
-                <div>
-                    <input id="swish-input" type="text" class="paymentinput" placeholder="Fyll i telefonnummer">
-                </div>
-
-
-
-            </div>
-
-            <hr>
-
-            <!-- DELIVERY INFORMATION -->
-            <div class="deliveryform  row pt-2 pb-4">
-                <h5 class="checkoutheaders col-12">LEVERANS 
-                    <span class="small">(0kr)</span>
-                </h5>
-                <div class="form-check col-12">
-                    <input class="form-check-input" type="radio" name="deliveryform" id="exampleRadios1" value="option1" checked>
-                    <label class="form-check-label" for="exampleRadios1">
-                        Leverans till utlämningsställe - 2-5 arbetsdagar
-                    </label>
-                </div>
-                <div class="form-check col-12">
-                    <input class="form-check-input" type="radio" name="deliveryform" id="exampleRadios2" value="option2">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Hemleverans - 2-5 arbetsdagar
-                    </label>
-                </div>
-                <div class="form-check col-12">
-                    <input class="form-check-input" type="radio" name="deliveryform" id="exampleRadios3" value="option3">
-                    <label class="form-check-label" for="exampleRadios3">
-                        Expressleverans - 1-2 arbetsdagar
-                    </label>
-                </div>
-            </div>
-            
-
-
-
-            <!-- Knapp som submittar formulär samt öppnar div. Ska göras disables until form is valid.  -->
-            <button type="submit" class="btn mt-5 mb-5 p-2d" id="sendorderbtn" >
-                SKICKA BESTÄLLNING
-            </button>
-            
-
-            <!--- Div som öppnas vid knapptrycket ovan 
-
-            <div id="thankyoucustomer">
-                <div id="thankyourcustomerheader">TACK FÖR DITT KÖP 
-                    <span id="thankyoucustomersname"></span>
-                </div>
-                <div id="thankyoureciept">KVITTO PÅ BESTÄLLNING TAGET FRÅN LOCAL STORAGE</div>
-
-                <button id="thankyougoback">Tillbaka till webbshoppen</button>
-            </div> -->
-
-
-            <div class="modal" id="demo">
-            
-                  <div class="modal-container">
-            
-                    <p>I love cats</p>
-            
-                    <a href="#modal-close">Close</a>
-            
-                  </div>
-            
-                </div>
-                
-
-
-
-
-            
-            <!-- Modal
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        Tack för ditt köp
-                        <span id="thankyoucustomer"></span>
-                        !
-                    </h5>
-                    </div>
-                    <div class="modal-body">
-                    KVITTO PÅ BESTÄLLNING
-                    </div>
-                    <div class="modal-footer">
-                        <a href="products.html">
-                            <button type="button" class="btn modalgobackbtn">
-                                Tillbaka till webbshopen
-                            </button>
-                        </a>
-                    </div>
-                </div>
-                </div>
-            </div> -->
-
-        </div>
-
-               <!-- FOOTER -->
-               <footer m-0>
-                    <div class="container-fluid">
-                        <div class="row justify-content-center pt-2 pb-2">
-                            <div class="col-12 col-lg-6 text-center">
-                                <div class="footer-logo">
-                                    OPPIGÅRDS ÖL
-                                </div>
-                                <div>
-                                    <a href="phoneto:0771-101010" class="footer-phone">Ring</a> 
-                                    eller 
-                                    <a href="mailto:oppigardsol@oppigard.se" class="footer-email">maila</a> 
-                                    oss!
-                                </div>
-                                <div>
-                                    Oppigårdsvägen 1
-                                </div>
-                                <div>
-                                    12345 Oppigård
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-6 text-center">
-                                <div class="pt-3">
-                                    <a href="http://www.facebook.com" class="text-dark">
-                                        <i class="fab fa-facebook fa-2x"></i>
-                                    </a>
-                                    <a href="http://www.instagram.com" class="text-dark">
-                                        <i class="fab fa-instagram fa-2x"></i>
-                                    </a>
-                                    <a href="http://www.twitter.com" class="text-dark">
-                                        <i class="fab fa-twitter fa-2x"></i>
-                                    </a>
-                                </div>
-                            </div>
+                    <div class="row justify-content-between align-items-center pl-2">
+                        <div class="backtoshop col-4 text-center">
+                            <a href="products.html"><button class="backtoshop-button">TILLBAKA</button></a>   
+                        </div>
+                        <div class="purchase-item-sum col-4 text-center pr-2">
+                            <h5 id="sumtotal" class="text-nowrap"></h5>
                         </div>
                     </div>
-                </footer>
+                </div>
+            <!-- CHECKOUT FORM -->
+            <div class="checkoutcontent row justify-content-center">
+                <!-- CUSTOMER INFORMATION -->
+                <div class="checkoutform col-12 pb-4">
+                    <h5 class="checkoutheaders mt-4">MINA UPPGIFTER</h5>
+                    <form>
+                        <div class="form-row text-left">
+                        <div class="form-group col-md-6 col-sm-12">
+                            <label for="firstname">Förnamn</label>
+                            <input type="text" class="form-control" placeholder="Förnamn" id="firstname" required>
+                        </div>
+                        <div class="form-group col-md-6 col-sm-12">
+                            <label for="lastname">Efternamn</label>
+                            <input type="text" class="form-control" placeholder="Efternamn" required>
+                        </div>
+                        </div>
+                        <div class="form-row text-left">
+                        <div class="form-group col-12">
+                            <label for="streetadress">Adress</label>
+                            <input type="text" class="form-control" placeholder="Adress" required>
+                        </div>
+                        <div class="form-group col-12">
+                            <label for="city and zip">Stad och postnummer</label>
+                            <input type="text" class="form-control" placeholder="Stad och postnummer" required>
+                        </div>
+                        </div>
+                        <div class="form-row text-left">
+                        <div class="form-group col-md-6 col-sm-12">
+                            <label for="email">E-post</label>
+                            <input type="email" class="form-control" placeholder="E-post" required>
+                        </div>
+                        <div class="form-group col-md-6 col-sm-12">
+                            <label for="phonenumber">Telefonnummer</label>
+                            <input type="tel" class="form-control" placeholder="Telefonnummer" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paymentform col-12 col-md-6 pt-2 pb-2">
+                    <h5 class="checkoutheaders">BETALNING</h5>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input klarna" type="radio" name="paymentform" id="klarnaradiobutton" value="option1" required>
+                        <label class="form-check-label" for="klarnaradiobutton">
+                            Klarna (faktura)
+                        </label>
+                        <input id="klarna-input" type="text" class="paymentinput klarna" placeholder="Fyll i personnummer" required>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="paymentform" id="creditradiobutton" value="option2">
+                        <label class="form-check-label" for="creditradiobutton">
+                            Kreditkort
+                        </label>
+                        <input id="credit-input" type="number" class="paymentinput" placeholder="Fyll i kreditkortsnummer" required>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="paymentform" id="swishradiobutton" value="option3">
+                        <label class="form-check-label" for="swishradiobutton">
+                            Swish
+                        </label>
+                        <input id="swish-input" type="tel" class="paymentinput" placeholder="Fyll i telefonnummer" required>
+                    </div>
+
+                </div>
+
+                <!-- DELIVERY INFORMATION -->
+                <div class="deliveryform col-12 col-md-6 pt-2 pb-4">
+                    <h5 class="checkoutheaders col-12">LEVERANS 
+                        <span class="small">(0kr)</span>
+                    </h5>
+                    <div class="form-check col-12">
+                        <input class="form-check-input" type="radio" name="deliveryform" id="exampleRadios1" value="option1" required>
+                        <label class="form-check-label" for="exampleRadios1">
+                            Leverans till utlämningsställe - 2-5 arbetsdagar
+                        </label>
+                    </div>
+                    <div class="form-check col-12">
+                        <input class="form-check-input" type="radio" name="deliveryform" id="exampleRadios2" value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                            Hemleverans - 2-5 arbetsdagar
+                        </label>
+                    </div>
+                    <div class="form-check col-12">
+                        <input class="form-check-input" type="radio" name="deliveryform" id="exampleRadios3" value="option3">
+                        <label class="form-check-label" for="exampleRadios3">
+                            Expressleverans - 1-2 arbetsdagar
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Button trigger modal -->
+            
+                <button type="button" class="btn sendorderbtn mt-5 mb-5 p-2d show-modal">
+                    SKICKA BESTÄLLNING
+                </button>
+               
+                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            Tack för ditt köp
+                            <span id="thankyoucustomer"></span>
+                            !
+                        </h5>
+                        </div>
+                        <div class="modal-body">
+                        KVITTO PÅ BESTÄLLNING
+                        </div>
+                        <div class="modal-footer">
+                            <a href="products.html">
+                                <button type="button" class="btn modalgobackbtn">
+                                    Tillbaka till webbshopen
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
         </main>
- 
-      
+        
+    </div>
+
+        <!-- FOOTER -->
+        <footer class="row pt-2 pb-2 w-100 m-0">
+            <div class="col-12 col-lg-6 text-center">
+                <div class="footer-logo">
+                    OPPIGÅRDS ÖL
+                </div>
+                <div>
+                    <a href="phoneto:0771-101010" class="footer-phone">Ring</a> 
+                    eller 
+                    <a href="mailto:oppigardsol@oppigard.se" class="footer-email">maila</a> 
+                    oss!
+                </div>
+                <div>
+                    Oppigårdsvägen 1
+                </div>
+                <div>
+                    12345 Oppigård
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 text-center">
+                <div class="pt-3">
+                    <a href="http://www.facebook.com" class="text-dark">
+                        <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                    <a href="http://www.instagram.com" class="text-dark">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="http://www.twitter.com" class="text-dark">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                </div>
+            </div> 
+        </footer>
+
+    </div>
 </body>
 </html>
