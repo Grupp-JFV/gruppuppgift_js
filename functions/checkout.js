@@ -1,5 +1,16 @@
 $(document).ready(function(){
     
+    $("#sendorderbtn").click(function(){
+        $("#demo").show();
+      });
+
+    // Skickar värdet från first name-inputfältet till modalens Tack för ditt köp-rubrik.
+    $("#sendorderbtn").click(function(){
+        let value = $("#firstname").val();
+        $("#customersname").text(value);
+        
+    });
+
     //klarna syns som default 
     $("input#klarnaradiobutton").change( function(){
         $("#klarna-input").show(); 
@@ -27,7 +38,7 @@ $(document).ready(function(){
         $("#klarna-input").hide();  
     });
 
-    //skriver ut varukorgen 
+    //skriver ut varukorgen     
     printCart(); 
 
 });

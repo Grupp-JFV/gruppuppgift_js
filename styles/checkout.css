@@ -157,26 +157,50 @@ html {
     width:300px;
     border: none; 
 }
-.sendorderbtn:hover {
+#sendorderbtn:hover {
     background-color: rgb(61, 6, 6);
     color: whitesmoke;
 }
 
- /*THANKS FOR YOUR PURCHASE MODAL */
+ /*THANKS FOR YOUR PURCHASE DIV */
 
-.purchaseconfirmed-modal-btn {
+ #thankyoucustomer {
+    display: none;
+    position: sticky;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 50%;
+    height: 85%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 3px rgba(139, 0, 0, 0.9) solid;
+    text-align: center;
+ }
+
+ #thankyourcustomerheader {
+     font-size: 1.5rem;
+ }
+
+ #customersname {
+    font-size: 1.5rem;
+}
+
+#thankyougoback {
     font-size:0.7rem;
     font-weight: 500;
     color:whitesmoke; 
     text-transform: uppercase;
-    background-color: darkred;
+    background-color: grey;
     border-radius:28px;
-    width:200px;
-    border: none;
+    width: 250px;
+    border: none; 
 }
-.modal-title {
-    color: darkred;
+
+#thankyougoback:hover {
+    background-color: rgb(65, 63, 63);
 }
+ 
 
 .modalgobackbtn {
     font-size:0.7rem;
