@@ -1,4 +1,4 @@
-s<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -38,7 +38,6 @@ s<!DOCTYPE html>
         </header>
         <!-- BORDER -->
         <div class="row border-line"></div>
-        
         <!-- HEADER IMG -->
         <div class="row">
             <div class="col-12 p-0">
@@ -68,7 +67,7 @@ s<!DOCTYPE html>
                     </div>
                 </div>
             <!-- CHECKOUT FORM -->
-            <div class="checkoutcontent row justify-content-center">
+            <div class="checkoutcontent row justify-content-center align-items-center">
                 <!-- CUSTOMER INFORMATION -->
                 <div class="checkoutform col-12 pb-4">
                     <h5 class="checkoutheaders mt-4">MINA UPPGIFTER</h5>
@@ -105,89 +104,94 @@ s<!DOCTYPE html>
                     </div>
                 </div>
 
-                <div class="paymentform col-12 col-md-6 pt-2 pb-2">
-                    <h5 class="checkoutheaders">BETALNING</h5>
-
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input klarna" type="radio" name="paymentform" id="klarnaradiobutton" value="option1" required>
+                <div class="paymentform col-12 col-md-6">
+                    <h5 class="checkoutheaders m-2 pb-2">BETALNING</h5>
+                    <div class="form-check text-left">
+                        <input class="" type="radio" name="paymentform" id="klarnaradiobutton" value="option1" checked>
                         <label class="form-check-label" for="klarnaradiobutton">
-                            Klarna (faktura)
+                            Klarna
                         </label>
-                        <input id="klarna-input" type="text" class="paymentinput klarna" placeholder="Fyll i personnummer" required>
+                        <input id="klarna-input" type="text" class="paymentinput ml-2" placeholder="Personnummer">
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="paymentform" id="creditradiobutton" value="option2">
+                    <div class="form-check text-left">
+                        <input class="" type="radio" name="paymentform" id="creditradiobutton" value="option2">
                         <label class="form-check-label" for="creditradiobutton">
                             Kreditkort
                         </label>
-                        <input id="credit-input" type="number" class="paymentinput" placeholder="Fyll i kreditkortsnummer" required>
+                        <input id="credit-input" type="number" class="paymentinput ml-2" placeholder="Kreditkortsnummer">
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="paymentform" id="swishradiobutton" value="option3">
-                        <label class="form-check-label" for="swishradiobutton">
+                    <div class="form-check text-left">
+                        <input class="" type="radio" name="paymentform" id="swishradiobutton" value="option3">
+                        <label class="form-check-label " for="swishradiobutton">
                             Swish
                         </label>
-                        <input id="swish-input" type="tel" class="paymentinput" placeholder="Fyll i telefonnummer" required>
+                        <input id="swish-input" type="tel" class="paymentinput ml-2" placeholder="Telefonnummer">
                     </div>
-
                 </div>
 
                 <!-- DELIVERY INFORMATION -->
-                <div class="deliveryform col-12 col-md-6 pt-2 pb-4">
-                    <h5 class="checkoutheaders col-12">LEVERANS 
-                        <span class="small">(0kr)</span>
-                    </h5>
-                    <div class="form-check col-12">
-                        <input class="form-check-input" type="radio" name="deliveryform" id="exampleRadios1" value="option1" required>
+                <div class="deliveryform col-12 col-md-6">
+                    <h5 class="checkoutheaders m-2 pb-2">LEVERANS</h5>
+                    <div class="form-check text-left">
+                        <input class="" type="radio" name="deliveryform" id="exampleRadios1" value="option1" checked>
                         <label class="form-check-label" for="exampleRadios1">
-                            Leverans till utlämningsställe - 2-5 arbetsdagar
+                            Utlämningsställe
                         </label>
                     </div>
-                    <div class="form-check col-12">
-                        <input class="form-check-input" type="radio" name="deliveryform" id="exampleRadios2" value="option2">
+                    <div class="form-check text-left">
+                        <input class="" type="radio" name="deliveryform" id="exampleRadios2" value="option2">
                         <label class="form-check-label" for="exampleRadios2">
-                            Hemleverans - 2-5 arbetsdagar
+                            Hemleverans
                         </label>
                     </div>
-                    <div class="form-check col-12">
-                        <input class="form-check-input" type="radio" name="deliveryform" id="exampleRadios3" value="option3">
+                    <div class="form-check text-left">
+                        <input class="" type="radio" name="deliveryform" id="exampleRadios3" value="option3">
                         <label class="form-check-label" for="exampleRadios3">
-                            Expressleverans - 1-2 arbetsdagar
+                            Expressleverans
                         </label>
                     </div>
                 </div>
                 
-                <!-- Button trigger modal -->
+                <!-- Send order button trigger div below -->
             
-                <button type="button" class="btn sendorderbtn mt-5 mb-5 p-2d show-modal">
+                <button type="button" class="btn mt-5 mb-5 p-2d show-modal" id="sendorderbtn">
                     SKICKA BESTÄLLNING
                 </button>
                
-                
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">
-                            Tack för ditt köp
-                            <span id="thankyoucustomer"></span>
-                            !
-                        </h5>
+                <!-- Thanks for your purchase div -->
+
+                <div id="modal">
+                    <div class="modalheader">
+                        TACK FÖR DITT KÖP 
+                        <span id="customersname">
+                            <!-- Value from "first name" input here -->
+                        </span>
+                        !
+                    </div>
+                    <div class="row justify-content-center reciept">
+                        <div id="reciept_title" class="col-6">
+                            <!-- Title of purchased beer from Local Storage -->
                         </div>
-                        <div class="modal-body">
-                        KVITTO PÅ BESTÄLLNING
-                        </div>
-                        <div class="modal-footer">
-                            <a href="products.html">
-                                <button type="button" class="btn modalgobackbtn">
-                                    Tillbaka till webbshopen
-                                </button>
-                            </a>
+                        <div class="col-3">x</div>
+                        <div id="recipet_amount" class="col-3">
+                            <!-- Amount of purchased beer from Local Storage -->
                         </div>
                     </div>
-                    </div>
+                    <div>Total summa: <span id=""></span></div>
+                    <a href="../index.html">
+                        <button type="button" class="modalokbutton">
+                            OK
+                        </button>
+                    </a>
                 </div>
+            </div>
+
+
+
+
+                
+                </div>
+
             </div>
         </main>
         
