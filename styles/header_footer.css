@@ -32,6 +32,11 @@ html {
     text-align: left;   
 }
 
+.fa-beer {
+    color: rgb(0, 60, 20); 
+    text-decoration:none;
+}
+
 .basket-display {
     color:  black;
     font-size: 0.8rem;
@@ -50,13 +55,6 @@ html {
     font-size: 1rem;
     color: rgb(75, 4, 4);
 }
-
-
-/* .shoppingcart-content {
-    display: inline;
-    font-size: 0.7rem;
-    font-weight: 800;
-}  */
 
 
 /*DROP-DOWN SHOPPING CART*/

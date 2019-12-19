@@ -21,11 +21,10 @@ header {
 .intro-headline {
     border-bottom: 1px solid grey;
     padding-top: 10px;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 800;
-    color:darkred;
+    color: rgb(0, 60, 20);;
     text-transform: uppercase;
-    text-shadow: 1px 1px black;
 }
 
 .image-link {
@@ -39,21 +38,18 @@ header {
     margin: 0 auto;
     font-size: 0.7rem;
     font-weight: 600;
-    color: whitesmoke; 
-    background-color: darkred;
-    border-radius: 25px;
+    background-color:lightgrey;
     border: none;
-    width: 150px;
+    width:250px;
+ 
 }
 
-.jumbotron-button:hover {
-    background-color: rgb(90, 2, 2);
+.jumbotron-button:hover, .webshopbuttonlink a:hover {
     text-decoration: none;
+    background-color:grey;
+
 }
 
-.webshopbuttonlink a:hover {
-    text-decoration: none;
-}
 
 /* READ MORE */
 .readmore-index {
@@ -112,9 +108,6 @@ header {
 @media (min-width: 768px) {
     /* HEADER */  
 
-    .intro-headline {
-        font-size: 1.5rem;
-    }
     .header-content {
         font-size: 0.8rem;
         padding-left: 30px;
@@ -124,7 +117,6 @@ header {
         width: 25%;
     }
 }
-
 
 /*Desktop */ 
 @media (min-width: 992px) {
@@ -138,10 +130,6 @@ header {
     .header-content {
         padding-left: 90px;
         padding-right: 90px;
-    }
-
-   .intro-headline {
-       font-size: 1.8rem;
     }
 
     .intro-headline p {
