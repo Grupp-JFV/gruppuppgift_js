@@ -2,11 +2,14 @@ $(document).ready(function() {
 
     getAmount();
 
-    $("#basket_button").on("click", function() {
-        $("#basket").slideToggle(300);
-        //skriv ut listan printlist
-        printShoppingcart(); 
-    });
+    /*let shoppingcart = JSON.parse(localStorage.getItem("CurrentShoppingcartList"));
+    if (shoppingcart.length > 0) {
+        $("#basket_button").on("click", function() {
+            $("#basket").slideToggle(300);
+            //skriv ut listan printlist
+            printShoppingcart(); 
+        });
+    }*/
   
 }); //stänger window ready
 
@@ -29,6 +32,7 @@ function deleteBasketItem(buttonClicked) {
     let buttonId = buttonClicked[0].id.substring(11);
 
     shoppingcart.splice(buttonId, 1);
+
     localStorage.setItem("CurrentShoppingcartList", JSON.stringify(shoppingcart));
 }
 
@@ -121,5 +125,18 @@ function printShoppingcart() {
 }
 
 function updateCartDisplay(totalAmount) {
+    $("#basket_button").off( "click");
+
+    $("#basket_button").on("click", function() {
+        $("#basket").slideToggle(300);
+        //skriv ut listan printlist
+        printShoppingcart(); 
+    });
+
+    if (totalAmount < 1) {
+        $("#basket_button").off( "click");
+        $("#basket").hide(300);
+    }
+
     $("#display_basket").html(String(totalAmount));
 }
