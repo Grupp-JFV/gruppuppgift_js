@@ -10,7 +10,7 @@ $(document).ready(function() {
 
     //togglar filterfunktionen mellan hide/show 
     $("#sortheadline").on("click", function() {
-        $(".sortcategories").slideToggle(300);
+        $("#sort_categories_container").slideToggle(300);
     }); 
   
     //togglar läs mer-knappen
@@ -22,10 +22,10 @@ $(document).ready(function() {
 //skapar en lista med existerande produkter 
 function productList() {
     
-    let product1 = new Product("Oppigårds Golden Ale", "../product_images/golden.jpg", "Ljus lager", 4.8,
+    let product1 = new Product("Oppigårds Golden Ale", "../product_images/golden.jpg", "Ale", 4.8,
     "Fruktig, något humlearomatisk smak med tydlig beska, inslag av aprikos, örter, apelsinskal och rågbröd. Serveras vid 8-10°C till husmanskost.", 
     19, "0");
-    let product2 = new Product("Oppigårds Winter Ale", "../product_images/winterale.jpg", "Mörk lager", 5.0, 
+    let product2 = new Product("Oppigårds Winter Ale", "../product_images/winterale.jpg", "Ale", 5.0, 
     "Nyanserad, något humlearomatisk smak med tydlig beska, inslag av rågbröd, kryddor, tallkåda och apelsinskal. Serveras vid 8-10°C som sällskapsdryck, eller till rätter av lamm- och nötkött.", 
     27, "1");
     let product3 = new Product("Oppigårds Every Day Ipa", "../product_images/everydayipa.jpg", "Ipa", 4.8, 
@@ -34,7 +34,7 @@ function productList() {
     let product4 = new Product("Oppigårds Hedemora Porter", "../product_images/hedemoraporter.jpg", "Porter", 5.4, 
     "Maltig, rostad, nyanserad smak med inslag av kavring, choklad, hasselnötter, kaffe, smörkola och torkade dadlar. Serveras vid 10-12°C till rätter av mörkt kött.", 
     19, "3");
-    let product5 = new Product("Oppigårds Single Hop", "../product_images/singlehop.jpg", "Ljus lager", 5.0, 
+    let product5 = new Product("Oppigårds Single Hop", "../product_images/singlehop.jpg", "Ale", 5.0, 
     "Tydligt humlearomatisk smak med inslag av apelsinblom, aprikos, honung, citrusskal och knäckebröd. Serveras vid 11-13°C som sällskapsdryck, eller till rätter av fisk eller ljust kött.", 
     18, "4");
     let product6 = new Product("Oppigårds Thurbo Double", "../product_images/thurbodouble.jpg", "Ipa", 5.4,
@@ -58,6 +58,15 @@ function Product(name, image, type, strength, description, price, id) {         
     this.description = description;
     this.price = price;
     this.id = id;
+}
+
+function filterDisplay(checkmark) {
+    let products = JSON.parse(localStorage.getItem("CurrentProductList"));
+    if (checkmark.id = "ipa-checkmark") {
+        products = jQuery.grep(products, function( a ) {
+            return a.type === "Ipa";
+          });
+    }
 }
 
 //funktion som loopar igenom produkterna och skriver ut dem i products.html
@@ -111,8 +120,7 @@ function addToCart(buttonClicked) {
         }
 
         //hämtar produktlistan från localstorage och sparar listan i variabeln products 
-        let localstorageList = localStorage.getItem("CurrentProductList"); 
-        let products = JSON.parse(localstorageList); 
+        let products = JSON.parse(localStorage.getItem("CurrentProductList"));
     
         $.each(products, function(i, product) {
             let buttonId = buttonClicked[0].id.substring(7);
