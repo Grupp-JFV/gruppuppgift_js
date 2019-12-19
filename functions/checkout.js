@@ -100,30 +100,31 @@ function showReceipt() {
     let localstorageList = localStorage.getItem("CurrentShoppingcartList"); 
     let shoppingcartList = JSON.parse(localstorageList);
 
-    let totalCost = 0; 
+    if (shoppingcartList !== null) {
+        let totalCost = 0; 
 
-        $.each(shoppingcartList, function(i, cartitem) {
+            $.each(shoppingcartList, function(i, cartitem) {
 
-            let recieptrow = $("<div>").addClass("row").appendTo(".reciept");
+                let recieptrow = $("<div>").addClass("row").appendTo(".reciept");
 
-            //diven som vi vill stoppa in allt innehåll i
-            let title = cartitem.name; 
-            $("<p/>").addClass("col-6").attr("id", "#reciept_title").html(title).appendTo(recieptrow);
-        
-            $("<span/>").addClass("col-2").text("x").appendTo(recieptrow); 
+                //diven som vi vill stoppa in allt innehåll i
+                let title = cartitem.name; 
+                $("<p/>").addClass("col-6").attr("id", "#reciept_title").html(title).appendTo(recieptrow);
+            
+                $("<span/>").addClass("col-2").text("x").appendTo(recieptrow); 
 
-            let amount = cartitem.amount;
-            $("<p/>").addClass("col-3").attr("id", "#reciept_amount").html(amount).appendTo(recieptrow); 
+                let amount = cartitem.amount;
+                $("<p/>").addClass("col-3").attr("id", "#reciept_amount").html(amount).appendTo(recieptrow); 
 
-            //bestämmer totalsumman utifrån varukorgen 
-            let cost = cartitem.price * cartitem.amount;
-            //hämta sumtotal-taggen från javascript och sätt värdet 
-            totalCost += cost;
-    }); 
+                //bestämmer totalsumman utifrån varukorgen 
+                let cost = cartitem.price * cartitem.amount;
+                //hämta sumtotal-taggen från javascript och sätt värdet 
+                totalCost += cost;
+            }); 
 
-    $("#receipt_totalsum").html("Total summa: " +  String(totalCost) + " kr");
+        $("#receipt_totalsum").html("Total summa: " +  String(totalCost) + " kr");
 
-    //tömmer localSTorage när man trycker på OK i modalen 
-    localStorage.removeItem("CurrentShoppingcartList");
-
+        //tömmer localSTorage när man trycker på OK i modalen 
+        localStorage.removeItem("CurrentShoppingcartList");
+    }
 }
