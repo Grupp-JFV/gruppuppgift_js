@@ -95,7 +95,7 @@
     text-transform: uppercase;
     background-color: rgb(0, 60, 20);
     border-radius:28px;
-    width:300px;
+    width: 240px;
     border: none; 
 }
 .send-order-btn:hover {
@@ -112,7 +112,7 @@
     display: none;
     position: fixed;
     background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0px 0px 4px 4px rgba(119, 14, 14, 0.8);
+    box-shadow: 0px 0px 4px black;
     z-index: 1;
     width: 70%;
     top: 50%;
@@ -167,7 +167,11 @@
     }
      .numberofpurchaseditems {
         width: 20%;
-    } 
+    }
+
+    .send-order-btn {
+        width:300px;
+    }
 
 }
 
