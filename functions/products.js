@@ -99,7 +99,7 @@ function display(products) {
         $("<input>").attr("type", "number").appendTo(input).attr("placeholder", "Välj antal"); 
 
         //skapa en köp-knapp         
-        $("<button>").addClass("btn purchase-button").attr("type", "button").attr("id", "button_" + product.id).append("Köp").appendTo(input);
+        $("<button>").addClass("btn purchase-button p-0 ml-1").attr("type", "button").attr("id", "button_" + product.id).append("Köp").appendTo(input);
 
         $("#page").append(responsiveColumn);
     });
