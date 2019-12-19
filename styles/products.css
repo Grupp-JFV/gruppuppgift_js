@@ -1,7 +1,7 @@
 /* Mobile phones breakpoint */
 
 /* HEADER IMAGE */
-.header_img {
+.header-img {
     object-fit: cover;
     height:25vh;
 }
@@ -17,12 +17,12 @@
     padding: 6px;
 }
 
-#sortheadline {
+.sort-button {
     color:grey;
     font-weight: 600;
 }
 
-.sortcategories {
+.sort-categories {
     display:none;
     font-size:0.6rem;
     list-style: none;
@@ -68,7 +68,7 @@ div.card {
     margin-right: 5px;
 }
 
-.readmore_button {
+.readmore-button {
     font-size: 0.7rem;
     font-weight: 500;
     background-color: white;
@@ -99,7 +99,7 @@ div.card {
     width: 30%;
 }
 
-.product_description {
+.product-description {
     display: none;
     font-size: 0.7rem;
     text-align: left;
@@ -113,7 +113,7 @@ div.card {
 @media (min-width: 768px) {
    
     /* HEADER */
-    .header_img {
+    .header-img {
         height: 30vh;
     }    
     /* CARD DECK */
@@ -138,7 +138,7 @@ div.card {
 @media (min-width: 992px) {
 
     /* SORT MENU */
-    .header_img {
+    .header-img {
         height: 30vh;
     }
     .sort li {
@@ -159,7 +159,7 @@ div.card {
         height: 20vh;
         object-fit: scale-down;
     }
-    .readmore_button {
+    .readmore-button {
         font-size: 0.7rem;
         font-weight: 500;
         color: grey;
@@ -179,7 +179,7 @@ div.card {
         border-top: 1px solid black;
         background-color: whitesmoke;
     }
-    #sortheadline {
+    .sort-button {
         color: grey;
         font-weight: 600;
     }

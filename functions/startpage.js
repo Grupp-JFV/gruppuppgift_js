@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     $("#readmoreindex_button").on("click", function(){
-        $(".readmoreindex").slideToggle(300);
+        $(".readmore-index").slideToggle(300);
 
     }); //stänger klick-funktionen
 

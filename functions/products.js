@@ -14,8 +14,8 @@ $(document).ready(function() {
     }); 
   
     //togglar läs mer-knappen
-    $(".readmore_button").on("click",function() {
-        $(this).siblings(".product_description").slideToggle(300);
+    $(".readmore-button").on("click",function() {
+        $(this).siblings(".product-description").slideToggle(300);
     }); 
 }); 
     
@@ -49,7 +49,7 @@ function productList() {
 }
 
 //skapar en objektsklass för produkterna
-function Product(name, image, type, strength, description, price, id) {                         //Product Constructor
+function Product(name, image, type, strength, description, price, id) { 
 
     this.name = name;
     this.image = image;
@@ -74,18 +74,18 @@ function display(products) {
 
     $.each(products, function (i, product) {
          
-        let responsiveColumn = $("<div>").addClass("col-12"+" "+"col-md-6"+" "+"col-lg-4");
-        let productContainer = $("<div>").addClass("card"+" "+"container"+" "+" "+"text-center").appendTo(responsiveColumn);
+        let responsiveColumn = $("<div>").addClass("col-12 col-md-6 col-lg-4");
+        let productContainer = $("<div>").addClass("card container text-center").appendTo(responsiveColumn);
         $("<img>").addClass("card-img-top").attr("src", product.image).attr("alt", "Ölflaska").appendTo(productContainer);
-        let cardBody = $("<div>").addClass("card-body"+" "+"row"+" "+"justify-content-center").appendTo(productContainer);
+        let cardBody = $("<div>").addClass("card-body row justify-content-center").appendTo(productContainer);
         $("<h5>").addClass("card-title").text(product.name + " " + "(" + product.strength + "%" + ")").appendTo(cardBody);
         $("<p>").addClass("card-text").text(product.price+" "+"kr").appendTo(cardBody);
 
         //skapa en läs-mer-knapp         
-        $("<button>").addClass("readmore_button").attr("type", "button").append("Läs mer").appendTo(cardBody);
+        $("<button>").addClass("readmore-button").attr("type", "button").append("Läs mer").appendTo(cardBody);
         
         //skapa en div för beskrivningen
-        let descriptionDiv = $("<div>").addClass("product_description").appendTo(cardBody);        
+        let descriptionDiv = $("<div>").addClass("product-description").appendTo(cardBody);        
         $(descriptionDiv).text(product.description).appendTo(descriptionDiv);
 
         //skapa en input-group + lägger in input-group i card-body

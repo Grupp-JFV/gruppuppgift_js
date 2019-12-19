@@ -3,30 +3,30 @@ html {
 }
 
 /*NAVBAR*/
-#nav {
+.nav {
     background-image: linear-gradient(white, rgb(245, 245, 245));
     border-bottom: 1px solid black;
     box-shadow: 0px 0px 4px black;
     min-height:48px;
 }
-#companyname a:hover {
+.companyname a:hover {
     color: rgb(75, 4, 4);
 }
 
-#companylogo {
+.company-logo {
     font-size: 1rem;
     font-weight: 800;
     color: rgb(0, 60, 20);
     padding-top: 10px;
 }
 
-#companylogo_end {
+.companylogo-end {
     font-size: 1rem;
     font-weight: 800;
     padding-top: 10px;
     display: inline;
-    color: color: rgb(0, 60, 20);
-    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    color: rgb(0, 60, 20);
+    -webkit-text-fill-color: white;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: rgb(0, 60, 20);
     text-align: left;   
@@ -41,20 +41,22 @@ html {
 .shopping-cart-button {
     margin-top: 6px;
 }
-#productpagelogo, #shoppingcartlogo {
+.productpage-logo, .shoppingcart-logo {
     font-size: 1rem;
     color: rgb(0, 60, 20);
 }
 
-#productpagelogo:hover, #shoppingcartlogo:hover {
+.productpage-logo:hover, .shoppingcart-logo:hover {
     font-size: 1rem;
     color: rgb(75, 4, 4);
 }
-#shoppingcart_content {
+
+
+/* .shoppingcart-content {
     display: inline;
     font-size: 0.7rem;
     font-weight: 800;
-} 
+}  */
 
 
 /*DROP-DOWN SHOPPING CART*/
@@ -131,7 +133,6 @@ footer {
     background-color: white;
     font-size: 0.7rem;
     border-top: 1px solid black;
-    box-shadow: 0px 0px 4px black;
 }
 
 .footer-logo {

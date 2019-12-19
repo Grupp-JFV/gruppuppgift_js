@@ -10,7 +10,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.headercontent {
+.header-content {
     background-color: whitesmoke;
     top: 15%;
     font-size: 0.7rem;
@@ -18,7 +18,7 @@ header {
     border-radius: 1px;
     width: 90%;
 }
-.introheadline {
+.intro-headline {
     border-bottom: 1px solid grey;
     padding-top: 10px;
     font-size: 2rem;
@@ -34,7 +34,7 @@ header {
     opacity: 0.7;
 }
 
-#readmoreindex_button, #webshop_button {
+.jumbotron-button {
     display: block;    
     margin: 0 auto;
     font-size: 0.7rem;
@@ -45,8 +45,10 @@ header {
     border: none;
     width: 150px;
 }
-#readmoreindex_button:hover, #webshop_button:hover {
+
+.jumbotron-button:hover {
     background-color: rgb(90, 2, 2);
+    text-decoration: none;
 }
 
 .webshopbuttonlink a:hover {
@@ -54,10 +56,11 @@ header {
 }
 
 /* READ MORE */
-.readmoreindex {
+.readmore-index {
     display: none;
 }
-.infoheadline {
+
+.page-info-headline {
     font-size: 1.5rem;
     font-weight: 800;
     color: darkred;
@@ -65,7 +68,8 @@ header {
     border-bottom: 1px solid grey;
     padding-bottom: 10px;
 }
-#companylogo {
+
+.company-logo {
     width: 30%;
 }
 
@@ -74,31 +78,32 @@ header {
     height: 25vh;
 }
 
-.firstintrotext {
+.first-infotext {
     font-size: 0.8rem;
     padding-top: 5%;
     padding-left: 10%;
     padding-right: 10%; 
 }
 
-.secondintrotext {
+.second-infotext {
     font-size: 1rem;
     padding-top: 5%; 
 }
 
-.secondintrotext p {
+.second-infotext p {
     font-size: 0.8rem;
 }
 
-.secondintrotext a {
+.second-infotext a {
     font-size: 1rem;
     color: rgb(48, 45, 45);
 }
-.secondintrotext a:hover {
+
+.second-infotext a:hover {
     text-decoration: none;
 }
 
-.introheadline p {
+.page-info-headline p {
     background-color: none;
 }
 
@@ -107,15 +112,15 @@ header {
 @media (min-width: 768px) {
     /* HEADER */  
 
-    .introheadline {
+    .intro-headline {
         font-size: 1.5rem;
     }
-    .headercontent {
+    .header-content {
         font-size: 0.8rem;
         padding-left: 30px;
         padding-right: 30px;
     }    
-    #companylogo {
+    .company-logo {
         width: 25%;
     }
 }
@@ -130,20 +135,22 @@ header {
 
     /* Intro styling */
 
-    .headercontent {
+    .header-content {
         padding-left: 90px;
         padding-right: 90px;
     }
 
-   .introheadline {
+   .intro-headline {
        font-size: 1.8rem;
     }
 
-    .introtext {
+    .intro-headline p {
+        background-color:none;
+    }
+
+    .first-infotext {
     font-size: 1rem;
     }
 
-    .introheadline p {
-        background-color:none;
-    }
+
 }

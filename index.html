@@ -1,43 +1,42 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        
-        <title>OPPIGÅRDS ÖL</title>
-        <!-- BOOTSTRAP CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <!-- CSS  -->
-        <link rel="stylesheet" href="styles/header_footer.css">
-        <link rel="stylesheet" href="styles/startpage.css"> 
-         <!-- FONT-AWESOME -->
-         <script src="https://kit.fontawesome.com/55cb2a86bc.js" crossorigin="anonymous"></script>
-        <!-- JQUERY -->
-        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-        <!-- JS-FIL -->
-        <script type="text/javascript" src="functions/shoppingcart.js"></script>
-        <script type="text/javascript" src="functions/startpage.js"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>OPPIGÅRDS ÖL</title>
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- CSS  -->
+    <link rel="stylesheet" href="styles/header_footer.css">
+    <link rel="stylesheet" href="styles/startpage.css"> 
+        <!-- FONT-AWESOME -->
+        <script src="https://kit.fontawesome.com/55cb2a86bc.js" crossorigin="anonymous"></script>
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- JS-FIL -->
+    <script type="text/javascript" src="functions/shoppingcart.js"></script>
+    <script type="text/javascript" src="functions/startpage.js"></script>
 </head>
 <body>
     <div class="container-fluid">    
         <!--TOP NAVBAR-->
-        <header class="row sticky-top" id="nav"> 
-            <div class="text-left col-6 align-self-center" id="companyname">
+        <header class="row sticky-top nav" id="nav"> 
+            <div class="text-left col-6 align-self-center company-name" id="companyname">
                 <a href="index.html">
-                    <span id="companylogo">OPPI<h1 id="companylogo_end">GÅRDS</h1></span>
+                    <span class="company-logo">OPPI<h1 class="companylogo-end">GÅRDS</h1></span>
                 </a>
                 <a href="pages/products.html">
-                    <i class="fas fa-beer  pl-1" id="productpagelogo"></i>
+                    <i class="fas fa-beer  pl-1" id="productpage_logo"></i>
                 </a>
             </div>
             <!-- SHOPPING CART -->
             <div class="text-right col-6">
-                <button type="button" class="btn p-0 shopping-cart-button" id="basketButton">
+                <button type="button" class="btn p-0 shopping-cart-button" id="basket_button">
                     <span class="d-inline basket-display" id="display_basket">
                     </span>
-                    <i class="fa fa-shopping-cart" id="shoppingcartlogo">
+                    <i class="fa fa-shopping-cart" id="shoppingcart_logo">
                     </i>
                 </button>
             </div>
@@ -83,11 +82,10 @@
         </header>
         <!-- BORDER -->
         <div class="row border-line"></div>
-
         <!-- JUMBOTRON -->
         <div class="jumbotron jumbotron-fluid row justify-content-center">
-            <div class="mw-100 pb-2 pt-2 mr-4 ml-4 text-center headercontent">
-                <h1 class="introheadline mb-2">Välkommen!</h1>
+            <div class="mw-100 pb-2 pt-2 mr-4 ml-4 text-center header-content">
+                <h1 class="intro-headline mb-2">Välkommen!</h1>
                 <div class="col-12">
                 <p>
                     Gården Oppigårds har varit i vår släkts ägo sedan 1700-talet. 
@@ -107,14 +105,14 @@
                 <div class="row justify-content-center">
                     <div class="img-link col-12 col-md-12 col-lg-5 text-center">
                         <img src="cheers.jpg" alt="Beer barrels" class="image-link mb-2 md-w-100">
-                        <button type="button" class="btn mb-4" id="readmoreindex_button">
+                        <button type="button" class="btn mb-4  jumbotron-button" id="readmoreindex_button">
                             LÄS MER
                         </button>
                     </div>
                     <div class="img-link col-12 col-md-12 col-lg-5 text-center webshopbuttonlink">
                         <img src="beer.jpg" class="image-link mb-2 md-w-100">
                         <a href="pages/products.html">
-                            <button type="button" class="btn mb-4" id="webshop_button">
+                            <button type="button" class="btn mb-4 jumbotron-button" id="webshop_button">
                                 WEBBSHOP
                             </button>
                        </a>
@@ -123,84 +121,84 @@
             </div>
         </div>
         <!-- MAIN CONTENT -->
-        <div class="row sort readmoreindex text-center">
-        <main> 
-            <!-- content goes here -->
-            <div class="col-lg-6 col-sm-12 justify-content-center">
-                <h3 class="infoheadline">Vår öl</h3>
-                <div class="firstintrotext">
-                    <p>Vi på Oppigårds har alltid gillat att utforska smak, doft och karaktär. 
-                        Öl är för oss ett uttryckssätt, som säger mycket om hur vi tänker och vad vi gillar. 
-                    </p>
-                    <p>Vår första öl i kontinuerlig produktion, Golden Ale, inspirerades av de brittiska öarna
-                        och humlesorten East Kent Golding. 
-                        Men vi kände oss inte begränsade av ölkulturella gärsgårdar, 
-                        utan testade att höja ölen med en amerikansk fruktig humlesort. 
-                    </p>
-                    <p>På liknande vis har vi blivit inspirerade av klassiska ölstilar från 
-                        olika delar av världen och lagt till en twist som vi tycker passar.
-                    </p>
-                    <div class="pt-1 pb-4">
-                        <img src="thelogo.png" id="companylogo">
+        <div class="row sort readmore-index text-center">
+            <main> 
+                <!-- content goes here -->
+                <div class="col-lg-6 col-sm-12 justify-content-center">
+                    <h3 class="page-info-headline">Vår öl</h3>
+                    <div class="first-infotext">
+                        <p>Vi på Oppigårds har alltid gillat att utforska smak, doft och karaktär. 
+                            Öl är för oss ett uttryckssätt, som säger mycket om hur vi tänker och vad vi gillar. 
+                        </p>
+                        <p>Vår första öl i kontinuerlig produktion, Golden Ale, inspirerades av de brittiska öarna
+                            och humlesorten East Kent Golding. 
+                            Men vi kände oss inte begränsade av ölkulturella gärsgårdar, 
+                            utan testade att höja ölen med en amerikansk fruktig humlesort. 
+                        </p>
+                        <p>På liknande vis har vi blivit inspirerade av klassiska ölstilar från 
+                            olika delar av världen och lagt till en twist som vi tycker passar.
+                        </p>
+                        <div class="pt-1 pb-4">
+                            <img src="thelogo.png" class="company-logo" id="companylogo">
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="col-lg-6 col-sm-12 justify-content-center">
-                <h3 class="infoheadline">Nyheter</h3>
-                <div class="secondintrotext ">
-                    <div class="row mb-4 align-items-center">
-                        <div class="col-3">
-                            <a href="pages/products.html" class="index-productnews">
-                                <img src="product_images/winterale.jpg"  alt="Öletikett" class="index-productnewsimg">
-                            </a>
-                        </div>
-                        <div class="introtext col-9 text-left">
-                            <a href="pages/products.html" class="index-productnews">
-                                <h5>Winter Ale (5,0%)</h5>
-                            </a>
-                            <p>
-                                Nyanserad, något humlearomatisk smak med tydlig beska, inslag av rågbröd, kryddor, tallkåda och apelsinskal.
-                                Serveras vid 8-10°C som sällskapsdryck, eller till rätter av lamm- och nötkött.
-                            </p>
-                        </div>
-                    </div>  
-                    <div class="row mb-4 align-items-center">
-                        <div class="col-3">
-                            <a href="pages/products.html" class="index-productnews">
-                                <img src="product_images/hedemoraporter.jpg"  alt="Öletikett" class="index-productnewsimg">
-                            </a>
-                        </div>
-                        <div class="introtext col-9 text-left">
-                            <a href="pages/products.html" class="index-productnews">
-                                <h5>Hedemora Porter (5.4%)</h5>
-                            </a>
-                            <p>
-                                Maltig, rostad, nyanserad smak med inslag av kavring, choklad, hasselnötter, 
-                                kaffe, smörkola och torkade dadlar. Serveras vid 10-12°C till rätter av mörkt kött.
-                            </p>
-                        </div>
-                    </div> 
-                    <div class="row mb-4 align-items-center">
-                        <div class="col-3">
-                            <a href="pages/products.html" class="index-productnews">
-                                <img src="product_images/singlehop.jpg"  alt="Öletikett" class="index-productnewsimg">
-                            </a>
-                        </div>
-                        <div class="introtext col-9 text-left">
-                            <a href="pages/products.html" class="index-productnews">
-                                <h5>Oppigårds Single Hop (5%)</h5>
-                            </a>
-                            <p>
-                                Tydligt humlearomatisk smak med inslag av apelsinblom, aprikos, honung, 
-                                citrusskal och knäckebröd. Serveras vid 11-13°C som sällskapsdryck,
-                                eller till rätter av fisk eller ljust kött.
-                            </p>
-                        </div>
-                    </div> 
+                <!-- info-content that toggle -->
+                <div class="col-lg-6 col-sm-12 justify-content-center">
+                    <h3 class="page-info-headline">Nyheter</h3>
+                    <div class="second-infotext">
+                        <div class="row mb-4 align-items-center">
+                            <div class="col-3">
+                                <a href="pages/products.html" class="index-productnews">
+                                    <img src="product_images/winterale.jpg"  alt="Öletikett" class="index-productnewsimg">
+                                </a>
+                            </div>
+                            <div class="product-infotext col-9 text-left">
+                                <a href="pages/products.html" class="index-productnews">
+                                    <h5>Winter Ale (5,0%)</h5>
+                                </a>
+                                <p>
+                                    Nyanserad, något humlearomatisk smak med tydlig beska, inslag av rågbröd, kryddor, tallkåda och apelsinskal.
+                                    Serveras vid 8-10°C som sällskapsdryck, eller till rätter av lamm- och nötkött.
+                                </p>
+                            </div>
+                        </div>  
+                        <div class="row mb-4 align-items-center">
+                            <div class="col-3">
+                                <a href="pages/products.html" class="index-productnews">
+                                    <img src="product_images/hedemoraporter.jpg"  alt="Öletikett" class="index-productnewsimg">
+                                </a>
+                            </div>
+                            <div class="product-infotext col-9 text-left">
+                                <a href="pages/products.html" class="index-productnews">
+                                    <h5>Hedemora Porter (5.4%)</h5>
+                                </a>
+                                <p>
+                                    Maltig, rostad, nyanserad smak med inslag av kavring, choklad, hasselnötter, 
+                                    kaffe, smörkola och torkade dadlar. Serveras vid 10-12°C till rätter av mörkt kött.
+                                </p>
+                            </div>
+                        </div> 
+                        <div class="row mb-4 align-items-center">
+                            <div class="col-3">
+                                <a href="pages/products.html" class="index-productnews">
+                                    <img src="product_images/singlehop.jpg"  alt="Öletikett" class="index-productnewsimg">
+                                </a>
+                            </div>
+                            <div class="product-infotext col-9 text-left">
+                                <a href="pages/products.html" class="index-productnews">
+                                    <h5>Oppigårds Single Hop (5%)</h5>
+                                </a>
+                                <p>
+                                    Tydligt humlearomatisk smak med inslag av apelsinblom, aprikos, honung, 
+                                    citrusskal och knäckebröd. Serveras vid 11-13°C som sällskapsdryck,
+                                    eller till rätter av fisk eller ljust kött.
+                                </p>
+                            </div>
+                        </div> 
+                    </div>
                 </div>
-            </div>
-        </main>
+            </main>
         </div>    
     </div>
     <footer class="row pt-2 pb-2 w-100 m-0">
