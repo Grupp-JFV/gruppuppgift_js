@@ -29,6 +29,7 @@ $(document).ready(function(){
 
 
     $("#send_order_btn").click(function() {
+        let shoppingcartList = JSON.parse(localStorage.getItem("CurrentShoppingcartList"));
         let good = true;
         $(".form-control").each(function() {
             if ($(this).val() == "") {
@@ -39,14 +40,12 @@ $(document).ready(function(){
             }
         });
         
-        if (good) {
-            //töm fält 
-            $(".form-control input").html(""); 
+        if (good && shoppingcartList.length > 0) {
             //låter modalen visas 
             $("#modal").show();
             showReceipt(); 
         }
-      
+        
         //förhindrar att fösntret laddas om 
         return false; 
 
@@ -93,38 +92,40 @@ function printCart() {
 
 
 function showReceipt() {
-    let value = $("#firstname").val();
-    $("#customersname").text("Tack för ditt köp " + value + "!"); 
-
     //hämta innehåll från local storage 
     let localstorageList = localStorage.getItem("CurrentShoppingcartList"); 
     let shoppingcartList = JSON.parse(localstorageList);
 
-    if (shoppingcartList !== null) {
-        let totalCost = 0; 
-
-            $.each(shoppingcartList, function(i, cartitem) {
-
-                let recieptrow = $("<div>").addClass("row").appendTo(".reciept");
-
-                //diven som vi vill stoppa in allt innehåll i
-                let title = cartitem.name; 
-                $("<p/>").addClass("col-6").attr("id", "#reciept_title").html(title).appendTo(recieptrow);
+    if (shoppingcartList.length > 0) {
+        let value = $("#firstname").val();
+        $("#customersname").text("Tack för ditt köp " + value + "!");
+        let totalCost = 0;
+        
+        $.each(shoppingcartList, function(i, cartitem) {
             
-                $("<span/>").addClass("col-2").text("x").appendTo(recieptrow); 
+            let recieptrow = $("<div>").addClass("row").appendTo(".reciept");
 
-                let amount = cartitem.amount;
-                $("<p/>").addClass("col-3").attr("id", "#reciept_amount").html(amount).appendTo(recieptrow); 
+            //diven som vi vill stoppa in allt innehåll i
+            let title = cartitem.name; 
+            $("<p/>").addClass("col-6").attr("id", "#reciept_title").html(title).appendTo(recieptrow);
+        
+            $("<span/>").addClass("col-2").text("x").appendTo(recieptrow); 
 
-                //bestämmer totalsumman utifrån varukorgen 
-                let cost = cartitem.price * cartitem.amount;
-                //hämta sumtotal-taggen från javascript och sätt värdet 
-                totalCost += cost;
-            }); 
+            let amount = cartitem.amount;
+            $("<p/>").addClass("col-3").attr("id", "#reciept_amount").html(amount).appendTo(recieptrow); 
 
+            //bestämmer totalsumman utifrån varukorgen 
+            let cost = cartitem.price * cartitem.amount;
+            //hämta sumtotal-taggen från javascript och sätt värdet 
+            totalCost += cost;
+        });
+        
         $("#receipt_totalsum").html("Total summa: " +  String(totalCost) + " kr");
-
-        //tömmer localSTorage när man trycker på OK i modalen 
-        localStorage.removeItem("CurrentShoppingcartList");
+        
+        //töm fält 
+        $(".form-control input").val("");
+        //tömmer localSTorage när man trycker på OK i modalen
+        shoppingcartList = [];
+        localStorage.setItem("CurrentShoppingcartList", JSON.stringify(shoppingcartList));
     }
 }
