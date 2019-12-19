@@ -10,29 +10,58 @@ $(document).ready(function(){
 
     //klarna syns som default 
     $("input#klarnaradiobutton").change( function(){
-        $("#klarna-input").show(); 
+        $("klarna-input").show(); 
         //dölj de andra betalsätten 
-        $("#swish-input").hide();
-        $("#credit-input").hide();
+        $(".swish-input").hide();
+        $(".credit-input").hide();
     }); 
  
     //visa kreditkort
     $("input#creditradiobutton").on("click", function(){
-        $("#credit-input").show(); 
+        $(".credit-input").show(); 
         //göm de andra alternativen 
-        $("#swish-input").hide();
-        $("#klarna-input").hide();
+        $(".swish-input").hide();
+        $(".klarna-input").hide();
     }); 
  
     //visa swish
     $("input#swishradiobutton").on("click", function(){
-        $("#swish-input").show(); 
+        $(".swish-input").show(); 
         //göm de andra alternativen 
-        $("#credit-input").hide();
-        $("#klarna-input").hide();  
+        $(".credit-input").hide();
+        $(".klarna-input").hide();  
+    });
+
+
+    $("#send_order_btn").click(function() {
+        //validate form here  
+                    
+        $(".form-control").each(function() {
+            if ($(this).val() == "") {
+                
+                //validering, t.ex. focus() för att fokusera på det felaktga elementet 
+
+                //förhindrar att fönstret laddas om
+                return false;
+
+            } else {
+               
+                //låter modalen visas 
+                $("#modal").show();
+                showReceipt(); 
+
+            }
+            
+
+        }); 
+      
+        //förhindrar att fösntret laddas om 
+        return false; 
+
     });
 
 });
+
 
 function printCart() {
 
@@ -60,10 +89,8 @@ function printCart() {
             //skapa en p-tagg, placera ut antalet 
             $("<p>").addClass("text-center purchase-item-price col-2 text-nowrap").text(cartitem.price + " kr/st").appendTo(newRow);
 
-
             //bestämmer totalsumman utifrån varukorgen 
             let cost = cartitem.price * cartitem.amount;
-            //hämta sumtotal-taggen från javascript och sätt värdet 
             totalCost += cost;
 
         });
@@ -71,6 +98,7 @@ function printCart() {
     $("#sumtotal").html("Summa: " +  String(totalCost) + " kr");
 
 }
+
 
 function showReceipt() {
     let value = $("#firstname").val();
@@ -104,72 +132,6 @@ function showReceipt() {
     $("#receipt_totalsum").html("Total summa: " +  String(totalCost) + " kr");
 
     //tömmer localSTorage när man trycker på OK i modalen 
+    localStorage.removeItem("CurrentShoppingcartList");
 
 }
-
-//funktion som körs när sidan laddas 
-$(function() {
-   
-    $("#sendorderbtn").click(function() {
-        //validate form here
-          
-          $('.error').hide();
-            let name = $("#firstname").val();
-            // let lastname = $("#lastname").val();
-            // let adress = $("#adress").val();
-            // let city = $("#city_zip").val(); 
-            // let email = $("#email").val();
-            // let tel = $("#tel").val();
-            
-            
-            
-            
-            if  (name == "") { 
-            //&& (lastname == "") 
-            //&& (adress == "") 
-            //&& (city == "") 
-            //&& (email == "") 
-            //&& (tel == "") ) 
-            
-             
-                //felmeddelande som ev. ska visas 
-                // $("label#name_error").show();
-                
-                $("#name").focus();
-                return false;
-            } 
-            else {
-                //tömmer input-fälten 
-                $(".form-control").val() = ""; 
-
-                //visar tack för ditt köp-diven
-                $("#modal").show();
-                showReceipt(); 
-
-            }
-
-          //prevents reload 
-          return false;
-
-    }); 
-}); 
-
-
-
-
-    $.each( function(i, value) {
-
-    let text = ""
-    var i;  
-
-        //om det finns ett värde, break ur loopen 
-        if (i == "") {
-            break;
-        }
-
-        //kör denna kod om värdena finns 
-        //visar tack för ditt köp-diven
-        $("#modal").show();
-        showReceipt(); 
-
-    }); 
