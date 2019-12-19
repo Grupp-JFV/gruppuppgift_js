@@ -4,33 +4,56 @@ $(document).ready(function(){
     printCart(); 
 
     //klarna syns som default 
-    $("input#klarna_radiobutton").change( function(){
+    $("#klarna_radiobutton").change( function(){
         $("#klarna_input").show(); 
+        //dölj de andra betalsätten 
         $("#swish_input").hide();
         $("#credit_input").hide();
     }); 
  
     //visa kreditkort
-    $("input#credit_radiobutton").on("click", function(){
+    $("#credit_radiobutton").on("click", function(){
         $("#credit_input").show(); 
+        //göm de andra alternativen 
         $("#swish_input").hide();
         $("#klarna_input").hide();
     }); 
  
     //visa swish
-    $("input#swish_radiobutton").on("click", function(){
+    $("#swish_radiobutton").on("click", function(){
         $("#swish_input").show(); 
+        //göm de andra alternativen 
         $("#credit_input").hide();
         $("#klarna_input").hide();  
     });
 
-    //visar tack för ditt köp-diven
-    $("#send_order_btn").click(function(){
-        $("#modal").show();
-        showReceipt(); 
+
+    $("#send_order_btn").click(function() {
+        let good = true;
+        $(".form-control").each(function() {
+            if ($(this).val() == "") {
+                good = false;
+                //validering, t.ex. focus() för att fokusera på det felaktga elementet 
+                //förhindrar att fönstret laddas om
+                return false;
+            }
+        });
+        
+        if (good) {
+            //töm fält 
+            $(".form-control input").html(""); 
+            //låter modalen visas 
+            $("#modal").show();
+            showReceipt(); 
+        }
+      
+        //förhindrar att fösntret laddas om 
+        return false; 
+
     });
 
 });
+
 
 function printCart() {
 
@@ -68,6 +91,7 @@ function printCart() {
 
 }
 
+
 function showReceipt() {
     let value = $("#firstname").val();
     $("#customersname").text("Tack för ditt köp " + value + "!"); 
@@ -92,11 +116,14 @@ function showReceipt() {
             $("<p/>").addClass("col-3").attr("id", "#reciept_amount").html(amount).appendTo(recieptrow); 
 
             //bestämmer totalsumman utifrån varukorgen 
-            let cost = cartitem.price * cartitem.amount; 
+            let cost = cartitem.price * cartitem.amount;
+            //hämta sumtotal-taggen från javascript och sätt värdet 
             totalCost += cost;
     }); 
 
     $("#receipt_totalsum").html("Total summa: " +  String(totalCost) + " kr");
 
-}
+    //tömmer localSTorage när man trycker på OK i modalen 
+    localStorage.removeItem("CurrentShoppingcartList");
 
+}
