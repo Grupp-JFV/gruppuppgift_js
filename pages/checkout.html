@@ -16,7 +16,7 @@
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <!--  js -->
-    <script type="text/javascript" src="../functions/checkout.js"></script>
+    <script type="text/javascript" src="../test.js"></script>
 
 </head>
 <body>
@@ -67,97 +67,95 @@
                 </div>
             </div>
             <!-- CHECKOUT FORM -->
-            <div class="checkoutcontent row justify-content-center align-items-center">
+            <div class="checkoutcontent row justify-content-center align-items-center text-center">
                 <!-- CUSTOMER INFORMATION -->
+                <form class="col-10 ">
                 <div class="checkoutform col-12 pb-4">
                     <h5 class="checkoutheaders mt-4">MINA UPPGIFTER</h5>
-                    <form>
                         <div class="form-row text-left">
                         <div class="form-group col-md-6 col-sm-12">
                             <label for="firstname">Förnamn</label>
-                            <input type="text" class="form-control" placeholder="Förnamn" id="firstname" required>
+                            <input type="text" class="form-control" placeholder="Förnamn" id="firstname">
                         </div>
                         <div class="form-group col-md-6 col-sm-12">
                             <label for="lastname">Efternamn</label>
-                            <input type="text" class="form-control" placeholder="Efternamn" required>
+                            <input type="text" class="form-control" placeholder="Efternamn" id="lastname">
                         </div>
                         </div>
                         <div class="form-row text-left">
                         <div class="form-group col-12">
                             <label for="streetadress">Adress</label>
-                            <input type="text" class="form-control" placeholder="Adress" required>
+                            <input type="text" class="form-control" placeholder="Adress" id="adress">
                         </div>
                         <div class="form-group col-12">
                             <label for="city and zip">Stad och postnummer</label>
-                            <input type="text" class="form-control" placeholder="Stad och postnummer" required>
+                            <input type="text" class="form-control" placeholder="Stad och postnummer" id="city_zip">
                         </div>
                         </div>
                         <div class="form-row text-left">
                         <div class="form-group col-md-6 col-sm-12">
                             <label for="email">E-post</label>
-                            <input type="email" class="form-control" placeholder="E-post" required>
+                            <input type="email" class="form-control" placeholder="E-post" id="email">
                         </div>
                         <div class="form-group col-md-6 col-sm-12">
                             <label for="phonenumber">Telefonnummer</label>
-                            <input type="tel" class="form-control" placeholder="Telefonnummer" required>
+                            <input type="tel" class="form-control" placeholder="Telefonnummer" id="tel">
                         </div>
                     </div>
                 </div>
-
-                <div class="paymentform col-12 col-md-6">
-                    <h5 class="checkoutheaders m-2 pb-2">BETALNING</h5>
-                    <div class="form-check text-left">
-                        <input class="" type="radio" name="paymentform" id="klarnaradiobutton" value="option1" checked>
-                        <label class="form-check-label" for="klarnaradiobutton">
-                            Klarna
-                        </label>
-                        <input id="klarna-input" type="text" class="paymentinput ml-2" placeholder="Personnummer">
+                <div class="row">
+                    <div class="paymentform col-12 col-md-6 text-center">
+                            <h5 class="checkoutheaders m-2 pb-2">BETALNING</h5>
+                            <div class="form-check text-left">
+                                <input class="" type="radio" name="paymentform" id="klarnaradiobutton" value="option1" checked>
+                                <label class="form-check-label" for="klarnaradiobutton">
+                                    Klarna
+                                </label>
+                                <input id="klarna-input" type="text" class="paymentinput ml-2" placeholder="Personnummer">
+                            </div>
+                            <div class="form-check text-left">
+                                <input class="" type="radio" name="paymentform" id="creditradiobutton" value="option2">
+                                <label class="form-check-label" for="creditradiobutton">
+                                    Kreditkort
+                                </label>
+                                <input id="credit-input" type="number" class="paymentinput ml-2" placeholder="Kreditkortsnummer">
+                            </div>
+                            <div class="form-check text-left">
+                                <input class="" type="radio" name="paymentform" id="swishradiobutton" value="option3">
+                                <label class="form-check-label " for="swishradiobutton">
+                                    Swish
+                                </label>
+                                <input id="swish-input" type="tel" class="paymentinput ml-2" placeholder="Telefonnummer">
+                            </div>
                     </div>
-                    <div class="form-check text-left">
-                        <input class="" type="radio" name="paymentform" id="creditradiobutton" value="option2">
-                        <label class="form-check-label" for="creditradiobutton">
-                            Kreditkort
-                        </label>
-                        <input id="credit-input" type="number" class="paymentinput ml-2" placeholder="Kreditkortsnummer">
-                    </div>
-                    <div class="form-check text-left">
-                        <input class="" type="radio" name="paymentform" id="swishradiobutton" value="option3">
-                        <label class="form-check-label " for="swishradiobutton">
-                            Swish
-                        </label>
-                        <input id="swish-input" type="tel" class="paymentinput ml-2" placeholder="Telefonnummer">
+                    <!-- DELIVERY INFORMATION -->
+                    <div class="deliveryform col-12 col-md-6 text-center">
+                            <h5 class="checkoutheaders m-2 pb-2">LEVERANS</h5>
+                            <div class="form-check text-left">
+                                <input class="" type="radio" name="deliveryform" id="exampleRadios1" value="option1" checked>
+                                <label class="form-check-label" for="exampleRadios1">
+                                    Utlämningsställe
+                                </label>
+                            </div>
+                            <div class="form-check text-left">
+                                <input class="" type="radio" name="deliveryform" id="exampleRadios2" value="option2">
+                                <label class="form-check-label" for="exampleRadios2">
+                                    Hemleverans
+                                </label>
+                            </div>
+                            <div class="form-check text-left">
+                                <input class="" type="radio" name="deliveryform" id="exampleRadios3" value="option3">
+                                <label class="form-check-label" for="exampleRadios3">
+                                    Expressleverans
+                                </label>
+                            </div>
                     </div>
                 </div>
-
-                <!-- DELIVERY INFORMATION -->
-                <div class="deliveryform col-12 col-md-6">
-                    <h5 class="checkoutheaders m-2 pb-2">LEVERANS</h5>
-                    <div class="form-check text-left">
-                        <input class="" type="radio" name="deliveryform" id="exampleRadios1" value="option1" checked>
-                        <label class="form-check-label" for="exampleRadios1">
-                            Utlämningsställe
-                        </label>
-                    </div>
-                    <div class="form-check text-left">
-                        <input class="" type="radio" name="deliveryform" id="exampleRadios2" value="option2">
-                        <label class="form-check-label" for="exampleRadios2">
-                            Hemleverans
-                        </label>
-                    </div>
-                    <div class="form-check text-left">
-                        <input class="" type="radio" name="deliveryform" id="exampleRadios3" value="option3">
-                        <label class="form-check-label" for="exampleRadios3">
-                            Expressleverans
-                        </label>
-                    </div>
-                </div>
-                
                 <!-- Send order button trigger div below -->
-            
-                <!-- gör knappen till submit när vi är redo, så vi kan fixa validering -->
-                <button type="button" class="btn mt-5 mb-5 p-2d show-modal" id="sendorderbtn">
+                <button type="submit" class="btn mt-5 mb-5 p-2d show-modal" id="sendorderbtn">
                     SKICKA BESTÄLLNING
                 </button>
+            </form> 
             
                 <!-- Thanks for your purchase div -->
                 <div id="modal">

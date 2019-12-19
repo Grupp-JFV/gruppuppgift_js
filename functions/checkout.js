@@ -10,11 +10,6 @@ $(document).ready(function(){
         $("#modal").show();
         showReceipt(); 
     });
-      
-    // Skickar värdet från first name-inputfältet till modalens Tack för ditt köp-rubrik.
-    $("#sendorderbtn").click(function(){
- 
-    });
 
     //klarna syns som default 
     $("input#klarnaradiobutton").change( function(){
@@ -115,3 +110,4 @@ function showReceipt() {
     $("#receipt_totalsum").html("Total summa: " +  String(totalCost) + " kr");
 
 }
+
