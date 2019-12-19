@@ -23,7 +23,7 @@ header {
     padding-top: 10px;
     font-size: 2.5rem;
     font-weight: 800;
-    color: rgb(0, 60, 20);;
+    color: rgb(0, 60, 20);
     text-transform: uppercase;
 }
 
@@ -47,7 +47,6 @@ header {
 .jumbotron-button:hover, .webshopbuttonlink a:hover {
     text-decoration: none;
     background-color:grey;
-
 }
 
 
@@ -59,7 +58,7 @@ header {
 .page-info-headline {
     font-size: 1.5rem;
     font-weight: 800;
-    color: darkred;
+    color: rgb(0, 60, 20);
     text-transform: uppercase;
     border-bottom: 1px solid grey;
     padding-bottom: 10px;

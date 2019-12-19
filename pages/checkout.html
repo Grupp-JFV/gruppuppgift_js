@@ -39,19 +39,19 @@
         <!-- BORDER -->
         <div class="row border-line"></div>
         <!-- HEADER IMG -->
-        <div class="row justify-content-center">
+        <div class="row">
             <div class="header-image">
                 <img class="header-img w-100" src="../styles/headerimage/header-image.jpg" alt="Beer bottles">
             </div>
         </div>
         <!-- MAIN CONTENT -->
         <main>
-            <div class="row shoppingcart-main text-center justify-content-center"> 
+            <div class="row shoppingcart-main text-center"> 
                 <div class="shoppingcart-header col-12 pt-4">
                     <h2>VARUKORG</h2>
                 </div>
             </div>
-            <div class="row justify-content-center">
+            <div class="row">
                 <div class="purchase-info col-12 col-md-10">
                     <!-- Product image from shoppingcart -->
                     <!-- Product titel  -->
@@ -59,7 +59,7 @@
                     <!-- Product price -->
                 </div>
             </div>
-            <div class="row justify-content-center">
+            <div class="row">
                 <div class="back-to-shop col-6 text-left">
                     <a href="products.html"><button class="backtoshop-button">TILLBAKA</button></a>   
                 </div>
@@ -70,9 +70,9 @@
             <!-- CHECKOUT FORM -->
             <div class="checkout-content row justify-content-center align-items-center text-center">
                 <!-- CUSTOMER INFORMATION -->
-                <form class="col-10 ">
+                <form class="col-10">
                 <div class="checkout-form col-12 pb-4">
-                    <h5 class="checkout-headers mt-4">MINA UPPGIFTER</h5>
+                    <h5 class="checkout-headers mt-4 pt-4">MINA UPPGIFTER</h5>
                         <div class="form-row text-left">
                         <div class="form-group col-md-6 col-sm-12">
                             <label for="firstname">Förnamn</label>
@@ -105,8 +105,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="payment-form col-12 col-md-6 text-center">
-                        <h5 class="checkout-headers m-2 pb-2">BETALNING</h5>
+                    <div class="payment-form col-12 col-md-6 text-left mb-4">
+                        <h5 class="checkout-headers mt-2 pb-2">BETALNING</h5>
                         <div class="form-check text-left">
                             <input class="form-check-input" type="radio" name="paymentform" id="klarna_radiobutton" value="option1" checked>
                             <label class="form-check-label" for="klarna_radiobutton">
@@ -130,8 +130,8 @@
                         </div>
                     </div>
                     <!-- DELIVERY INFORMATION -->
-                    <div class="delivery-form col-12 col-md-6 text-center">
-                            <h5 class="checkout-headers m-2 pb-2">LEVERANS</h5>
+                    <div class="delivery-form col-12 col-md-6">
+                            <h5 class="checkout-headers mt-2 pb-2 text-left">LEVERANS</h5>
                             <div class="form-check text-left">
                                 <input type="radio" name="deliveryform" id="radios_1" value="option1" checked>
                                 <label class="form-check-label" for="radios_1">
@@ -158,7 +158,7 @@
                 </button>
             </form>        
             <!-- Modal - Thanks for your purchase -->
-            <div class="receipt-modal" id="modal">
+            <div class="reciept-modal" id="modal">
                 <div class="modal-header">
                     <span class="customers-name" id="customersname">
                         <!-- Value from "first name" input here -->

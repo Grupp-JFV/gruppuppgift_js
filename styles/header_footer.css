@@ -9,9 +9,6 @@ html {
     box-shadow: 0px 0px 4px black;
     min-height:48px;
 }
-.companyname a:hover {
-    color: rgb(75, 4, 4);
-}
 
 .company-logo {
     font-size: 1rem;
