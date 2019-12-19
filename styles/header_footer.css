@@ -9,6 +9,9 @@ html {
     box-shadow: 0px 0px 4px black;
     min-height:48px;
 }
+#companyname a:hover {
+    color: rgb(75, 4, 4);
+}
 
 #companylogo {
     font-size:1rem;
@@ -37,9 +40,14 @@ html {
 .shopping-cart-button {
     margin-top: 6px;
 }
-#shoppingcartlogo {
+#productpagelogo, #shoppingcartlogo {
     font-size: 1rem;
     color: darkred;
+}
+
+#productpagelogo:hover, #shoppingcartlogo:hover {
+    font-size: 1rem;
+    color: rgb(75, 4, 4);
 }
 #shoppingcart_content {
     display: inline;
@@ -55,7 +63,7 @@ html {
     padding-bottom: 12px;
 }
 
-.hidden-basket h3, span {
+.hidden-basket h3 {
     font-size:0.6rem;
 }
 
@@ -130,11 +138,19 @@ footer {
 }
 
 .footer-phone, .footer-email {
-    color: grey;
     text-decoration: underline;
+    color: grey;
 }
 
 .footer-phone:hover, .footer-email:hover {
     text-decoration: none;
     color: black;
+}
+
+.footer-icons i {
+    color: rgb(68, 68, 68);
+}
+.footer-icons i:hover {
+    color: rgb(119, 11, 11);
+    text-decoration: none;
 }
