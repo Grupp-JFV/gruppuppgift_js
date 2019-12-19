@@ -21,7 +21,7 @@ header {
 .intro-headline {
     border-bottom: 1px solid grey;
     padding-top: 10px;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 800;
     color: rgb(0, 60, 20);
     text-transform: uppercase;
@@ -129,6 +129,10 @@ header {
     .header-content {
         padding-left: 90px;
         padding-right: 90px;
+    }
+
+    .intro-headline {
+        font-size: 2.5rem;
     }
 
     .intro-headline p {
