@@ -9,27 +9,27 @@ $(document).ready(function(){
     }); 
 
     //klarna syns som default 
-    $("input#klarnaradiobutton").change( function(){
-        $("klarna-input").show(); 
+    $("input#klarna_radiobutton").change( function(){
+        $("#klarna_input").show(); 
         //dölj de andra betalsätten 
-        $(".swish-input").hide();
-        $(".credit-input").hide();
+        $("#swish_input").hide();
+        $("#credit_input").hide();
     }); 
  
     //visa kreditkort
-    $("input#creditradiobutton").on("click", function(){
-        $(".credit-input").show(); 
+    $("input#credit_radiobutton").on("click", function(){
+        $("#credit_input").show(); 
         //göm de andra alternativen 
-        $(".swish-input").hide();
-        $(".klarna-input").hide();
+        $("#swish_input").hide();
+        $("#klarna_input").hide();
     }); 
  
     //visa swish
-    $("input#swishradiobutton").on("click", function(){
-        $(".swish-input").show(); 
+    $("input#swish_radiobutton").on("click", function(){
+        $("#swish_input").show(); 
         //göm de andra alternativen 
-        $(".credit-input").hide();
-        $(".klarna-input").hide();  
+        $("#credit_input").hide();
+        $("#klarna_input").hide();  
     });
 
 

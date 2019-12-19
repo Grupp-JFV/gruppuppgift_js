@@ -77,9 +77,8 @@
     border-radius:.25rem;
     font-size: 0.6rem;
     border:1px solid lightgrey;
-    height:calc(1.5em + .75rem + 2px); 
-    padding: .375rem .75rem;
-    line-height:1.5;
+    height:30px;
+    line-height:0.5rem;
 }
 
 #klarna_input {
