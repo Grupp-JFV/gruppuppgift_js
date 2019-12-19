@@ -2,8 +2,7 @@ $(document).ready(function() {
 
     getAmount();
 
-     //lyssnar efter varukorgen och hämtar info från local storage 
-    $("#basketButton").on("click", function() {
+    $("#basket_button").on("click", function() {
         $("#basket").slideToggle(300);
         //skriv ut listan printlist
         printShoppingcart(); 

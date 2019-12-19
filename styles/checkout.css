@@ -1,12 +1,10 @@
 /* Mobile phones breakpoint */
 
 /* HEADER IMAGE */
-.header_img {
+.header-img {
     object-fit: cover;
     height:25vh;
 }
-
-/*CHECKOUT PAGE*/
 
 /*PRODUCTS IN SHOPPINGCART*/
 .shoppingcart-div {
@@ -41,12 +39,12 @@
    padding:none !important;
 }
 
-.numberofpurchaseditems{
+/* .numberofpurchaseditems{
     border-radius:8px;
     text-align: center;
     border:1px solid darkred;  
     width: 25%;
-}
+} */
 .backtoshop-button {
     font-size:0.7rem;
     font-weight: 500;
@@ -68,21 +66,21 @@
 
 /*CHECK OUT FORM*/
 
-.checkoutheaders {
+.checkout-headers {
     font-weight: 500;
     color: darkred;
     text-transform: uppercase;
     border-bottom:1px solid lightgray; 
 }
 
-#sumtotal {
+.sum-total {
     font-size: 1rem;
     font-weight:bold;
 }
 
 
 /* PAYMENT OPTIONS */
-.paymentinput {
+.payment-input {
     border-radius:.25rem;
     font-size: 0.6rem;
     border:1px solid lightgrey;
@@ -91,14 +89,14 @@
     line-height:1.5;
 }
 
-#klarna-input {
+#klarna_input {
     display: visible;
 }
-#credit-input, #swish-input {
+#credit_input, #swish_input {
     display: none;
 }
 
-#sendorderbtn {
+.send-order-btn {
     font-size:0.9rem;
     font-weight: 500;
     color:whitesmoke; 
@@ -108,7 +106,7 @@
     width:300px;
     border: none; 
 }
-#sendorderbtn:hover {
+.send-order-btn:hover {
     background-color: rgb(61, 6, 6);
     color: whitesmoke;
 }
@@ -118,7 +116,7 @@
 
 /*TACK FÖR DITT KÖP-MODAL*/
 
-#modal {
+.receipt-modal {
     display: none;
     position: fixed;
     background-color: rgba(255, 255, 255, 0.95);
@@ -136,31 +134,11 @@
     transition: transform 200ms ease-out;
 }
 
- /*THANKS FOR YOUR PURCHASE DIV */
-
- #thankyoucustomer {
-    display: none;
-    position: sticky;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100;
-    width: 50%;
-    height: 85%;
-    background-color: rgba(255, 255, 255, 0.9);
-    border: 3px rgba(139, 0, 0, 0.9) solid;
-    text-align: center;
- }
-
- #thankyourcustomerheader {
-    font-size: 1.5rem;
- }
-
- #customersname {
+ .customers-name {
     font-size: 1.5rem;
 }
 
-.modalokbutton {
+.modal-ok-button {
     font-size:0.7rem;
     font-weight: 500;
     color:whitesmoke; 
@@ -172,14 +150,14 @@
     border: none; 
 }
 
-.modalokbutton:hover {
+.modal-ok-button:hover {
     background-color: rgb(65, 63, 63);
 }
  
 /* Padlet 768px */
 @media (min-width: 768px) {
     /* HEADER */
-    .header_img {
+    .header-img {
         height:30vh;
     }  
 
@@ -191,9 +169,9 @@
     .shoppingcart-item-titel {
         font-size:1rem;
     }
-    .numberofpurchaseditems {
+     .numberofpurchaseditems {
         width: 20%;
-    }
+    } 
 
 }
 
@@ -202,7 +180,7 @@
 @media (min-width: 992px) {
  
     /*Shopping bag*/
-    .numberofpurchaseditems {
+     .numberofpurchaseditems {
         width: 8%;
     }
     .shoppingcart-item-titel {

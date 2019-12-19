@@ -1,42 +1,34 @@
 $(document).ready(function(){
 
-    //när man väljer betalsätt, kör denna funktion: 
-    $(".form-check-input").change(function(){
-        $(".paymentinput").slideToggle(300);
-    }); 
-
-    //visar tack för ditt köp-diven
-    $("#sendorderbtn").click(function(){
-        $("#modal").show();
-        showReceipt(); 
-    });
+    //skriver ut varukorgen     
+    printCart(); 
 
     //klarna syns som default 
-    $("input#klarnaradiobutton").change( function(){
-        $("#klarna-input").show(); 
-        //dölj de andra betalsätten 
-        $("#swish-input").hide();
-        $("#credit-input").hide();
+    $("input#klarna_radiobutton").change( function(){
+        $("#klarna_input").show(); 
+        $("#swish_input").hide();
+        $("#credit_input").hide();
     }); 
  
     //visa kreditkort
-    $("input#creditradiobutton").on("click", function(){
-        $("#credit-input").show(); 
-        //göm de andra alternativen 
-        $("#swish-input").hide();
-        $("#klarna-input").hide();
+    $("input#credit_radiobutton").on("click", function(){
+        $("#credit_input").show(); 
+        $("#swish_input").hide();
+        $("#klarna_input").hide();
     }); 
  
     //visa swish
-    $("input#swishradiobutton").on("click", function(){
-        $("#swish-input").show(); 
-        //göm de andra alternativen 
-        $("#credit-input").hide();
-        $("#klarna-input").hide();  
+    $("input#swish_radiobutton").on("click", function(){
+        $("#swish_input").show(); 
+        $("#credit_input").hide();
+        $("#klarna_input").hide();  
     });
 
-    //skriver ut varukorgen     
-    printCart(); 
+    //visar tack för ditt köp-diven
+    $("#send_order_btn").click(function(){
+        $("#modal").show();
+        showReceipt(); 
+    });
 
 });
 
@@ -66,10 +58,8 @@ function printCart() {
             //skapa en p-tagg, placera ut antalet 
             $("<p>").addClass("text-center purchase-item-price col-2 text-nowrap").text(cartitem.price + " kr/st").appendTo(newRow);
 
-
             //bestämmer totalsumman utifrån varukorgen 
             let cost = cartitem.price * cartitem.amount;
-            //hämta sumtotal-taggen från javascript och sätt värdet 
             totalCost += cost;
 
         });
@@ -102,8 +92,7 @@ function showReceipt() {
             $("<p/>").addClass("col-3").attr("id", "#reciept_amount").html(amount).appendTo(recieptrow); 
 
             //bestämmer totalsumman utifrån varukorgen 
-            let cost = cartitem.price * cartitem.amount;
-            //hämta sumtotal-taggen från javascript och sätt värdet 
+            let cost = cartitem.price * cartitem.amount; 
             totalCost += cost;
     }); 
 
