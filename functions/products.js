@@ -111,8 +111,8 @@ function display(products) {
     });
 
     //togglar läs mer-knappen
-    $(".readmore_button").on("click",function() {
-        $(this).siblings(".product_description").slideToggle(300);
+    $(".readmore-button").on("click",function() {
+        $(this).siblings(".product-description").slideToggle(300);
     });
 }
 
