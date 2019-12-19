@@ -24,20 +24,26 @@
     <div class="container-fluid">    
         <!--TOP NAVBAR-->
         <header class="row sticky-top" id="nav"> 
-            <div class="text-left col-6 align-self-center" id ="companyname">
-                <a href="../gruppuppgift_js/index.html">
+            <div class="text-left col-6 align-self-center" id="companyname">
+                <a href="index.html">
                     <span id="companylogo">OPPI<h1 id="companylogo_end">GÅRDS</h1></span>
                 </a>
+                <a href="pages/products.html">
+                    <i class="fas fa-beer  pl-1" id="productpagelogo"></i>
+                </a>
             </div>
-            <!-- SHOPPING CART ICON-->
+            <!-- SHOPPING CART -->
             <div class="text-right col-6">
                 <button type="button" class="btn p-0 shopping-cart-button" id="basketButton">
-                    <i class="fa fa-shopping-cart" id="shoppingcartlogo"></i>
+                    <span class="d-inline basket-display" id="display_basket">
+                    </span>
+                    <i class="fa fa-shopping-cart" id="shoppingcartlogo">
+                    </i>
                 </button>
             </div>
             <!-- HIDDEN BASKET -->
             <div class="col-12 hidden-basket" id="basket">
-                <div class="inner-container p-0 pl-md-4 pr-md-4" id="basket_content">
+                <div class="inner container-fluid p-0 pl-md-4 pr-md-4">
                     <div class="row border-top pt-1 basket-heading">
                         <div class="col-7 col-md-2">
                             <h3 class="text-left">Produkt</h3>
@@ -59,12 +65,15 @@
                         </div>
                     </div>
                 </div>
+                <div class="inner-container p-0 pl-md-4 pr-md-4" id="basket_content">
+                </div>
                 <div class="inner-container p-0 pl-md-4 pr-md-4" id="basket_sum">
                     <div class="row border-top p-2">
                         <div class="col-12 pr-md-0 text-center text-md-right basket-sum">
                             <h3 class="d-inline">Summa</h3>
-                            <span>499kr</span>                       
-                            <a href="../gruppuppgift_js/pages/checkout.html">
+                            <span id="total_cost">499kr</span>
+                     
+                            <a href="pages/checkout.html">
                                 <button" class="pay-btn" id="to_pay">Till Kassan</button>
                             </a>
                         </div>
@@ -98,12 +107,16 @@
                 <div class="row justify-content-center">
                     <div class="img-link col-12 col-md-12 col-lg-5 text-center">
                         <img src="cheers.jpg" alt="Beer barrels" class="image-link mb-2 md-w-100">
-                        <button type="button" class="btn mb-4" id="readmoreindex_button">LÄS MER</button>
+                        <button type="button" class="btn mb-4" id="readmoreindex_button">
+                            LÄS MER
+                        </button>
                     </div>
-                    <div class="img-link col-12 col-md-12 col-lg-5 text-center">
+                    <div class="img-link col-12 col-md-12 col-lg-5 text-center webshopbuttonlink">
                         <img src="beer.jpg" class="image-link mb-2 md-w-100">
-                       <a href="pages/products.html">
-                        <button type="button" class="btn mb-4" id="webshop_button">WEBBSHOP</button>
+                        <a href="pages/products.html">
+                            <button type="button" class="btn mb-4" id="webshop_button">
+                                WEBBSHOP
+                            </button>
                        </a>
                     </div>
                 </div>
@@ -113,48 +126,78 @@
         <div class="row sort readmoreindex text-center">
         <main> 
             <!-- content goes here -->
-            <div class="col-lg-6 col-sm-8">
-                <h3 class="infoheadline text-left">Vår öl</h3>
-                <div class="introtext">
-                    <span>Vi på Oppigårds har alltid gillat att utforska smak, doft och karaktär. 
+            <div class="col-lg-6 col-sm-12 justify-content-center">
+                <h3 class="infoheadline">Vår öl</h3>
+                <div class="firstintrotext">
+                    <p>Vi på Oppigårds har alltid gillat att utforska smak, doft och karaktär. 
                         Öl är för oss ett uttryckssätt, som säger mycket om hur vi tänker och vad vi gillar. 
-                        Vår första öl i kontinuerlig produktion, Golden Ale, inspirerades av de brittiska öarna och humlesorten East Kent Golding. 
-                        Men vi kände oss inte begränsade av ölkulturella gärsgårdar, utan testade att höja ölen med en amerikansk fruktig humlesort. 
-                        På liknande vis har vi blivit inspirerade av klassiska ölstilar från olika delar av världen och lagt till en twist som vi tycker passar.
-                    </span>
-                    <div class="pt-4 pb-4">
+                    </p>
+                    <p>Vår första öl i kontinuerlig produktion, Golden Ale, inspirerades av de brittiska öarna
+                        och humlesorten East Kent Golding. 
+                        Men vi kände oss inte begränsade av ölkulturella gärsgårdar, 
+                        utan testade att höja ölen med en amerikansk fruktig humlesort. 
+                    </p>
+                    <p>På liknande vis har vi blivit inspirerade av klassiska ölstilar från 
+                        olika delar av världen och lagt till en twist som vi tycker passar.
+                    </p>
+                    <div class="pt-1 pb-4">
                         <img src="thelogo.png" id="companylogo">
                     </div>
                 </div>
             </div>
             
-            <div class="col-lg-6 col-sm-8">
-                <h3 class="infoheadline text-left">Nyheter</h3>
-                <div class="introtext text-left">
-                    <div class="mb-4">
-                        <img src="product_images/everydayipa.jpg" alt="Öletikett" class="index-productnewsimg">
-                        <span class="introtext">
+            <div class="col-lg-6 col-sm-12 justify-content-center">
+                <h3 class="infoheadline">Nyheter</h3>
+                <div class="secondintrotext ">
+                    <div class="row mb-4 align-items-center">
+                        <div class="col-3">
                             <a href="pages/products.html" class="index-productnews">
-                                Everyday Ipa - 4,8%
+                                <img src="product_images/winterale.jpg"  alt="Öletikett" class="index-productnewsimg">
                             </a>
-                        </span>
-                    </div>
-                    <div class="mb-4">
-                        <img src="product_images/hedemoraporter.jpg" alt="Öletikett" class="index-productnewsimg">
-                        <span class="introtext">
+                        </div>
+                        <div class="introtext col-9 text-left">
                             <a href="pages/products.html" class="index-productnews">
-                                Hedemora Porter - 5,4%
+                                <h5>Winter Ale (5,0%)</h5>
                             </a>
-                        </span>
-                    </div>
-                    <div class="mb-4">
-                        <img src="product_images/winterale.jpg"  alt="Öletikett" class="index-productnewsimg">
-                        <span class="introtext">
+                            <p>
+                                Nyanserad, något humlearomatisk smak med tydlig beska, inslag av rågbröd, kryddor, tallkåda och apelsinskal.
+                                Serveras vid 8-10°C som sällskapsdryck, eller till rätter av lamm- och nötkött.
+                            </p>
+                        </div>
+                    </div>  
+                    <div class="row mb-4 align-items-center">
+                        <div class="col-3">
                             <a href="pages/products.html" class="index-productnews">
-                                Winter Ale - 5,0% 
+                                <img src="product_images/hedemoraporter.jpg"  alt="Öletikett" class="index-productnewsimg">
                             </a>
-                        </span>
-                    </div>
+                        </div>
+                        <div class="introtext col-9 text-left">
+                            <a href="pages/products.html" class="index-productnews">
+                                <h5>Hedemora Porter (5.4%)</h5>
+                            </a>
+                            <p>
+                                Maltig, rostad, nyanserad smak med inslag av kavring, choklad, hasselnötter, 
+                                kaffe, smörkola och torkade dadlar. Serveras vid 10-12°C till rätter av mörkt kött.
+                            </p>
+                        </div>
+                    </div> 
+                    <div class="row mb-4 align-items-center">
+                        <div class="col-3">
+                            <a href="pages/products.html" class="index-productnews">
+                                <img src="product_images/singlehop.jpg"  alt="Öletikett" class="index-productnewsimg">
+                            </a>
+                        </div>
+                        <div class="introtext col-9 text-left">
+                            <a href="pages/products.html" class="index-productnews">
+                                <h5>Oppigårds Single Hop (5%)</h5>
+                            </a>
+                            <p>
+                                Tydligt humlearomatisk smak med inslag av apelsinblom, aprikos, honung, 
+                                citrusskal och knäckebröd. Serveras vid 11-13°C som sällskapsdryck,
+                                eller till rätter av fisk eller ljust kött.
+                            </p>
+                        </div>
+                    </div> 
                 </div>
             </div>
         </main>
@@ -179,16 +222,10 @@
                 </div>
             </div>
             <div class="col-12 col-lg-6 text-center">
-                <div class="pt-3">
-                    <a href="http://www.facebook.com" class="text-dark">
-                        <i class="fab fa-facebook fa-2x"></i>
-                    </a>
-                    <a href="http://www.instagram.com" class="text-dark">
-                        <i class="fab fa-instagram fa-2x"></i>
-                    </a>
-                    <a href="http://www.twitter.com" class="text-dark">
-                        <i class="fab fa-twitter fa-2x"></i>
-                    </a>
+                <div class="pt-3 footer-icons">
+                    <a href="http://www.facebook.com"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="http://www.instagram.com"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="http://www.twitter.com"><i class="fab fa-twitter fa-2x"></i></a>
                 </div>
             </div>
     </footer>

@@ -4,11 +4,9 @@
 
 header {
     background-color: rgb(255, 255, 255);   
-
 }
 .jumbotron {
     background-image:url("../styles/headerimage/header-image.jpg")!important;
-    /* height: 90vh; */
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -33,10 +31,12 @@ header {
 .image-link {
     object-fit: scale-down;
     height: 25vh;
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
-#webshop_button, #readmoreindex_button {
+#readmoreindex_button, #webshop_button {
+    display: block;    
+    margin: 0 auto;
     font-size: 0.7rem;
     font-weight: 600;
     color: whitesmoke; 
@@ -44,10 +44,13 @@ header {
     border-radius: 25px;
     border: none;
     width: 150px;
-    margin-bottom: 10px;
 }
-#webshop_button:hover, #readmoreindex_button:hover {
+#readmoreindex_button:hover, #webshop_button:hover {
     background-color: rgb(90, 2, 2);
+}
+
+.webshopbuttonlink a:hover {
+    text-decoration: none;
 }
 
 /* READ MORE */
@@ -65,23 +68,40 @@ header {
 #companylogo {
     width: 30%;
 }
+
 .index-productnewsimg {
-    width: 15%;
+    object-fit: scale-down;
+    height: 25vh;
 }
 
-.introtext {
-    color: rgb(0, 0, 0);
-    font-size: 1rem;
+.firstintrotext {
+    font-size: 0.8rem;
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%; 
 }
+
+.secondintrotext {
+    font-size: 1rem;
+    padding-top: 5%; 
+}
+
+.secondintrotext p {
+    font-size: 0.8rem;
+}
+
+.secondintrotext a {
+    font-size: 1rem;
+    color: rgb(48, 45, 45);
+}
+.secondintrotext a:hover {
+    text-decoration: none;
+}
+
 .introheadline p {
     background-color: none;
 }
-.index-productnews {
-    font-size: 0.8rem;
-    font-weight: 500;
-    color:grey;
-    border: none;
-}
+
 
 /* Padlet 768px */
 @media (min-width: 768px) {
@@ -125,14 +145,5 @@ header {
 
     .introheadline p {
         background-color:none;
-    }
-
-    .index-productnews {
-        font-size: 0.7rem;
-        font-weight: 500;
-        color: grey;
-        align-self: baseline;
-        text-transform: uppercase;
-        border: none;
     }
 }
