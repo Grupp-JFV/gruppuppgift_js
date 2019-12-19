@@ -1,22 +1,29 @@
 $(document).ready(function() {
     //skapar alla html-element 
     productList();
+    filterDisplay();
     
-    //lyssnar efter läggtill i varukorg 
-    $(".purchase-button").on("click",function() {
-        addToCart($(this));
-        printShoppingcart();
-    });
-
     //togglar filterfunktionen mellan hide/show 
     $("#sortheadline").on("click", function() {
         $("#sort_categories_container").slideToggle(300);
-    }); 
+    });
+
+    $.each($("#checkbox_ipa, #checkbox_ale, #checkbox_porter"), function (i, checkbox) {
+        $(checkbox).on("click",function() {
+            filterDisplay();
+        });
+    });
   
     //togglar läs mer-knappen
     $(".readmore-button").on("click",function() {
         $(this).siblings(".product-description").slideToggle(300);
     }); 
+
+    //lyssnar efter läggtill i varukorg 
+    $(".purchase-button").on("click",function() {
+        addToCart($(this));
+        printShoppingcart();
+    });
 }); 
     
 //skapar en lista med existerande produkter 
@@ -43,7 +50,6 @@ function productList() {
 
     let products = [product1, product2, product3, product4, product5, product6];
 
-    display(products);
     toLocalStorage(products);
 
 }
@@ -60,18 +66,29 @@ function Product(name, image, type, strength, description, price, id) {
     this.id = id;
 }
 
-function filterDisplay(checkmark) {
+function filterDisplay() {
     let products = JSON.parse(localStorage.getItem("CurrentProductList"));
-    if (checkmark.id = "ipa-checkmark") {
-        products = jQuery.grep(products, function( a ) {
-            return a.type === "Ipa";
-          });
-    }
+    
+    let checkboxes = $("#checkbox_ipa, #checkbox_ale, #checkbox_porter");
+    let outProducts = [];
+    $.each($(checkboxes), function (i, checkbox) {
+        if (checkbox.checked) {
+            outProducts = outProducts.concat(jQuery.grep(products, function( a ) {
+                return a.type.toLowerCase() === checkbox.id.substring(9).toLowerCase();
+            }));
+        }
+    });
+   
+    display(outProducts);
+
+    let arr = [0, 1, 2];
+    let ny_arr = [];
+    ny_arr.concat(arr);
 }
 
 //funktion som loopar igenom produkterna och skriver ut dem i products.html
 function display(products) {
-
+    $("#page").html("");
     $.each(products, function (i, product) {
          
         let responsiveColumn = $("<div>").addClass("col-12 col-md-6 col-lg-4");
