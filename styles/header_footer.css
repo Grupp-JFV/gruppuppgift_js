@@ -10,14 +10,7 @@ html {
     min-height:48px;
 }
 
-.company-logo {
-    font-size: 1rem;
-    font-weight: 800;
-    color: rgb(0, 60, 20);
-    padding-top: 10px;
-}
-
-.companylogo-end {
+.companylogo {
     font-size: 1rem;
     font-weight: 800;
     padding-top: 10px;
@@ -32,6 +25,7 @@ html {
 .fa-beer {
     color: rgb(0, 60, 20); 
     text-decoration:none;
+    margin-bottom: 4px;
 }
 
 .basket-display {
@@ -40,18 +34,20 @@ html {
     font-weight: 500;
 }
 
-.icon-container {
-    margin-top: 6px;
-}
-
 .productpage-logo, .shoppingcart-logo {
     font-size: 1rem;
     color: rgb(0, 60, 20);
+    margin-bottom: 4px;
 }
 
 .productpage-logo:hover, .shoppingcart-logo:hover {
     font-size: 1rem;
     color: rgb(75, 4, 4);
+}
+
+.shopping-cart-button {
+    padding: 0;
+    margin-bottom: 2px;
 }
 
 
@@ -118,7 +114,7 @@ html {
     background-image: linear-gradient(rgb(0, 60, 20), rgb(0, 30, 10));
     border-radius: 28px;
     border: none;
-    padding: 4px 12px;
+    padding: 4px 12px 6px 12px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -126,9 +122,10 @@ html {
 /*FOOTER*/
 
 footer {
-    background-color: white;
+    background-image: linear-gradient(white, rgb(245, 245, 245));
     font-size: 0.7rem;
     border-top: 1px solid black;
+    box-shadow: 0px 0px 4px black;
 }
 
 .footer-logo {
