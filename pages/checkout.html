@@ -21,20 +21,32 @@
     <div class="container-fluid"> 
         <!--TOP NAVBAR-->
         <header class="row sticky-top nav" id="nav"> 
-            <div class="text-left col-6 align-self-center company-name" id="companyname">
+            <div class="text-left col-6 col-md-4 align-self-center company-name" id="companyname">
                 <a href="../index.html">
-                    <span class="company-logo">OPPI<h1 class="companylogo-end">GÅRDS</h1></span>
-                </a>
-                <a href="products.html">
-                    <i class="fas fa-beer pl-1" id="productpage_logo"></i>
+                    <div class="company-logo d-inline">
+                        <h1 class="companylogo">
+                            OPPIGÅRDS
+                        </h1>
+                    </div>
                 </a>
             </div>
-            <!-- SHOPPING CART ICON-->
-            <div class="text-right col-6">
-                <button type="button" class="btn p-0 shopping-cart-button" id="basket_button" disabled>
-                    <i class="fa fa-shopping-cart" id="shoppingcart_logo"></i>
+            <!-- SHOPPING CART -->
+            <div class="text-center col-2 col-md-4 align-self-center">
+                <div class="d-inline">
+                    <a href="products.html">
+                        <i class="fas fa-beer" id="productpage_logo">
+                        </i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-right col-4 col-md-4 align-self-center">
+                <button type="button" class="btn shopping-cart-button" id="basket_button">
+                    <span class="d-inline basket-display" id="display_basket">
+                    </span>
+                    <i class="fa fa-shopping-cart" id="shoppingcart_logo">
+                    </i>
                 </button>
-            </div>         
+            </div>
         </header>
         <!-- BORDER -->
         <div class="row border-line"></div>
