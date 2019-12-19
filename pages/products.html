@@ -89,41 +89,41 @@
             </div>
         </div>
         <!-- MAIN CONTENT -->
-        <main class="sort">  
+        <main class="content">  
             <!-- SORTING MENU -->
-            <ul class="row navbar align-items-baseline">
-                <h3 class="text-center col-12 p-0 m-0" id="sortheadline">Filtrera produkter<i class="fa fa-caret-down"></i></h3>
-                <li class="sortcategories col pl-4 pr-0 border-top mt-1">
-                    <h3 class="sorthead text-center w-100">Öltyp </h3>
-                    <div class="categories">
-                        <div class="w-100"><input type="checkbox">IPA</input></div>
-                        <div class="w-100"> <input type="checkbox">Lager</input></div>
-                        <div class="w-100"><input type="checkbox">Ale</input></div>
+            <div class="row navbar p-0">
+                <div class="col-12 pt-0 pb-1 m-0 text-center sort-bar">
+                    <button class="sort-button" id="sortheadline">
+                        Filtrera produkter 
+                        <i class="fa fa-caret-down">
+                        </i>
+                    </button>
+                </div>
+                <div class="col-12 text-center border-top sort-categories-container" id="sort_categories_container">
+                    <div class="d-inline sort-categories">
+                        <input type="checkbox" id="checkbox_ipa" checked>
+                            IPA
+                        </input>
                     </div>
-                </li>
-                <li class="sortcategories col border-top mt-1">
-                    <h3 class="sorthead text-center w-100">Pris</h3>
-                    <div class="categories">
-                        <div class="w-100"><input type="checkbox">Högt till lågt</input></div>
-                        <div class="w-100"><input type="checkbox">Lågt till högt</input></div>
+                    <div class="d-inline sort-categories">
+                        <input type="checkbox" id="checkbox_ale" checked>
+                            ALE
+                        </input>
                     </div>
-                </li>
-                <li class="sortcategories col pr-4 pl-0 border-top mt-1">
-                    <h3 class="sorthead text-center w-100">Styrka</h3>
-                    <div class="categories">
-                        <div class="w-100"><input type="checkbox">3,5%</input></div>
-                        <div class="w-100"><input type="checkbox">5,5%</input></div>
-                        <div class="w-100"><input type="checkbox">0,0%</input></div>   
+                    <div class="d-inline sort-categories">
+                        <input type="checkbox" id="checkbox_porter" checked>
+                            PORTER
+                        </input>
                     </div>
-                </li>
-            </ul>  
+                </div>
+            </div>
             <!-- CARD DECK WITH PRODUCTS -->
             <div class="row justify-content-center" id="page">
                 <!-- CONTENT FROM PRODUCTS.JS -->
             </div>
         </main>
         <!-- FOOTER -->
-        <footer class="row pt-2 pb-2 w-100 m-0">
+        <footer class="row pt-2 pb-2 pl-0 pr-0">
             <div class="col-12 col-lg-6 text-center">
                 <div class="footer-logo">
                     OPPIGÅRDS ÖL

@@ -1,10 +1,10 @@
 html {
-    font-size:16pt;
+    font-size: 16pt;
 }
 
 /*NAVBAR*/
 #nav {
-    background-color:white;
+    background-image: linear-gradient(white, rgb(245, 245, 245));
     border-bottom: 1px solid black;
     box-shadow: 0px 0px 4px black;
     min-height:48px;
@@ -14,9 +14,9 @@ html {
 }
 
 #companylogo {
-    font-size:1rem;
-    font-weight:800;
-    color:darkred;
+    font-size: 1rem;
+    font-weight: 800;
+    color: rgb(0, 60, 20);
     padding-top: 10px;
 }
 
@@ -25,14 +25,15 @@ html {
     font-weight: 800;
     padding-top: 10px;
     display: inline;
-    color:darkred;
+    color: color: rgb(0, 60, 20);
     -webkit-text-fill-color: white; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: darkred;
+    -webkit-text-stroke-color: rgb(0, 60, 20);
     text-align: left;   
 }
 
 .basket-display {
+    color:  black;
     font-size: 0.8rem;
     font-weight: 500;
 }
@@ -42,7 +43,7 @@ html {
 }
 #productpagelogo, #shoppingcartlogo {
     font-size: 1rem;
-    color: darkred;
+    color: rgb(0, 60, 20);
 }
 
 #productpagelogo:hover, #shoppingcartlogo:hover {
@@ -116,7 +117,7 @@ html {
 .pay-btn {
     font-size: 0.6rem;
     color:whitesmoke; 
-    background-color: darkred;
+    background-image: linear-gradient(rgb(0, 60, 20), rgb(0, 30, 10));
     border-radius: 28px;
     border: none;
     padding: 4px 12px;
@@ -129,7 +130,8 @@ html {
 footer {
     background-color: white;
     font-size: 0.7rem;
-    border-top: 1px solid grey;
+    border-top: 1px solid black;
+    box-shadow: 0px 0px 4px black;
 }
 
 .footer-logo {
