@@ -13,18 +13,6 @@ $(document).ready(function() {
             filterDisplay();
         });
     });
-  
-    //togglar läs mer-knappen
-    $(".readmore_button").on("click",function() {
-        $(this).siblings(".product_description").slideToggle(300);
-    });
-
-    //lyssnar efter läggtill i varukorg 
-    $(".purchase-button").on("click",function() {
-        addToCart($(this));
-        printShoppingcart();
-    });
-   
 }); 
     
 //skapar en lista med existerande produkter 
@@ -111,9 +99,20 @@ function display(products) {
         $("<input>").attr("type", "number").appendTo(input).attr("placeholder", "Välj antal"); 
 
         //skapa en köp-knapp         
-        $("<button>").addClass("btn purchase-button").attr("type", "button").attr("id", "button_" + i).append("Köp").appendTo(input);
+        $("<button>").addClass("btn purchase-button").attr("type", "button").attr("id", "button_" + product.id).append("Köp").appendTo(input);
 
         $("#page").append(responsiveColumn);
+    });
+    
+    //lyssnar efter läggtill i varukorg 
+    $(".purchase-button").on("click",function() {
+        addToCart($(this));
+        printShoppingcart();
+    });
+
+    //togglar läs mer-knappen
+    $(".readmore_button").on("click",function() {
+        $(this).siblings(".product_description").slideToggle(300);
     });
 }
 
