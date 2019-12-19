@@ -40,9 +40,10 @@ html {
     font-weight: 500;
 }
 
-.shopping-cart-button {
+.icon-container {
     margin-top: 6px;
 }
+
 .productpage-logo, .shoppingcart-logo {
     font-size: 1rem;
     color: rgb(0, 60, 20);

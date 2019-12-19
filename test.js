@@ -9,51 +9,48 @@ $(document).ready(function(){
     }); 
 
     //klarna syns som default 
-    $("input#klarna_radiobutton").change( function(){
-        $("#klarna_input").show(); 
+    $("input#klarnaradiobutton").change( function(){
+        $("klarna-input").show(); 
         //dölj de andra betalsätten 
-        $("#swish_input").hide();
-        $("#credit_input").hide();
+        $(".swish-input").hide();
+        $(".credit-input").hide();
     }); 
  
     //visa kreditkort
-    $("input#credit_radiobutton").on("click", function(){
-        $("#credit_input").show(); 
+    $("input#creditradiobutton").on("click", function(){
+        $(".credit-input").show(); 
         //göm de andra alternativen 
-        $("#swish_input").hide();
-        $("#klarna_input").hide();
+        $(".swish-input").hide();
+        $(".klarna-input").hide();
     }); 
  
     //visa swish
-    $("input#swish_radiobutton").on("click", function(){
-        $("#swish_input").show(); 
+    $("input#swishradiobutton").on("click", function(){
+        $(".swish-input").show(); 
         //göm de andra alternativen 
-        $("#credit_input").hide();
-        $("#klarna_input").hide();  
+        $(".credit-input").hide();
+        $(".klarna-input").hide();  
     });
 
 
     $("#send_order_btn").click(function() {
         //validate form here  
-                    
+        let good = true;
         $(".form-control").each(function() {
             if ($(this).val() == "") {
-                
+                good = false;
                 //validering, t.ex. focus() för att fokusera på det felaktga elementet 
 
                 //förhindrar att fönstret laddas om
                 return false;
 
-            } else {
-               
-                //låter modalen visas 
-                $("#modal").show();
-                showReceipt(); 
-
             }
-            
-
-        }); 
+        });
+        if (good) {
+            //låter modalen visas 
+            $("#modal").show();
+            showReceipt(); 
+        }
       
         //förhindrar att fösntret laddas om 
         return false; 
