@@ -49,6 +49,10 @@ header {
     background-color: rgb(90, 2, 2);
 }
 
+.webshopbuttonlink a:hover {
+    text-decoration: none;
+}
+
 /* READ MORE */
 .readmoreindex {
     display: none;
