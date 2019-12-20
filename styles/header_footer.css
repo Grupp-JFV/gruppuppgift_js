@@ -9,7 +9,11 @@ html {
     box-shadow: 0px 0px 4px black;
 }
 
-.companylogo {
+.nav a {
+    text-decoration: none;
+}
+
+.company-logo {
     font-size: 1rem;
     font-weight: 800;
     padding-top: 10px;
@@ -19,6 +23,10 @@ html {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: rgb(0, 60, 20);
     text-align: left;   
+}
+
+.company-logo:hover { 
+    -webkit-text-fill-color: yellow;
 }
 
 .fa-beer {
@@ -33,20 +41,13 @@ html {
     font-weight: 500;
 }
 
-.productpage-logo, .shoppingcart-logo {
-    font-size: 1rem;
-    color: rgb(0, 60, 20);
-    margin-bottom: 4px;
-}
-
-.productpage-logo:hover, .shoppingcart-logo:hover {
-    font-size: 1rem;
-    color: rgb(75, 4, 4);
-}
-
 .shopping-cart-button {
     padding: 0;
     margin-bottom: 2px;
+}
+
+.shopping-cart-button i {
+    color: rgb(0, 60, 20);
 }
 
 
