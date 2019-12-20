@@ -18,15 +18,15 @@ html {
     font-weight: 800;
     padding-top: 10px;
     display: inline;
-    color: rgb(0, 60, 20);
+    color: black;
     -webkit-text-fill-color: white;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: rgb(0, 60, 20);
+    -webkit-text-stroke-color: black;
     text-align: left;   
 }
 
 .company-logo:hover { 
-    -webkit-text-fill-color: yellow;
+    -webkit-text-fill-color: rgb(0, 60, 20);
 }
 
 .fa-beer {
@@ -86,7 +86,7 @@ html {
 
 .basket-text .delete-button {
     display: hidden;
-    font-size: 0.6rem;
+    font-size: 1rem;
     color: darkred;
     background: none;
     border: none;
@@ -96,7 +96,7 @@ html {
 
 .basket-text .amount-button {
     display: hidden;
-    font-size: 0.6rem;
+    font-size: 1rem;
     color: rgb(0, 87, 39);
     background: none;
     border: none;
