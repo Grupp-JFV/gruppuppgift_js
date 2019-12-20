@@ -6,7 +6,7 @@ header {
     background-color: rgb(255, 255, 255);   
 }
 .jumbotron {
-    background-image:url("../styles/headerimage/header-image.jpg")!important;
+    background-image:url("../startpage_images/header-image.jpg")!important;
     background-repeat: no-repeat;
     background-size: cover;
 }
